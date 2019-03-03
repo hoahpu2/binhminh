@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcomefas');
-});
+Route::get('/','HomeController@index')->name('homepage');
+Route::get('/{param}','DetailProductController@index')->name('product_detail');
