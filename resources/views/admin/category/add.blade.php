@@ -28,7 +28,7 @@
               <label for="inputPassword3" class="col-sm-2 control-label">Danh mục cha</label>
 
               <div class="col-sm-5">
-                <select name="CA_parent" class="form-control">
+                <select name="CA_parent" class="form-control select2">
                   <option value="0">Danh mục cha</option>
                   @foreach($a_Cates as $cate)
                   <option value="{{$cate['CA_id']}}" <?php echo($cate['CA_status']==1)?'':'disabled'; echo(isset($a_CateOne[0])&&$a_CateOne[0]['CA_parentId'] == $cate['CA_id'])?' selected':' aaa'; ?> >{{$cate['CA_name']}}</option>
@@ -48,8 +48,13 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <button type="submit" class="btn btn-info pull-center">Sign in</button>
-            <button class="btn btn-default">Cancel</button>
+            <div class="row">
+              <div class="col-sm-5"></div>
+              <div class="col-sm-5">
+                <button type="submit" class="btn btn-info pull-center">Sign in</button>
+                <button class="btn btn-default">Cancel</button>
+              </div>              
+            </div>
           </div>
           <!-- /.box-footer -->
         </form>

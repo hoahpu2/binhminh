@@ -29,12 +29,12 @@ Route::group(['prefix'=>'admin'],function(){
 
 	/* Prodution */
 	Route::group(['prefix'=>'product'],function(){
-		Route::get('index',['as'=>'admin.product.index','uses'=>'ProductController@index']);
-		Route::get('add',['as'=>'admin.product.getAdd','uses'=>'ProductController@getAdd']);
-		Route::post('add',['as'=>'admin.product.postAdd','uses'=>'ProductController@postAdd']);
-		Route::get('delete/{id}',['as'=>'admin.product.getDelete','uses'=>'ProductController@getDelete']);
-		Route::get('edit/{id}',['as'=>'admin.product.getEdit','uses'=>'ProductController@getEdit']);
-		Route::post('edit/{id}',['as'=>'admin.product.postEdit','uses'=>'ProductController@postEdit']);
+		Route::get('index',['as'=>'admin.product.index','uses'=>'admin\ProductController@index']);
+		Route::get('add',['as'=>'admin.product.getAdd','uses'=>'admin\ProductController@getAdd']);
+		Route::post('add',['as'=>'admin.product.postAdd','uses'=>'admin\ProductController@postAdd']);
+		Route::get('delete/{id}',['as'=>'admin.product.getDelete','uses'=>'admin\ProductController@getDelete']);
+		Route::get('edit/{id}',['as'=>'admin.product.getEdit','uses'=>'admin\ProductController@getEdit']);
+		Route::post('edit/{id}',['as'=>'admin.product.postEdit','uses'=>'admin\ProductController@postEdit']);
 	});
 	Route::group(['prefix'=>'slider'],function(){
 		Route::get('index',['as'=>'admin.slider.index','uses'=>'SliderController@index']);
