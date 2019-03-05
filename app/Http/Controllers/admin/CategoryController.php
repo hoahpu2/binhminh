@@ -10,6 +10,7 @@ class CategoryController extends Controller
 {
 	public function index()
 	{
+        //test
 		$a_Cate = Category::select('CA_name','CA_alias','CA_status','CA_parentId','created_at','updated_at','CA_id')->get()->toArray();
 		if ($a_Cate) {
 			foreach ($a_Cate as $key => $value) {
