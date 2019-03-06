@@ -105,7 +105,7 @@
               <li><a href="editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
             </ul>
           </li>
-          <li class="treeview">
+          <li class="treeview <?php if($asset[0] == 'PR') echo'active'; ?>">
             <a href="#">
               <i class="fa fa-table"></i> <span>Quản lý sản phẩm</span>
               <span class="pull-right-container">
@@ -113,8 +113,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="../tables/simple.html"><i class="fa fa-circle-o"></i> Thêm mới sản phẩm</a></li>
-              <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
+              <li class="<?php if($asset[1] == 'pro.add') echo'active'; ?>"><a href="{{route('admin.product.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới sản phẩm</a></li>
+              <li class="<?php if($asset[1] == 'pro.index') echo'active'; ?>"><a href="{{route('admin.product.index')}}"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
             </ul>
           </li>
           <li>

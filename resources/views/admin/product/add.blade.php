@@ -14,18 +14,19 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal">
+            <form action="{!! route('admin.product.postAdd') !!}" class="form-horizontal" method="POST" enctype="multipart/form-data">
+              @csrf
               <div class="box-body">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Tên sản phẩm</label>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+                    <input type="text" class="form-control" name="PR_name" id="inputEmail3" placeholder="Tên sản phẩm">
                   </div>
                 </div>
                 <div class="form-group">
-	                <label class="col-sm-2 control-label">Danh mục</label>
+	                <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
 	                <div class="col-sm-4">
-		                <select class="form-control select2">
+		                <select id="danhmuc" name="CA_id" class="form-control select2">
 			                <option selected="selected">Alabama</option>
 			                <option>Alaska</option>
 			                <option>California</option>
@@ -37,56 +38,49 @@
 		            </div>
 	            </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Giá</label>
-
+                  <label for="price" class="col-sm-2 control-label">Giá</label>
                   <div class="col-sm-3">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="number" name="PR_price" class="form-control" id="price" placeholder="Giá">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Giảm giá</label>
-
+                  <label for="sale" class="col-sm-2 control-label">Giảm giá</label>
                   <div class="col-sm-3">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="number" class="form-control" name="PR_sale" id="sale" placeholder="Giảm giá">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Số lượng</label>
-
+                  <label for="quantity" class="col-sm-2 control-label">Số lượng</label>
                   <div class="col-sm-3">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="number" name="PR_quantity" class="form-control" id="quantity" placeholder="Số lượng">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Mã sản phẩm</label>
-
+                  <label for="masp" class="col-sm-2 control-label">Mã sản phẩm</label>
                   <div class="col-sm-2">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="text" name="PR_SKU" class="form-control" id="masp" placeholder="Mã sản phẩm">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Nhà cung cấp</label>
-
+                  <label for="producer" class="col-sm-2 control-label">Nhà cung cấp</label>
                   <div class="col-sm-3">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="text" name="PR_producer" class="form-control" id="producer" placeholder="Nhà cung cấp">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Mô tả</label>
-
+                  <label for="descrip" class="col-sm-2 control-label">Mô tả</label>
                   <div class="col-sm-6">
-                    <textarea class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                    <textarea class="form-control" rows="3" name="PR_descript" id="descrip" placeholder="Enter ..."></textarea>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Chi tiết</label>
-
+                  <label for="editor1" class="col-sm-2 control-label">Chi tiết</label>
                   <div class="col-sm-9">
                     <!-- tools box -->
 		              <div class="box-body pad">
 			              <form>
-			                    <textarea id="editor1" name="editor1" rows="10" cols="80">
-			                                            This is my textarea to be replaced with CKEditor.
+			                    <textarea id="editor1" name="PR_detail" rows="10" cols="80">
+			                      This is my textarea to be replaced with CKEditor.
 			                    </textarea>
 			              </form>
 			          </div>
@@ -99,6 +93,18 @@
                         <input type="checkbox"> Hiển thị trang chủ
                       </label>
                     </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="avatar" class="col-sm-2 control-label">Hình đại diện</label>
+                  <div class="col-sm-2">
+                    <input type="file" name="avatar" class="form-control" id="avatar" placeholder="Mã sản phẩm">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subavatar" class="col-sm-2 control-label">Hình ảnh kèm theo</label>
+                  <div class="col-sm-2">
+                    <input type="file" name="subavatar[]" multiple class="form-control" id="subavatar" placeholder="Mã sản phẩm">
                   </div>
                 </div>
               </div>

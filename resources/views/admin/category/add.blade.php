@@ -11,7 +11,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" {!! route('admin.cate.getAdd',isset($a_CateOne[0]['CA_id'])?$a_CateOne[0]['CA_id']:0) !!}>
+        <form class="form-horizontal" method="POST" action="{!! route('admin.cate.getAdd',isset($a_CateOne[0]['CA_id'])?$a_CateOne[0]['CA_id']:0) !!}">
           @csrf
           <div class="box-body">
             <div class="form-group">

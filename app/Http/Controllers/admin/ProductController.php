@@ -23,7 +23,7 @@ class ProductController extends Controller
 			}
 		}
 		
-		$asset = array('DM','index');
+		$asset = array('PR','pro.index');
     	return view('admin.product.index',compact('a_Pro','asset'));
 	}
 
@@ -32,12 +32,16 @@ class ProductController extends Controller
     	// dd($id);
     	// $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $id)->get()->toArray();
     	// $a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
-    	$asset = array('DM','add');
-    	return view('admin.product.add',compact('a_Cates','asset','a_CateOne'));
+    	$asset = array('PR','pro.add');
+    	return view('admin.product.add',compact('asset'));
     }
 
     public function postAdd(Request $request,$id)
     {
+        
+
+
+
     	$getCate = Category::where('CA_id',$id)->get()->toArray();
     	if ($getCate) {
     		$request->validate([
