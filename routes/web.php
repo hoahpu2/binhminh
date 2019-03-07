@@ -36,6 +36,7 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::get('edit/{id}',['as'=>'admin.product.getEdit','uses'=>'admin\ProductController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.product.postEdit','uses'=>'admin\ProductController@postEdit']);
 	});
+
 	Route::group(['prefix'=>'slider'],function(){
 		Route::get('index',['as'=>'admin.slider.index','uses'=>'SliderController@index']);
 		Route::get('add',['as'=>'admin.slider.getAdd','uses'=>'SliderController@getAdd']);
@@ -44,6 +45,7 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::get('edit/{id}',['as'=>'admin.slider.getEdit','uses'=>'SliderController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.slider.postEdit','uses'=>'SliderController@postEdit']);
 	});
+
 	Route::group(['prefix'=>'news'],function(){
 		Route::get('index',['as'=>'admin.news.index','uses'=>'NewsController@index']);
 		Route::get('add',['as'=>'admin.news.getAdd','uses'=>'NewsController@getAdd']);
@@ -52,12 +54,22 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::get('edit/{id}',['as'=>'admin.news.getEdit','uses'=>'NewsController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.news.postEdit','uses'=>'NewsController@postEdit']);
 	});
+
 	Route::group(['prefix'=>'user'],function(){
-		Route::get('index',['as'=>'admin.user.index','uses'=>'UserController@index']);
+		Route::get('index/{id}',['as'=>'admin.user.index','uses'=>'admin\ProfileController@index']);
 		Route::get('add',['as'=>'admin.user.getAdd','uses'=>'UserController@getAdd']);
 		Route::post('add',['as'=>'admin.user.postAdd','uses'=>'UserController@postAdd']);
 		Route::get('delete/{id}',['as'=>'admin.user.getDelete','uses'=>'UserController@getDelete']);
 		Route::get('edit/{id}',['as'=>'admin.user.getEdit','uses'=>'UserController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.user.postEdit','uses'=>'UserController@postEdit']);
+	});
+
+	Route::group(['prefix'=>'contact'],function(){
+		Route::get('index',['as'=>'admin.contact.index','uses'=>'UserController@index']);
+		Route::get('add',['as'=>'admin.contact.getAdd','uses'=>'UserController@getAdd']);
+		Route::post('add',['as'=>'admin.contact.postAdd','uses'=>'UserController@postAdd']);
+		Route::get('delete/{id}',['as'=>'admin.contact.getDelete','uses'=>'UserController@getDelete']);
+		Route::get('edit/{id}',['as'=>'admin.contact.getEdit','uses'=>'UserController@getEdit']);
+		Route::post('edit/{id}',['as'=>'admin.contact.postEdit','uses'=>'UserController@postEdit']);
 	});
 });

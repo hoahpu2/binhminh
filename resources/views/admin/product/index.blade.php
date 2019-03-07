@@ -36,7 +36,10 @@
                {{$loop->index+1}}
              </td>
              <td>
-              {{$element['']}}
+              <img class="thumbnail" src="{{url('resources/upload/product/')}}/{{$element['PR_avatar']}}" alt="" width="50px" height="50px">
+            </td>
+            <td>
+              {{$element['PR_name']}}
             </td>
             <td>
               {{$element['created_at']}}
@@ -45,10 +48,10 @@
               {{$element['updated_at']}}
             </td>
             <td>
-              {{$element['']}}
+              
             </td>
             <td>
-             @if($element[''] == 1)
+             @if($element['PR_status'] == 1)
              <span class="label label-success">Approved</span>  
              @else
              <span class="label label-danger">Denied</span>
@@ -56,10 +59,10 @@
            </td>
 
            <td>
-            <a href="{{route('admin.cate.getAdd',['id' =>$element['']])}}" class="btn btn-sm btn-primary">
+            <a href="{{route('admin.product.getEdit',$element['PR_id'])}}" class="btn btn-sm btn-primary">
               <i class="fa fa-pencil"></i>
             </a>
-            <a href="javascript:;" onclick ="confirmRemove('{{route('admin.cate.getDelete',['id' =>$element['']])}}')" class="btn btn-sm btn-danger">
+            <a href="javascript:;" onclick ="confirmRemove('')" class="btn btn-sm btn-danger">
               <i class="fa fa-remove"></i>
             </a>
 

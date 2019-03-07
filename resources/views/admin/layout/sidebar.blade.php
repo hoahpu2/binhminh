@@ -117,7 +117,7 @@
               <li class="<?php if($asset[1] == 'pro.index') echo'active'; ?>"><a href="{{route('admin.product.index')}}"><i class="fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
             </ul>
           </li>
-          <li>
+          {{-- <li>
             <a href="../calendar.html">
               <i class="fa fa-calendar"></i> <span>Calendar</span>
               <span class="pull-right-container">
@@ -125,10 +125,29 @@
                 <small class="label pull-right bg-blue">17</small>
               </span>
             </a>
+          </li> --}}
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-folder"></i> <span>Quản lý slider</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="../examples/invoice.html"><i class="fa fa-circle-o"></i> Thêm mới slider</a></li>
+              <li><a href="../examples/profile.html"><i class="fa fa-circle-o"></i> Danh sách slider</a></li>
+              {{-- <li><a href="../examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+              <li><a href="../examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+              <li><a href="../examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+              <li><a href="../examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+              <li><a href="../examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+              <li><a href="../examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+              <li><a href="../examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li> --}}
+            </ul>
           </li>
           <li>
             <a href="../mailbox/mailbox.html">
-              <i class="fa fa-envelope"></i> <span>Mailbox</span>
+              <i class="fa fa-envelope"></i> <span>Liên hệ</span>
               <span class="pull-right-container">
                 <small class="label pull-right bg-yellow">12</small>
                 <small class="label pull-right bg-green">16</small>
@@ -136,26 +155,7 @@
               </span>
             </a>
           </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-folder"></i> <span>Examples</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-              <li><a href="../examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-              <li><a href="../examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-              <li><a href="../examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-              <li><a href="../examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-              <li><a href="../examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-              <li><a href="../examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-              <li><a href="../examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-              <li><a href="../examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
+          {{-- <li class="treeview">
             <a href="#">
               <i class="fa fa-share"></i> <span>Multilevel</span>
               <span class="pull-right-container">
@@ -188,7 +188,7 @@
               <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
             </ul>
           </li>
-          <li><a href="../../documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+          <li><a href="../../documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li> --}}
           {{-- <li class="header">LABELS</li>
           <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
           <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
