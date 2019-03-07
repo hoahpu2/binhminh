@@ -11,15 +11,14 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" action="{!! route('admin.contact.postAdd') !!}">
+        <form class="form-horizontal" method="POST" action="{!! route('admin.cate.getAdd',isset($a_CateOne[0]['CA_id'])?$a_CateOne[0]['CA_id']:0) !!}">
           @csrf
-          <input type="hidden" name="id" value="">
           <div class="box-body">
             <div class="form-group">
               <label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Số điện thoại" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
@@ -29,7 +28,7 @@
               <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Địa chỉ" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
@@ -39,7 +38,7 @@
               <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Facebook</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Đường dẫn Facebook" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
@@ -49,7 +48,7 @@
               <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Google</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Đường dẫn Google" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
@@ -59,7 +58,7 @@
               <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Youtube</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Đường dẫn Youtube" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
@@ -69,7 +68,7 @@
               <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ Email</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Example@gmail.com" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif

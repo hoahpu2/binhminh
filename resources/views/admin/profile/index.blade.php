@@ -8,7 +8,7 @@
       <!-- Profile Image -->
       <div class="box box-primary">
         <div class="box-body box-profile">
-          <img class="profile-user-img img-responsive img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
+          <img class="profile-user-img img-responsive img-circle" src="{{url('resources/upload/useradmin/').'/'.$user[0]['avatar']}}" alt="User profile picture">
 
           <h3 class="profile-username text-center">Nina Mcintire</h3>
 
@@ -83,43 +83,50 @@
         </ul>
         <div class="tab-content">
           <div class="tab-pane active" id="settings">
-                <form class="form-horizontal" action="{!! route('admin.user.index',10) !!}" method="POST" enctype="multipart/form-data">
+                <form class="form-horizontal" method="POST" action="{!! route('admin.user.postAdd',10) !!}" enctype="multipart/form-data">
+                  @csrf
+                  <input type="hidden" name="id" value="{{$user[0]['id']}}">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+                    <label for="name" class="col-sm-2 control-label">Name</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{$user[0]['name']}}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <label for="email" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{$user[0]['email']}}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Mật khẩu</label>
+                    <label for="old_password" class="col-sm-2 control-label">Mật khẩu cũ</label>
 
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputName" placeholder="Name">
+                      <input type="password" class="form-control" id="old_password" name="old_password" placeholder="Mật khẩu cũ">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputExperience" class="col-sm-2 control-label">Nhập lại mật khẩu</label>
+                    <label for="password" class="col-sm-2 control-label">Mật khẩu mới</label>
 
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputName" placeholder="Name">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu mới">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
-
+                    <label for="re_password" class="col-sm-2 control-label">Nhập lại mật khẩu</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                      <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Nhập lại mật khẩu">
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="avatar" class="col-sm-2 control-label">Avatar</label>
+                    <div class="col-sm-10">
+                      <input type="file" class="form-control" name="avatar" id="avatar">
+                    </div>
+                  </div>
+                  <!-- <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
@@ -127,7 +134,7 @@
                         </label>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" class="btn btn-danger">Submit</button>

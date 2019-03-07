@@ -126,7 +126,7 @@
               </span>
             </a>
           </li> --}}
-          <li class="treeview">
+          <li class="treeview <?php if($asset[0] == 'SL') echo'active'; ?>">
             <a href="#">
               <i class="fa fa-folder"></i> <span>Quản lý slider</span>
               <span class="pull-right-container">
@@ -134,8 +134,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="../examples/invoice.html"><i class="fa fa-circle-o"></i> Thêm mới slider</a></li>
-              <li><a href="../examples/profile.html"><i class="fa fa-circle-o"></i> Danh sách slider</a></li>
+              <li class="<?php if($asset[1] == 'add')echo'active'; ?>"><a href="{{route('admin.slider.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới slider</a></li>
+              <li class="<?php if($asset[1] == 'index')echo'active'; ?>"><a href="{{route('admin.slider.index')}}"><i class="fa fa-circle-o"></i> Danh sách slider</a></li>
               {{-- <li><a href="../examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
               <li><a href="../examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
               <li><a href="../examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
@@ -145,8 +145,8 @@
               <li><a href="../examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li> --}}
             </ul>
           </li>
-          <li>
-            <a href="../mailbox/mailbox.html">
+          <li class="<?php if($asset[0] == 'CTT') echo'active'; ?>">
+            <a href="{{route('admin.contact.index',10)}}">
               <i class="fa fa-envelope"></i> <span>Liên hệ</span>
               <span class="pull-right-container">
                 <small class="label pull-right bg-yellow">12</small>

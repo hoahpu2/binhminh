@@ -9,6 +9,7 @@ class ContactController extends Controller
 {
     public function index($id)
     {
-    	# code...
+    	$asset = array('CTT','');
+    	return view('admin.contact.index',compact('asset'));
     }
 }
