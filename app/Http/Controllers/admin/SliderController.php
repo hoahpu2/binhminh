@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Slider;
 
 class SliderController extends Controller
 {
@@ -18,5 +19,10 @@ class SliderController extends Controller
     {
     	$asset = array('SL','add');
     	return view('admin.slider.add',compact('asset'));
+    }
+
+    public function postAdd(Request $request)
+    {
+
     }
 }

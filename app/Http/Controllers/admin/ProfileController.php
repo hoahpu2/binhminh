@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use File;
 
 class ProfileController extends Controller
@@ -39,5 +40,33 @@ class ProfileController extends Controller
 		
 		$user->save();
 		return redirect()->route('admin.user.index',$request->id)->with(['flash_lever'=>'success','flash_message'=>'Thêm mới thành công']);
+    }
+
+    public function postdangnhapAdmin (Request $request)
+    {
+    	// dd('sss');
+    	$rules = [
+    		'email' =>'required|email',
+    		'password' => 'required|min:8'
+    	];
+    	$messages = [
+    		'email.required' => 'Email là trường bắt buộc',
+    		'email.email' => 'Email không đúng định dạng',
+    		'password.required' => 'Mật khẩu là trường bắt buộc',
+    		'password.min' => 'Mật khẩu phải chứa ít nhất 8 ký tự',
+    	];
+    	// dd('sss');
+    	if (Auth::attempt(['email'=>$request->username,'password'=>$request->password])) {
+    		return redirect()->route('admin.product.index');
+    	} else {
+    		return redirect()->route('admin.dangnhap');
+    	}
+    }
+
+    public function getdangxuatAdmin ()
+    {
+    	Auth::logout();
+    	Session::flush();
+    	return redirect()->route('admin-login');
     }
 }

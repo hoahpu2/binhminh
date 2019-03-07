@@ -15,7 +15,17 @@
           @csrf
           <div class="box-body">
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
+              <label for="inputEmail3" class="col-sm-2 control-label">Slider</label>
+
+              <div class="col-sm-5">
+                <input type="file" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                @if ($errors->has('CA_name'))
+                  <span style="color:red">{{$errors->first('CA_name')}}</span>
+                @endif
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Alt</label>
 
               <div class="col-sm-5">
                 <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
@@ -25,56 +35,6 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ</label>
-
-              <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
-                @if ($errors->has('CA_name'))
-                  <span style="color:red">{{$errors->first('CA_name')}}</span>
-                @endif
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Facebook</label>
-
-              <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
-                @if ($errors->has('CA_name'))
-                  <span style="color:red">{{$errors->first('CA_name')}}</span>
-                @endif
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Google</label>
-
-              <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
-                @if ($errors->has('CA_name'))
-                  <span style="color:red">{{$errors->first('CA_name')}}</span>
-                @endif
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Youtube</label>
-
-              <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
-                @if ($errors->has('CA_name'))
-                  <span style="color:red">{{$errors->first('CA_name')}}</span>
-                @endif
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ Email</label>
-
-              <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
-                @if ($errors->has('CA_name'))
-                  <span style="color:red">{{$errors->first('CA_name')}}</span>
-                @endif
-              </div>
-            </div>
-            <!-- <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>
@@ -82,7 +42,7 @@
                   </label>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
           <!-- /.box-body -->
           <div class="box-footer">

@@ -12,11 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('admin.category.add');
+	// dd('aa');
+    return view('admin.login');
+});
+Route::post('admin-check',['as'=>'admin.dangnhap','uses'=>'admin\ProfileController@postdangnhapAdmin']);
+Route::get('admin-logout',['as'=>'admin.dangxuat','uses'=>'admin\ProfileController@getdangxuatAdmin']);
+Route::get('/admin-login', function () {
+    return view('admin.login');
 });
 //,'middleware'=>'adminLogin'
 
-Route::group(['prefix'=>'admin'],function(){
+Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	/* Category */
 	Route::group(['prefix'=>'cate'],function(){
 		Route::get('index',['as'=>'admin.cate.index','uses'=>'admin\CategoryController@index']);
@@ -71,7 +77,7 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'contact'],function(){
 		Route::get('index/{id}',['as'=>'admin.contact.index','uses'=>'admin\ContactController@index']);
 		Route::get('add',['as'=>'admin.contact.getAdd','uses'=>'UserController@getAdd']);
-		Route::post('add',['as'=>'admin.contact.postAdd','uses'=>'UserController@postAdd']);
+		Route::post('add',['as'=>'admin.contact.postAdd','uses'=>'admin\ContactController@postAdd']);
 		Route::get('delete/{id}',['as'=>'admin.contact.getDelete','uses'=>'UserController@getDelete']);
 		Route::get('edit/{id}',['as'=>'admin.contact.getEdit','uses'=>'UserController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.contact.postEdit','uses'=>'UserController@postEdit']);

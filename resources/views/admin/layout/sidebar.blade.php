@@ -102,7 +102,7 @@
             <ul class="treeview-menu">
               <li class="<?php if($asset[1] == 'add') echo'active'; ?>"><a href="{{route('admin.cate.getAdd',0)}}"><i class="fa fa-circle-o"></i> Thêm mới danh mục</a></li>
               <li class="<?php if($asset[1] == 'index') echo'active'; ?>"><a href="{{route('admin.cate.index')}}"><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
-              <li><a href="editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+              
             </ul>
           </li>
           <li class="treeview <?php if($asset[0] == 'PR') echo'active'; ?>">

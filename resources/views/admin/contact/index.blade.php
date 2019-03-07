@@ -11,65 +11,65 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" action="{!! route('admin.contact.postAdd') !!}">
+        <form class="form-horizontal" method="POST" action="{!! route('admin.contact.postAdd',1000) !!}">
           @csrf
-          <input type="hidden" name="id" value="">
+          <input type="hidden" name="id" value="{{$contact[0]['CT_id']}}">
           <div class="box-body">
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
+              <label for="CT_number" class="col-sm-2 control-label">Số điện thoại</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Số điện thoại" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CT_number"  class="form-control" id="CT_number" placeholder="Số điện thoại" value="{{$contact[0]['CT_number']}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ</label>
+              <label for="CT_address" class="col-sm-2 control-label">Địa chỉ</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Địa chỉ" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CT_address"  class="form-control" id="CT_address" placeholder="Địa chỉ" value="{{$contact[0]['CT_address']}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Facebook</label>
+              <label for="CT_linkFace" class="col-sm-2 control-label">Đường dẫn Facebook</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Đường dẫn Facebook" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CT_linkFace"  class="form-control" id="CT_linkFace" placeholder="Đường dẫn Facebook" value="{{$contact[0]['CT_linkFace']}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Google</label>
+              <label for="CT_linkGoogle" class="col-sm-2 control-label">Đường dẫn Google</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Đường dẫn Google" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CT_linkGoogle"  class="form-control" id="CT_linkGoogle" placeholder="Đường dẫn Google" value="{{$contact[0]['CT_linkGoogle']}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Đường dẫn Youtube</label>
+              <label for="CT_linkYoutu" class="col-sm-2 control-label">Đường dẫn Youtube</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Đường dẫn Youtube" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CT_linkYoutu"  class="form-control" id="CT_linkYoutu" placeholder="Đường dẫn Youtube" value="{{$contact[0]['CT_linkYoutu']}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
               </div>
             </div>
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Địa chỉ Email</label>
+              <label for="CT_Email" class="col-sm-2 control-label">Địa chỉ Email</label>
 
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="inputEmail3" placeholder="Example@gmail.com" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
+                <input type="text" name="CT_Email"  class="form-control" id="CT_Email" placeholder="Example@gmail.com" value="{{$contact[0]['CT_Email']}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
@@ -91,7 +91,7 @@
               <div class="col-sm-5"></div>
               <div class="col-sm-5">
                 <button type="submit" class="btn btn-info pull-center">Sign in</button>
-                <button class="btn btn-default">Cancel</button>
+                <button type="reset" class="btn btn-default">Cancel</button>
               </div>              
             </div>
           </div>
