@@ -249,7 +249,7 @@
                     <a href="{{route('admin.user.index',10)}}" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="{{route('admin.dangxuat')}}" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>

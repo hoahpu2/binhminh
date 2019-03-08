@@ -19,7 +19,7 @@ Route::post('admin-check',['as'=>'admin.dangnhap','uses'=>'admin\ProfileControll
 Route::get('admin-logout',['as'=>'admin.dangxuat','uses'=>'admin\ProfileController@getdangxuatAdmin']);
 Route::get('/admin-login', function () {
     return view('admin.login');
-});
+})->name('admin-login');
 //,'middleware'=>'adminLogin'
 
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){

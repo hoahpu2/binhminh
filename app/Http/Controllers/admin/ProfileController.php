@@ -24,7 +24,9 @@ class ProfileController extends Controller
     	$user = User::find($request->id);
     	$user->name = $request->name;
 		$user->email = $request->email;
-		$user->password = bcrypt($request->password);
+        if (!empty($request->password)) {
+            $user->password = bcrypt($request->password);
+        }
 
 		// dd($request->file('avatar'));
 		if(!empty($request->file('avatar'))){
@@ -59,14 +61,14 @@ class ProfileController extends Controller
     	if (Auth::attempt(['email'=>$request->username,'password'=>$request->password])) {
     		return redirect()->route('admin.product.index');
     	} else {
-    		return redirect()->route('admin.dangnhap');
+    		return redirect()->route('admin-login');
     	}
     }
 
     public function getdangxuatAdmin ()
     {
     	Auth::logout();
-    	Session::flush();
+    	// Session::flush();
     	return redirect()->route('admin-login');
     }
 }
