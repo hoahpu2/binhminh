@@ -1,7 +1,7 @@
 <div class="header">
         <div class="header_top">
             <div class="logo">
-                <a href="index.html"><img src="{{asset('images/logo.png')}}" alt="" /></a>
+                <a href="index.html"><img src="{{asset('images/logo.png')}}"  width="50%" alt="" /></a>
             </div>
               <div class="header_top_right">
                 <div class="search_box">
@@ -188,3 +188,15 @@
       <div class="clear"></div>
   </div>    
 </div>
+<script defer src="{{asset('js/jquery.flexslider.js')}}"></script>
+<script type="text/javascript">
+
+    $(window).load(function(){
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function(slider){
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
