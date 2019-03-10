@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/','HomeController@index')->name('homepage');
+Route::get('danh-muc/{slug}','DetailProductController@getList')->name('getList');
+Route::get('san-pham/{slug}','DetailProductController@index')->name('detail');
 
 Route::get('/', function () {
 	// dd('aa');
