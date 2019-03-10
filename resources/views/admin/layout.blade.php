@@ -18,17 +18,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          General Form Elements
-          <small>Preview</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li><a href="#">Forms</a></li>
-          <li class="active">General Elements</li>
-        </ol>
-      </section>
+      @include('admin.layout.cheader')
 
       <!-- Main content -->
       @yield('content')
@@ -36,7 +26,7 @@
       </div>
       <!-- /.content-wrapper -->
       @include('admin.layout.sidebar')
-
+      @include('admin.layout.footer')
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
         <!-- Create the tabs -->

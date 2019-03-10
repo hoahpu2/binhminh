@@ -16,6 +16,7 @@ class CreateSilderTable extends Migration
         Schema::create('Slider', function (Blueprint $table) {
             $table->increments('SL_id');
             $table->string('SL_url');
+            $table->string('SL_alt');
             $table->tinyInteger('SL_status');
             $table->timestamps();
         });
