@@ -28,16 +28,9 @@ class CategoryController extends Controller
 		}
 		// dd($a_Cate);
 		$asset = array('DM','index');
-    	return view('admin.category.index',compact('a_Cate','asset'));
+        $c_header = array('Quản lý danh mục','Danh sách danh mục');
+    	return view('admin.category.index',compact('a_Cate','asset','c_header'));
 	}
-
-    public function getAddd()
-    {
-        $a_CateOne = array();
-        $a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
-        $asset = array('DM','add');
-        return view('admin.category.edit',compact('a_Cates','asset','a_CateOne'));
-    }
 
     public function getAdd($id)
     {
@@ -56,7 +49,8 @@ class CategoryController extends Controller
         $a_CateOne[0]['CA_en_id'] = $id;
     	$a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
     	$asset = array('DM','add');
-    	return view('admin.category.add',compact('a_Cates','asset','a_CateOne'));
+        $c_header = array('Quản lý danh mục','Thêm mới danh mục','Vui lòng không để trống những trường (<span style="color:red">*</span>)');
+    	return view('admin.category.add',compact('a_Cates','asset','a_CateOne','c_header'));
     }
 
     public function postAdd(Request $request,$id)

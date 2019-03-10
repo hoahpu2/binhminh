@@ -15,8 +15,9 @@ class ProfileController extends Controller
     	// dd(bcrypt('hoa1234'));
     	$user = User::select()->get()->toArray();
     	// dd($user);
-    	$asset = array('','');
-    	return view('admin.profile.index',compact('asset','user'));
+        $asset = array('','');
+        $c_header = array('Quản lý Profile','Sửa Profile');
+    	return view('admin.profile.index',compact('asset','user','c_header'));
     }
 
     public function postAdd(Request $request)
@@ -89,6 +90,7 @@ class ProfileController extends Controller
     public function getPageError()
     {
         $asset = array('','','');
-        return view('admin.error.index',compact('asset'));
+        $c_header = array('Page Not found','404 Error Page');
+        return view('admin.error.index',compact('asset','c_header'));
     }
 }

@@ -7,7 +7,7 @@
       <!-- general form elements -->
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Quick Example</h3>
+          <h3 class="box-title"><b>{!!$c_header[2]!!}</b></h3>
         </div>
         <!-- /.box-header -->
         <!-- form start -->
@@ -15,8 +15,8 @@
           @csrf
           <div class="box-body">
             <div class="form-group">
-              <label for="CA_name" class="col-sm-2 control-label">Tên danh mục</label>
-
+              <label for="CA_name" class="col-sm-2 control-label">Tên danh mục <span style="color: red"> *</span></label>
+            
               <div class="col-sm-5">
                 <input type="text" name="CA_name" required="required" class="form-control" id="CA_name" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
