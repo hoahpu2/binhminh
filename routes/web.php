@@ -28,10 +28,10 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	/* Category */
 	Route::group(['prefix'=>'cate'],function(){
 		Route::get('index',['as'=>'admin.cate.index','uses'=>'admin\CategoryController@index']);
-		Route::get('add/{id}',['as'=>'admin.cate.getAdd','uses'=>'admin\CategoryController@getAdd']);
-		Route::post('add/{id}',['as'=>'admin.cate.postAdd','uses'=>'admin\CategoryController@postAdd']);
+		Route::get('add',['as'=>'admin.cate.getAdd','uses'=>'admin\CategoryController@getAdd']);
+		Route::post('add',['as'=>'admin.cate.postAdd','uses'=>'admin\CategoryController@postAdd']);
 		Route::get('delete/{id}',['as'=>'admin.cate.getDelete','uses'=>'admin\CategoryController@getDelete']);
-		Route::get('edit',['as'=>'admin.cate.getEdit','uses'=>'admin\CategoryController@getAddd']);
+		Route::get('edit/{id}',['as'=>'admin.cate.getEdit','uses'=>'admin\CategoryController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.cate.postEdit','uses'=>'admin\CategoryController@postEdit']);
 	});
 
