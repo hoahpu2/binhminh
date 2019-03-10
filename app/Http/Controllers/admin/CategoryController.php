@@ -12,6 +12,7 @@ class CategoryController extends Controller
 {
 	public function index()
 	{
+        // dd(Crypt::encryptString(0));
         //test
 		$a_Cate = Category::select('CA_name','CA_alias','CA_status','CA_parentId','created_at','updated_at','CA_id')->get()->toArray();
 		if ($a_Cate) {
@@ -30,6 +31,14 @@ class CategoryController extends Controller
     	return view('admin.category.index',compact('a_Cate','asset'));
 	}
 
+    public function getAddd()
+    {
+        $a_CateOne = array();
+        $a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
+        $asset = array('DM','add');
+        return view('admin.category.edit',compact('a_Cates','asset','a_CateOne'));
+    }
+
     public function getAdd($id)
     {
         try {
@@ -39,6 +48,11 @@ class CategoryController extends Controller
         }
     	// dd($id);
     	$a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $decrypted)->get()->toArray();
+        // dd($a_CateOne);
+        if (empty($a_CateOne)) {
+            $a_CateOne[0]['CA_parentId'] = 0;
+            $a_CateOne[0]['CA_status'] = 0;
+        }
         $a_CateOne[0]['CA_en_id'] = $id;
     	$a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
     	$asset = array('DM','add');

@@ -31,7 +31,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 		Route::get('add/{id}',['as'=>'admin.cate.getAdd','uses'=>'admin\CategoryController@getAdd']);
 		Route::post('add/{id}',['as'=>'admin.cate.postAdd','uses'=>'admin\CategoryController@postAdd']);
 		Route::get('delete/{id}',['as'=>'admin.cate.getDelete','uses'=>'admin\CategoryController@getDelete']);
-		Route::get('edit/{id}',['as'=>'admin.cate.getEdit','uses'=>'admin\CategoryController@getEdit']);
+		Route::get('edit',['as'=>'admin.cate.getEdit','uses'=>'admin\CategoryController@getAddd']);
 		Route::post('edit/{id}',['as'=>'admin.cate.postEdit','uses'=>'admin\CategoryController@postEdit']);
 	});
 
