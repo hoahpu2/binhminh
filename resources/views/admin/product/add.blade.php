@@ -14,19 +14,19 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form action="{!! route('admin.product.postAdd') !!}" class="form-horizontal" method="POST" enctype="multipart/form-data">
+        <form action="{!! route('admin.product.postAdd') !!}" class="form-horizontal" method="POST" enctype="multipart/form-data" autocomplete="off">
           @csrf
           <div class="box-body">
             <div class="form-group">
               <label for="inputEmail3" class="col-sm-2 control-label">Tên sản phẩm</label>
               <div class="col-sm-6">
-                <input type="text" class="form-control" name="PR_name" id="inputEmail3" placeholder="Tên sản phẩm">
+                <input type="text" class="form-control" required="" name="PR_name" id="inputEmail3" placeholder="Tên sản phẩm">
               </div>
             </div>
             <div class="form-group">
              <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
              <div class="col-sm-4">
-              <select id="danhmuc" name="CA_id" class="form-control select2">
+              <select id="danhmuc" name="CA_id" required="" class="form-control select2">
                 @foreach($a_Cates as $a_cate)
                   <option value="{{$a_cate['CA_id']}}">{{$a_cate['CA_name']}}</option>
                 @endforeach
@@ -36,7 +36,7 @@
          <div class="form-group">
           <label for="price" class="col-sm-2 control-label">Giá</label>
           <div class="col-sm-3">
-            <input type="number" name="PR_price" class="form-control" id="price" placeholder="Giá">
+            <input type="number" name="PR_price" required="" class="form-control" id="price" placeholder="Giá">
           </div>
         </div>
         <div class="form-group">
@@ -48,7 +48,7 @@
         <div class="form-group">
           <label for="quantity" class="col-sm-2 control-label">Số lượng</label>
           <div class="col-sm-3">
-            <input type="number" name="PR_quantity" class="form-control" id="quantity" placeholder="Số lượng">
+            <input type="number" name="PR_quantity" required="" class="form-control" id="quantity" placeholder="Số lượng">
           </div>
         </div>
         <div class="form-group">
@@ -81,18 +81,9 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <div class="checkbox">
-              <label>
-                <input name="PR_status" type="checkbox" value="1"> Hiển thị trang chủ
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
           <label for="file-4" class="col-sm-2 control-label">Hình đại diện</label>
           <div class="col-sm-5">
-            <input id="file-4" type="file" name="avatar" class="file" data-upload-url="#" data-theme="fas">
+            <input id="file-4" type="file" required="" name="avatar" class="file" data-upload-url="#" data-theme="fas">
             {{-- <input type="file" name="avatar" class="form-control" id="avatar" placeholder="Mã sản phẩm"> --}}
           </div>
         </div>
@@ -104,11 +95,23 @@
             {{-- <input type="file" name="subavatar[]" multiple class="form-control" id="file-4"> --}}
           </div>
         </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input name="PR_status" type="checkbox" value="1"> Hiển thị trang chủ
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- /.box-body -->
       <div class="box-footer">
-        <button type="submit" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-info pull-right">Sign in</button>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-info pull-left">Sign in</button> 
+          <button class="btn btn-default"><a href="{{route('admin.product.index')}}">Cancel</a></button>
+        </div>
       </div>
       <!-- /.box-footer -->
     </form>
