@@ -10,6 +10,13 @@
    folder instead of downloading all of them to reduce the load. -->
    <link rel="stylesheet" href="{{ url('admin/') }}/dist/css/skins/_all-skins.min.css">
 
+
+
+   <link href="{{ url('admin/upload') }}/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
+   <link href="{{ url('admin/upload') }}/themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css"/>
+
+
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>

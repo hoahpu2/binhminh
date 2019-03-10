@@ -20,6 +20,8 @@ Route::get('admin-logout',['as'=>'admin.dangxuat','uses'=>'admin\ProfileControll
 Route::get('/admin-login', function () {
     return view('admin.login');
 })->name('admin-login');
+
+Route::get('admin-error',['as'=>'admin.error','uses'=>'admin\ProfileController@getPageError']);
 //,'middleware'=>'adminLogin'
 
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
@@ -47,10 +49,10 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	Route::group(['prefix'=>'slider'],function(){
 		Route::get('index',['as'=>'admin.slider.index','uses'=>'admin\SliderController@index']);
 		Route::get('add',['as'=>'admin.slider.getAdd','uses'=>'admin\SliderController@getAdd']);
-		Route::post('add',['as'=>'admin.slider.postAdd','uses'=>'SliderController@postAdd']);
-		Route::get('delete/{id}',['as'=>'admin.slider.getDelete','uses'=>'SliderController@getDelete']);
-		Route::get('edit/{id}',['as'=>'admin.slider.getEdit','uses'=>'SliderController@getEdit']);
-		Route::post('edit/{id}',['as'=>'admin.slider.postEdit','uses'=>'SliderController@postEdit']);
+		Route::post('add',['as'=>'admin.slider.postAdd','uses'=>'admin\SliderController@postAdd']);
+		Route::get('delete/{id}',['as'=>'admin.slider.getDelete','uses'=>'admin\SliderController@getDelete']);
+		Route::get('edit/{id}',['as'=>'admin.slider.getEdit','uses'=>'admin\SliderController@getEdit']);
+		Route::post('edit/{id}',['as'=>'admin.slider.postEdit','uses'=>'admin\SliderController@postEdit']);
 	});
 
 	/* News */

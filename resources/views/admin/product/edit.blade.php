@@ -90,15 +90,20 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="avatar" class="col-sm-2 control-label">Hình đại diện</label>
-          <div class="col-sm-2">
-            <input type="file" name="avatar" class="form-control" id="avatar" placeholder="Mã sản phẩm">
+          <label for="file-4" class="col-sm-2 control-label">Hình đại diện</label>
+          <div class="col-sm-5">
+            {{-- <input type="file" name="avatar" class="form-control" id="avatar" placeholder="Mã sản phẩm"> --}}
+            <input id="file-4" type="file" name="avatar" class="file" data-upload-url="#" data-theme="fas">
+          </div>
+          <div class="col-sm-5">
+            <img  class="thumbnail" src="{{url('resources/upload/product/')}}/{{$a_Pros['PR_avatar']}}" alt="{{$a_Pros['PR_avatar']}}"  width="200px" height="200px">
           </div>
         </div>
         <div class="form-group">
-          <label for="subavatar" class="col-sm-2 control-label">Hình ảnh kèm theo</label>
-          <div class="col-sm-2">
-            <input type="file" name="subavatar[]" multiple class="form-control" id="subavatar" placeholder="Mã sản phẩm">
+          <label for="file-4" class="col-sm-2 control-label">Hình ảnh kèm theo</label>
+          <div class="col-sm-8">
+            {{-- <input type="file" name="subavatar[]" multiple class="form-control" id="subavatar" placeholder="Mã sản phẩm"> --}}
+            <input id="file-4" type="file" name="subavatar[]" multiple class="file" data-upload-url="#" data-theme="fas">
           </div>
         </div>
       </div>

@@ -7,6 +7,8 @@ use App\Product;
 use App\Category;
 use App\Product_images;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Contracts\Encryption\DecryptException;
 use Input;
 use File;
 use Storage;
@@ -19,14 +21,12 @@ class ProductController extends Controller
         //test
 		$a_Pro = Product::select()->get()->toArray();
 		if ($a_Pro) {
-			// foreach ($a_Pro as $key => $value) {
-			// 	if ($value['CA_parentId'] == 0) {
-			// 		$a_Pro[$key]['parentId'] = 'Danh mục cha';
-			// 		continue;
-				// }
-				// $getCate = Category::select('CA_name')->where('CA_id', $value['CA_parentId'])->get()->toArray();
-				// $a_Pro[$key]['parentId'] = $getCate[0]['CA_name'];
-			// }
+			foreach ($a_Pro as $key => $value) {
+                // dd($value);
+				$getCate = Category::select('CA_name')->where('CA_id', $value['PR_CA_id'])->get()->toArray();
+				$a_Pro[$key]['parentId'] = $getCate[0]['CA_name'];
+                $a_Pro[$key]['PR_en_id'] = Crypt::encryptString($value['PR_id']);
+			}
 		}
 		
 		$asset = array('PR','pro.index');
@@ -38,18 +38,23 @@ class ProductController extends Controller
     	// dd($id);
     	// $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $id)->get()->toArray();
     	$a_Cates = Category::select('CA_name','CA_id','CA_status')->get()->toArray();
-    	$asset = array('PR','pro.add');
+    	$asset = array('PR','pro.add','editer');
     	return view('admin.product.add',compact('asset','a_Cates'));
     }
 
     public function getEdit($id)
     {
+        try {
+            $decrypted = Crypt::decryptString($id);
+        } catch (DecryptException $e) {
+            return redirect()->route('admin.error');
+        }
         // dd($id);
         // $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $id)->get()->toArray();
-        $a_Pros = Product::find($id)->toArray();
+        $a_Pros = Product::find($decrypted)->toArray();
         $a_Cates = Category::select('CA_name','CA_id','CA_status')->get()->toArray();
         // dd($a_Pros['PR_id']);
-        $asset = array('PR','pro.add');
+        $asset = array('PR','pro.add','editer');
         return view('admin.product.edit',compact('asset','a_Pros','a_Cates'));
     }
 

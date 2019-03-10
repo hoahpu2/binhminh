@@ -22,10 +22,10 @@
           <table class="table table-hover">
             <tr>
               <th>STT</th>
-              <th>Tên DM</th>
+              <th>Hình ảnh</th>
+              <th>Alt</th>
               <th>Ngày tạo</th>
               <th>Ngày sửa</th>
-              <th>Danh mục cha</th>
               <th>Trạng thái</th>
               <th>Hành động</th>
             </tr>
@@ -35,7 +35,10 @@
                {{$loop->index+1}}
              </td>
              <td>
-              {{$element['CA_name']}}
+              <img src="{{url('resources/upload/slider/')}}/{{$element['SL_url']}}" alt="" class="thumbnail" width="400px" height="200px">
+            </td>
+            <td>
+              {{$element['SL_alt']}}
             </td>
             <td>
               {{$element['created_at']}}
@@ -44,10 +47,7 @@
               {{$element['updated_at']}}
             </td>
             <td>
-              {{$element['parentId']}}
-            </td>
-            <td>
-             @if($element['CA_status'] == 1)
+             @if($element['SL_status'] == 1)
              <span class="label label-success">Approved</span>  
              @else
              <span class="label label-danger">Denied</span>
@@ -55,7 +55,7 @@
            </td>
 
            <td>
-            <a href="{{route('admin.cate.getAdd',['id' =>$element['CA_id']])}}" class="btn btn-sm btn-primary">
+            <a href="{{route('admin.slider.getEdit',['id' =>$element['SL_en_id']])}}" class="btn btn-sm btn-primary">
               <i class="fa fa-pencil"></i>
             </a>
             <a href="javascript:;" onclick ="confirmRemove('{{route('admin.cate.getDelete',['id' =>$element['CA_id']])}}')" class="btn btn-sm btn-danger">

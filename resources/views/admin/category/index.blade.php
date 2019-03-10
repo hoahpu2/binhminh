@@ -55,7 +55,7 @@
            </td>
 
            <td>
-            <a href="{{route('admin.cate.getAdd',['id' =>$element['CA_id']])}}" class="btn btn-sm btn-primary">
+            <a href="{{route('admin.cate.getAdd',['id' =>$element['CA_en_id']])}}" class="btn btn-sm btn-primary">
               <i class="fa fa-pencil"></i>
             </a>
             <a href="javascript:;" onclick ="confirmRemove('{{route('admin.cate.getDelete',['id' =>$element['CA_id']])}}')" class="btn btn-sm btn-danger">

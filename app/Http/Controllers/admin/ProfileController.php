@@ -71,4 +71,10 @@ class ProfileController extends Controller
     	// Session::flush();
     	return redirect()->route('admin-login');
     }
+
+    public function getPageError()
+    {
+        $asset = array('','','');
+        return view('admin.error.index',compact('asset'));
+    }
 }

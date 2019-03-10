@@ -121,9 +121,10 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="avatar" class="col-sm-2 control-label">Avatar</label>
+                    <label for="file-4" class="col-sm-2 control-label">Avatar</label>
                     <div class="col-sm-10">
-                      <input type="file" class="form-control" name="avatar" id="avatar">
+                      <input id="file-4" type="file" name="avatar" class="file" data-upload-url="#" data-theme="fas">
+                      {{-- <input type="file" class="form-control" name="avatar" id="avatar"> --}}
                     </div>
                   </div>
                   <!-- <div class="form-group">

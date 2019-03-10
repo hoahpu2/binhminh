@@ -48,7 +48,7 @@
               {{$element['updated_at']}}
             </td>
             <td>
-              
+              {{$element['parentId']}}
             </td>
             <td>
              @if($element['PR_status'] == 1)
@@ -59,7 +59,7 @@
            </td>
 
            <td>
-            <a href="{{route('admin.product.getEdit',$element['PR_id'])}}" class="btn btn-sm btn-primary">
+            <a href="{{route('admin.product.getEdit',$element['PR_en_id'])}}" class="btn btn-sm btn-primary">
               <i class="fa fa-pencil"></i>
             </a>
             <a href="javascript:;" onclick ="confirmRemove('')" class="btn btn-sm btn-danger">
