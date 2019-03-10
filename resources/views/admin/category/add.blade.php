@@ -11,7 +11,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" action="{!! route('admin.cate.postAdd') !!}">
+        <form class="form-horizontal" method="POST" action="{!! route('admin.cate.postAdd') !!}"  autocomplete="off">
           @csrf
           <div class="box-body">
             <div class="form-group">
@@ -20,8 +20,8 @@
               <div class="col-sm-5">
                 <input type="text" name="CA_name" required="required" class="form-control" id="CA_name" placeholder="Tên danh mục">
                 @if ($errors->has('CA_name'))
-              <span style="color:red">{{$errors->first('CA_name')}}</span>
-            @endif
+                  <span style="color:red">{{$errors->first('CA_name')}}</span>
+                @endif
               </div>
             </div>
             <div class="form-group">

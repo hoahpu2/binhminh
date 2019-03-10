@@ -24,7 +24,14 @@
 	  $(function () {
 	    // Replace the <textarea id="editor1"> with a CKEditor
 	    // instance, using default configuration.
-	    CKEDITOR.replace('editor1')
+	    CKEDITOR.replace('editor1',{
+            filebrowserBrowseUrl : '{{url('admin/')}}/ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl : '{{url('admin/')}}/ckfinder/ckfinder.html?type=Images',
+            filebrowserFlashBrowseUrl : '{{url('admin/')}}/ckfinder/ckfinder.html?type=Flash',
+            filebrowserUploadUrl : '{{url('admin/')}}/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl : '{{url('admin/')}}/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+            filebrowserFlashUploadUrl : '{{url('admin/')}}/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+        })
 	    //bootstrap WYSIHTML5 - text editor
 	    $('.textarea').wysihtml5()
 	  })
@@ -32,6 +39,9 @@
 @endif
 
 <script>
+    $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+        $("#success-alert").slideUp(500);
+    });
 	// $("#file-4").fileinput({
  //        theme: 'fas',
  //        uploadExtraData: {kvId: '10'}

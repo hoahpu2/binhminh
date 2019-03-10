@@ -19,7 +19,7 @@ class CategoryController extends Controller
 			foreach ($a_Cate as $key => $value) {
                 $a_Cate[$key]['CA_en_id'] = Crypt::encryptString($value['CA_id']);
 				if ($value['CA_parentId'] == 0) {
-					$a_Cate[$key]['parentId'] = 'Danh mục cha';
+					$a_Cate[$key]['parentId'] = '';
 					continue;
 				}
 				$getCate = Category::select('CA_name')->where('CA_id', $value['CA_parentId'])->get()->toArray();

@@ -8,9 +8,9 @@
       <!-- Profile Image -->
       <div class="box box-primary">
         <div class="box-body box-profile">
-          <img class="profile-user-img img-responsive img-circle" src="{{url('resources/upload/useradmin/').'/'.$user[0]['avatar']}}" alt="User profile picture">
+          <img class="profile-user-img img-responsive img-circle" src="{{url('resources/upload/useradmin/').'/'.$user->avatar}}" alt="User profile picture">
 
-          <h3 class="profile-username text-center">Nina Mcintire</h3>
+          <h3 class="profile-username text-center">{{$user->name}}</h3>
 
           <p class="text-muted text-center">Software Engineer</p>
 
@@ -78,26 +78,29 @@
       <div class="nav-tabs-custom">
         <ul class="nav nav-tabs">
           <li class="active"><a href="#settings" data-toggle="tab">Settings</a></li>
-          <li><a href="#activity" data-toggle="tab">Activity</a></li>
           <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane active" id="settings">
-                <form class="form-horizontal" method="POST" action="{!! route('admin.user.postAdd',10) !!}" enctype="multipart/form-data">
+                <form class="form-horizontal" method="POST" action="{!! route('admin.user.postAdd',10) !!}" enctype="multipart/form-data"  autocomplete="off">
+                  @include('admin.massage')
+                  @if ($errors->has('avatar'))
+                        <span style="color:red;text-align: center;">{{$errors->first('avatar')}}</span>
+                      @endif
                   @csrf
-                  <input type="hidden" name="id" value="{{$user[0]['id']}}">
+                  <input type="hidden" name="id" value="{{$user->id}}">
                   <div class="form-group">
                     <label for="name" class="col-sm-2 control-label">Name</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{$user[0]['name']}}">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{$user->name}}">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="email" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{$user[0]['email']}}">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{$user->email}}">
                     </div>
                   </div>
                   <div class="form-group">
@@ -105,19 +108,30 @@
 
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="old_password" name="old_password" placeholder="Mật khẩu cũ">
+                      @if ($errors->has('old_password'))
+                        <span style="color:red">{{$errors->first('old_password')}}</span>
+                      @endif
+                      @if(Session::has('old_passwords'))
+                        <p style="color: red;text-align: left">{!! Session::get('old_passwords') !!}</p>
+                      @endif
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="password" class="col-sm-2 control-label">Mật khẩu mới</label>
-
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu mới">
+                      @if ($errors->has('password'))
+                        <span style="color:red">{{$errors->first('password')}}</span>
+                      @endif
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="re_password" class="col-sm-2 control-label">Nhập lại mật khẩu</label>
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Nhập lại mật khẩu">
+                      @if ($errors->has('re_password'))
+                        <span style="color:red">{{$errors->first('re_password')}}</span>
+                      @endif
                     </div>
                   </div>
                   <div class="form-group">
@@ -142,120 +156,6 @@
                     </div>
                   </div>
                 </form>
-              </div>
-          <div class="active tab-pane" id="activity">
-            <!-- Post -->
-            <div class="post">
-              <div class="user-block">
-                <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
-                <span class="username">
-                  <a href="#">Jonathan Burke Jr.</a>
-                  <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
-                </span>
-                <span class="description">Shared publicly - 7:30 PM today</span>
-              </div>
-              <!-- /.user-block -->
-              <p>
-                Lorem ipsum represents a long-held tradition for designers,
-                typographers and the like. Some people hate it and argue for
-                its demise, but others ignore the hate as they create awesome
-                tools to help create filler text for everyone from bacon lovers
-                to Charlie Sheen fans.
-              </p>
-              <ul class="list-inline">
-                <li><a href="#" class="link-black text-sm"><i class="fa fa-share margin-r-5"></i> Share</a></li>
-                <li><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a>
-                </li>
-                <li class="pull-right">
-                  <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
-                  (5)</a></li>
-                </ul>
-
-                <input class="form-control input-sm" type="text" placeholder="Type a comment">
-              </div>
-              <!-- /.post -->
-
-              <!-- Post -->
-              <div class="post clearfix">
-                <div class="user-block">
-                  <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
-                  <span class="username">
-                    <a href="#">Sarah Ross</a>
-                    <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
-                  </span>
-                  <span class="description">Sent you a message - 3 days ago</span>
-                </div>
-                <!-- /.user-block -->
-                <p>
-                  Lorem ipsum represents a long-held tradition for designers,
-                  typographers and the like. Some people hate it and argue for
-                  its demise, but others ignore the hate as they create awesome
-                  tools to help create filler text for everyone from bacon lovers
-                  to Charlie Sheen fans.
-                </p>
-
-                <form class="form-horizontal">
-                  <div class="form-group margin-bottom-none">
-                    <div class="col-sm-9">
-                      <input class="form-control input-sm" placeholder="Response">
-                    </div>
-                    <div class="col-sm-3">
-                      <button type="submit" class="btn btn-danger pull-right btn-block btn-sm">Send</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <!-- /.post -->
-
-              <!-- Post -->
-              <div class="post">
-                <div class="user-block">
-                  <img class="img-circle img-bordered-sm" src="../../dist/img/user6-128x128.jpg" alt="User Image">
-                  <span class="username">
-                    <a href="#">Adam Jones</a>
-                    <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
-                  </span>
-                  <span class="description">Posted 5 photos - 5 days ago</span>
-                </div>
-                <!-- /.user-block -->
-                <div class="row margin-bottom">
-                  <div class="col-sm-6">
-                    <img class="img-responsive" src="../../dist/img/photo1.png" alt="Photo">
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-sm-6">
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <img class="img-responsive" src="../../dist/img/photo2.png" alt="Photo">
-                        <br>
-                        <img class="img-responsive" src="../../dist/img/photo3.jpg" alt="Photo">
-                      </div>
-                      <!-- /.col -->
-                      <div class="col-sm-6">
-                        <img class="img-responsive" src="../../dist/img/photo4.jpg" alt="Photo">
-                        <br>
-                        <img class="img-responsive" src="../../dist/img/photo1.png" alt="Photo">
-                      </div>
-                      <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                  </div>
-                  <!-- /.col -->
-                </div>
-                <!-- /.row -->
-
-                <ul class="list-inline">
-                  <li><a href="#" class="link-black text-sm"><i class="fa fa-share margin-r-5"></i> Share</a></li>
-                  <li><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a>
-                  </li>
-                  <li class="pull-right">
-                    <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
-                    (5)</a></li>
-                  </ul>
-
-                  <input class="form-control input-sm" type="text" placeholder="Type a comment">
-                </div>
-                <!-- /.post -->
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="timeline">

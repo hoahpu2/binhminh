@@ -13,7 +13,7 @@ class ProfileController extends Controller
     public function index($id)
     {
     	// dd(bcrypt('hoa1234'));
-    	$user = User::select()->get()->toArray();
+    	$user = User::find(1);
     	// dd($user);
         $asset = array('','');
         $c_header = array('Quản lý Profile','Sửa Profile');
@@ -24,20 +24,38 @@ class ProfileController extends Controller
     {
         if (isset($request->old_password) || isset($request->password) || isset($request->re_password)) {
             $request->validate([
-                'email' => 'required|max:20',
-                'old_password' => 'required|min:8',
-                'password' => 'required|min:8',
-                're_password' => 'required|same:password',
+                    'email' => 'required|max:20',
+                    'old_password' => 'required|min:6',
+                    'password' => 'required|min:6',
+                    're_password' => 'required|same:password',
+                    'avatar' => 'size:5000',
                 ],
                 [
-                    'required' => 'Email Không được để trống',
-                    'max' => 'Email Không được lớn hơn :max',
+                    'email.required' => 'Email Không được để trống',
+                    'email.max' => 'Email Không được lớn hơn :max',
+                    'old_password.required' => 'Mật khẩu cũ Không được để trống',
+                    'old_password.min' => 'Mật khẩu cũ phải lớn hơn 6 ký tự',
+                    'password.required' => 'Mật khẩu mới Không được để trống',
+                    'password.min' => 'Mật khẩu mới phải lớn hơn 6 ký tự',
+                    're_password.required' => 'Mật khẩu nhập lại Không được để trống',
+                    're_password.same' => 'Mật khẩu nhập lại phải giống mật khẩu mới',
                 ]);
             $user = User::select()->where('password',bcrypt($request->old_password))->get();
-            if (empty($user)) {
-                return redirect()->route('admin.user.index',$request->id)->with(['flash_lever'=>'false','flash_message'=>'Mật khẩu cũ không đúng']);
+            // dd(Auth::attempt(['email'=>$request->email,'password'=>$request->old_password]));
+            // dd($user->getAuthPassword());
+            if (!Auth::attempt(['email'=>$request->email,'password'=>$request->old_password])) {
+                return redirect()->route('admin.user.index',$request->id)->with(['old_passwords'=>'Mật khẩu cũ không đúng']);
             }
         }
+
+        if (!empty($request->file('avatar'))) {
+            $request->validate([
+                'avatar' => 'max:5000',
+            ],[
+                'avatar.max' => 'Ảnh đại diện không nặng quá 5Mb',
+            ]);
+        }
+
     	$user = User::find($request->id);
     	$user->name = $request->name;
 		$user->email = $request->email;
@@ -56,7 +74,7 @@ class ProfileController extends Controller
 		}
 		
 		$user->save();
-		return redirect()->route('admin.user.index',$request->id)->with(['flash_lever'=>'success','flash_message'=>'Thêm mới thành công']);
+		return redirect()->route('admin.user.index',$request->id)->with(['flash_lever'=>'success','flash_message'=>'Cập nhật thành công']);
     }
 
     public function postdangnhapAdmin (Request $request)

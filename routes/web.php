@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::post('admin-check',['as'=>'admin.dangnhap','uses'=>'admin\ProfileController@postdangnhapAdmin']);
 Route::get('admin-logout',['as'=>'admin.dangxuat','uses'=>'admin\ProfileController@getdangxuatAdmin']);
 Route::get('/admin-login', function () {
+	// dd(bcrypt('123456'));
     return view('admin.login');
 })->name('admin-login');
 

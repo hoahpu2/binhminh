@@ -12,15 +12,22 @@
         <div class="box-header with-border">
           <h3 class="box-title">Thêm mới sản phẩm</h3>
         </div>
+        
         <!-- /.box-header -->
         <!-- form start -->
         <form action="{!! route('admin.product.postAdd') !!}" class="form-horizontal" method="POST" enctype="multipart/form-data" autocomplete="off">
           @csrf
           <div class="box-body">
+            @if(Session::has('avatar_error'))
+              <p style="color: red;text-align: center">{!! Session::get('avatar_error') !!}</p><br>
+            @endif
             <div class="form-group">
               <label for="inputEmail3" class="col-sm-2 control-label">Tên sản phẩm</label>
               <div class="col-sm-6">
-                <input type="text" class="form-control" required="" name="PR_name" id="inputEmail3" placeholder="Tên sản phẩm">
+                <input type="text" class="form-control" required="" name="PR_name" id="inputEmail3" placeholder="Tên sản phẩm" value="{{old('PR_name')}}">
+                @if ($errors->has('PR_name'))
+                  <span style="color:red">{{$errors->first('PR_name')}}</span>
+                @endif
               </div>
             </div>
             <div class="form-group">
@@ -36,48 +43,48 @@
          <div class="form-group">
           <label for="price" class="col-sm-2 control-label">Giá</label>
           <div class="col-sm-3">
-            <input type="number" name="PR_price" required="" class="form-control" id="price" placeholder="Giá">
+            <input type="number" name="PR_price" required="" class="form-control" id="price" placeholder="Giá" value="{{old('PR_price')}}">
           </div>
         </div>
         <div class="form-group">
           <label for="sale" class="col-sm-2 control-label">Giảm giá</label>
           <div class="col-sm-3">
-            <input type="number" class="form-control" name="PR_sale" id="sale" placeholder="Giảm giá">
+            <input type="number" class="form-control" name="PR_sale" id="sale" placeholder="Giảm giá"  value="{{old('PR_sale')}}">
           </div>
         </div>
         <div class="form-group">
           <label for="quantity" class="col-sm-2 control-label">Số lượng</label>
           <div class="col-sm-3">
-            <input type="number" name="PR_quantity" required="" class="form-control" id="quantity" placeholder="Số lượng">
+            <input type="number" name="PR_quantity" required="" class="form-control" id="quantity" placeholder="Số lượng" value="{{old('PR_quantity')}}">
           </div>
         </div>
         <div class="form-group">
           <label for="masp" class="col-sm-2 control-label">Mã sản phẩm</label>
           <div class="col-sm-2">
-            <input type="text" name="PR_SKU" class="form-control" id="masp" placeholder="Mã sản phẩm">
+            <input type="text" name="PR_SKU" class="form-control" id="masp" placeholder="Mã sản phẩm" value="{{old('PR_SKU')}}">
           </div>
         </div>
         <div class="form-group">
           <label for="producer" class="col-sm-2 control-label">Nhà cung cấp</label>
           <div class="col-sm-3">
-            <input type="text" name="PR_producer" class="form-control" id="producer" placeholder="Nhà cung cấp">
+            <input type="text" name="PR_producer" class="form-control" id="producer" placeholder="Nhà cung cấp" value="{{old('PR_producer')}}">
           </div>
         </div>
         <div class="form-group">
           <label for="descrip" class="col-sm-2 control-label">Mô tả</label>
           <div class="col-sm-6">
-            <textarea class="form-control" rows="3" name="PR_descript" id="descrip" placeholder="Enter ..."></textarea>
+            <textarea class="form-control" rows="3" name="PR_descript" id="descrip" placeholder="Enter ..."> {{old('PR_descript')}}</textarea>
           </div>
         </div>
         <div class="form-group">
           <label for="editor1" class="col-sm-2 control-label">Chi tiết</label>
           <div class="col-sm-9">
             <!-- tools box -->
-            <div class="box-body pad">
+            {{-- <div class="box-body pad"> --}}
               <textarea id="editor1" name="PR_detail" rows="10" cols="80">
-                This is my textarea to be replaced with CKEditor.
+                 {{old('PR_detail')}}
               </textarea>
-            </div>
+            {{-- </div> --}}
           </div>
         </div>
         <div class="form-group">

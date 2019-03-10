@@ -14,19 +14,22 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form action="{!! route('admin.product.postEdit',$a_Pros['PR_id']) !!}" class="form-horizontal" method="POST" enctype="multipart/form-data">
+        <form action="{!! route('admin.product.postEdit',$a_Pros['PR_id']) !!}" class="form-horizontal" method="POST" enctype="multipart/form-data" autocomplete="off">
           @csrf
           <div class="box-body">
+            @if(Session::has('avatar_error'))
+              <p style="color: red;text-align: center">{!! Session::get('avatar_error') !!}</p><br>
+            @endif
             <div class="form-group">
               <label for="inputEmail3" class="col-sm-2 control-label">Tên sản phẩm</label>
               <div class="col-sm-6">
-                <input type="text" value="{{$a_Pros['PR_name']}}" class="form-control" name="PR_name" id="inputEmail3" placeholder="Tên sản phẩm">
+                <input type="text" value="{{$a_Pros['PR_name']}}" required="" class="form-control" name="PR_name" id="inputEmail3" placeholder="Tên sản phẩm">
               </div>
             </div>
             <div class="form-group">
              <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
              <div class="col-sm-4">
-              <select id="danhmuc" name="CA_id" class="form-control select2">
+              <select id="danhmuc" name="CA_id" required="" class="form-control select2">
                 @foreach($a_Cates as $a_cate)
                   <option <?php echo($a_cate['CA_id']==$a_Pros['PR_CA_id'])?'selected':'' ?> value="{{$a_cate['CA_id']}}">{{$a_cate['CA_name']}}</option>
                 @endforeach
@@ -48,7 +51,7 @@
         <div class="form-group">
           <label for="quantity" class="col-sm-2 control-label">Số lượng</label>
           <div class="col-sm-3">
-            <input type="number" value="{{$a_Pros['PR_quantity']}}" name="PR_quantity" class="form-control" id="quantity" placeholder="Số lượng">
+            <input type="number" value="{{$a_Pros['PR_quantity']}}" required="" name="PR_quantity" class="form-control" id="quantity" placeholder="Số lượng">
           </div>
         </div>
         <div class="form-group">
