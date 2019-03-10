@@ -100,7 +100,7 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="<?php if($asset[1] == 'add') echo'active'; ?>"><a href="{{route('admin.cate.getAdd','eyJpdiI6IjhEZHFMK2JBdjI0M3l1SXZXZkhZeXc9PSIsInZhbHVlIjoiRm14T3hjQlwvWU9MYmpJajdLbTBGbEE9PSIsIm1hYyI6ImZlMjQ1YjhiNGU3NDFhOTdjYzllM2I4ZjRkOWJmMzMxNmIzNzc1YWQ2YzQzYzVlZGZiYzA5ODU2MTM2N2FlNjMifQ==')}}"><i class="fa fa-circle-o"></i> Thêm mới danh mục</a></li>
+              <li class="<?php if($asset[1] == 'add') echo'active'; ?>"><a href="{{route('admin.cate.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới danh mục</a></li>
               <li class="<?php if($asset[1] == 'index') echo'active'; ?>"><a href="{{route('admin.cate.index')}}"><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
               
             </ul>
