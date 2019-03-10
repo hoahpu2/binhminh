@@ -23,6 +23,7 @@
 
 
 
+
     <style>
         body{
             font-family:Arial, "Helvetica Neue", "Helvetica", Tahoma, Verdana, sans-serif;
@@ -42,50 +43,15 @@
 <body>
 <div class="wrap">
     <!--start header-->
-@include('sub.client.header-detail')
+@include('sub.client.header')
 <!-- end header -->
     <!-- start main-->
-    @include('sub.client.main-detail')
-
-    <script type="text/javascript">
-
-        $('.container').imagesLoaded( function() {
-            $("#exzoom").exzoom({
-                autoPlay: false,
-            });
-            $("#exzoom").removeClass('hidden')
-        });
-
-    </script>
+    @yield('content')
     <!-- end main -->
     <!-- start footer-->
-{{--@include('sub.client.footer')--}}
+</div>
+@include('sub.client.footer')
 <!-- end footer-->
-    <link href="{{asset('css/flexslider.css')}}" rel='stylesheet' type='text/css' />
-    <script>
-        function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
 
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
-            $('.gallery-responsive').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-        });
-
-    </script>
 </body>
 </html>

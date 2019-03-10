@@ -17,7 +17,7 @@
         @include('sub.client.header')
     <!-- end header -->
     <!-- start main-->
-        @include('sub.client.main')
+      @yield('content')
     <!-- end main -->
     <!-- start footer-->
     @include('sub.client.footer')

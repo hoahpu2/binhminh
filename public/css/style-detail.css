@@ -1,4 +1,6 @@
-
+.wrap-content{
+    font-family: Arial;
+}
 .content{
     display: table;
     width:75%;
@@ -161,6 +163,29 @@
     display: none !important;
 
 }
+.recommend .content_top{
+    margin :20px 0;
+}
+.button-contact{
+    margin-top: 30px;
+    background: none repeat scroll 0 0 #f59123;
+    box-shadow: 0 -3px 0 0 #c27806 inset;
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: 0 -3px 0 0 #248c50 inset;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 40%;
+    padding:15px;
+}
+
 
 
 
