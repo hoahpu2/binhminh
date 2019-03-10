@@ -81,15 +81,6 @@
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <div class="checkbox">
-              <label>
-                <input name="PR_status" <?php echo($a_Pros['PR_status']==1)?'checked':'' ?> type="checkbox" value="1"> Hiển thị trang chủ
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
           <label for="file-4" class="col-sm-2 control-label">Hình đại diện</label>
           <div class="col-sm-5">
             {{-- <input type="file" name="avatar" class="form-control" id="avatar" placeholder="Mã sản phẩm"> --}}
@@ -106,11 +97,23 @@
             <input id="file-4" type="file" name="subavatar[]" multiple class="file" data-upload-url="#" data-theme="fas">
           </div>
         </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input name="PR_status" <?php echo($a_Pros['PR_status']==1)?'checked':'' ?> type="checkbox" value="1"> Hiển thị trang chủ
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- /.box-body -->
       <div class="box-footer">
-        <button type="submit" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-info pull-right">Sign in</button>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-info pull-left">Sign in</button> 
+          <button class="btn btn-default"><a href="{{route('admin.product.index')}}">Cancel</a></button>
+        </div>
       </div>
       <!-- /.box-footer -->
     </form>

@@ -52,7 +52,7 @@
               <div class="col-sm-5"></div>
               <div class="col-sm-5">
                 <button type="submit" class="btn btn-info pull-center">Sign in</button>
-                <button class="btn btn-default">Cancel</button>
+                <button class="btn btn-default"><a href="{{route('admin.cate.index')}}">Cancel</a></button>
               </div>              
             </div>
           </div>
