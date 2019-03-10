@@ -7,7 +7,7 @@
       <!-- general form elements -->
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title">Quick Example</h3>
+          <h3 class="box-title"><b>{!!$c_header[2]!!}</b></h3>
         </div>
         <!-- /.box-header -->
         <!-- form start -->
@@ -15,8 +15,8 @@
           @csrf
           <div class="box-body">
             <div class="form-group">
-              <label for="CA_name" class="col-sm-2 control-label">Tên danh mục</label>
-
+              <label for="CA_name" class="col-sm-2 control-label">Tên danh mục <span style="color: red"> *</span></label>
+            
               <div class="col-sm-5">
                 <input type="text" name="CA_name" required="required" class="form-control" id="CA_name" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
@@ -31,7 +31,7 @@
                 <select name="CA_parent" class="form-control select2" id="CA_parent">
                   <option value="0">Danh mục cha</option>
                   @foreach($a_Cates as $cate)
-                  <option value="{{$cate['CA_id']}}" <?php echo($cate['CA_status']==1)?'':'disabled'; echo(isset($a_CateOne[0])&&$a_CateOne[0]['CA_parentId'] == $cate['CA_id'])?' selected':' aaa'; ?> >{{$cate['CA_name']}}</option>
+                  <option value="{{$cate['CA_id']}}" <?php echo($cate['CA_status']==1)?'':'disabled'; echo(isset($a_CateOne[0])&&$a_CateOne[0]['CA_parentId'] == $cate['CA_id'])?' selected':''; ?> >{{$cate['CA_name']}}</option>
                   @endforeach
                 </select>
               </div>

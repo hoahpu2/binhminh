@@ -2,7 +2,7 @@
 @section('content')
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+  {{--   <section class="content-header">
       <h1>
         404 Error Page
       </h1>
@@ -11,7 +11,7 @@
         <li><a href="#">Examples</a></li>
         <li class="active">404 error</li>
       </ol>
-    </section>
+    </section> --}}
 
     <!-- Main content -->
     <section class="content">

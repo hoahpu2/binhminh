@@ -15,12 +15,29 @@ class ProfileController extends Controller
     	// dd(bcrypt('hoa1234'));
     	$user = User::select()->get()->toArray();
     	// dd($user);
-    	$asset = array('','');
-    	return view('admin.profile.index',compact('asset','user'));
+        $asset = array('','');
+        $c_header = array('Quản lý Profile','Sửa Profile');
+    	return view('admin.profile.index',compact('asset','user','c_header'));
     }
 
     public function postAdd(Request $request)
     {
+        if (isset($request->old_password) || isset($request->password) || isset($request->re_password)) {
+            $request->validate([
+                'email' => 'required|max:20',
+                'old_password' => 'required|min:8',
+                'password' => 'required|min:8',
+                're_password' => 'required|same:password',
+                ],
+                [
+                    'required' => 'Email Không được để trống',
+                    'max' => 'Email Không được lớn hơn :max',
+                ]);
+            $user = User::select()->where('password',bcrypt($request->old_password))->get();
+            if (empty($user)) {
+                return redirect()->route('admin.user.index',$request->id)->with(['flash_lever'=>'false','flash_message'=>'Mật khẩu cũ không đúng']);
+            }
+        }
     	$user = User::find($request->id);
     	$user->name = $request->name;
 		$user->email = $request->email;
@@ -36,8 +53,6 @@ class ProfileController extends Controller
 			$file_names = str_random(4).$file_name;
 			$user->avatar = $file_names;
 			$request->file('avatar')->move('resources/upload/useradmin/',$file_names);
-		} else {
-			//$user->avatar = 'defaull.png';
 		}
 		
 		$user->save();
@@ -75,6 +90,7 @@ class ProfileController extends Controller
     public function getPageError()
     {
         $asset = array('','','');
-        return view('admin.error.index',compact('asset'));
+        $c_header = array('Page Not found','404 Error Page');
+        return view('admin.error.index',compact('asset','c_header'));
     }
 }

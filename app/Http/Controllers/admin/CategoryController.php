@@ -12,6 +12,7 @@ class CategoryController extends Controller
 {
 	public function index()
 	{
+        // dd(Crypt::encryptString(0));
         //test
 		$a_Cate = Category::select('CA_name','CA_alias','CA_status','CA_parentId','created_at','updated_at','CA_id')->get()->toArray();
 		if ($a_Cate) {
@@ -27,7 +28,8 @@ class CategoryController extends Controller
 		}
 		// dd($a_Cate);
 		$asset = array('DM','index');
-    	return view('admin.category.index',compact('a_Cate','asset'));
+        $c_header = array('Quản lý danh mục','Danh sách danh mục');
+    	return view('admin.category.index',compact('a_Cate','asset','c_header'));
 	}
 
     public function getAdd($id)
@@ -39,10 +41,16 @@ class CategoryController extends Controller
         }
     	// dd($id);
     	$a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $decrypted)->get()->toArray();
+        // dd($a_CateOne);
+        if (empty($a_CateOne)) {
+            $a_CateOne[0]['CA_parentId'] = 0;
+            $a_CateOne[0]['CA_status'] = 0;
+        }
         $a_CateOne[0]['CA_en_id'] = $id;
     	$a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
     	$asset = array('DM','add');
-    	return view('admin.category.add',compact('a_Cates','asset','a_CateOne'));
+        $c_header = array('Quản lý danh mục','Thêm mới danh mục','Vui lòng không để trống những trường (<span style="color:red">*</span>)');
+    	return view('admin.category.add',compact('a_Cates','asset','a_CateOne','c_header'));
     }
 
     public function postAdd(Request $request,$id)

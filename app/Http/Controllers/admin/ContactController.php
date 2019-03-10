@@ -14,7 +14,8 @@ class ContactController extends Controller
     {
     	$contact = Contact::select()->get()->toArray();
     	$asset = array('CTT','');
-    	return view('admin.contact.index',compact('asset','contact'));
+        $c_header = array('Quản lý liên hệ','Quản lý liên hệ');
+    	return view('admin.contact.index',compact('asset','contact','c_header'));
     }
 
     public function postAdd(Request $request)

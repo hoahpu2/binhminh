@@ -30,7 +30,8 @@ class ProductController extends Controller
 		}
 		
 		$asset = array('PR','pro.index');
-    	return view('admin.product.index',compact('a_Pro','asset'));
+        $c_header = array('Quản lý sản phẩm','Danh sách sản phẩm');
+    	return view('admin.product.index',compact('a_Pro','asset','c_header'));
 	}
 
     public function getAdd()
@@ -39,7 +40,8 @@ class ProductController extends Controller
     	// $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $id)->get()->toArray();
     	$a_Cates = Category::select('CA_name','CA_id','CA_status')->get()->toArray();
     	$asset = array('PR','pro.add','editer');
-    	return view('admin.product.add',compact('asset','a_Cates'));
+        $c_header = array('Quản lý sản phẩm','Thêm mới sản phẩm');
+    	return view('admin.product.add',compact('asset','a_Cates','c_header'));
     }
 
     public function getEdit($id)
@@ -55,7 +57,8 @@ class ProductController extends Controller
         $a_Cates = Category::select('CA_name','CA_id','CA_status')->get()->toArray();
         // dd($a_Pros['PR_id']);
         $asset = array('PR','pro.add','editer');
-        return view('admin.product.edit',compact('asset','a_Pros','a_Cates'));
+        $c_header = array('Quản lý sản phẩm','Sửa sản phẩm');
+        return view('admin.product.edit',compact('asset','a_Pros','a_Cates','c_header'));
     }
 
     public function postAdd(Request $request)
