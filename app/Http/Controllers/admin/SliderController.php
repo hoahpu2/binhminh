@@ -68,12 +68,15 @@ class SliderController extends Controller
         } catch (DecryptException $e) {
             return redirect()->route('admin.error');
         }
-        $a_DataSize = getimagesize($request->file('SL_url'));
-        $a_width = (int)$a_DataSize[0];
-        $a_height = (int)$a_DataSize[1];
-        if ($a_width / $a_height !== 2) {
-            return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh Slider theo tỷ lệ 2:1'])->withInput();
+        if (!empty($request->file('SL_url'))) {
+            $a_DataSize = getimagesize($request->file('SL_url'));
+            $a_width = (int)$a_DataSize[0];
+            $a_height = (int)$a_DataSize[1];
+            if ($a_width / $a_height !== 2) {
+                return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh Slider theo tỷ lệ 2:1'])->withInput();
+            }
         }
+        
         // dd($id);
         $slider = Slider::find($decrypted);
         $slider->SL_alt = $request->SL_alt;

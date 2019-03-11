@@ -14,10 +14,10 @@ Route::get('/','HomeController@index')->name('homepage');
 Route::get('danh-muc/{slug}','DetailProductController@getList')->name('getList');
 Route::get('san-pham/{slug}','DetailProductController@index')->name('detail');
 
-Route::get('/', function () {
-	// dd('aa');
-    return view('admin.login');
-});
+// Route::get('/', function () {
+// 	dd(bcrypt('123456'));
+//     // return view('admin.login');
+// });
 Route::post('admin-check',['as'=>'admin.dangnhap','uses'=>'admin\ProfileController@postdangnhapAdmin']);
 Route::get('admin-logout',['as'=>'admin.dangxuat','uses'=>'admin\ProfileController@getdangxuatAdmin']);
 Route::get('/admin-login', function () {
