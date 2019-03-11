@@ -63,6 +63,22 @@ class ProductController extends Controller
 
     public function postAdd(Request $request)
     {
+        $request->validate([
+            'PR_name' => 'required|unique:product',
+            'avatar' => 'required'
+        ],
+        [
+            'PR_name.required' => 'Tên Không được để trống',
+            'PR_name.unique' => 'Tên sản phẩm đã tồn tại',
+            'avatar.required' => 'Chọn ảnh Avatar'
+        ]);
+        $a_DataSize = getimagesize($request->file('avatar'));
+        $a_width = (int)$a_DataSize[0];
+        $a_height = (int)$a_DataSize[1];
+        if ($a_height / $a_width !== 1) {
+            return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh đại diện theo tỷ lệ 1:1'])->withInput();
+        }
+
         // $file_name = $request->file('avatar')->getClientOriginalName();
         // dd($file_name);
         $file_names = str_random(4).$request->file('avatar')->getClientOriginalName();
@@ -71,16 +87,16 @@ class ProductController extends Controller
         $product->PR_name = $request->PR_name;
         $product->PR_CA_id = $request->CA_id;
         $product->PR_alias = str_slug($request->PR_name);
-        $product->PR_price = $request->PR_price;
-        $product->PR_quantity = $request->PR_quantity;
-        $product->PR_SKU = $request->PR_SKU;
+        $product->PR_price = isset($request->PR_price)?$request->PR_price:0;
+        $product->PR_quantity = isset($request->PR_quantity)?$request->PR_quantity:0;
+        $product->PR_SKU = isset($request->PR_SKU)?$request->PR_SKU:' ';
         $product->PR_avatar = $file_names;
-        $product->PR_sortDesc = $request->PR_descript;
-        $product->PR_sale = $request->PR_sale;
+        $product->PR_sortDesc = isset($request->PR_descript)?$request->PR_descript:' ';
+        $product->PR_sale = isset($request->PR_sale)?$request->PR_sale:0;
         $product->PR_view = 0;
         $product->PR_numberBuy = 0;
-        $product->PR_content = $request->PR_detail;
-        $product->PR_producer = $request->PR_producer;
+        $product->PR_content = isset($request->PR_detail)?$request->PR_detail:' ';
+        $product->PR_producer = isset($request->PR_producer)?$request->PR_producer:' ';
         $product->PR_status = isset($request->PR_status)?1:0;
         $request->file('avatar')->move('resources/upload/product/',$file_names);
         $product->save();
@@ -102,19 +118,26 @@ class ProductController extends Controller
 
     public function postEdit(Request $request,$id)
     {
+        $a_DataSize = getimagesize($request->file('avatar'));
+        $a_width = (int)$a_DataSize[0];
+        $a_height = (int)$a_DataSize[1];
+        if ($a_height / $a_width !== 1) {
+            return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh đại diện theo tỷ lệ 1:1'])->withInput();
+        }
+        
         $product = Product::find($id);
         $product->PR_name = $request->PR_name;
         $product->PR_CA_id = $request->CA_id;
         $product->PR_alias = str_slug($request->PR_name);
-        $product->PR_price = $request->PR_price;
+        $product->PR_price = isset($request->PR_price)?$request->PR_price:0;
         $product->PR_quantity = $request->PR_quantity;
-        $product->PR_SKU = $request->PR_SKU;
-        $product->PR_sortDesc = $request->PR_descript;
-        $product->PR_sale = $request->PR_sale;
+        $product->PR_SKU = isset($request->PR_SKU)?$request->PR_SKU:' ';
+        $product->PR_sortDesc = isset($request->PR_descript)?$request->PR_descript:' ';
+        $product->PR_sale = isset($request->PR_sale)?$request->PR_sale:0;
         $product->PR_view = 0;
         $product->PR_numberBuy = 0;
-        $product->PR_content = $request->PR_detail;
-        $product->PR_producer = $request->PR_producer;
+        $product->PR_content = isset($request->PR_detail)?$request->PR_detail:' ';
+        $product->PR_producer = isset($request->PR_producer)?$request->PR_producer:' ';
         $product->PR_status = isset($request->PR_status)?1:0;
 
         if(!empty($request->file('avatar'))){

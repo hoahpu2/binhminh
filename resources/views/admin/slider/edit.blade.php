@@ -11,7 +11,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" action="{!! route('admin.slider.postEdit',$slider->SL_en_id) !!}" enctype="multipart/form-data">
+        <form class="form-horizontal" method="POST" action="{!! route('admin.slider.postEdit',$slider->SL_en_id) !!}" enctype="multipart/form-data"  autocomplete="off">
           @csrf
           <div class="box-body">
 
@@ -22,7 +22,9 @@
                 </div>
             </div> --}}
           {{-- </div> --}}
-
+            @if(Session::has('avatar_error'))
+              <p style="color: red;text-align: center">{!! Session::get('avatar_error') !!}</p><br>
+            @endif
             <div class="form-group">
               <label for="file-4" class="col-sm-2 control-label">Slider</label>
 

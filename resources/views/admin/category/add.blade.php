@@ -11,7 +11,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" action="{!! route('admin.cate.postAdd') !!}">
+        <form class="form-horizontal" method="POST" action="{!! route('admin.cate.postAdd') !!}"  autocomplete="off">
           @csrf
           <div class="box-body">
             <div class="form-group">

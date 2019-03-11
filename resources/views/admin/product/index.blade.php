@@ -17,8 +17,10 @@
             </div>
           </div>
         </div>
+
         <!-- /.box-header -->
         <div class="box-body table-responsive no-padding">
+          @include('admin.massage')
           <table class="table table-hover">
             <tr>
               <th>STT</th>

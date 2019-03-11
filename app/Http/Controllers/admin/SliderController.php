@@ -37,6 +37,12 @@ class SliderController extends Controller
 
     public function postAdd(Request $request)
     {
+        $a_DataSize = getimagesize($request->file('SL_url'));
+        $a_width = (int)$a_DataSize[0];
+        $a_height = (int)$a_DataSize[1];
+        if ($a_width / $a_height !== 2) {
+            return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh Slider theo tỷ lệ 2:1'])->withInput();
+        }
         // dd($request->file('SL_url'));
         $profile = new Slider();
         $profile->SL_alt = $request->SL_alt;
@@ -61,6 +67,12 @@ class SliderController extends Controller
             $decrypted = Crypt::decryptString($id);
         } catch (DecryptException $e) {
             return redirect()->route('admin.error');
+        }
+        $a_DataSize = getimagesize($request->file('SL_url'));
+        $a_width = (int)$a_DataSize[0];
+        $a_height = (int)$a_DataSize[1];
+        if ($a_width / $a_height !== 2) {
+            return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh Slider theo tỷ lệ 2:1'])->withInput();
         }
         // dd($id);
         $slider = Slider::find($decrypted);
