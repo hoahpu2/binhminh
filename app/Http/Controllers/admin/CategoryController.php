@@ -130,7 +130,9 @@ class CategoryController extends Controller
         }else{
             $o_Cate = new Category();
         }
-
+/*
+FPT.HoaNV12
+ */
         $o_Cate->CA_parentId = $request->CA_parent;
         $o_Cate->CA_name = $request->CA_name;
         $o_Cate->CA_alias = str_slug($request->CA_name);
