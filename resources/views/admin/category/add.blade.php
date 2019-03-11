@@ -20,8 +20,8 @@
               <div class="col-sm-5">
                 <input type="text" name="CA_name" required="required" class="form-control" id="CA_name" placeholder="Tên danh mục">
                 @if ($errors->has('CA_name'))
-              <span style="color:red">{{$errors->first('CA_name')}}</span>
-            @endif
+                  <span style="color:red">{{$errors->first('CA_name')}}</span>
+                @endif
               </div>
             </div>
             <div class="form-group">

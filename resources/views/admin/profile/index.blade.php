@@ -8,9 +8,9 @@
       <!-- Profile Image -->
       <div class="box box-primary">
         <div class="box-body box-profile">
-          <img class="profile-user-img img-responsive img-circle" src="{{url('resources/upload/useradmin/').'/'.$user[0]['avatar']}}" alt="User profile picture">
+          <img class="profile-user-img img-responsive img-circle" src="{{url('resources/upload/useradmin/').'/'.$user->avatar}}" alt="User profile picture">
 
-          <h3 class="profile-username text-center">Nina Mcintire</h3>
+          <h3 class="profile-username text-center">{{$user->name}}</h3>
 
           <p class="text-muted text-center">Software Engineer</p>
 
@@ -83,20 +83,24 @@
         <div class="tab-content">
           <div class="tab-pane active" id="settings">
                 <form class="form-horizontal" method="POST" action="{!! route('admin.user.postAdd',10) !!}" enctype="multipart/form-data"  autocomplete="off">
+                  @include('admin.massage')
+                  @if ($errors->has('avatar'))
+                        <span style="color:red;text-align: center;">{{$errors->first('avatar')}}</span>
+                      @endif
                   @csrf
-                  <input type="hidden" name="id" value="{{$user[0]['id']}}">
+                  <input type="hidden" name="id" value="{{$user->id}}">
                   <div class="form-group">
                     <label for="name" class="col-sm-2 control-label">Name</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{$user[0]['name']}}">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{$user->name}}">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="email" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{$user[0]['email']}}">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{$user->email}}">
                     </div>
                   </div>
                   <div class="form-group">
@@ -104,24 +108,29 @@
 
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="old_password" name="old_password" placeholder="Mật khẩu cũ">
-                      @if ($errors->has('CA_name'))
-                        <span style="color:red">{{$errors->first('CA_name')}}</span>
+                      @if ($errors->has('old_password'))
+                        <span style="color:red">{{$errors->first('old_password')}}</span>
+                      @endif
+                      @if(Session::has('old_passwords'))
+                        <p style="color: red;text-align: left">{!! Session::get('old_passwords') !!}</p>
                       @endif
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="password" class="col-sm-2 control-label">Mật khẩu mới</label>
-
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu mới">
+                      @if ($errors->has('password'))
+                        <span style="color:red">{{$errors->first('password')}}</span>
+                      @endif
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="re_password" class="col-sm-2 control-label">Nhập lại mật khẩu</label>
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="re_password" name="re_password" placeholder="Nhập lại mật khẩu">
-                      @if ($errors->has('CA_name'))
-                        <span style="color:red">{{$errors->first('CA_name')}}</span>
+                      @if ($errors->has('re_password'))
+                        <span style="color:red">{{$errors->first('re_password')}}</span>
                       @endif
                     </div>
                   </div>

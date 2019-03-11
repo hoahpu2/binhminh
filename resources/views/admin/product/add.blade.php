@@ -80,11 +80,11 @@
           <label for="editor1" class="col-sm-2 control-label">Chi tiết</label>
           <div class="col-sm-9">
             <!-- tools box -->
-            <div class="box-body pad">
+            {{-- <div class="box-body pad"> --}}
               <textarea id="editor1" name="PR_detail" rows="10" cols="80">
                  {{old('PR_detail')}}
               </textarea>
-            </div>
+            {{-- </div> --}}
           </div>
         </div>
         <div class="form-group">
