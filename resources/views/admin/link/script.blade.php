@@ -57,4 +57,22 @@
     // $(".btn-info").on('click', function () {
     //     $("#file-4").fileinput('refresh', {previewClass: 'bg-info'});
     // });
+    $(document).ready(function() {
+        $('.kv-file-remove').click(function(){alert('aaaa');
+             $(this).parent(".kv-preview-thumb").remove();
+
+             var currentId = $(this).attr('id');
+             var images_delete = $('input[name="images_delete"]').val();
+             var result = images_delete + ',' + currentId;
+             $('input[name="images_delete"]').val(result);
+
+        });
+        //     $('.img_del').on('click', function() {
+        //         var currentId = $(this).attr('href');
+        //         var images_delete = $('input[name="images_delete"]').val();
+        //         var result = images_delete + ',' + currentId;
+        //         $('input[name="images_delete"]').val(result);
+        //         return false;
+        //     });
+        });
 </script>

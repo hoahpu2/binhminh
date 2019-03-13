@@ -30,8 +30,8 @@
              <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
              <div class="col-sm-4">
               <select id="danhmuc" name="CA_id" required="" class="form-control select2">
-                @foreach($a_Cates as $a_cate)
-                  <option <?php echo($a_cate['CA_id']==$a_Pros['PR_CA_id'])?'selected':'' ?> value="{{$a_cate['CA_id']}}">{{$a_cate['CA_name']}}</option>
+                @foreach($a_Cates as $key=>$a_cate)
+                  <option <?php echo($key==$a_Pros['PR_CA_id'])?'selected':''; echo(strpos($a_cate,'&nbsp;') === false)?'disabled':''; ?> value="{{$key}}">{!!$a_cate!!}</option>
                 @endforeach
              </select>
            </div>
@@ -98,6 +98,41 @@
           <div class="col-sm-8">
             {{-- <input type="file" name="subavatar[]" multiple class="form-control" id="subavatar" placeholder="Mã sản phẩm"> --}}
             <input id="file-4" type="file" name="subavatar[]" multiple class="file" data-upload-url="#" data-theme="fas">
+            {{-- <div class="file-preview">
+            <div class=" file-drop-zone">
+              <div class="file-preview-thumbnails"> --}}
+                <div class="file-preview-frame krajee-default kv-preview-thumb aaa" data-fileindex="0" data-template="image">
+  <div class="kv-file-content">
+    <img src="{{url('resources/upload/product/')}}/{{$a_Pros['PR_avatar']}}" class="file-preview-image kv-preview-data" title="Jellyfish.jpg" alt="Jellyfish.jpg" style="width:auto;height:auto;max-width:100%;max-height:100%;">
+  </div>
+  <div class="file-thumbnail-footer">
+    <div class="file-footer-caption" title="Jellyfish.jpg">
+      <div class="file-caption-info">Jellyfish.jpg</div>
+      <div class="file-size-info"> <samp>(757.52 KB)</samp></div>
+    </div>
+    <div class="file-thumb-progress kv-hidden">
+      <div class="progress">
+        <div class="progress-bar bg-success progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+          Initializing...
+         </div>
+      </div>
+    </div>
+    <div class="file-upload-indicator" title="Not uploaded yet"><i class="fas fa-plus-circle text-warning"></i></div>
+    <div class="file-actions">
+      <div class="file-footer-buttons">
+         <button type="button" class="kv-file-upload btn btn-sm btn-kv btn-default btn-outline-secondary" title="Upload file"><i class="fas fa-upload"></i></button> 
+         <button type="button" class="kv-file-remove btn btn-sm btn-kv btn-default btn-outline-secondary" title="Remove file"><i class="fas fa-trash-alt"></i></button>
+        <button type="button" class="kv-file-zoom btn btn-sm btn-kv btn-default btn-outline-secondary" title="View Details"><i class="fas fa-search-plus"></i></button>     
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+  <button type="button" class="kv-file-remove btn btn-sm btn-kv btn-default btn-outline-secondary" title="Remove file"><i class="fas fa-trash-alt"></i></button>
+</div>
+              {{-- </div>
+            </div>
+            </div> --}}
           </div>
         </div>
         <div class="form-group">

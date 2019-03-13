@@ -31,7 +31,7 @@
                 <select name="CA_parent" class="form-control select2" id="CA_parent">
                   <option value="0">Danh mục cha</option>
                   @foreach($a_Cates as $cate)
-                  <option value="{{$cate['CA_id']}}" <?php echo($cate['CA_status']==1)?'':'disabled'; echo(isset($a_CateOne[0])&&$a_CateOne[0]['CA_parentId'] == $cate['CA_id'])?' selected':''; ?> >{{$cate['CA_name']}}</option>
+                  <option value="{{$cate['CA_id']}}" <?php echo($cate['CA_status']==1)?'':'disabled'; echo(isset($a_CateOne[0])&&$a_CateOne[0]['CA_parentId'] == $cate['CA_id'])?' selected':''; echo($a_CateOne[0]['CA_id'] == $cate['CA_id'])?'disabled':'' ?> >{{$cate['CA_name']}}</option>
                   @endforeach
                 </select>
               </div>

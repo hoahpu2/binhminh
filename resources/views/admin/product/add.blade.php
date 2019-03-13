@@ -34,8 +34,8 @@
              <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
              <div class="col-sm-4">
               <select id="danhmuc" name="CA_id" required="" class="form-control select2">
-                @foreach($a_Cates as $a_cate)
-                  <option value="{{$a_cate['CA_id']}}">{{$a_cate['CA_name']}}</option>
+                @foreach($a_Catess as $key => $a_cate)
+                  <option value="{{$key}}" <?php echo(strpos($a_cate,'&nbsp;') === false)?'disabled':'' ?> ><i>{!!$a_cate!!}</i></option>
                 @endforeach
              </select>
            </div>

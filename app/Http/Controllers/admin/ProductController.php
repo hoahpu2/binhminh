@@ -16,6 +16,7 @@ use Session;
 
 class ProductController extends Controller
 {
+    public $treess = array();
     public function index()
 	{
         //test
@@ -38,10 +39,34 @@ class ProductController extends Controller
     {
     	// dd($id);
     	// $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $id)->get()->toArray();
-    	$a_Cates = Category::select('CA_name','CA_id','CA_status')->get()->toArray();
+    	$a_Cates = Category::select('CA_name','CA_id','CA_status','CA_parentId')->get()->toArray();
+        $a_Catess = $this->showCategories($a_Cates);
+
     	$asset = array('PR','pro.add','editer');
         $c_header = array('Quản lý sản phẩm','Thêm mới sản phẩm');
-    	return view('admin.product.add',compact('asset','a_Cates','c_header'));
+    	return view('admin.product.add',compact('asset','a_Catess','c_header'));
+    }
+
+    public function showCategories($categories, $parent_id = 0, $char = '')
+    {
+        foreach ($categories as $key => $item)
+        {
+            // Nếu là chuyên mục con thì hiển thị
+            if ($item['CA_parentId'] == $parent_id)
+            {
+                if ($char == '') {
+                    $this->treess[$item['CA_id']] = '<b>'.$char . $item['CA_name'].'</b>';
+                }else{
+                    $this->treess[$item['CA_id']] = $char . $item['CA_name'];
+                }
+
+                // Xóa chuyên mục đã lặp
+                unset($categories[$key]);
+                // Tiếp tục đệ quy để tìm chuyên mục con của chuyên mục đang lặp
+                $this->showCategories($categories, $item['CA_id'], $char.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+            }
+        }
+        return $this->treess;
     }
 
     public function getEdit($id)
@@ -54,7 +79,8 @@ class ProductController extends Controller
         // dd($id);
         // $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $id)->get()->toArray();
         $a_Pros = Product::find($decrypted)->toArray();
-        $a_Cates = Category::select('CA_name','CA_id','CA_status')->get()->toArray();
+        $a_Cates = Category::select('CA_name','CA_id','CA_status','CA_parentId')->get()->toArray();
+        $a_Cates = $this->showCategories($a_Cates);
         // dd($a_Pros['PR_id']);
         $asset = array('PR','pro.add','editer');
         $c_header = array('Quản lý sản phẩm','Sửa sản phẩm');
@@ -118,11 +144,13 @@ class ProductController extends Controller
 
     public function postEdit(Request $request,$id)
     {
-        $a_DataSize = getimagesize($request->file('avatar'));
-        $a_width = (int)$a_DataSize[0];
-        $a_height = (int)$a_DataSize[1];
-        if ($a_height / $a_width !== 1) {
-            return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh đại diện theo tỷ lệ 1:1'])->withInput();
+        if (!empty($request->file('avatar'))) {
+            $a_DataSize = getimagesize($request->file('avatar'));
+            $a_width = (int)$a_DataSize[0];
+            $a_height = (int)$a_DataSize[1];
+            if ($a_height / $a_width !== 1) {
+                return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh đại diện theo tỷ lệ 1:1'])->withInput();
+            }
         }
         
         $product = Product::find($id);
