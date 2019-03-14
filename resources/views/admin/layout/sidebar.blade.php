@@ -75,33 +75,29 @@
               <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
             </ul>
           </li> --}}
-          {{-- <li class="treeview">
+          <li class="treeview">
             <a href="#">
               <i class="fa fa-laptop"></i>
-              <span>UI Elements</span>
+              <span>Quản lý danh mục</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-              <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-              <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-              <li><a href="../UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-              <li><a href="../UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-              <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> Thêm mới danh mục</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
             </ul>
-          </li> --}}
+          </li>
           <li class="treeview <?php if($asset[0] == 'DM') echo'active'; ?>">
             <a href="#">
-              <i class="fa fa-edit"></i> <span>Quản lý danh mục</span>
+              <i class="fa fa-edit"></i> <span>Quản lý Menu</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="<?php if($asset[1] == 'add') echo'active'; ?>"><a href="{{route('admin.cate.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới danh mục</a></li>
-              <li class="<?php if($asset[1] == 'index') echo'active'; ?>"><a href="{{route('admin.cate.index')}}"><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
+              <li class="<?php if($asset[1] == 'add') echo'active'; ?>"><a href="{{route('admin.cate.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới Menu</a></li>
+              <li class="<?php if($asset[1] == 'index') echo'active'; ?>"><a href="{{route('admin.cate.index')}}"><i class="fa fa-circle-o"></i> Danh sách Menu</a></li>
               
             </ul>
           </li>

@@ -48,9 +48,9 @@
             </td>
             <td>
              @if($element['SL_status'] == 1)
-             <span class="label label-success">Approved</span>  
+             <span class="label label-success">Hiện</span>  
              @else
-             <span class="label label-danger">Denied</span>
+             <span class="label label-danger">Ẩn</span>
              @endif
            </td>
 

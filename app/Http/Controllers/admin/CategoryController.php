@@ -34,22 +34,9 @@ class CategoryController extends Controller
 
     public function getAdd()
     {
-     //    try {
-     //        $decrypted = Crypt::decryptString($id);
-     //    } catch (DecryptException $e) {
-     //        return redirect()->route('admin.error');
-     //    }
-    	// // dd($id);
-    	// $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $decrypted)->get()->toArray();
-        // dd($a_CateOne);
-        // if (empty($a_CateOne)) {
-        //     $a_CateOne[0]['CA_parentId'] = 0;
-        //     $a_CateOne[0]['CA_status'] = 0;
-        // }
-        // $a_CateOne[0]['CA_en_id'] = $id;
     	$a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
     	$asset = array('DM','add');
-        $c_header = array('Quản lý danh mục','Thêm mới danh mục','Vui lòng không để trống những trường (<span style="color:red">*</span>)');
+        $c_header = array('Quản lý danh mục','Thêm mới Menu','Vui lòng không để trống những trường (<span style="color:red">*</span>)');
     	return view('admin.category.add',compact('a_Cates','asset','c_header'));
     }
 
