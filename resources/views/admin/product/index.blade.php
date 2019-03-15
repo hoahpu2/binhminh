@@ -28,7 +28,7 @@
               <th>Tên Sản phẩm</th>
               <th>Ngày tạo</th>
               <th>Ngày sửa</th>
-              <th>Danh mục cha</th>
+              <th>Menu cha</th>
               <th>Trạng thái</th>
               <th>Hành động</th>
             </tr>

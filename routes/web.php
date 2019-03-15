@@ -88,4 +88,14 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 		Route::get('edit/{id}',['as'=>'admin.contact.getEdit','uses'=>'UserController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.contact.postEdit','uses'=>'UserController@postEdit']);
 	});
+
+	/* Contact */
+	Route::group(['prefix'=>'catecontent'],function(){
+		Route::get('index',['as'=>'admin.catecontent.index','uses'=>'admin\CatecontentController@index']);
+		Route::get('add',['as'=>'admin.catecontent.getAdd','uses'=>'admin\CatecontentController@getAdd']);
+		Route::post('add',['as'=>'admin.catecontent.postAdd','uses'=>'admin\CatecontentController@postAdd']);
+		Route::get('delete/{id}',['as'=>'admin.catecontent.getDelete','uses'=>'admin\CatecontentController@getDelete']);
+		Route::get('edit/{id}',['as'=>'admin.catecontent.getEdit','uses'=>'admin\CatecontentController@getEdit']);
+		Route::post('edit/{id}',['as'=>'admin.catecontent.postEdit','uses'=>'admin\CatecontentController@postEdit']);
+	});
 });

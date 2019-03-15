@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use App\Catecontent;
 use App\Product_images;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Crypt;
@@ -41,10 +42,11 @@ class ProductController extends Controller
     	// $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $id)->get()->toArray();
     	$a_Cates = Category::select('CA_name','CA_id','CA_status','CA_parentId')->get()->toArray();
         $a_Catess = $this->showCategories($a_Cates);
+        $a_Catecontent = Catecontent::select()->get()->toArray();
 
     	$asset = array('PR','pro.add','editer');
         $c_header = array('Quản lý sản phẩm','Thêm mới sản phẩm');
-    	return view('admin.product.add',compact('asset','a_Catess','c_header'));
+    	return view('admin.product.add',compact('asset','a_Catess','c_header','a_Catecontent'));
     }
 
     public function showCategories($categories, $parent_id = 0, $char = '')
@@ -81,10 +83,11 @@ class ProductController extends Controller
         $a_Pros = Product::find($decrypted)->toArray();
         $a_Cates = Category::select('CA_name','CA_id','CA_status','CA_parentId')->get()->toArray();
         $a_Cates = $this->showCategories($a_Cates);
+        $a_Catecontent = Catecontent::select()->get()->toArray();
         // dd($a_Pros['PR_id']);
         $asset = array('PR','pro.add','editer');
         $c_header = array('Quản lý sản phẩm','Sửa sản phẩm');
-        return view('admin.product.edit',compact('asset','a_Pros','a_Cates','c_header'));
+        return view('admin.product.edit',compact('asset','a_Pros','a_Cates','c_header','a_Catecontent'));
     }
 
     public function postAdd(Request $request)
@@ -112,6 +115,7 @@ class ProductController extends Controller
         $product = new Product;
         $product->PR_name = $request->PR_name;
         $product->PR_CA_id = $request->CA_id;
+        $product->PR_CC_id = $request->CC_id;
         $product->PR_alias = str_slug($request->PR_name);
         $product->PR_price = isset($request->PR_price)?$request->PR_price:0;
         $product->PR_quantity = isset($request->PR_quantity)?$request->PR_quantity:0;
@@ -156,6 +160,7 @@ class ProductController extends Controller
         $product = Product::find($id);
         $product->PR_name = $request->PR_name;
         $product->PR_CA_id = $request->CA_id;
+        $product->PR_CC_id = $request->CC_id;
         $product->PR_alias = str_slug($request->PR_name);
         $product->PR_price = isset($request->PR_price)?$request->PR_price:0;
         $product->PR_quantity = $request->PR_quantity;

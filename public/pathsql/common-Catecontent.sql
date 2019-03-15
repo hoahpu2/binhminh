@@ -8,6 +8,8 @@ CREATE TABLE IF NOT EXISTS catecontent (
     CC_name VARCHAR(100) NOT NULL,
     CC_alias VARCHAR(100) NOT NULL,
     CC_status TINYINT(4) NOT NULL,
+    created_at date,
+    updated_at date
 )  ENGINE=INNODB;
 
 ALTER TABLE product

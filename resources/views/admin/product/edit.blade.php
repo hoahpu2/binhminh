@@ -27,11 +27,21 @@
               </div>
             </div>
             <div class="form-group">
-             <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
+             <label class="col-sm-2 control-label" for="danhmuc">Menu</label>
              <div class="col-sm-4">
               <select id="danhmuc" name="CA_id" required="" class="form-control select2">
                 @foreach($a_Cates as $key=>$a_cate)
                   <option <?php echo($key==$a_Pros['PR_CA_id'])?'selected':''; echo(strpos($a_cate,'&nbsp;') === false)?'disabled':''; ?> value="{{$key}}">{!!$a_cate!!}</option>
+                @endforeach
+             </select>
+           </div>
+         </div>
+         <div class="form-group">
+             <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
+             <div class="col-sm-4">
+              <select id="danhmuc" name="CC_id" required="" class="form-control select2">
+                @foreach($a_Catecontent as $a_catecon)
+                  <option <?php echo($a_catecon['CC_id']==$a_Pros['PR_CC_id'])?'selected':''; ?> value="{{$a_catecon['CC_id']}}">{!!$a_catecon['CC_name']!!}</option>
                 @endforeach
              </select>
            </div>

@@ -23,10 +23,9 @@
           <table class="table table-hover">
             <tr>
               <th>STT</th>
-              <th>Tên Menu</th>
+              <th>Tên DM</th>
               <th>Ngày tạo</th>
               <th>Ngày sửa</th>
-              <th>Menu cha</th>
               <th>Trạng thái</th>
               <th>Hành động</th>
             </tr>
@@ -36,7 +35,7 @@
                {{$loop->index+1}}
              </td>
              <td>
-              {{$element['CA_name']}}
+              {{$element['CC_name']}}
             </td>
             <td>
               {{$element['created_at']}}
@@ -45,10 +44,7 @@
               {{$element['updated_at']}}
             </td>
             <td>
-              {{$element['parentId']}}
-            </td>
-            <td>
-             @if($element['CA_status'] == 1)
+             @if($element['CC_status'] == 1)
              <span class="label label-success">Hiện</span>  
              @else
              <span class="label label-danger">Ẩn</span>
@@ -56,10 +52,10 @@
            </td>
 
            <td>
-            <a href="{{route('admin.cate.getEdit',['id' =>$element['CA_en_id']])}}" class="btn btn-sm btn-primary">
+            <a href="{{route('admin.catecontent.getEdit',['id' =>$element['CC_en_id']])}}" class="btn btn-sm btn-primary">
               <i class="fa fa-pencil"></i>
             </a>
-            <a href="javascript:;" onclick ="confirmRemove('{{route('admin.cate.getDelete',['id' =>$element['CA_id']])}}')" class="btn btn-sm btn-danger">
+            <a href="javascript:;" onclick ="confirmRemove('{{route('admin.cate.getDelete',['id' =>$element['CC_id']])}}')" class="btn btn-sm btn-danger">
               <i class="fa fa-remove"></i>
             </a>
 

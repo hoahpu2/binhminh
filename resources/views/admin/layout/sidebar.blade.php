@@ -75,7 +75,7 @@
               <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
             </ul>
           </li> --}}
-          <li class="treeview">
+          <li class="treeview <?php if($asset[0] == 'Mn') echo'active'; ?>">
             <a href="#">
               <i class="fa fa-laptop"></i>
               <span>Quản lý danh mục</span>
@@ -84,8 +84,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href=""><i class="fa fa-circle-o"></i> Thêm mới danh mục</a></li>
-              <li><a href=""><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
+              <li class="<?php if($asset[1] == 'cate.add') echo'active'; ?>"><a href="{{route('admin.catecontent.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới danh mục</a></li>
+              <li class="<?php if($asset[1] == 'cate.index') echo'active'; ?>"><a href="{{route('admin.catecontent.index')}}"><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
             </ul>
           </li>
           <li class="treeview <?php if($asset[0] == 'DM') echo'active'; ?>">
