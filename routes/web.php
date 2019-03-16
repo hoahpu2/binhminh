@@ -19,6 +19,7 @@ Route::get('danh-sach-san-pham/lien-quan','DetailProductController@getListProduc
 Route::get('tim-kiem/{slug}','DetailProductController@search');
 Route::get('lien-he','ContactController@index');
 Route::get('tin-tuc','NewsController@index');
+Route::get('tin-tuc/{Slug}','NewsController@getDetail');
 
 // Route::get('/', function () {
 // 	dd(bcrypt('123456'));

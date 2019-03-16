@@ -57,7 +57,9 @@
     </div>
         <div class="info-product">
             <h2>Thông tin sản phẩm</h2>
-            {!!$product->PR_content!!}
+           <div class="product-desc-detail">
+               {!!$product->PR_content!!}
+           </div>
         </div>
     <div class="recommend">
         <div class="content_top">
