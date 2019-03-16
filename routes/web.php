@@ -18,6 +18,7 @@ Route::get('danh-sach-san-pham/sale','DetailProductController@getListSale')->nam
 Route::get('danh-sach-san-pham/lien-quan','DetailProductController@getListProductRecommend')->name('list-product-recommend');
 Route::get('tim-kiem/{slug}','DetailProductController@search');
 Route::get('lien-he','ContactController@index');
+Route::get('tin-tuc','NewsController@index');
 
 // Route::get('/', function () {
 // 	dd(bcrypt('123456'));
