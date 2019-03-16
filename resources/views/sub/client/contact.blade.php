@@ -31,7 +31,11 @@
                                </tr>
                                <tr>
                                    <td>Nội dung</td>
-                                   <td><p style="width: 100%;"><textarea name="" id="" style="width: 100%;" ></textarea></p></td>
+                                   <td><p style="width: 100%;"><textarea name="" id="" style="width: 100%;" rows="10"></textarea></p></td>
+                               </tr>
+                             <tr>
+                                   <td></td>
+                                   <td><input type="submit" value="Gửi cho chúng tôi" class="button"></td>
                                </tr>
 
                            </table>

@@ -122,7 +122,7 @@
             <li class="activate"><a href="{{url('danh-muc').'/'.$item->CA_alias}}">{{$item->CA_name}}</a>
             </li>
             <?php endforeach; ?>
-            <li><a>TIN TUC </a>
+            <li><a href="{{url('tin-tuc')}}">TIN TUC </a>
                 <ul class="menu-second">
                     <li><a href="">Tin Tuc 1</a></li>
                     <li><a href="">Tin Tuc 1 Tin Tuc 1 Tin Tuc 1</a></li>
