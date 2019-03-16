@@ -1,9 +1,10 @@
 @extends('sub.client.product-detail')
 @section('content')
-<div >
-    <div class="main">
+    @if(isset($product))
+    <div>
+        <div class="main">
         <div class="content">
-            <p>Trang chủ/chi tiết sản phẩm</p>
+            <p style="font-style: italic;margin-bottom:8px;"><a href="/">Trang chủ</a> / <a href="">Chi tiết sản phẩm</a></p>
             <div class="container product-detail-image-desktop">
                 <div class="exzoom hidden" id="exzoom">
                     <div class="exzoom_img_box">
@@ -23,10 +24,12 @@
             <div class="product-detail">
 
                 <div class="product-name">{{$product->PR_name}}</div>
-                <div class="tsh"><i class="fas fa-stopwatch"></i><a href="#">Nhận giao hàng trong vòng 1 giờ</a></div>
-                <b class="price">{{$product->PR_price}}</b>
-                <div class="product-sku">{{$product->PR_SKU}}</div>
-                <div class="product-desc">{{$product->PR_sortDesc}}</div>
+                <p class="detail-info">Mã sản phẩm: {{$product->PR_SKU}}</p>
+                <p class="detail-info">Tình trạng:</p>
+                <p class="detail-info">Hãng sản xuất:</p>
+                <b class="price">{{number_format($product->PR_price)}} Đ</b>
+                <p><i style="font-style: italic; color:green;">Chúng tôi nhận giao hàng trong vòng 1 giờ</i></p>
+                <div class="product-desc" style="font-style: italic;">{{$product->PR_sortDesc}}</div>
                 <button type="button" class="single_add_to_cart_button single_add_vang" data-toggle="modal" data-target="#myModal">
                     Đặt Ngay Giao Tận Nơi<span>Nút mua nhanh - gọn - lẹ</span></button>
             </div>
@@ -52,24 +55,9 @@
         </div>
         <div class="clear"></div>
     </div>
-    <div class="tab-content">
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'Mota')" id="defaultOpen">Mô tả</button>
-            <button class="tablinks" onclick="openCity(event, 'Danhgia')">Đánh giá</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        <div class="info-product">
+            <h2>Thông tin sản phẩm</h2>
         </div>
-
-        <div id="Mota" class="tabcontent">
-            <h3>Mô tả</h3>
-            <p>{!!$product->PR_content !!}</p>
-        </div>
-
-        <div id="Danhgia" class="tabcontent">
-            <h3>Danhgia</h3>
-            <p>day la danh gia</p>
-        </div>
-
-    </div>
     <div class="recommend">
         <div class="content_top">
             <div class="heading">
@@ -77,16 +65,16 @@
             </div>
             <div class="page-no">
                <ul>
-                    <li>[<a href="#"> Next>>></a >]</li>
-                </ul></p>
+                    <li>[<a href="{{route('list-product-recommend')}}"> Next>>></a >]</li>
+                </ul>
             </div>
             <div class="clear"></div>
         </div>
         <div class="section group">
             @foreach($recommended as $new)
                 <div class="grid_1_of_4 images_1_of_4">
-                    <a href=""><img src="{{asset('resources/upload/product/'.$new->PR_avatar)}}" alt="" /></a>
-                    <h2>{{$new->PR_name}} </h2>
+                    <a href=""><img src="{{asset('resources/upload/product/'.$new->PR_avatar)}}" alt="" width="300px" height="240px" /></a>
+                    <h2><a href="{{url('san-pham').'/'.$new->PR_alias}}">{{$new->PR_name}} </a></h2>
                     <p>{{$new->PR_sortDesc}}</p>
                     <p><span class="strike">{{$new->PR_sale}}</span><span class="price">{{$new->PR_price}}</span></p>
                     <div class="button"><span><img src="{{asset('images/cart.jpg')}}" alt="" /><a href="preview-3.html" class="cart-button">Liên hệ</a></span> </div>
@@ -96,6 +84,11 @@
         </div>
     </div>
 </div>
+@else
+    <div>
+        <p style="height:500px" >Sản phẩm không tồn tại!</p>
+    </div>
+@endif
 <script type="text/javascript">
 
     $('.container').imagesLoaded( function() {
@@ -107,29 +100,4 @@
 
 </script>
 <link href="{{asset('css/flexslider.css')}}" rel='stylesheet' type='text/css' />
-<script>
-    function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-    $('.gallery-responsive').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-    });
-
-</script>
 @endsection

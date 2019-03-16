@@ -12,11 +12,45 @@ class DetailProductController extends Controller
         $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
         $product = Product::where("PR_alias",$slug)->first();
         $saleProduct = Product::where("PR_alias",$slug)->orderBy('PR_sale','desc')->take(10)->get();
-        $images = Product_images::where("IM_PR_id",$product->PR_id)->get();
-        $recommended = Product::where('PR_CA_id',$product->PR_CA_id)->take(10)->get();
-    	return view('sub/client/main-detail',compact('category','product','saleProduct','images','recommended'));
+        if(isset($product->PR_id)){
+            $images = Product_images::where("IM_PR_id",$product->PR_id)->get();
+            $recommended = Product::where('PR_CA_id',$product->PR_CA_id)->take(10)->get();
+            return view('sub/client/main-detail',compact('category','product','saleProduct','images','recommended'));
+        }
+        return view('sub/client/main-detail',compact('category'));
     }
     public function getList($slug){
         $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
+        $categorys = Category::all()->where('CA_alias',$slug)->first();
+        if(isset($categorys->CA_id)){
+              $product = Product::all()->where('PR_CA_id',$categorys->CA_id)->where('PR_status',1);
+              return view('sub.client.list-product',compact('category','product','categorys'));
+
+        }
+      return view('sub.client.list-product',compact('category'));
+
     }
+    public function getListNew(){
+        $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
+        $product = Product::where("PR_status",'1')->orderBy('created_at','desc')->paginate(4);
+        return view('sub.client.list-product',compact('category','product'));
+    }
+    public function getListSale(){
+        $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
+        $product = Product::where("PR_status",'1')->orderBy('PR_sale','desc')->get();
+        return view('sub.client.list-product',compact('category','product'));
+    }
+    public function getListProductRecommend(){
+        $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
+        $product = Product::where("PR_status",'1')->orderBy('PR_sale','desc')->get();
+        return view('sub.client.list-product',compact('category','product'));
+    }
+    public function search($slug){
+        $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
+        $product = Product::all()->where('PR_name','like','%'.$slug.'%');
+        $count = $product->count();
+        return view('sub.client.list-product',compact('category','product','slug','count'));
+    }
+
+
 }

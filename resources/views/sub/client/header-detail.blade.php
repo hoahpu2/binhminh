@@ -2,47 +2,37 @@
     <div class="header_bottom_left">
         <div class="section group">
             <div class="listview_1_of_2 images_1_of_2">
-                <div class="listimg listimg_2_of_1">
-                    <a href="preview.html"> <img src="{{asset('images/pic4.png')}}" alt="" /></a>
-                </div>
-                <div class="text list_2_of_1">
-                    <h2>Iphone</h2>
-                    <p>Lorem ipsum dolor sit amet sed do eiusmod.</p>
-                    <div class="button"><span><a href="preview.html">Add to cart</a></span></div>
-                </div>
+                <a href="preview.html"> <img src="{{asset('images/mau/tin-tuc/kia.jpg')}}" alt=""  class="tin-tuc-img"/></a>
+                <p class="tin-tuc-icon">Tin tuc</p>
+                <a href="" class="new-title">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
+                </a>
             </div>
-            <div class="listview_1_of_2 images_1_of_2">
-                <div class="listimg listimg_2_of_1">
-                    <a href="preview-5.html"><img src="{{asset('images/pic3.png')}}" alt="" ></a>
+ <div class="listview_1_of_2 images_1_of_2">
+                <div class="">
+                    <a href="preview.html"> <img src="{{asset('images/mau/tin-tuc/toyota.jpg')}}" alt=""  class="tin-tuc-img"/></a>
                 </div>
-                <div class="text list_2_of_1">
-                    <h2>Samsung</h2>
-                    <p>Lorem ipsum dolor sit amet, sed do eiusmod.</p>
-                    <div class="button"><span><a href="preview-5.html">Add to cart</a></span></div>
-                </div>
+     <div class="new-title">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
+     </div>
             </div>
-        </div>
-        <div class="section group">
-            <div class="listview_1_of_2 images_1_of_2">
-                <div class="listimg listimg_2_of_1">
-                    <a href="preview-3.html"> <img src="{{asset('images/pic3.jpg')}}" alt="" /></a>
+ <div class="listview_1_of_2 images_1_of_2">
+                <div class="">
+                    <a href="preview.html"> <img src="{{asset('images/mau/tin-tuc/xe.jpg')}}" alt=""  class="tin-tuc-img"/></a>
                 </div>
-                <div class="text list_2_of_1">
-                    <h2>Acer</h2>
-                    <p>Lorem ipsum dolor sit amet, sed do eiusmod.</p>
-                    <div class="button"><span><a href="preview-3.html">Add to cart</a></span></div>
-                </div>
+     <div class="new-title">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
+     </div>
             </div>
-            <div class="listview_1_of_2 images_1_of_2">
-                <div class="listimg listimg_2_of_1">
-                    <a href="preview-6.html"><img src="{{asset('images/pic1.png')}}" alt="" /></a>
+ <div class="listview_1_of_2 images_1_of_2">
+                <div class="">
+                    <a href="preview.html"> <img src="{{asset('images/mau/tin-tuc/vn.jpg')}}" alt=""  class="tin-tuc-img"/></a>
                 </div>
-                <div class="text list_2_of_1">
-                    <h2>Canon</h2>
-                    <p>Lorem ipsum dolor sit amet, sed do eiusmod.</p>
-                    <div class="button"><span><a href="preview-6.html">Add to cart</a></span></div>
-                </div>
+     <div class="new-title">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
+     </div>
             </div>
+
         </div>
         <div class="clear"></div>
     </div>
