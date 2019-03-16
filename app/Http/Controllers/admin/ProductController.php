@@ -22,6 +22,7 @@ class ProductController extends Controller
 	{
         //test
 		$a_Pro = Product::select()->get()->toArray();
+		$linkProduct = Product::all()->get();
 		if ($a_Pro) {
 			foreach ($a_Pro as $key => $value) {
                 // dd($value);
@@ -33,7 +34,7 @@ class ProductController extends Controller
 		
 		$asset = array('PR','pro.index');
         $c_header = array('Quản lý sản phẩm','Danh sách sản phẩm');
-    	return view('admin.product.index',compact('a_Pro','asset','c_header'));
+    	return view('admin.product.index',compact('a_Pro','asset','c_header','linkProduct'));
 	}
 
     public function getAdd()

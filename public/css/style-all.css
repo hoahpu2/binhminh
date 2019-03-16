@@ -211,3 +211,15 @@ left:10px;
     display: block;
     padding-top: 10px;
 }
+/*css detail product*/
+@media only screen and (max-width: 600px){
+    .product-detail{
+        width: 100%;
+    }
+    .panel-default{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+    }
+}
