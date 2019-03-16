@@ -1,20 +1,19 @@
 <div class="header">
         <div class="header_top">
             <div class="logo">
-                <a href="index.html"><img src="{{asset('images/logo.png')}}"  width="50%" alt="" /></a>
+                <a href="/"><img src="{{asset('images/logo.png')}}" class="image-logo"alt="" /></a>
             </div>
               <div class="header_top_right">
                 <div class="search_box">
                     <form>
-                        <input type="text" value="Search for Products" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for Products';}"><input type="submit" value="SEARCH">
+                        <input type="text" value="Nhập tên sản phẩm bạn muốn tìm kiếm ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập tên sản bạn muốn tìm';}"><input type="submit" value="Tìm kiếm">
                     </form>
                 </div>
                 <div class="shopping_cart">
                     <div class="cart">
                         <a href="#" title="View my shopping cart" rel="nofollow">
                             <strong class="opencart"> </strong>
-                                <span class="cart_title">Cart</span>
-                                    <span class="no_product">(empty)</span>
+                                <span class="cart_title">Giỏ hàng</span>
                             </a>
                         </div>
                   </div>
@@ -98,6 +97,18 @@
            <div class="login">
                <span><a href="login.html"><img src="{{asset('images/login.png')}}" alt="" title="login"/></a></span>
            </div>
+                  <div class="social-icons" style="float:right;padding-top: 10px;   ">
+                      <ul>
+                          <li class="facebook"><a href="#" target="_blank"> </a></li>
+                          <li class="twitter"><a href="#" target="_blank"> </a></li>
+                          <li class="googleplus"><a href="#" target="_blank"> </a></li>
+                          <li class="contact"><a href="#" target="_blank"> </a></li>
+                          <div class="clear"></div>
+                      </ul>
+                  </div>
+                  <div class="hotline-phone">
+                      <h2>Hotline: 0989797979</h2>
+                  </div>
          <div class="clear"></div>
      </div>
      <div class="clear"></div>
@@ -106,11 +117,20 @@
         <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
         <nav>
         <ul class="menu list-unstyled">
-            <li><a href="index.html">HOME </a></li>
+            <li><a href="/">HOME </a></li>
             <?php foreach ($category as $item): ?>
-            <li class="activate"><a href="products.html">{{$item->CA_name}}</a>
+            <li class="activate"><a href="{{url('danh-muc').'/'.$item->CA_alias}}">{{$item->CA_name}}</a>
             </li>
             <?php endforeach; ?>
+            <li><a>TIN TUC </a>
+                <ul class="menu-second">
+                    <li><a href="">Tin Tuc 1</a></li>
+                    <li><a href="">Tin Tuc 1 Tin Tuc 1 Tin Tuc 1</a></li>
+                    <li><a href="">Tin Tuc 1</a></li>
+                    <li><a href="">Tin Tuc 1</a></li>
+                </ul>
+            </li>
+            <li><a href="{{url('lien-he')}}">LIEN HE </a></li>
             <div class="clear"> </div>
         </ul>
         </nav> 
