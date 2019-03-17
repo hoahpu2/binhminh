@@ -1,38 +1,17 @@
 <div class="header_bottom">
     <div class="header_bottom_left">
         <div class="section group">
-            <div class="listview_1_of_2 images_1_of_2">
-                <a href="preview.html"> <img src="{{asset('images/IMG_2539.JPG')}}" alt=""  class="tin-tuc-img"/></a>
-                <p class="tin-tuc-icon">Tin tuc</p>
-                <a href="" class="new-title">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
-                </a>
-            </div>
- <div class="listview_1_of_2 images_1_of_2">
-                <div class="">
-                    <a href="preview.html"> <img src="{{asset('images/IMG_2540.JPG')}}" alt=""  class="tin-tuc-img"/></a>
-                </div>
-     <div class="new-title">
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
-     </div>
-            </div>
- <div class="listview_1_of_2 images_1_of_2">
-                <div class="">
-                    <a href="preview.html"> <img src="{{asset('images/IMG_2557.JPG')}}" alt=""  class="tin-tuc-img"/></a>
-                </div>
-     <div class="new-title">
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
-     </div>
-            </div>
- <div class="listview_1_of_2 images_1_of_2">
-                <div class="">
-                    <a href="preview.html"> <img src="{{asset('images/IMG_2558.JPG')}}" alt=""  class="tin-tuc-img"/></a>
-                </div>
-     <div class="new-title">
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
-     </div>
-            </div>
-
+            @if($news)
+                @foreach($news as $item)
+                    <div class="listview_1_of_2 images_1_of_2">
+                        <a href="{{url('tin-tuc/').$item->N_alias}}"> <img src="{{asset('resources/upload/news/'.$item->N_avatar)}}" alt=""  class="tin-tuc-img"/></a>
+                        <p class="tin-tuc-icon">Tin tuc</p>
+                        <a href="" class="new-title">
+                            <p>{{$item->N_title}}</p>
+                        </a>
+                    </div>
+                @endforeach
+            @endif
         </div>
         <div class="clear"></div>
     </div>

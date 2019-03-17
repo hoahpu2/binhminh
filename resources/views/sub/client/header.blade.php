@@ -125,21 +125,11 @@
                   @foreach($item->sub_category as $sub_cate)
                     <li><a href="">{{$sub_cate['CA_name']}}</a></li>
                   @endforeach
-                  {{-- <li><a href="">Tin Tuc 1</a></li>
-                  <li><a href="">Tin Tuc 1 Tin Tuc 1 Tin Tuc 1</a></li>
-                  <li><a href="">Tin Tuc 1</a></li>
-                  <li><a href="">Tin Tuc 1</a></li> --}}
                 </ul>
               @endif
             </li>
             <?php endforeach; ?>
             <li><a href="{{url('tin-tuc')}}">TIN TUC </a>
-                <ul class="menu-second">
-                    <li><a href="">Tin Tuc 1</a></li>
-                    <li><a href="">Tin Tuc 1 Tin Tuc 1 Tin Tuc 1</a></li>
-                    <li><a href="">Tin Tuc 1</a></li>
-                    <li><a href="">Tin Tuc 1</a></li>
-                </ul>
             </li>
             <li><a href="{{url('lien-he')}}">LIEN HE </a></li>
             <div class="clear"> </div>
