@@ -23,7 +23,7 @@ class CategoryController extends Controller
 					continue;
 				}
 				$getCate = Category::select('CA_name')->where('CA_id', $value['CA_parentId'])->get()->toArray();
-				$a_Cate[$key]['parentId'] = $getCate[0]['CA_name'];
+				$a_Cate[$key]['parentId'] = isset($getCate[0]['CA_name'])?$getCate[0]['CA_name']:'';
 			}
 		}
 		// dd($a_Cate);
@@ -127,6 +127,19 @@ FPT.HoaNV12
         
         $o_Cate->save();
         
+        return redirect()->route('admin.cate.index');
+    }
+
+    public function getDelete($id)
+    {
+        try {
+            $decrypted = Crypt::decryptString($id);
+        } catch (DecryptException $e) {
+            return redirect()->route('admin.error');
+        }
+
+        $cate = Category::find($decrypted);
+        $cate->delete();
         return redirect()->route('admin.cate.index');
     }
 }

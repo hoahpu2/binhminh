@@ -55,7 +55,7 @@
             <a href="{{route('admin.catecontent.getEdit',['id' =>$element['CC_en_id']])}}" class="btn btn-sm btn-primary">
               <i class="fa fa-pencil"></i>
             </a>
-            <a href="javascript:;" onclick ="confirmRemove('{{route('admin.cate.getDelete',['id' =>$element['CC_id']])}}')" class="btn btn-sm btn-danger">
+            <a href="javascript:;" onclick ="confirmRemove('{{route('admin.catecontent.getDelete',['id' =>$element['CC_en_id']])}}')" class="btn btn-sm btn-danger">
               <i class="fa fa-remove"></i>
             </a>
 

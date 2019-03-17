@@ -105,4 +105,17 @@ FPT.HoaNV12
         
         return redirect()->route('admin.catecontent.index');
     }
+
+    public function getDelete($id)
+    {
+        try {
+            $decrypted = Crypt::decryptString($id);
+        } catch (DecryptException $e) {
+            return redirect()->route('admin.error');
+        }
+
+        $o_Cate = Catecontent::find($decrypted);
+        $o_Cate->delete();
+        return redirect()->route('admin.catecontent.index');
+    }
 }

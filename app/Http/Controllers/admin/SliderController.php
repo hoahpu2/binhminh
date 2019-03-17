@@ -114,4 +114,18 @@ class SliderController extends Controller
         $c_header = array('Quản lý Slider','Sửa Slider');
         return view('admin.slider.edit',compact('asset','slider','c_header'));
     }
+
+    public function getDelete($id)
+    {
+        try {
+            $decrypted = Crypt::decryptString($id);
+        } catch (DecryptException $e) {
+            return redirect()->route('admin.error');
+        }
+
+        $slider = Slider::find($decrypted);
+        File::delete('resources/upload/slider/'.$slider->SL_url);
+        $slider->delete();
+        return redirect()->route('admin.slider.index')->with(['flash_lever'=>'success','flash_message'=>'Xóa dữ liệu thành công']);
+    }
 }

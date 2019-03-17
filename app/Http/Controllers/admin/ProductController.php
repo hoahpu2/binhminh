@@ -26,7 +26,7 @@ class ProductController extends Controller
 			foreach ($a_Pro as $key => $value) {
                 // dd($value);
 				$getCate = Category::select('CA_name')->where('CA_id', $value['PR_CA_id'])->get()->toArray();
-				$a_Pro[$key]['parentId'] = $getCate[0]['CA_name'];
+				$a_Pro[$key]['parentId'] = isset($getCate[0]['CA_name'])?$getCate[0]['CA_name']:'';
                 $a_Pro[$key]['PR_en_id'] = Crypt::encryptString($value['PR_id']);
 			}
 		}
@@ -206,5 +206,29 @@ class ProductController extends Controller
         }
     
         return redirect()->route('admin.product.index')->with(['flash_lever'=>'success','flash_message'=>'Sửa dữ liệu thành công']);
+    }
+
+    public function getDelete($id)
+    {
+        try {
+            $decrypted = Crypt::decryptString($id);
+        } catch (DecryptException $e) {
+            return redirect()->route('admin.error');
+        }
+
+        $product = Product::find($decrypted);
+        // dd($product->PR_id);
+        File::delete('resources/upload/product/'.$product->PR_avatar);
+        $product_Img = Product_images::select()->where('IM_PR_id', $product->PR_id)->get()->toArray();
+        if (!empty($product_Img)) {
+            foreach ($product_Img as $value) {
+                $sub_IMG = Product_images::find($value['IM_id']);
+                File::delete('resources/upload/product/images_detail/'.$product->PR_avatar);
+                $sub_IMG->delete();
+            }
+        }
+        
+        $product->delete();
+        return redirect()->route('admin.product.index')->with(['flash_lever'=>'success','flash_message'=>'Xóa dữ liệu thành công']);
     }
 }

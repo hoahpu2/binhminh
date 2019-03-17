@@ -2,7 +2,7 @@
     <div class="header_bottom_left">
         <div class="section group">
             <div class="listview_1_of_2 images_1_of_2">
-                <a href="preview.html"> <img src="{{asset('images/mau/tin-tuc/kia.jpg')}}" alt=""  class="tin-tuc-img"/></a>
+                <a href="preview.html"> <img src="{{asset('images/IMG_2539.JPG')}}" alt=""  class="tin-tuc-img"/></a>
                 <p class="tin-tuc-icon">Tin tuc</p>
                 <a href="" class="new-title">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
@@ -10,7 +10,7 @@
             </div>
  <div class="listview_1_of_2 images_1_of_2">
                 <div class="">
-                    <a href="preview.html"> <img src="{{asset('images/mau/tin-tuc/toyota.jpg')}}" alt=""  class="tin-tuc-img"/></a>
+                    <a href="preview.html"> <img src="{{asset('images/IMG_2540.JPG')}}" alt=""  class="tin-tuc-img"/></a>
                 </div>
      <div class="new-title">
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
@@ -18,7 +18,7 @@
             </div>
  <div class="listview_1_of_2 images_1_of_2">
                 <div class="">
-                    <a href="preview.html"> <img src="{{asset('images/mau/tin-tuc/xe.jpg')}}" alt=""  class="tin-tuc-img"/></a>
+                    <a href="preview.html"> <img src="{{asset('images/IMG_2557.JPG')}}" alt=""  class="tin-tuc-img"/></a>
                 </div>
      <div class="new-title">
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>
@@ -26,7 +26,7 @@
             </div>
  <div class="listview_1_of_2 images_1_of_2">
                 <div class="">
-                    <a href="preview.html"> <img src="{{asset('images/mau/tin-tuc/vn.jpg')}}" alt=""  class="tin-tuc-img"/></a>
+                    <a href="preview.html"> <img src="{{asset('images/IMG_2558.JPG')}}" alt=""  class="tin-tuc-img"/></a>
                 </div>
      <div class="new-title">
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, fuga.</p>

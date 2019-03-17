@@ -94,7 +94,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 		Route::post('edit/{id}',['as'=>'admin.contact.postEdit','uses'=>'UserController@postEdit']);
 	});
 
-	/* Contact */
+	/* CateContent */
 	Route::group(['prefix'=>'catecontent'],function(){
 		Route::get('index',['as'=>'admin.catecontent.index','uses'=>'admin\CatecontentController@index']);
 		Route::get('add',['as'=>'admin.catecontent.getAdd','uses'=>'admin\CatecontentController@getAdd']);

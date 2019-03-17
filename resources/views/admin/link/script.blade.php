@@ -2,6 +2,8 @@
 <script src="{{ url('admin/') }}/plugins/jQuery/jquery-3.1.1.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ url('admin/') }}/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="{{ url('admin/bootbox/bootbox.min.js')}}" type="text/javascript"></script>
 <!-- FastClick -->
 <script src="{{ url('admin/') }}/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
@@ -11,13 +13,14 @@
 <script src="{{ url('admin/') }}/ckeditor/ckeditor.js"></script>
 <script src="{{ url('admin/') }}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+{{-- <script src="{{ url('admin/bootbox')}}/bootstrap.bundle.min.js" crossorigin="anonymous"></script> --}}
 <script src="{{ url('admin/upload') }}/js/plugins/sortable.js" type="text/javascript"></script>
 <script src="{{ url('admin/upload') }}/js/fileinput.js" type="text/javascript"></script>
 <script src="{{ url('admin/upload') }}/js/locales/fr.js" type="text/javascript"></script>
 <script src="{{ url('admin/upload') }}/js/locales/es.js" type="text/javascript"></script>
 <script src="{{ url('admin/upload') }}/themes/fas/theme.js" type="text/javascript"></script>
 <script src="{{ url('admin/upload') }}/themes/explorer-fas/theme.js" type="text/javascript"></script>
+
 
 @if(isset($asset[2]))
 	<script>
@@ -75,4 +78,26 @@
         //         return false;
         //     });
         });
+</script>
+<script type="text/javascript">
+    function confirmRemove(url){
+            bootbox.confirm({
+    message: "Bạn có chắc chắn muốn xóa?",
+    buttons: {
+        confirm: { 
+            label: 'có',
+            className: 'btn-danger'
+        },
+        cancel: {
+            label: 'không',
+            className: 'btn-success'
+        }
+    },
+    callback: function (result) {
+       if(result){
+         window.location.href = url;
+       }
+    }
+});
+    }
 </script>

@@ -58,7 +58,7 @@
             <a href="{{route('admin.slider.getEdit',['id' =>$element['SL_en_id']])}}" class="btn btn-sm btn-primary">
               <i class="fa fa-pencil"></i>
             </a>
-            <a href="javascript:;" onclick ="confirmRemove('{{route('admin.cate.getDelete',['id' =>$element['CA_id']])}}')" class="btn btn-sm btn-danger">
+            <a href="javascript:;" onclick ="confirmRemove('{{route('admin.slider.getDelete',['id' =>$element['SL_en_id']])}}')" class="btn btn-sm btn-danger">
               <i class="fa fa-remove"></i>
             </a>
 
