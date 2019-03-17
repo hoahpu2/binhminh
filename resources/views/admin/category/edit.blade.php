@@ -51,7 +51,7 @@
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="CA_status" value="1" <?php echo (isset($a_CateOne[0])&&$a_CateOne[0]['CA_status']==1)?'checked':'aa' ?> > Hiển thị trang chủ
+                    <input type="checkbox" name="CA_status" value="1" <?php echo (isset($a_CateOne[0])&&$a_CateOne[0]['CA_status']==1)?'checked':'' ?> > Hiển thị trang chủ
                   </label>
                 </div>
               </div>

@@ -69,12 +69,12 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
 	/* News */
 	Route::group(['prefix'=>'news'],function(){
-		Route::get('index',['as'=>'admin.news.index','uses'=>'NewsController@index']);
-		Route::get('add',['as'=>'admin.news.getAdd','uses'=>'NewsController@getAdd']);
-		Route::post('add',['as'=>'admin.news.postAdd','uses'=>'NewsController@postAdd']);
-		Route::get('delete/{id}',['as'=>'admin.news.getDelete','uses'=>'NewsController@getDelete']);
-		Route::get('edit/{id}',['as'=>'admin.news.getEdit','uses'=>'NewsController@getEdit']);
-		Route::post('edit/{id}',['as'=>'admin.news.postEdit','uses'=>'NewsController@postEdit']);
+		Route::get('index',['as'=>'admin.news.index','uses'=>'admin\NewsController@index']);
+		Route::get('add',['as'=>'admin.news.getAdd','uses'=>'admin\NewsController@getAdd']);
+		Route::post('add',['as'=>'admin.news.postAdd','uses'=>'admin\NewsController@postAdd']);
+		Route::get('delete/{id}',['as'=>'admin.news.getDelete','uses'=>'admin\NewsController@getDelete']);
+		Route::get('edit/{id}',['as'=>'admin.news.getEdit','uses'=>'admin\NewsController@getEdit']);
+		Route::post('edit',['as'=>'admin.news.postEdit','uses'=>'admin\NewsController@postEdit']);
 	});
 
 	/* User */
@@ -110,15 +110,6 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	/* CateContent */
 	Route::group(['prefix'=>'catecontent'],function(){
 		Route::get('index',['as'=>'admin.catecontent.index','uses'=>'admin\CatecontentController@index']);
-		Route::get('add',['as'=>'admin.catecontent.getAdd','uses'=>'admin\CatecontentController@getAdd']);
-		Route::post('add',['as'=>'admin.catecontent.postAdd','uses'=>'admin\CatecontentController@postAdd']);
-		Route::get('delete/{id}',['as'=>'admin.catecontent.getDelete','uses'=>'admin\CatecontentController@getDelete']);
-		Route::get('edit/{id}',['as'=>'admin.catecontent.getEdit','uses'=>'admin\CatecontentController@getEdit']);
-		Route::post('edit/{id}',['as'=>'admin.catecontent.postEdit','uses'=>'admin\CatecontentController@postEdit']);
-	});
-	/* News */
-	Route::group(['prefix'=>'news'],function(){
-		Route::get('index',['as'=>'admin.news.index','uses'=>'admin\CatecontentController@index']);
 		Route::get('add',['as'=>'admin.catecontent.getAdd','uses'=>'admin\CatecontentController@getAdd']);
 		Route::post('add',['as'=>'admin.catecontent.postAdd','uses'=>'admin\CatecontentController@postAdd']);
 		Route::get('delete/{id}',['as'=>'admin.catecontent.getDelete','uses'=>'admin\CatecontentController@getDelete']);

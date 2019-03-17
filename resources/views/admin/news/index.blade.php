@@ -31,16 +31,16 @@
                                 <th>Trạng thái</th>
                                 <th>Hành động</th>
                             </tr>
-                            @foreach($a_Pro as $element)
+                            @foreach($news as $element)
                                 <tr>
                                     <td>
                                         {{$loop->index+1}}
                                     </td>
                                     <td>
-                                        <img class="thumbnail" src="{{url('resources/upload/product/')}}/{{$element->PR_avatar}}" alt="" width="50px" height="50px">
+                                        <img class="thumbnail" src="{{url('resources/upload/news/')}}/{{$element->N_avatar}}" alt="" width="50px" height="50px">
                                     </td>
                                     <td>
-                                        {{$element->PR_name}}
+                                        {{$element->N_title}}
                                     </td>
                                     <td>
                                         {{$element->created_at}}
@@ -49,10 +49,7 @@
                                         {{$element->updated_at}}
                                     </td>
                                     <td>
-                                        {{$element->parentId}}
-                                    </td>
-                                    <td>
-                                        @if($element->PR_status == 1)
+                                        @if($element->N_status == 1)
                                             <span class="label label-success">Hiện</span>
                                         @else
                                             <span class="label label-danger">Ẩn</span>
@@ -60,10 +57,10 @@
                                     </td>
 
                                     <td>
-                                        <a href="{{route('admin.product.getEdit',$element->PR_en_id)}}" class="btn btn-sm btn-primary">
+                                        <a href="{{route('admin.news.getEdit',$element->N_id)}}" class="btn btn-sm btn-primary">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <a href="javascript:;" onclick ="confirmRemove('{{route('admin.product.getDelete',$element->PR_en_id)}}')" class="btn btn-sm btn-danger">
+                                        <a href="javascript:;" onclick ="confirmRemove('{{route('admin.news.getDelete',$element->N_id)}}')" class="btn btn-sm btn-danger">
                                             <i class="fa fa-remove"></i>
                                         </a>
 
@@ -77,6 +74,6 @@
                 <!-- /.box -->
             </div>
         </div>
-        {{$a_Pro->links()}}
+        {{$news->links()}}
     </section>
 @endsection

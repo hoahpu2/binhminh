@@ -140,6 +140,17 @@
               <li><a href="../examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
               <li><a href="../examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li> --}}
             </ul>
+          </li>     <li class="treeview <?php if($asset[0] == 'SL') echo'active'; ?>">
+            <a href="#">
+              <i class="fa fa-"></i> <span>Quản lý tin tức</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="<?php if($asset[1] == 'add.new')echo'active'; ?>"><a href="{{route('admin.news.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới tin tức</a></li>
+              <li class="<?php if($asset[1] == 'index.new')echo'active'; ?>"><a href="{{route('admin.news.index')}}"><i class="fa fa-circle-o"></i> Danh sách tin tức</a></li>
+            </ul>
           </li>
           <li class="<?php if($asset[0] == 'CTT') echo'active'; ?>">
             <a href="{{route('admin.contact.index',10)}}">
