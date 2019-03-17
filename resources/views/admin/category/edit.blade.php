@@ -9,6 +9,7 @@
         <div class="box-header with-border">
           <h3 class="box-title"><b>{!!$c_header[2]!!}</b></h3>
         </div>
+        @include('admin.massage')
         <!-- /.box-header -->
         <!-- form start -->
         <form class="form-horizontal" method="POST" action="{!! route('admin.cate.postEdit',isset($a_CateOne[0]['CA_en_id'])?$a_CateOne[0]['CA_en_id']:0) !!}"  autocomplete="off">
@@ -20,8 +21,8 @@
               <div class="col-sm-5">
                 <input type="text" name="CA_name" required="required" class="form-control" id="CA_name" placeholder="Tên danh mục" value="<?php echo isset($a_CateOne[0]['CA_name'])?$a_CateOne[0]['CA_name']:'' ?>">
                 @if ($errors->has('CA_name'))
-              <span style="color:red">{{$errors->first('CA_name')}}</span>
-            @endif
+                  <span style="color:red">{{$errors->first('CA_name')}}</span>
+                @endif
               </div>
             </div>
             <div class="form-group">

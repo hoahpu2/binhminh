@@ -35,6 +35,6 @@
  </div>
  <!-- ./wrapper -->
 
- @include('admin.link.script')
+ @include('admin.link.scripts')
 </body>
 </html>

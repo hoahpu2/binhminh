@@ -18,7 +18,7 @@
               <label for="CA_name" class="col-sm-2 control-label">Tên Menu <span style="color: red"> *</span></label>
             
               <div class="col-sm-5">
-                <input type="text" name="CA_name" required="required" class="form-control" id="CA_name" placeholder="Tên Menu">
+                <input type="text" name="CA_name" required="required" class="form-control" id="CA_name" placeholder="Tên Menu" value="{{old('CA_name')}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
@@ -40,7 +40,7 @@
               <label for="CA_number" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
             
               <div class="col-sm-2">
-                <input type="number" name="CA_number" required="required" class="form-control" id="CA_number" placeholder="Tên Menu" mandoly>
+                <input type="number" name="CA_number" required="required" class="form-control" id="CA_number" placeholder="Tên Menu" value="{{old('CA_number')}}" >
                 @if ($errors->has('CA_number'))
                   <span style="color:red">{{$errors->first('CA_number')}}</span>
                 @endif

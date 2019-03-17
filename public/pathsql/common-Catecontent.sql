@@ -55,3 +55,7 @@ CREATE TABLE IF NOT EXISTS news (
     created_at date,
     updated_at date
 )  ENGINE=INNODB;
+
+
+ALTER TABLE catecontent
+ADD COLUMN CC_number TINYINT(4) AFTER CC_id;

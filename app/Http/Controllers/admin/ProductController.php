@@ -32,7 +32,7 @@ class ProductController extends Controller
                 $a_Pro[$key]->PR_en_id = Crypt::encryptString($value['PR_id']);
 			}
 		}
-
+		
 		$asset = array('PR','pro.index');
         $c_header = array('Quản lý sản phẩm','Danh sách sản phẩm');
     	return view('admin.product.index',compact('a_Pro','asset','c_header','linkProduct'));
@@ -86,10 +86,11 @@ class ProductController extends Controller
         $a_Cates = Category::select('CA_name','CA_id','CA_status','CA_parentId')->get()->toArray();
         $a_Cates = $this->showCategories($a_Cates);
         $a_Catecontent = Catecontent::select()->get()->toArray();
-        // dd($a_Pros['PR_id']);
+        $sub_image = Product_images::where('IM_PR_id', $decrypted)->get()->toArray();
+        // dd($sub_image);
         $asset = array('PR','pro.add','editer');
         $c_header = array('Quản lý sản phẩm','Sửa sản phẩm');
-        return view('admin.product.edit',compact('asset','a_Pros','a_Cates','c_header','a_Catecontent'));
+        return view('admin.product.edit',compact('asset','a_Pros','a_Cates','c_header','a_Catecontent','sub_image','id'));
     }
 
     public function postAdd(Request $request)
@@ -118,7 +119,7 @@ class ProductController extends Controller
         $product->PR_name = $request->PR_name;
         $product->PR_CA_id = $request->CA_id;
         $product->PR_CC_id = $request->CC_id;
-        $product->PR_alias = str_slug($request->PR_name);
+        $product->PR_alias = str_slug($request->PR_name).'-'.date('dmyhis');
         $product->PR_price = isset($request->PR_price)?$request->PR_price:0;
         $product->PR_quantity = isset($request->PR_quantity)?$request->PR_quantity:0;
         $product->PR_SKU = isset($request->PR_SKU)?$request->PR_SKU:' ';
@@ -150,6 +151,11 @@ class ProductController extends Controller
 
     public function postEdit(Request $request,$id)
     {
+        try {
+            $decrypted = Crypt::decryptString($id);
+        } catch (DecryptException $e) {
+            return redirect()->route('admin.error');
+        }
         if (!empty($request->file('avatar'))) {
             $a_DataSize = getimagesize($request->file('avatar'));
             $a_width = (int)$a_DataSize[0];
@@ -159,11 +165,19 @@ class ProductController extends Controller
             }
         }
         
-        $product = Product::find($id);
+        if(!empty($request->images_delete)){
+            $ex =explode(",",$request->images_delete);
+            for($i=1;$i<count($ex);$i++){
+                $img = Product_images::find($ex[$i]);
+                File::delete('resources/upload/product/images_detail/'.$img->IM_url);
+                $img->delete();
+            }
+        }
+        $product = Product::find($decrypted);
         $product->PR_name = $request->PR_name;
         $product->PR_CA_id = $request->CA_id;
         $product->PR_CC_id = $request->CC_id;
-        $product->PR_alias = str_slug($request->PR_name);
+        $product->PR_alias = str_slug($request->PR_name).'-'.date('dmyhis');
         $product->PR_price = isset($request->PR_price)?$request->PR_price:0;
         $product->PR_quantity = $request->PR_quantity;
         $product->PR_SKU = isset($request->PR_SKU)?$request->PR_SKU:' ';
@@ -182,14 +196,14 @@ class ProductController extends Controller
             $request->file('avatar')->move('resources/upload/product/',$update);
         }
         
-        if(!empty($request->file('subavatar'))){
-            $product_detail = Product_images::select()->where('IM_PR_id',$id)->get()->toArray();
-            foreach ($product_detail as $value) {
-                File::delete('resources/upload/product/images_detail/'.$value['IM_url']);
-            }
-        }
+        // if(!empty($request->file('subavatar'))){
+        //     $product_detail = Product_images::select()->where('IM_PR_id',$decrypted)->get()->toArray();
+        //     foreach ($product_detail as $value) {
+        //         File::delete('resources/upload/product/images_detail/'.$value['IM_url']);
+        //     }
+        // }
         if(!empty($request->file('avatar'))){
-            $product1 = Product::find($id);
+            $product1 = Product::find($decrypted);
             File::delete('resources/upload/product/'.$product1->PR_avatar);
         }
         

@@ -26,6 +26,7 @@
               <th>Tên DM</th>
               <th>Ngày tạo</th>
               <th>Ngày sửa</th>
+              <th>Vị trí</th>
               <th>Trạng thái</th>
               <th>Hành động</th>
             </tr>
@@ -42,6 +43,9 @@
             </td>
             <td>
               {{$element['updated_at']}}
+            </td>
+            <td>
+              {{$element['CC_number']}}
             </td>
             <td>
              @if($element['CC_status'] == 1)

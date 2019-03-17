@@ -14,7 +14,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form action="{!! route('admin.product.postEdit',$a_Pros['PR_id']) !!}" class="form-horizontal" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <form action="{!! route('admin.product.postEdit',$id) !!}" class="form-horizontal" method="POST" enctype="multipart/form-data" autocomplete="off">
           @csrf
           <div class="box-body">
             @if(Session::has('avatar_error'))
@@ -86,11 +86,11 @@
           <label for="editor1" class="col-sm-2 control-label">Chi tiết</label>
           <div class="col-sm-9">
             <!-- tools box -->
-            <div class="box-body pad">
+            {{-- <div class="box-body"> --}}
               <textarea id="editor1" name="PR_detail" rows="10" cols="80">
                 {{$a_Pros['PR_content']}}
               </textarea>
-            </div>
+            {{-- </div> --}}
           </div>
         </div>
         <div class="form-group">
@@ -111,14 +111,16 @@
             {{-- <div class="file-preview">
             <div class=" file-drop-zone">
               <div class="file-preview-thumbnails"> --}}
-                <div class="file-preview-frame krajee-default kv-preview-thumb aaa" data-fileindex="0" data-template="image">
+                <input type="hidden" name="images_delete" value="">
+@foreach($sub_image as $s_image)
+<div class="file-preview-frame krajee-default kv-preview-thumb aaa" data-fileindex="0" data-template="image">
   <div class="kv-file-content">
-    <img src="{{url('resources/upload/product/')}}/{{$a_Pros['PR_avatar']}}" class="file-preview-image kv-preview-data" title="Jellyfish.jpg" alt="Jellyfish.jpg" style="width:auto;height:auto;max-width:100%;max-height:100%;">
+    <img src="{{url('resources/upload/product/images_detail/')}}/{{$s_image['IM_url']}}" class="file-preview-image kv-preview-data" title="Jellyfish.jpg" alt="Jellyfish.jpg" style="width:auto;height:auto;max-width:100%;max-height:100%;">
   </div>
   <div class="file-thumbnail-footer">
     <div class="file-footer-caption" title="Jellyfish.jpg">
-      <div class="file-caption-info">Jellyfish.jpg</div>
-      <div class="file-size-info"> <samp>(757.52 KB)</samp></div>
+      <div class="file-caption-info">{{$s_image['IM_url']}}</div>
+      {{-- <div class="file-size-info"> <samp>(757.52 KB)</samp></div> --}}
     </div>
     <div class="file-thumb-progress kv-hidden">
       <div class="progress">
@@ -128,18 +130,12 @@
       </div>
     </div>
     <div class="file-upload-indicator" title="Not uploaded yet"><i class="fas fa-plus-circle text-warning"></i></div>
-    <div class="file-actions">
-      <div class="file-footer-buttons">
-         <button type="button" class="kv-file-upload btn btn-sm btn-kv btn-default btn-outline-secondary" title="Upload file"><i class="fas fa-upload"></i></button> 
-         <button type="button" class="kv-file-remove btn btn-sm btn-kv btn-default btn-outline-secondary" title="Remove file"><i class="fas fa-trash-alt"></i></button>
-        <button type="button" class="kv-file-zoom btn btn-sm btn-kv btn-default btn-outline-secondary" title="View Details"><i class="fas fa-search-plus"></i></button>     
-      </div>
-    </div>
 
     <div class="clearfix"></div>
   </div>
-  <button type="button" class="kv-file-remove btn btn-sm btn-kv btn-default btn-outline-secondary" title="Remove file"><i class="fas fa-trash-alt"></i></button>
+  <button type="button" id="{{$s_image['IM_id']}}" class="kv-file-remove btn btn-sm btn-kv btn-default btn-outline-secondary" title="Remove file"><i class="fas fa-trash-alt"></i></button>
 </div>
+@endforeach
               {{-- </div>
             </div>
             </div> --}}
