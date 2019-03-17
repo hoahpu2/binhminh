@@ -53,7 +53,7 @@ class CatecontentController extends Controller
     public function postAdd(Request $request)
     {
 		$request->validate([
-        'CC_name' => 'required|unique:Catecontent|max:20'
+            'CC_name' => 'required|unique:catecontent|max:20'
         ],
         [
             'required' => 'Tên Không được để trống',

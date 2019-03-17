@@ -27,6 +27,7 @@
               <th>Ngày tạo</th>
               <th>Ngày sửa</th>
               <th>Menu cha</th>
+              <th>Vị trí</th>
               <th>Trạng thái</th>
               <th>Hành động</th>
             </tr>
@@ -46,6 +47,9 @@
             </td>
             <td>
               {{$element['parentId']}}
+            </td>
+            <td>
+              {{$element['CA_number']}}
             </td>
             <td>
              @if($element['CA_status'] == 1)

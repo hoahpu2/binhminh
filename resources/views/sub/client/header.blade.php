@@ -119,7 +119,18 @@
         <ul class="menu list-unstyled">
             <li><a href="/">HOME </a></li>
             <?php foreach ($category as $item): ?>
-            <li class="activate"><a href="{{url('danh-muc').'/'.$item->CA_alias}}">{{$item->CA_name}}</a>
+            <li class="activate"><a {{-- href="{{url('danh-muc').'/'.$item->CA_alias}}" --}}>{{$item->CA_name}}</a>
+              @if(!empty($item->sub_category))
+                <ul class="menu-second">
+                  @foreach($item->sub_category as $sub_cate)
+                    <li><a href="">{{$sub_cate['CA_name']}}</a></li>
+                  @endforeach
+                  {{-- <li><a href="">Tin Tuc 1</a></li>
+                  <li><a href="">Tin Tuc 1 Tin Tuc 1 Tin Tuc 1</a></li>
+                  <li><a href="">Tin Tuc 1</a></li>
+                  <li><a href="">Tin Tuc 1</a></li> --}}
+                </ul>
+              @endif
             </li>
             <?php endforeach; ?>
             <li><a href="{{url('tin-tuc')}}">TIN TUC </a>

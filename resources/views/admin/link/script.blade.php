@@ -77,7 +77,20 @@
         //         $('input[name="images_delete"]').val(result);
         //         return false;
         //     });
+        $('#CA_parent').change(function(){
+            if ($('#CA_parent').val() == 0) {
+                $('#CA_number').attr("required","required");
+                $('.vitri').css("display", "block");
+            } else {
+                $('#CA_number').removeAttr("required");
+                $('.vitri').css("display", "none");
+            }
         });
+        if ($('#CA_parent').val() != 0) {
+            $('#CA_number').removeAttr("required");
+            $('.vitri').css("display", "none");
+        }
+    });
 </script>
 <script type="text/javascript">
     function confirmRemove(url){

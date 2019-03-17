@@ -14,7 +14,7 @@ class CategoryController extends Controller
 	{
         // dd(Crypt::encryptString(0));
         //test
-		$a_Cate = Category::select('CA_name','CA_alias','CA_status','CA_parentId','created_at','updated_at','CA_id')->get()->toArray();
+		$a_Cate = Category::select()->get()->toArray();
 		if ($a_Cate) {
 			foreach ($a_Cate as $key => $value) {
                 $a_Cate[$key]['CA_en_id'] = Crypt::encryptString($value['CA_id']);
@@ -48,7 +48,7 @@ class CategoryController extends Controller
             return redirect()->route('admin.error');
         }
         // dd($id);
-        $a_CateOne = Category::select('CA_name','CA_id','CA_parentId','CA_status')->where('CA_id', $decrypted)->get()->toArray();
+        $a_CateOne = Category::select()->where('CA_id', $decrypted)->get()->toArray();
         // dd($a_CateOne);
         $a_CateOne[0]['CA_en_id'] = $id;
         $a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
@@ -59,13 +59,20 @@ class CategoryController extends Controller
 
     public function postAdd(Request $request)
     {
+        if ($request->CA_parent == 0) {
+            $unique = "unique:category";
+        }else{
+            $unique = '';
+        }
 		$request->validate([
-        'CA_name' => 'required|unique:category|max:20'
+            'CA_name' => 'required|unique:category|max:20',
+            'CA_number' => $unique
         ],
         [
-            'required' => 'Tên Không được để trống',
-            'unique' => 'Tên Đã tồn tại',
-            'max' => 'Tên Không được lớn hơn :max',
+            'CA_name.required' => 'Tên Không được để trống',
+            'CA_name.unique' => 'Tên Đã tồn tại',
+            'CA_name.max' => 'Tên Không được lớn hơn :max',
+            'CA_number.unique' => 'Vị trí đã tồn tại',
         ]);
     	
 
@@ -75,6 +82,11 @@ class CategoryController extends Controller
 
         $o_Cate->CA_parentId = $request->CA_parent;
         $o_Cate->CA_name = $request->CA_name;
+        if ($request->CA_parent == 0) {
+            $o_Cate->CA_number = isset($request->CA_number)?$request->CA_number:null;
+        }else{
+            $o_Cate->CA_number = null;
+        }
         $o_Cate->CA_alias = str_slug($request->CA_name);
         $o_Cate->CA_status = isset($request->CA_status)?1:0;
         
@@ -91,13 +103,20 @@ class CategoryController extends Controller
             return redirect()->route('admin.error');
         }
         $getCate = Category::where('CA_id',$decrypted)->get()->toArray();
+        if ($request->CA_parent == 0) {
+            $unique = "unique:category";
+        }else{
+            $unique = '';
+        }
         if ($getCate) {
             $request->validate([
-            'CA_name' => 'required|max:20'
+                'CA_name' => 'required|max:20',
+                'CA_number' => $unique,
             ],
             [
-                'required' => 'Tên Không được để trống',
-                'max' => 'Tên Không được lớn hơn :max',
+                'CA_name.required' => 'Tên Không được để trống',
+                'CA_name.max' => 'Tên Không được lớn hơn :max',
+                'CA_number.unique' => 'Vị trí đã tồn tại',
             ]);
         }else{
             $request->validate([
@@ -117,11 +136,14 @@ class CategoryController extends Controller
         }else{
             $o_Cate = new Category();
         }
-/*
-FPT.HoaNV12
- */
+
         $o_Cate->CA_parentId = $request->CA_parent;
         $o_Cate->CA_name = $request->CA_name;
+        if ($request->CA_parent == 0) {
+            $o_Cate->CA_number = isset($request->CA_number)?$request->CA_number:null;
+        }else{
+            $o_Cate->CA_number = null;
+        }
         $o_Cate->CA_alias = str_slug($request->CA_name);
         $o_Cate->CA_status = isset($request->CA_status)?1:0;
         

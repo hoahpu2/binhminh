@@ -8,8 +8,19 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
-        $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
+    public function index()
+    {
+        $category = Category::where("CA_status",1)->where('CA_parentId',0)->orderBy('CA_number','ASC')->take(5)->get();
+        if (!empty($category)) {
+        	foreach ($category as $key => $value) {
+        		if ($value->CA_parentId == 0) {
+        			$category[$key]->sub_category = Category::where('CA_parentId',$value->CA_id)->where("CA_status",1)->get()->toArray();
+        		}
+        		// dd($value->CA_id);
+        	}
+        }
+        // dd($category);
+        // echo"<pre>";print_r($category);die();
         $slider = Slider::all()->where('SL_status',1);
         $newProduct = Product::where("PR_status",'1')->orderBy('created_at','desc')->take(4)->get();
         $saleProduct = Product::where("PR_status",'1')->orderBy('PR_sale','desc')->take(4)->get();
