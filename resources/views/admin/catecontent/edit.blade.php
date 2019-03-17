@@ -25,6 +25,16 @@
               </div>
             </div>
             <div class="form-group">
+              <label for="CC_number" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
+            
+              <div class="col-sm-2">
+                <input type="number" name="CC_number" required="required" class="form-control" id="CC_number" placeholder="Vị trí" value="{{$a_CateOne[0]['CC_number']}}" >
+                @if ($errors->has('CC_number'))
+                  <span style="color:red">{{$errors->first('CC_number')}}</span>
+                @endif
+              </div>
+            </div>
+            <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>

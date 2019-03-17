@@ -9,5 +9,5 @@ class Catecontent extends Model
     //CC_id	CC_name	CC_alias	CC_status
     protected $table = "catecontent";
 	protected $primaryKey = 'CC_id';
-	public $fillable = ['CC_id','CC_name','CC_alias','CC_status'];
+	public $fillable = ['CC_id','CC_number','CC_name','CC_alias','CC_status'];
 }

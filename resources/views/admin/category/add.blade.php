@@ -40,7 +40,7 @@
               <label for="CA_number" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
             
               <div class="col-sm-2">
-                <input type="number" name="CA_number" required="required" class="form-control" id="CA_number" placeholder="Tên Menu" value="{{old('CA_number')}}" >
+                <input type="number" name="CA_number" required="required" class="form-control" id="CA_number" placeholder="Vị trí" value="{{old('CA_number')}}" >
                 @if ($errors->has('CA_number'))
                   <span style="color:red">{{$errors->first('CA_number')}}</span>
                 @endif

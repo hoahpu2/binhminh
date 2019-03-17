@@ -12,8 +12,6 @@ class CatecontentController extends Controller
 {
     public function index()
 	{
-        // dd(Crypt::encryptString(0));
-        //test
 		$a_Cate = Catecontent::select()->get()->toArray();
 		if ($a_Cate) {
 			foreach ($a_Cate as $key => $value) {
@@ -53,18 +51,22 @@ class CatecontentController extends Controller
     public function postAdd(Request $request)
     {
 		$request->validate([
-            'CC_name' => 'required|unique:catecontent|max:20'
+            'CC_name' => 'required|unique:catecontent|max:20',
+            'CC_number' => 'required|unique:catecontent',
         ],
         [
-            'required' => 'Tên Không được để trống',
-            'unique' => 'Tên Đã tồn tại',
-            'max' => 'Tên Không được lớn hơn :max',
+            'CC_name.required' => 'Tên Không được để trống',
+            'CC_name.unique' => 'Tên Đã tồn tại',
+            'CC_name.max' => 'Tên Không được lớn hơn :max',
+            'CC_number.required' => 'Vị trí Không được để trống',
+            'CC_number.unique' => 'Vị trí đã tồn tại',
         ]);
         
         $o_Cate = new Catecontent();
 
         $o_Cate->CC_name = $request->CC_name;
         $o_Cate->CC_alias = str_slug($request->CC_name);
+        $o_Cate->CC_number = $request->CC_number;
         $o_Cate->CC_status = isset($request->CC_status)?1:0;
         
     	$o_Cate->save();
@@ -80,25 +82,31 @@ class CatecontentController extends Controller
             return redirect()->route('admin.error');
         }
         $getCate = Catecontent::where('CC_id',$decrypted)->get()->toArray();
-        // dd($getCate);
+        // dd(Catecontent::find($decrypted)->CC_number);
+        if ($request->CC_number != Catecontent::find($decrypted)->CC_number) {
+            $unique = "unique:catecontent";
+        } else {
+            $unique = '';
+        }
+        // dd($request->CC_number);
         if ($getCate) {
             $request->validate([
-	            'CC_name' => 'required|max:20'
-	            ],
-	            [
-                'required' => 'Tên Không được để trống',
-                'max' => 'Tên Không được lớn hơn :max',
+	            'CC_name' => 'required|max:20',
+                'CC_number' => $unique,
+	        ],
+	        [
+                'CC_name.required' => 'Tên Không được để trống',
+                'CC_name.max' => 'Tên Không được lớn hơn :max',
+                'CC_number.unique' => 'Vị trí đã tồn tại',
             ]);
         }
         
         if ($getCate) {
             $o_Cate = Catecontent::find($decrypted);
         }
-/*
-FPT.HoaNV12
- */
         $o_Cate->CC_name = $request->CC_name;
         $o_Cate->CC_alias = str_slug($request->CC_name);
+        $o_Cate->CC_number = $request->CC_number;
         $o_Cate->CC_status = isset($request->CC_status)?1:0;
         
         $o_Cate->save();
