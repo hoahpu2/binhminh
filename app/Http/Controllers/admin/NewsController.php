@@ -21,15 +21,16 @@ class NewsController extends Controller
 	{
         $news = News::paginate(10);
         $c_header = array('Quản lý tin tức','Danh sách tin tức');
-        $asset = array('N','index.news',);
+        $asset = array('News','index.news',);
     	return view('admin.news.index',compact('news','asset','c_header'));
 	}
 	public function getAdd(){
         $c_header = array('Quản lý tin tức','Thêm mới tin tức');
-        $asset = array('N','add.news','editer');
+        $asset = array('News','add.news','editer');
         return view('admin.news.add',compact('asset','c_header'));
     }
-    public function postAdd(Request $request){
+    public function postAdd(Request $request)
+    {
         $request->validate([
             'N_title' => 'required|unique:news',
             'avatar' => 'required'
@@ -55,11 +56,12 @@ class NewsController extends Controller
     public function getEdit($id)
     {
         $news = News::find($id);
-        $asset = array('N','add.news','editer');
+        $asset = array('News','add.news','editer');
         $c_header = array('Quản lý tin tức','Sửa tin tức');
         return view('admin.news.edit',compact('asset','news','c_header'));
     }
-    public function postEdit(Request $request){
+    public function postEdit(Request $request)
+    {
         $request->validate([
             'N_title' => 'required',
         ],
