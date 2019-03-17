@@ -12,8 +12,6 @@ class CategoryController extends Controller
 {
 	public function index()
 	{
-        // dd(Crypt::encryptString(0));
-        //test
 		$a_Cate = Category::select()->get()->toArray();
 		if ($a_Cate) {
 			foreach ($a_Cate as $key => $value) {
@@ -104,7 +102,11 @@ class CategoryController extends Controller
         }
         $getCate = Category::where('CA_id',$decrypted)->get()->toArray();
         if ($request->CA_parent == 0) {
-            $unique = "unique:category";
+            if ($request->CA_number != Category::find($decrypted)->CA_number) {
+                $unique = "unique:category";
+            } else {
+                $unique = '';
+            }
         }else{
             $unique = '';
         }
@@ -129,7 +131,9 @@ class CategoryController extends Controller
             ]);
         }
 
-        if(!Category::where('CA_id',$request->CA_parent)->first() && $request->CA_parent != 0) return redirect()->back();
+        if (Category::find($decrypted)->CA_name != $request->CA_name) {
+            if(Category::where('CA_alias', str_slug($request->CA_name))->first()) return redirect()->back()->with(['flash_lever'=>'danger','flash_message'=>'Tên Menu đã tồn tại']);
+        }
         
         if ($getCate) {
             $o_Cate = Category::find($decrypted);
