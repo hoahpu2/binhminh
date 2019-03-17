@@ -14,3 +14,11 @@ CREATE TABLE IF NOT EXISTS catecontent (
 
 ALTER TABLE product
 ADD COLUMN PR_CC_id INT(11) AFTER PR_CA_id;
+
+/*
+*	add field in category table
+*	16/03/2019
+*	@author	HoaNV12
+ */
+ALTER TABLE category
+ADD COLUMN CA_number TINYINT(4) AFTER CA_parentId;
