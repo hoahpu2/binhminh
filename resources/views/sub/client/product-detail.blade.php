@@ -41,7 +41,7 @@
     </style>
 </head>
 <body>
-<div style="float:right;position: fixed; margin-top:500px; z-index: 1;" ><img src="{{asset('images/hotline.gif')}}" class="hotline"   alt=""></div>
+<div style="float:right;position: fixed; margin-top:550px; margin-left:20px; z-index: 1;" > <a href="tel:+13174562564"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="80px"  alt=""></a></div>
 <div class="wrap">
     <!--start header-->
 @include('sub.client.header')

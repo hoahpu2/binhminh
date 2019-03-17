@@ -17,7 +17,8 @@ Route::get('danh-sach-san-pham/moi','DetailProductController@getListNew')->name(
 Route::get('danh-sach-san-pham/sale','DetailProductController@getListSale')->name('list-product-sale');
 Route::get('danh-sach-san-pham/lien-quan','DetailProductController@getListProductRecommend')->name('list-product-recommend');
 Route::get('tim-kiem/{slug}','DetailProductController@search');
-Route::get('lien-he','ContactController@index');
+Route::get('lien-he','ContactController@index')->name('customer-contact');
+Route::post('lien-he','ContactController@postContact');
 Route::get('tin-tuc','NewsController@index');
 Route::get('tin-tuc/{Slug}','NewsController@getDetail');
 
@@ -105,4 +106,14 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 		Route::get('edit/{id}',['as'=>'admin.catecontent.getEdit','uses'=>'admin\CatecontentController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.catecontent.postEdit','uses'=>'admin\CatecontentController@postEdit']);
 	});
+	/* News */
+	Route::group(['prefix'=>'news'],function(){
+		Route::get('index',['as'=>'admin.news.index','uses'=>'admin\CatecontentController@index']);
+		Route::get('add',['as'=>'admin.catecontent.getAdd','uses'=>'admin\CatecontentController@getAdd']);
+		Route::post('add',['as'=>'admin.catecontent.postAdd','uses'=>'admin\CatecontentController@postAdd']);
+		Route::get('delete/{id}',['as'=>'admin.catecontent.getDelete','uses'=>'admin\CatecontentController@getDelete']);
+		Route::get('edit/{id}',['as'=>'admin.catecontent.getEdit','uses'=>'admin\CatecontentController@getEdit']);
+		Route::post('edit/{id}',['as'=>'admin.catecontent.postEdit','uses'=>'admin\CatecontentController@postEdit']);
+	});
+
 });

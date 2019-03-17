@@ -160,7 +160,7 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-4">
           <button type="submit" class="btn btn-info pull-left">Sign in</button> 
-          <button class="btn btn-default"><a href="{{route('admin.product.index')}}">Cancel</a></button>
+          <button class="btn btn-default"><a href="{{ url()->previous() }}">Cancel</a></button>
         </div>
       </div>
       <!-- /.box-footer -->

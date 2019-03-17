@@ -129,6 +129,7 @@ left:10px;
 .info-company{
     float:left;
     width: 50%;
+    margin-bottom: 20px;
 }
 .info-customer{
     float:right;
@@ -222,4 +223,7 @@ left:10px;
     .content{
         width: 100%;
     }
+}
+.form-contact tr td p{
+    color: red;
 }
