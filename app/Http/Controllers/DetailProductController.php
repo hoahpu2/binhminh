@@ -40,7 +40,9 @@ class DetailProductController extends Controller
     }
     public function getListNew(){
         $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
-        $product = Product::where("PR_status",'1')->orderBy('created_at','desc')->paginate(4);
+        $product = Product::where("PR_status",'1')->orderBy('created_at','desc')->paginate(2);
+        $product[0]->aaaa = 'Van';
+        dd($product);
         return view('sub.client.list-product',compact('category','product'));
     }
     public function getListSale(){

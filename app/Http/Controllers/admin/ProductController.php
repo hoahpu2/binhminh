@@ -21,14 +21,15 @@ class ProductController extends Controller
     public function index()
 	{
         //test
-		$a_Pro = Product::select()->get()->toArray();
-		$linkProduct = Product::all();
-		if ($a_Pro) {
+
+		$a_Pro = Product::paginate(10);
+
+		if (!empty($a_Pro)) {
 			foreach ($a_Pro as $key => $value) {
                 // dd($value);
-				$getCate = Category::select('CA_name')->where('CA_id', $value['PR_CA_id'])->get()->toArray();
-				$a_Pro[$key]['parentId'] = isset($getCate[0]['CA_name'])?$getCate[0]['CA_name']:'';
-                $a_Pro[$key]['PR_en_id'] = Crypt::encryptString($value['PR_id']);
+				$getCate = Category::select('CA_name')->where('CA_id', $value->PR_CA_id)->get()->toArray();
+				$a_Pro[$key]->parentId = isset($getCate[0]['CA_name'])?$getCate[0]['CA_name']:'';
+                $a_Pro[$key]->PR_en_id = Crypt::encryptString($value['PR_id']);
 			}
 		}
 		
