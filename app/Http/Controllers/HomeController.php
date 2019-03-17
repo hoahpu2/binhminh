@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Slider;
 use App\Product;
+use App\Catecontent;
+use App\News;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,11 +20,14 @@ class HomeController extends Controller
         		}
         	}
         }
-        // dd($category);
-        // echo"<pre>";print_r($category);die();
+        $categoryContent = Catecontent::where('CC_status',1)->orderBy('CC_number','asc')->get();
+        foreach ($categoryContent as $key =>$value){
+            $value->product = Product::where('PR_status',1)->where('PR_CC_id',$value->CC_id)->take(4)->get();
+        }
+        $news = News::where('N_status',1)->take(4)->get();
         $slider = Slider::all()->where('SL_status',1);
         $newProduct = Product::where("PR_status",'1')->orderBy('created_at','desc')->take(4)->get();
-        $saleProduct = Product::where("PR_status",'1')->orderBy('PR_sale','desc')->take(4)->get();
-    	return view('sub.client.main',compact('category','slider','newProduct','saleProduct'));
+
+    	return view('sub.client.main',compact('category','slider','categoryContent','news'));
     }
 }

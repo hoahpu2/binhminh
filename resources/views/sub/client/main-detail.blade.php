@@ -25,13 +25,13 @@
 
                 <div class="product-name">{{$product->PR_name}}</div>
                 <p class="detail-info">Mã sản phẩm: {{$product->PR_SKU}}</p>
-                <p class="detail-info">Tình trạng:</p>
-                <p class="detail-info">Hãng sản xuất:</p>
+                <p class="detail-info">Tình trạng:{{($product->PR_quantity)>0 ? 'Còn hàng': 'Hết hàng'}}</p>
+                <p class="detail-info">Hãng sản xuất: {{$product->PR_producer}}</p>
                 <b class="price">{{number_format($product->PR_price)}} Đ</b>
                 <p><i style="font-style: italic; color:green;">Chúng tôi nhận giao hàng trong vòng 1 giờ</i></p>
                 <div class="product-desc" style="font-style: italic;">{{$product->PR_sortDesc}}</div>
-                <button type="button" class="single_add_to_cart_button single_add_vang" data-toggle="modal" data-target="#myModal">
-                    Đặt Ngay Giao Tận Nơi<span>Nút mua nhanh - gọn - lẹ</span></button>
+                <a href="{{url('lien-he')}}"><button type="button" class="single_add_to_cart_button single_add_vang" data-toggle="modal" data-target="#myModal">
+                        Đặt Ngay Giao Tận Nơi<span>Nút mua nhanh - gọn - lẹ</span></button></a>
             </div>
             <div class="clear"></div>
         </div>
@@ -75,13 +75,20 @@
         </div>
         <div class="section group">
             @foreach($recommended as $new)
-                <div class="grid_1_of_4 images_1_of_4">
-                    <a href=""><img src="{{asset('resources/upload/product/'.$new->PR_avatar)}}" alt="" width="300px" height="240px" /></a>
-                    <h2><a href="{{url('san-pham').'/'.$new->PR_alias}}">{{$new->PR_name}} </a></h2>
-                    <p>{{$new->PR_sortDesc}}</p>
-                    <p><span class="strike">{{$new->PR_sale}}</span><span class="price">{{$new->PR_price}}</span></p>
-                    <div class="button"><span><img src="{{asset('images/cart.jpg')}}" alt="" /><a href="preview-3.html" class="cart-button">Liên hệ</a></span> </div>
-                    <div class="button"><span><a href="preview-3.html" class="details">Chi tiết</a></span></div>
+                  <div class="grid_1_of_4 images_1_of_4">
+                    @if($new->PR_sale != 0)
+                        <img src="{{asset('images/sale.png')}}"  width="300px" height="240px" class="product-sale"/>
+                    @endif
+                    <a href="{{url('san-pham/'.$new->PR_alias)}}"><img src="{{asset('resources/upload/product/'.$new->PR_avatar)}}"  width="300px" height="240px" alt="" /></a>
+                    <h2><a href="{{url('san-pham').'/'.$new->PR_alias}}" class="pr-price">{{substr($new->PR_name,0,40)}} </a></h2>
+                    <p class="short_description">{{substr($new->PR_sortDesc,0,80)}}...</p>
+                    @if($new->PR_sale != 0)
+                        <p><span class="strike">{{number_format($new->PR_price)}}Đ</span><span class="price">{{number_format($new->PR_sale)}}Đ</span></p>
+                    @else
+                        <p><span class="strike"></span><span class="price">{{number_format($new->PR_price)}}Đ</span></p>
+                    @endif
+                    <div class="button"><span><img src="{{asset('images/cart.jpg')}}" alt="" /><a href="{{url('san-pham').'/'.$new->PR_alias}}" class="cart-button">Liên hệ</a></span> </div>
+                    <div class="button"><span><a href="{{url('san-pham').'/'.$new->PR_alias}}" class="details">Chi tiết</a></span></div>
                 </div>
             @endforeach()
         </div>

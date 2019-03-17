@@ -22,7 +22,7 @@ class DetailProductController extends Controller
         $saleProduct = Product::where("PR_alias",$slug)->orderBy('PR_sale','desc')->take(10)->get();
         if(isset($product->PR_id)){
             $images = Product_images::where("IM_PR_id",$product->PR_id)->get();
-            $recommended = Product::where('PR_CA_id',$product->PR_CA_id)->take(10)->get();
+            $recommended = Product::where('PR_CA_id',$product->PR_CA_id)->take(4)->get();
             return view('sub/client/main-detail',compact('category','product','saleProduct','images','recommended'));
         }
         return view('sub/client/main-detail',compact('category'));
@@ -37,18 +37,6 @@ class DetailProductController extends Controller
         }
       return view('sub.client.list-product',compact('category'));
 
-    }
-    public function getListNew(){
-        $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
-        $product = Product::where("PR_status",'1')->orderBy('created_at','desc')->paginate(2);
-        $product[0]->aaaa = 'Van';
-        dd($product);
-        return view('sub.client.list-product',compact('category','product'));
-    }
-    public function getListSale(){
-        $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
-        $product = Product::where("PR_status",'1')->orderBy('PR_sale','desc')->get();
-        return view('sub.client.list-product',compact('category','product'));
     }
     public function getListProductRecommend(){
         $category = Category::all()->where("CA_status",'1')->where('CA_parentId',0);
