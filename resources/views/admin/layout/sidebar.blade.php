@@ -144,10 +144,22 @@
           <li class="<?php if($asset[0] == 'CTT') echo'active'; ?>">
             <a href="{{route('admin.contact.index',10)}}">
               <i class="fa fa-envelope"></i> <span>Liên hệ</span>
-              <span class="pull-right-container">
+              {{-- <span class="pull-right-container">
                 <small class="label pull-right bg-yellow">12</small>
                 <small class="label pull-right bg-green">16</small>
                 <small class="label pull-right bg-red">5</small>
+              </span> --}}
+            </a>
+          </li>
+          <li class="<?php if($asset[0] == 'Req') echo'active'; ?>">
+            <a href="{{route('admin.request.index')}}">
+              <i class="fa fa-envelope"></i> <span>Yêu cầu từ khách hàng</span>
+              <span class="pull-right-container">
+                {{-- <small class="label pull-right bg-yellow">12</small> --}}
+                @if($i_total > 0)
+                <small class="label pull-right bg-green">{{$i_total}}</small>
+                @endif
+                {{-- <small class="label pull-right bg-red">5</small> --}}
               </span>
             </a>
           </li>

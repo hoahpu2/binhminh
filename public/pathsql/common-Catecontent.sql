@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS customer_contact (
     CU_phone VARCHAR(100) NOT NULL ,
     CU_email VARCHAR(100) ,
     CU_content TEXT,
-    CC_status TINYINT(4) default 1,
+    CU_status TINYINT(4) default 1,
     created_at date,
     updated_at date
 )  ENGINE=INNODB;

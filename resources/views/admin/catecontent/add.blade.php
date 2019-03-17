@@ -18,9 +18,19 @@
               <label for="CA_name" class="col-sm-2 control-label">Tên danh mục <span style="color: red"> *</span></label>
             
               <div class="col-sm-5">
-                <input type="text" name="CC_name" required="required" class="form-control" id="CA_name" placeholder="Tên danh mục">
+                <input type="text" name="CC_name" required="required" class="form-control" id="CA_name" placeholder="Tên danh mục" value="{{old('CA_name')}}">
                 @if ($errors->has('CC_name'))
                   <span style="color:red">{{$errors->first('CC_name')}}</span>
+                @endif
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="CC_number" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
+            
+              <div class="col-sm-2">
+                <input type="number" name="CC_number" required="required" class="form-control" id="CC_number" placeholder="Vị trí" value="{{old('CC_number')}}" >
+                @if ($errors->has('CC_number'))
+                  <span style="color:red">{{$errors->first('CC_number')}}</span>
                 @endif
               </div>
             </div>
