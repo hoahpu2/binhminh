@@ -31,9 +31,6 @@
                 @endif
               </div>
             </div>
-
-         </div>
-
         <div class="form-group">
           <label for="editor1" class="col-sm-2 control-label">Nội dung tin tức</label>
           <div class="col-sm-9">
@@ -58,10 +55,11 @@
           <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
               <label>
-                <input name="N_status " type="checkbox" value="1"  <?= ($news->N_status==1)?'checked':'' ?> > Hiển thị trang chủ
+                <input name="N_status" type="checkbox" value="1"  <?= ($news->N_status==1)?'checked':'' ?> > Hiển thị trang chủ
               </label>
             </div>
           </div>
+        </div>
         </div>
       <div class="box-footer">
         <div class="col-sm-2"></div>

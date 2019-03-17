@@ -140,16 +140,16 @@
               <li><a href="../examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
               <li><a href="../examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li> --}}
             </ul>
-          </li>     <li class="treeview <?php if($asset[0] == 'SL') echo'active'; ?>">
+          </li>     <li class="treeview <?php if($asset[0] == 'News') echo'active'; ?>">
             <a href="#">
-              <i class="fa fa-"></i> <span>Quản lý tin tức</span>
+              <i class="fa fa-calendar"></i> <span>Quản lý tin tức</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="<?php if($asset[1] == 'add.new')echo'active'; ?>"><a href="{{route('admin.news.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới tin tức</a></li>
-              <li class="<?php if($asset[1] == 'index.new')echo'active'; ?>"><a href="{{route('admin.news.index')}}"><i class="fa fa-circle-o"></i> Danh sách tin tức</a></li>
+              <li class="<?php if($asset[1] == 'add.news')echo'active'; ?>"><a href="{{route('admin.news.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới tin tức</a></li>
+              <li class="<?php if($asset[1] == 'index.news')echo'active'; ?>"><a href="{{route('admin.news.index')}}"><i class="fa fa-circle-o"></i> Danh sách tin tức</a></li>
             </ul>
           </li>
           <li class="<?php if($asset[0] == 'CTT') echo'active'; ?>">
@@ -164,12 +164,10 @@
           </li>
           <li class="<?php if($asset[0] == 'Req') echo'active'; ?>">
             <a href="{{route('admin.request.index')}}">
-              <i class="fa fa-envelope"></i> <span>Yêu cầu từ khách hàng</span>
+              <i class="fa fa-share"></i> <span>Yêu cầu từ khách hàng</span>
               <span class="pull-right-container">
                 {{-- <small class="label pull-right bg-yellow">12</small> --}}
-                @if($i_total > 0)
-                <small class="label pull-right bg-green">{{$i_total}}</small>
-                @endif
+                <small class="label pull-right bg-green" id="i_total"></small>
                 {{-- <small class="label pull-right bg-red">5</small> --}}
               </span>
             </a>

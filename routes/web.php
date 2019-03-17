@@ -103,7 +103,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 		Route::get('detail/{id}',['as'=>'admin.request.detail','uses'=>'admin\CustomerController@detail']);
 		Route::get('preview',['as'=>'admin.request.preview','uses'=>'admin\CustomerController@preview']);
 		Route::get('clickshow/{id}',['as'=>'admin.request.clickshow','uses'=>'admin\CustomerController@clickshow']);
-		Route::get('edit/{id}',['as'=>'admin.request.getEdit','uses'=>'admin\CustomerController@getEdit']);
+		Route::get('ajaxx',['as'=>'admin.request.ajaxx','uses'=>'admin\CustomerController@ajaxx']);
 		Route::post('edit/{id}',['as'=>'admin.request.postEdit','uses'=>'admin\CustomerController@postEdit']);
 	});
 

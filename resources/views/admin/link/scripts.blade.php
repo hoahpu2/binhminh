@@ -46,22 +46,23 @@
     $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
         $("#success-alert").slideUp(500);
     });
-	// $("#file-4").fileinput({
- //        theme: 'fas',
- //        uploadExtraData: {kvId: '10'}
- //    });
-    // $(".btn-warning").on('click', function () {
-    //     var $el = $("#file-4");
-    //     if ($el.attr('disabled')) {
-    //         $el.fileinput('enable');
-    //     } else {
-    //         $el.fileinput('disable');
-    //     }
-    // });
-    // $(".btn-info").on('click', function () {
-    //     $("#file-4").fileinput('refresh', {previewClass: 'bg-info'});
-    // });
     $(document).ready(function() {
+        $('.fa-search').ready(function(){
+            $.ajax({
+               url: "{{route('admin.request.ajaxx')}}",
+               data: {
+                  format: 'json'
+               },
+               error: function() {
+                  $('#info').html('<p>An error has occurred</p>');
+               },
+               dataType: 'json',
+               success: function(data) {
+                    $(".pull-right-container #i_total").text(data.i_total);
+               },
+               type: 'GET'
+            });
+        });
         $('.kv-file-remove').click(function(){
              $(this).parent(".kv-preview-thumb").remove();
 
