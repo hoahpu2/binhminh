@@ -22,3 +22,6 @@ ADD COLUMN PR_CC_id INT(11) AFTER PR_CA_id;
  */
 ALTER TABLE category
 ADD COLUMN CA_number TINYINT(4) AFTER CA_parentId;
+
+ALTER TABLE catecontent
+ADD COLUMN CC_number TINYINT(4) AFTER CC_id;
