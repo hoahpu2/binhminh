@@ -20,8 +20,6 @@ class ProductController extends Controller
     public $treess = array();
     public function index()
 	{
-        //test
-
 		$a_Pro = Product::paginate(10);
 
 		if (!empty($a_Pro)) {
@@ -35,7 +33,7 @@ class ProductController extends Controller
 		
 		$asset = array('PR','pro.index');
         $c_header = array('Quản lý sản phẩm','Danh sách sản phẩm');
-    	return view('admin.product.index',compact('a_Pro','asset','c_header','linkProduct'));
+    	return view('admin.product.index',compact('a_Pro','asset','c_header'));
 	}
 
     public function getAdd()

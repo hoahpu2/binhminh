@@ -56,10 +56,16 @@
         <div class="clear"></div>
     </div>
         <div class="info-product">
-            <h2>Thông tin sản phẩm</h2>
-           <div class="product-desc-detail">
+            <h2>Thông tin sản phẩm </h2>
+           <div class="product-desc-detail col-md-08">
                {!!$product->PR_content!!}
            </div>
+        </div><br>
+        <div class="product-comment product-v-desc">
+            <b style="font-size: 40px;color: red"><u><h1>Bình luận</h1></u></b>
+            <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+                <div class="fb-comments" data-href="{{$url}}{{$product->PR_alias}}" data-numposts="10" with="100%"></div>
+            </div>
         </div>
     <div class="recommend">
         <div class="content_top">

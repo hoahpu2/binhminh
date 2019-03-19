@@ -41,6 +41,14 @@
     </style>
 </head>
 <body>
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 <div style="float:right;position: fixed; margin-top:550px; margin-left:20px; z-index: 1;" > <a href="tel:+13174562564"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="80px"  alt=""></a></div>
 <div class="wrap">
     <!--start header-->
@@ -61,5 +69,7 @@
         if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
 </script>
 <!-- End of Chaport Live Chat code -->
+<div id="fb-root"></div>
+
 </body>
 </html>

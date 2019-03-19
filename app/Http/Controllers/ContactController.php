@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 use App\Category;
 use App\CustomerContact;
+use App\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Routing\UrlGenerator;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function index(UrlGenerator $url)
     {
+        // dd($url->to('/'));
         $category = Category::where("CA_status",1)->where('CA_parentId',0)->orderBy('CA_number','ASC')->take(5)->get();
         if (!empty($category)) {
             foreach ($category as $key => $value) {
@@ -17,7 +20,9 @@ class ContactController extends Controller
                 }
             }
         }
-        return view('sub.client.contact',compact('category'));
+
+        $contact = Contact::find(1);
+        return view('sub.client.contact',compact('category','contact'));
 
     }
     public function postContact(Request $request){

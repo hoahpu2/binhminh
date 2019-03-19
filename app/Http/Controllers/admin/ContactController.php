@@ -13,7 +13,7 @@ class ContactController extends Controller
     public function index($id)
     {
     	$contact = Contact::select()->get()->toArray();
-    	$asset = array('CTT','');
+    	$asset = array('CTT','','editer');
         $c_header = array('Quản lý liên hệ','Quản lý liên hệ');
     	return view('admin.contact.index',compact('asset','contact','c_header'));
     }
@@ -29,6 +29,7 @@ class ContactController extends Controller
 		$user->CT_linkYoutu = $request->CT_linkYoutu;
 		$user->CT_linkGoogle = $request->CT_linkGoogle;
 		$user->CT_Email = $request->CT_Email;
+        $user->CT_content = isset($request->CT_content)?$request->CT_content:' ';
 		
 		$user->save();
 		return redirect()->route('admin.contact.index',$request->id)->with(['flash_lever'=>'success','flash_message'=>'Thêm mới thành công']);
