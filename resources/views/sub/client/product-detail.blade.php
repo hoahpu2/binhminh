@@ -49,7 +49,7 @@
         js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
-<div style="float:right;position: fixed; margin-top:550px; margin-left:20px; z-index: 1;" > <a href="tel:+13174562564"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="80px"  alt=""></a></div>
+<div style="float:right;position: fixed; margin-top:550px; margin-left:20px; z-index: 1;" > <a href="{{$contactAdmin->phone}}"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="80px"  alt=""></a></div>
 <div class="wrap">
     <!--start header-->
 @include('sub.client.header')

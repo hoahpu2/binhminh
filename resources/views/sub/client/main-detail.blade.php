@@ -62,7 +62,7 @@
            </div>
         </div><br>
         <div class="product-comment product-v-desc">
-            <b style="font-size: 40px;color: red"><u><h1>Bình luận</h1></u></b>
+            <b style="font-size: 20px;color: red"><u><h1>Bình luận</h1></u></b>
             <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
                 <div class="fb-comments" data-href="{{$url}}{{$product->PR_alias}}" data-numposts="10" with="100%"></div>
             </div>
