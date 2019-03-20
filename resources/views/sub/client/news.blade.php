@@ -2,17 +2,17 @@
 @section('content')
     <div class="clear"></div>
     <p class="category-name">Tin tuc</p>
+    @foreach($news as $item)
     <div class="news">
-        <div class="news-img">
-            <img src="{{asset('images/mau/tin-tuc/kia.jpg')}}" alt="">
-        </div>
+        <a href="{{url('tin-tuc'.'/'.$item->N_alias)}}" class="news-img">
+            <img src="{{asset('resources/upload/news'.'/'.$item->N_avatar)}}" alt="">
+        </a>
         <div class="news-content">
-            <p class="news-title">Có nên lắp đặt thiết bị hiển thị tốc độ trên kính lái HUD cho ô tô không?</p>
-            <p class="new-desc">Thiết bị hiển thị tốc độ trên kính lái
-                HUD vốn dĩ là thiết bị công nghệ tiên tiến và hữu ích dành cho xe ô tô. Nhưng bên cạnh đó, c
-                ó rất nhiều người vẫn luôn thắc mắc và đặt ra câu hỏi: Có cần thiết lắp thiết bị hiển thị tốc độ trên...</p>
-            <a href="" class="read-more">Đọc tiếp</a>
+            <p class="news-title">{{$item->N_title}}</p>
+            <p class="new-desc">{!! str_limit($item->N_content,400) !!}</p>
+            <a href="{{url('tin-tuc'.'/'.$item->N_alias)}}" class="read-more">Đọc tiếp</a>
         </div>
 
     </div>
+    @endforeach
 @endsection

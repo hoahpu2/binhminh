@@ -6,6 +6,7 @@
 <div class="wrap">
     <div class="main">
         @foreach($categoryContent as $item)
+            @if($item->count >0)
         <div class="content">
             <div class="content_top" style="background: #ede392;">
                 <div class="heading">
@@ -13,7 +14,7 @@
                 </div>
                 <div class="page-no">
                     <ul>
-                        <li>[<a href="{{route('list-product-new')}}"> Xem thêm>>></a >]</li>
+                        <li>[<a href="{{url('danh-sach-san-pham'.'/'.$item->CC_alias)}}"> Xem thêm>>></a >]</li>
                     </ul></p>
                 </div>
                 <div class="clear"></div>
@@ -35,9 +36,11 @@
                     <div class="button"><span><img src="{{asset('images/cart.jpg')}}" alt="" /><a href="{{url('san-pham').'/'.$new->PR_alias}}" class="cart-button">Liên hệ</a></span> </div>
                     <div class="button"><span><a href="{{url('san-pham').'/'.$new->PR_alias}}" class="details">Chi tiết</a></span></div>
                 </div>
+
                     @endforeach()
             </div>
         </div>
+            @endif
             @endforeach
     </div>
 </div>

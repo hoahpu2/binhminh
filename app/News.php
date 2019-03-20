@@ -8,5 +8,5 @@ class News extends Model
 {
     protected $table = "news";
 	protected $primaryKey = 'N_id';
-	public $fillable = ['N_id','N_title','N_alias','N_content','N_status','N_avatar'];
+	public $fillable = ['N_title','N_alias','N_content','N_status','N_avatar'];
 }
