@@ -15,7 +15,7 @@
 <body>
 {{--<img src="{{asset('images/preview-img5.jpg')}}" class="quangcao-phai">--}}
 {{--<img src="{{asset('images/bo.jpg')}}" class="quangcao-trai">--}}
-<div style="float:right;position: fixed; margin-top:550px; margin-left:20px; z-index: 1;" > <a href="tel:+13174562564"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="80px"  alt=""></a></div>
+<div style="float: right; position: fixed; bottom:20px;z-index: 1;" > <a href="{{$contactAdmin->phone}}"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="70px"  alt=""></a></div>
 <div class="wrap">
     <!--start header-->
 @include('sub.client.header')
