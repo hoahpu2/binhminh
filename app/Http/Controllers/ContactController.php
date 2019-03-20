@@ -20,9 +20,9 @@ class ContactController extends Controller
                 }
             }
         }
-
+        $contactAdmin = Contact::get()->first();
         $contact = Contact::find(1);
-        return view('sub.client.contact',compact('category','contact'));
+        return view('sub.client.contact',compact('category','contact','contactAdmin'));
 
     }
     public function postContact(Request $request){

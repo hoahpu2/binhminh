@@ -5,8 +5,9 @@
             </div>
               <div class="header_top_right">
                 <div class="search_box">
-                    <form>
-                        <input type="text" value="Nhập tên sản phẩm bạn muốn tìm kiếm ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập tên sản bạn muốn tìm';}"><input type="submit" value="Tìm kiếm">
+                    <form action="{{route('search')}}" method="post">
+                        @csrf
+                        <input type="text" name="product" value="{{old('product')}}" placeholder="Nhập tên sản phẩm bạn muốn tìm kiếm ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập tên sản bạn muốn tìm';}"><input type="submit" value="Tìm kiếm">
                     </form>
                 </div>
                 <div class="shopping_cart">
@@ -95,19 +96,19 @@
         </script>
    </div>
            <div class="login">
-               <span><a href="login.html"><img src="{{asset('images/login.png')}}" alt="" title="login"/></a></span>
+               <span><a href="/"><img src="{{asset('images/login.png')}}" alt="" title="login"/></a></span>
            </div>
                   <div class="social-icons" style="float:right;padding-top: 10px;   ">
                       <ul>
-                          <li class="facebook"><a href="#" target="_blank"> </a></li>
-                          <li class="twitter"><a href="#" target="_blank"> </a></li>
-                          <li class="googleplus"><a href="#" target="_blank"> </a></li>
-                          <li class="contact"><a href="#" target="_blank"> </a></li>
+                          <li class="facebook"><a href="{{$contactAdmin->CT_linkFace}}" target="_blank"> </a></li>
+                          <li class="twitter"><a href="{{$contactAdmin->CT_linkFace}}" target="_blank"> </a></li>
+                          <li class="googleplus"><a href="{{$contactAdmin->CT_linkFace}}" target="_blank"> </a></li>
+                          <li class="contact"><a href="{{url('lien-he')}}" target="_blank"> </a></li>
                           <div class="clear"></div>
                       </ul>
                   </div>
                   <div class="hotline-phone">
-                      <h2>Hotline: 0989797979</h2>
+                      <h2>Hotline: {{$contactAdmin->CT_number}}</h2>
                   </div>
          <div class="clear"></div>
      </div>
@@ -119,19 +120,19 @@
         <ul class="menu list-unstyled">
             <li><a href="/">HOME </a></li>
             <?php foreach ($category as $item): ?>
-            <li class="activate"><a {{-- href="{{url('danh-muc').'/'.$item->CA_alias}}" --}}>{{$item->CA_name}}</a>
+            <li class="activate"><a  href="{{url('danh-sach-san-pham/danh-muc').'/'.$item->CA_alias}}" >{{$item->CA_name}}</a>
               @if(!empty($item->sub_category))
                 <ul class="menu-second">
                   @foreach($item->sub_category as $sub_cate)
-                    <li><a href="">{{$sub_cate['CA_name']}}</a></li>
+                    <li><a href="{{url('danh-sach-san-pham/danh-muc'.'/'.$sub_cate['CA_alias'])}}">{{$sub_cate['CA_name']}}</a></li>
                   @endforeach
                 </ul>
               @endif
             </li>
             <?php endforeach; ?>
-            <li><a href="{{url('tin-tuc')}}">TIN TUC </a>
+            <li><a href="{{url('tin-tuc')}}">TIN TỨC </a>
             </li>
-            <li><a href="{{url('lien-he')}}">LIEN HE </a></li>
+            <li><a href="{{url('lien-he')}}">LIÊN HỆ </a></li>
             <div class="clear"> </div>
         </ul>
         </nav> 

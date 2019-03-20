@@ -183,6 +183,10 @@ left:10px;
     .news-img{
         width: 100% !important;
     }
+    .news-img img{
+        width:100%;
+        height:200px;
+    }
 
 }
 
@@ -195,8 +199,12 @@ left:10px;
     width: 100%;
     display: flex;
 }
-.news-img {
+.news-img  {
     width: 250px;
+}
+.news-img img{
+    width:100%;
+    height:200px;
 }
 .news-content{
     width: 50%;

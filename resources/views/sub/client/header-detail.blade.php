@@ -4,9 +4,9 @@
             @if($news)
                 @foreach($news as $item)
                     <div class="listview_1_of_2 images_1_of_2">
-                        <a href="{{url('tin-tuc/').$item->N_alias}}"> <img src="{{asset('resources/upload/news/'.$item->N_avatar)}}" alt=""  class="tin-tuc-img"/></a>
+                        <a href="{{url('tin-tuc')."/".$item->N_alias}}"> <img src="{{asset('resources/upload/news/'.$item->N_avatar)}}" alt=""  class="tin-tuc-img"/></a>
                         <p class="tin-tuc-icon">Tin tuc</p>
-                        <a href="" class="new-title">
+                        <a href="{{url('tin-tuc')."/".$item->N_alias}}" class="new-title">
                             <p>{{$item->N_title}}</p>
                         </a>
                     </div>

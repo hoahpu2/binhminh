@@ -74,14 +74,14 @@
             </div>
             <div class="page-no">
                <ul>
-                    <li>[<a href="{{route('list-product-recommend')}}"> Next>>></a >]</li>
+                    <li>[<a href="{{url('danh-sach-san-pham/danh-muc'.'/'.$product->PR_CA_id)}}"> Xem thêm>>></a >]</li>
                 </ul>
             </div>
             <div class="clear"></div>
         </div>
         <div class="section group">
             @foreach($recommended as $new)
-                  <div class="grid_1_of_4 images_1_of_4">
+                <div class="grid_1_of_4 images_1_of_4">
                     @if($new->PR_sale != 0)
                         <img src="{{asset('images/sale.png')}}"  width="300px" height="240px" class="product-sale"/>
                     @endif

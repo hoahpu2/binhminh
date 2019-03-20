@@ -6,6 +6,7 @@ use App\Slider;
 use App\Product;
 use App\Catecontent;
 use App\News;
+use App\Contact;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,14 +21,16 @@ class HomeController extends Controller
         		}
         	}
         }
+//        create category levels
         $categoryContent = Catecontent::where('CC_status',1)->orderBy('CC_number','asc')->get();
         foreach ($categoryContent as $key =>$value){
             $value->product = Product::where('PR_status',1)->where('PR_CC_id',$value->CC_id)->take(4)->get();
+            $value->count = count( Product::where('PR_status',1)->where('PR_CC_id',$value->CC_id)->take(4)->get()->toArray());
         }
         $news = News::where('N_status',1)->take(4)->get();
         $slider = Slider::all()->where('SL_status',1);
-        $newProduct = Product::where("PR_status",'1')->orderBy('created_at','desc')->take(4)->get();
+        $contactAdmin = Contact::get()->first();
 
-    	return view('sub.client.main',compact('category','slider','categoryContent','news'));
+    	return view('sub.client.main',compact('category','slider','categoryContent','news','contactAdmin'));
     }
 }

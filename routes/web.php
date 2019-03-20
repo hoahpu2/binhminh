@@ -11,17 +11,14 @@
 |
 */
 Route::get('/','HomeController@index')->name('homepage');
-Route::get('danh-muc/{slug}','DetailProductController@getList')->name('getList');
+Route::get('danh-sach-san-pham/danh-muc/{slug}','DetailProductController@getListProductByCategory')->name('getListProductByCategory');
 Route::get('san-pham/{slug}','DetailProductController@index')->name('detail');
-Route::get('danh-sach-san-pham/moi','DetailProductController@getListNew')->name('list-product-new');
-Route::get('danh-sach-san-pham/sale','DetailProductController@getListSale')->name('list-product-sale');
-Route::get('danh-sach-san-pham/lien-quan','DetailProductController@getListProductRecommend')->name('list-product-recommend');
-Route::get('tim-kiem/{slug}','DetailProductController@search');
+Route::get('danh-sach-san-pham/{slug}','DetailProductController@getListProductBySlug')->name('list-product-by-slug');
+Route::post('tim-kiem','DetailProductController@search')->name('search');
 Route::get('lien-he','ContactController@index')->name('customer-contact');
 Route::post('lien-he','ContactController@postContact');
-Route::get('tin-tuc','NewsController@index');
+Route::get('tin-tuc','NewsController@index')->name('news');
 Route::get('tin-tuc/{Slug}','NewsController@getDetail');
-
 // Route::get('/', function () {
 // 	dd(bcrypt('123456'));
 //     // return view('admin.login');
