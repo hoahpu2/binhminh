@@ -84,4 +84,14 @@ class NewsController extends Controller
         $news->save();
         return redirect()->route('admin.news.index')->with(['flash_lever'=>'success','flash_message'=>'Sửa thành công']);
     }
+
+    public function getDelete($id)
+    {
+        $cate = News::find($id);
+        if (empty($cate)) {
+            return redirect()->route('admin.error');
+        }
+        $cate->delete();
+        return redirect()->route('admin.news.index');
+    }
 }

@@ -59,3 +59,10 @@ CREATE TABLE IF NOT EXISTS news (
 
 ALTER TABLE catecontent
 ADD COLUMN CC_number TINYINT(4) AFTER CC_id;
+
+/*
+*   add field in contact table
+*   FPT.HoaNV12
+ */
+ALTER TABLE contact
+ADD COLUMN CT_content text AFTER CT_Email;
