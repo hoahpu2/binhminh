@@ -115,3 +115,4 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	});
 
 });
+Route::get('{slug}','HomeController@notFound')->name('404');

@@ -11,7 +11,7 @@
 }
 .heading h3{
     font-family: 'Monda', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     color: red;
     text-transform: uppercase;
     font-weight: bold;
@@ -93,6 +93,7 @@
     opacity: 0.6;
     filter: alpha(opacity=30);
     width:91%;
+    font-style: italic;
 
 }
 .new-title p {
@@ -230,6 +231,11 @@ left:10px;
     }
     .content{
         width: 100%;
+    }
+    .product-detail-image-desktop{
+        display: block;
+        padding-right: 0;
+        float: none;
     }
 }
 .form-contact tr td p{

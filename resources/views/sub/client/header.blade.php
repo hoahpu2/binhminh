@@ -7,7 +7,7 @@
                 <div class="search_box">
                     <form action="{{route('search')}}" method="post">
                         @csrf
-                        <input type="text" name="product" value="{{old('product')}}" placeholder="Nhập tên sản phẩm bạn muốn tìm kiếm ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập tên sản bạn muốn tìm';}"><input type="submit" value="Tìm kiếm">
+                        <input type="text" name="product" value="{{isset($name) ? $name : '' }}" placeholder="Nhập tên sản phẩm bạn muốn tìm kiếm ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nhập tên sản bạn muốn tìm';}"><input type="submit" value="Tìm kiếm">
                     </form>
                 </div>
                 <div class="shopping_cart">

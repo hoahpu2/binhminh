@@ -34,6 +34,20 @@
         @media screen and (max-width: 500px){
             #exzoom{
                 width: 200px;
+                margin: 20px auto;
+            }
+        }@media screen and (max-width: 375px){
+            .languages{
+                display: none;
+            }
+            .currency{
+                display: none;
+            }
+            .login{
+                display: none;
+            }
+            .social-icons{
+                display: none;
             }
         }
 
@@ -49,7 +63,7 @@
         js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
-<div style="float:right;position: fixed; margin-top:550px; margin-left:20px; z-index: 1;" > <a href="{{$contactAdmin->phone}}"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="80px"  alt=""></a></div>
+<div style="float: right; position: fixed; bottom:20px;z-index: 1;" > <a href="{{'tel:'.$contactAdmin->CT_number}}"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="65px"  alt=""></a></div>
 <div class="wrap">
     <!--start header-->
 @include('sub.client.header')
