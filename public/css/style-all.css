@@ -84,7 +84,7 @@
 }
 .new-title{
     position: absolute;
-    bottom: 10px;
+    bottom: 17px;
     font-size: 16px;
     font-weight: bold;
     padding: 5px;
@@ -92,8 +92,9 @@
     background: black;
     opacity: 0.6;
     filter: alpha(opacity=30);
-    width:91%;
+    width:90%;
     font-style: italic;
+    text-align:center;
 
 }
 .new-title p {
@@ -189,6 +190,18 @@ left:10px;
         height:200px;
     }
 
+    /*css menu*/
+    .icon-menu{
+        display: inline !important;
+        float:right;
+    }
+    .__active{
+        display: inline !important;
+    }
+
+}
+.icon-menu{
+    display: none;
 }
 
 /*css news*/

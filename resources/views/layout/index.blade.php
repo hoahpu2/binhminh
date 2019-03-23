@@ -12,19 +12,23 @@
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/script.js')}}" type="text/javascript"></script>
     <style>
-        @media screen and (max-width: 375px){
-            .languages{
+        @media screen and (max-width: 375px) {
+            .languages {
                 display: none;
             }
-            .currency{
+
+            .currency {
                 display: none;
             }
-            .login{
+
+            .login {
                 display: none;
             }
-            .social-icons{
+
+            .social-icons {
                 display: none;
             }
+        }
     </style>
 </head>
 <body>
@@ -49,6 +53,9 @@
         w.chaportConfig = { appId : '5c851d2996553c1ae0d27ae7' };
 
         if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
+    $('.menu-main').click(function () {
+        $(this).find('.menu-second').toggleClass("__active");
+    });
 </script>
 <!-- End of Chaport Live Chat code -->
 </body>

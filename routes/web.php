@@ -10,7 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','HomeController@index')->name('homepage');
+Route::get('/',function (){
+    return view('sub.bao-tri');
+});
+//Route::get('/','HomeController@index')->name('homepage');
 Route::get('danh-sach-san-pham/danh-muc/{slug}','DetailProductController@getListProductByCategory')->name('getListProductByCategory');
 Route::get('san-pham/{slug}','DetailProductController@index')->name('detail');
 Route::get('danh-sach-san-pham/{slug}','DetailProductController@getListProductBySlug')->name('list-product-by-slug');

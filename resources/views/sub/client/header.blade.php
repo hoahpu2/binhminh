@@ -120,7 +120,11 @@
         <ul class="menu list-unstyled">
             <li><a href="/">HOME </a></li>
             <?php foreach ($category as $item): ?>
-            <li class="activate"><a  href="{{url('danh-sach-san-pham/danh-muc').'/'.$item->CA_alias}}" >{{$item->CA_name}}</a>
+            <li class="activate menu-main"><a>{{$item->CA_name}}
+                @if(!empty($item->sub_category))
+                        <span class="icon-menu"><img src="{{asset('images/down.png')}}" width="10px" alt=""></span>
+                    @endif
+                </a>
               @if(!empty($item->sub_category))
                 <ul class="menu-second">
                   @foreach($item->sub_category as $sub_cate)
