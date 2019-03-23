@@ -11,11 +11,30 @@
     <link href="{{asset('css/style-all.css')}}" rel="stylesheet" type="text/css" media="all"/>
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/script.js')}}" type="text/javascript"></script>
+    <style>
+        @media screen and (max-width: 375px) {
+            .languages {
+                display: none;
+            }
+
+            .currency {
+                display: none;
+            }
+
+            .login {
+                display: none;
+            }
+
+            .social-icons {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 {{--<img src="{{asset('images/preview-img5.jpg')}}" class="quangcao-phai">--}}
 {{--<img src="{{asset('images/bo.jpg')}}" class="quangcao-trai">--}}
-<div style="float: right; position: fixed; bottom:20px;z-index: 1;" > <a href="{{$contactAdmin->phone}}"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="70px"  alt=""></a></div>
+<div style="float: right; position: fixed; bottom:20px;z-index: 1;" > <a href="{{'tel:'.$contactAdmin->CT_number}}"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="65px"  alt=""></a></div>
 <div class="wrap">
     <!--start header-->
 @include('sub.client.header')
@@ -34,6 +53,9 @@
         w.chaportConfig = { appId : '5c851d2996553c1ae0d27ae7' };
 
         if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
+    $('.menu-main').click(function () {
+        $(this).find('.menu-second').toggleClass("__active");
+    });
 </script>
 <!-- End of Chaport Live Chat code -->
 </body>

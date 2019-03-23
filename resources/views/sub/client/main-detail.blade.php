@@ -40,16 +40,17 @@
                 <span class="label label-success">Cam kết của chúng tôi</span>
                 <div class="hrviet"></div>
                 <div class="camket">
-                    <p><i class="far fa-thumbs-up"></i>Đảm bảo 100% hàng chính hãng</p>
-                    <p><i class="fas fa-sync-alt"></i></span> Đổi trả hàng trong 10 ngày (*)</p>
-                    <p><i class="fas fa-heart"></i></span> Dịch vụ khách hàng tốt nhất</p>  </div>
+                    <p><i class="far fa-thumbs-up"></i>&nbsp;Đảm bảo 100% hàng chính hãng</p>
+                    <p><i class="far fa-thumbs-up"></i>&nbsp; Đổi trả hàng trong 10 ngày (*)</p>
+                    <p><i class="far fa-thumbs-up"></i>&nbsp; Dịch vụ khách hàng tốt nhất</p>
+                    <p><i class="far fa-thumbs-up"></i>&nbsp; Gọi lại cho khách hàng trong 5 phút </p>
+                    <p><i class="far fa-thumbs-up"></i>&nbsp; Xem hàng tại nhà, hài lòng thanh toán </p>
+                </div>
                 <div class="hrviet"></div>
                 <div class="hotlie">
-                    <p class="sft"><i class="fas fa-phone"></i><b> 0968.268.365 </b>( KD Nội Thất )
+                    <b ><i class="fas fa-phone"></i> Mua hàng gọi</b>
                         <br>
-                        <b>***</b><b> 0921.268.365 </b>( KD Phụ Tùng )</p>
-                    <p class="sft"><i class="fas fa-phone"></i> <b> 0905.268.365</b> ( Bán Sỉ )</p>
-                    <p><i class="fas fa-phone"></i> <b> 0385.910.910</b>( Khiếu Nại )</p>
+                        <b>***</b><b> {{$contactAdmin->CT_number}} </b><b>***</b>
                 </div>
             </div>
         </div>
@@ -83,7 +84,7 @@
             @foreach($recommended as $new)
                 <div class="grid_1_of_4 images_1_of_4">
                     @if($new->PR_sale != 0)
-                        <img src="{{asset('images/sale.png')}}"  width="300px" height="240px" class="product-sale"/>
+                        <img src="{{asset('images/sale.png')}}" style="width: 50px;height: 50px;" class="product-sale"/>
                     @endif
                     <a href="{{url('san-pham/'.$new->PR_alias)}}"><img src="{{asset('resources/upload/product/'.$new->PR_avatar)}}"  width="300px" height="240px" alt="" /></a>
                     <h2><a href="{{url('san-pham').'/'.$new->PR_alias}}" class="pr-price">{{substr($new->PR_name,0,40)}} </a></h2>

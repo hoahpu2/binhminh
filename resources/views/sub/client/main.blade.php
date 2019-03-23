@@ -23,7 +23,7 @@
                 @foreach($item->product as $new)
                 <div class="grid_1_of_4 images_1_of_4">
                     @if($new->PR_sale != 0)
-                    <img src="{{asset('images/sale.png')}}"  width="300px" height="240px" class="product-sale"/>
+                    <img src="{{asset('images/sale.png')}}" style="width: 50px;height: 50px;" class="product-sale"/>
                     @endif
                     <a href="{{url('san-pham/'.$new->PR_alias)}}"><img src="{{asset('resources/upload/product/'.$new->PR_avatar)}}"  width="300px" height="240px" alt="" /></a>
                     <h2><a href="{{url('san-pham').'/'.$new->PR_alias}}" class="pr-price">{{substr($new->PR_name,0,40)}} </a></h2>

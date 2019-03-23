@@ -3,13 +3,13 @@
 }
 .content{
     display: table;
-    width:75%;
+    width:74%;
     float:left;
 
 }
 .product-detail{
     float: right;
-    width: 50%;
+    width: 54%;
 }
 .product-detail-image-desktop{
     display: inline-block;
@@ -45,6 +45,10 @@
 }
 .panel-default p{
     margin: 0 0 10px;
+}
+.hotlie{
+    text-align: center;
+    font-size: 25px;
 }
 .hotlie b{
     color: red;
