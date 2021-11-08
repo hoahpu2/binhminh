@@ -105,9 +105,9 @@ class ProductController extends Controller
         $a_DataSize = getimagesize($request->file('avatar'));
         $a_width = (int)$a_DataSize[0];
         $a_height = (int)$a_DataSize[1];
-        if ($a_height / $a_width !== 1) {
-            return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh đại diện theo tỷ lệ 1:1'])->withInput();
-        }
+        // if ($a_height / $a_width !== 1) {
+        //     return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh đại diện theo tỷ lệ 1:1'])->withInput();
+        // }
 
         // $file_name = $request->file('avatar')->getClientOriginalName();
         // dd($file_name);
@@ -158,11 +158,12 @@ class ProductController extends Controller
             $a_DataSize = getimagesize($request->file('avatar'));
             $a_width = (int)$a_DataSize[0];
             $a_height = (int)$a_DataSize[1];
-            if ($a_height / $a_width !== 1) {
-                return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh đại diện theo tỷ lệ 1:1'])->withInput();
-            }
+            // if ($a_height / $a_width !== 1) {
+            //     return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh đại diện theo tỷ lệ 1:1'])->withInput();
+            // }
         }
         
+        dd($request->file('subavatar'));
         if(!empty($request->images_delete)){
             $ex =explode(",",$request->images_delete);
             for($i=1;$i<count($ex);$i++){

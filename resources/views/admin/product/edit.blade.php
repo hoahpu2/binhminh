@@ -39,7 +39,7 @@
          <div class="form-group">
              <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
              <div class="col-sm-4">
-              <select id="danhmuc" name="CC_id" required="" class="form-control select2">
+              <select id="danhmuc" name="CC_id" class="form-control select2">
                 @foreach($a_Catecontent as $a_catecon)
                   <option <?php echo($a_catecon['CC_id']==$a_Pros['PR_CC_id'])?'selected':''; ?> value="{{$a_catecon['CC_id']}}">{!!$a_catecon['CC_name']!!}</option>
                 @endforeach

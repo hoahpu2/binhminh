@@ -41,12 +41,19 @@ return [
     's' => ':count seg.',
     'ago' => 'hai :time',
     'from_now' => function ($time) {
-        if (substr($time, 0, 2) === 'un') {
+        if (str_starts_with($time, 'un')) {
             return "n$time";
         }
 
         return "en $time";
     },
+    'diff_now' => 'agora',
+    'diff_today' => 'hoxe',
+    'diff_today_regexp' => 'hoxe(?:\\s+ás)?',
+    'diff_yesterday' => 'onte',
+    'diff_yesterday_regexp' => 'onte(?:\\s+á)?',
+    'diff_tomorrow' => 'mañá',
+    'diff_tomorrow_regexp' => 'mañá(?:\\s+ás)?',
     'after' => ':time despois',
     'before' => ':time antes',
     'formats' => [
@@ -84,4 +91,5 @@ return [
     'first_day_of_week' => 1,
     'day_of_first_week_of_year' => 4,
     'list' => [', ', ' e '],
+    'meridiem' => ['a.m.', 'p.m.'],
 ];

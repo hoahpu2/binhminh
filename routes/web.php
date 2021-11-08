@@ -10,22 +10,23 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',function (){
-    return view('sub.bao-tri');
-});
-//Route::get('/','HomeController@index')->name('homepage');
-Route::get('danh-sach-san-pham/danh-muc/{slug}','DetailProductController@getListProductByCategory')->name('getListProductByCategory');
-Route::get('san-pham/{slug}','DetailProductController@index')->name('detail');
-Route::get('danh-sach-san-pham/{slug}','DetailProductController@getListProductBySlug')->name('list-product-by-slug');
+// Route::get('/',function (){
+//     return view('sub.bao-tri');
+// });
+Route::get('/','HomeController@index')->name('homepage');
+Route::get('lien-ket-nhanh/ve-chung-toi/index.html','HomeController@vechungtoi')->name('vechungtoi');
+Route::get('san-pham/index.html','HomeController@sanpham')->name('sanpham');
+Route::get('lien-ket-nhanh/giai-phap/index.html','HomeController@giaiphap')->name('giaiphap');
+Route::get('du-an/index.html','HomeController@duan')->name('duan');
+Route::get('dich-vu/index.html','HomeController@dichvu')->name('dichvu');
+Route::get('lien-he/index.html','HomeController@lienhe')->name('lienhe');
+
 Route::post('tim-kiem','DetailProductController@search')->name('search');
 Route::get('lien-he','ContactController@index')->name('customer-contact');
 Route::post('lien-he','ContactController@postContact');
 Route::get('tin-tuc','NewsController@index')->name('news');
 Route::get('tin-tuc/{Slug}','NewsController@getDetail');
-// Route::get('/', function () {
-// 	dd(bcrypt('123456'));
-//     // return view('admin.login');
-// });
+
 Route::post('admin-check',['as'=>'admin.dangnhap','uses'=>'admin\ProfileController@postdangnhapAdmin']);
 Route::get('admin-logout',['as'=>'admin.dangxuat','uses'=>'admin\ProfileController@getdangxuatAdmin']);
 Route::get('/admin-login', function () {
@@ -36,7 +37,7 @@ Route::get('/admin-login', function () {
 Route::get('admin-error',['as'=>'admin.error','uses'=>'admin\ProfileController@getPageError']);
 //,'middleware'=>'adminLogin'
 
-Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
+Route::group(['prefix'=>'admin'],function(){
 	/* Category */
 	Route::group(['prefix'=>'cate'],function(){
 		Route::get('index',['as'=>'admin.cate.index','uses'=>'admin\CategoryController@index']);
