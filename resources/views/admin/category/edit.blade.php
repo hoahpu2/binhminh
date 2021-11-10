@@ -37,7 +37,7 @@
                 </select>
               </div>
             </div>
-            <div class="form-group vitri">
+            <!-- <div class="form-group vitri">
               <label for="CA_number" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
             
               <div class="col-sm-2">
@@ -46,7 +46,7 @@
                   <span style="color:red">{{$errors->first('CA_number')}}</span>
                 @endif
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">

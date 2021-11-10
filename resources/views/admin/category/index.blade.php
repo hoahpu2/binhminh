@@ -27,7 +27,7 @@
               <th>Ngày tạo</th>
               <th>Ngày sửa</th>
               <th>Menu cha</th>
-              <th>Vị trí</th>
+              <th>Menu cấp</th>
               <th>Trạng thái</th>
               <th>Hành động</th>
             </tr>

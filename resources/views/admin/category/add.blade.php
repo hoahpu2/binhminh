@@ -29,14 +29,14 @@
 
               <div class="col-sm-5">
                 <select name="CA_parent" class="form-control select2" id="CA_parent">
-                  <option value="0">Menu cha</option>
+                  <option value="0">Danh mục cha</option>
                   @foreach($a_Cates as $cate)
                   <option value="{{$cate['CA_id']}}" <?php echo($cate['CA_status']==1)?'':'disabled';?> >{{$cate['CA_name']}}</option>
                   @endforeach
                 </select>
               </div>
             </div>
-            <div class="form-group vitri">
+            <!-- <div class="form-group vitri">
               <label for="CA_number" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
             
               <div class="col-sm-2">
@@ -45,12 +45,12 @@
                   <span style="color:red">{{$errors->first('CA_number')}}</span>
                 @endif
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="CA_status" value="1"> Hiển thị trang chủ
+                    <input type="checkbox" checked name="CA_status" value="1"> Hiển thị trang chủ
                   </label>
                 </div>
               </div>

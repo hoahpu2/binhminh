@@ -20,6 +20,7 @@ Route::get('lien-ket-nhanh/giai-phap/index.html','HomeController@giaiphap')->nam
 Route::get('du-an/index.html','HomeController@duan')->name('duan');
 Route::get('dich-vu/index.html','HomeController@dichvu')->name('dichvu');
 Route::get('lien-he/index.html','HomeController@lienhe')->name('lienhe');
+Route::get('product/detail.html','HomeController@productDetail')->name('productdetail');
 
 Route::post('tim-kiem','DetailProductController@search')->name('search');
 Route::get('lien-he','ContactController@index')->name('customer-contact');

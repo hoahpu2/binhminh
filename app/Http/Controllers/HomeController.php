@@ -42,7 +42,19 @@ class HomeController extends Controller
 
     public function sanpham()
     {
-        return view('sub.client.sanpham');
+        $a_GetCategory = $this->getCategory();
+        // dd($a_GetCategory);
+        return view('sub.client.sanpham', compact('a_GetCategory'));
+    }
+
+    public function getCategory($parent = 0){
+        $a_catePa = Category::where('CA_parentId', $parent)->get()->toArray();
+        if(!empty($a_catePa)){
+            foreach($a_catePa as $key => $value){
+                $a_catePa[$key]['subMenu'] = $this->getCategory($value['CA_id']);
+            }
+        }
+        return $a_catePa;
     }
 
     public function giaiphap()
@@ -63,6 +75,11 @@ class HomeController extends Controller
     public function lienhe()
     {
         return view('sub.client.lienhe');
+    }
+
+    public function productDetail()
+    {
+        return view('sub.client.productDetail');
     }
 
     public function notFound()

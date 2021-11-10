@@ -24,7 +24,7 @@ class CategoryController extends Controller
 				$a_Cate[$key]['parentId'] = isset($getCate[0]['CA_name'])?$getCate[0]['CA_name']:'';
 			}
 		}
-		// dd($a_Cate);
+		
 		$asset = array('DM','index');
         $c_header = array('Quản lý danh mục','Danh sách danh mục');
     	return view('admin.category.index',compact('a_Cate','asset','c_header'));
@@ -32,7 +32,7 @@ class CategoryController extends Controller
 
     public function getAdd()
     {
-    	$a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
+    	$a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_number', '!=', 3)->get()->toArray();
     	$asset = array('DM','add');
         $c_header = array('Quản lý danh mục','Thêm mới Menu','Vui lòng không để trống những trường (<span style="color:red">*</span>)');
     	return view('admin.category.add',compact('a_Cates','asset','c_header'));
@@ -45,9 +45,9 @@ class CategoryController extends Controller
         } catch (DecryptException $e) {
             return redirect()->route('admin.error');
         }
-        // dd($id);
+        
         $a_CateOne = Category::select()->where('CA_id', $decrypted)->get()->toArray();
-        // dd($a_CateOne);
+        
         $a_CateOne[0]['CA_en_id'] = $id;
         $a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
         $asset = array('DM','add');
@@ -57,20 +57,13 @@ class CategoryController extends Controller
 
     public function postAdd(Request $request)
     {
-        if ($request->CA_parent == 0) {
-            $unique = "unique:category";
-        }else{
-            $unique = '';
-        }
 		$request->validate([
             'CA_name' => 'required|unique:category|max:20',
-            'CA_number' => $unique
         ],
         [
             'CA_name.required' => 'Tên Không được để trống',
             'CA_name.unique' => 'Tên Đã tồn tại',
             'CA_name.max' => 'Tên Không được lớn hơn :max',
-            'CA_number.unique' => 'Vị trí đã tồn tại',
         ]);
     	
 
@@ -81,9 +74,10 @@ class CategoryController extends Controller
         $o_Cate->CA_parentId = $request->CA_parent;
         $o_Cate->CA_name = $request->CA_name;
         if ($request->CA_parent == 0) {
-            $o_Cate->CA_number = isset($request->CA_number)?$request->CA_number:null;
-        }else{
-            $o_Cate->CA_number = null;
+            $o_Cate->CA_number = 1;
+        }elseif($request->CA_parent != 0){
+            $checkCate = Category::where('CA_id',$request->CA_parent)->first();
+            $o_Cate->CA_number = $checkCate->CA_number == 1 ? 2 : 3;
         }
         $o_Cate->CA_alias = str_slug($request->CA_name);
         $o_Cate->CA_status = isset($request->CA_status)?1:0;
