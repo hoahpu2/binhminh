@@ -36,7 +36,7 @@
              </select>
            </div>
          </div>
-         <div class="form-group">
+         <!-- <div class="form-group">
              <label class="col-sm-2 control-label" for="danhmuc">Danh mục</label>
              <div class="col-sm-4">
               <select id="danhmuc" name="CC_id" class="form-control select2">
@@ -45,8 +45,8 @@
                 @endforeach
              </select>
            </div>
-         </div>
-         <div class="form-group">
+         </div> -->
+         <!-- <div class="form-group">
           <label for="price" class="col-sm-2 control-label">Giá</label>
           <div class="col-sm-3">
             <input type="number" value="{{$a_Pros['PR_price']}}" name="PR_price" class="form-control" id="price" placeholder="Giá">
@@ -63,19 +63,19 @@
           <div class="col-sm-3">
             <input type="number" value="{{$a_Pros['PR_quantity']}}" required="" name="PR_quantity" class="form-control" id="quantity" placeholder="Số lượng">
           </div>
-        </div>
+        </div> -->
         <div class="form-group">
-          <label for="masp" class="col-sm-2 control-label">Mã sản phẩm</label>
+          <label for="masp" class="col-sm-2 control-label">Từ khóa</label>
           <div class="col-sm-2">
             <input type="text" value="{{$a_Pros['PR_SKU']}}" name="PR_SKU" class="form-control" id="masp" placeholder="Mã sản phẩm">
           </div>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="producer" class="col-sm-2 control-label">Nhà cung cấp</label>
           <div class="col-sm-3">
             <input type="text" value="{{$a_Pros['PR_producer']}}" name="PR_producer" class="form-control" id="producer" placeholder="Nhà cung cấp">
           </div>
-        </div>
+        </div> -->
         <div class="form-group">
           <label for="descrip" class="col-sm-2 control-label">Mô tả</label>
           <div class="col-sm-6">
@@ -83,7 +83,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="editor1" class="col-sm-2 control-label">Chi tiết</label>
+          <label for="editor1" class="col-sm-2 control-label">Mô tả chi tiết</label>
           <div class="col-sm-9">
             <!-- tools box -->
             {{-- <div class="box-body"> --}}

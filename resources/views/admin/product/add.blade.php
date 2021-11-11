@@ -50,7 +50,7 @@
                 </select>
               </div>
             </div> -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="price" class="col-sm-2 control-label">Giá</label>
               <div class="col-sm-3">
                 <input type="number" name="PR_price" required="" class="form-control" id="price" placeholder="Giá" value="{{old('PR_price')}}">
@@ -67,19 +67,19 @@
               <div class="col-sm-3">
                 <input type="number" name="PR_quantity" required="" class="form-control" id="quantity" placeholder="Số lượng" value="{{old('PR_quantity')}}">
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
               <label for="masp" class="col-sm-2 control-label">Mã sản phẩm</label>
               <div class="col-sm-2">
                 <input type="text" name="PR_SKU" class="form-control" id="masp" placeholder="Mã sản phẩm" value="{{old('PR_SKU')}}">
               </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="producer" class="col-sm-2 control-label">Nhà cung cấp</label>
               <div class="col-sm-3">
                 <input type="text" name="PR_producer" class="form-control" id="producer" placeholder="Nhà cung cấp" value="{{old('PR_producer')}}">
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
               <label for="descrip" class="col-sm-2 control-label">Mô tả</label>
               <div class="col-sm-6">
@@ -87,7 +87,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="editor1" class="col-sm-2 control-label">Chi tiết</label>
+              <label for="editor1" class="col-sm-2 control-label">Mô tả chi tiết</label>
               <div class="col-sm-9">
                 <!-- tools box -->
                 {{-- <div class="box-body pad"> --}}
@@ -116,7 +116,7 @@
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>
-                    <input name="PR_status" type="checkbox" value="1"> Hiển thị trang chủ
+                    <input name="PR_status" checked type="checkbox" value="1"> Hiển thị trang chủ
                   </label>
                 </div>
               </div>

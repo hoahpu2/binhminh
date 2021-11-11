@@ -13,6 +13,10 @@
 // Route::get('/',function (){
 //     return view('sub.bao-tri');
 // });
+Route::get('admin', function () {
+	die('xx');
+    return redirect('admin-login');
+});
 Route::get('/','HomeController@index')->name('homepage');
 Route::get('lien-ket-nhanh/ve-chung-toi/index.html','HomeController@vechungtoi')->name('vechungtoi');
 Route::get('san-pham/index.html','HomeController@sanpham')->name('sanpham');
@@ -20,7 +24,7 @@ Route::get('lien-ket-nhanh/giai-phap/index.html','HomeController@giaiphap')->nam
 Route::get('du-an/index.html','HomeController@duan')->name('duan');
 Route::get('dich-vu/index.html','HomeController@dichvu')->name('dichvu');
 Route::get('lien-he/index.html','HomeController@lienhe')->name('lienhe');
-Route::get('product/detail.html','HomeController@productDetail')->name('productdetail');
+Route::get('product/{Slug}/detail.html','HomeController@productDetail')->name('productdetail');
 
 Route::post('tim-kiem','DetailProductController@search')->name('search');
 Route::get('lien-he','ContactController@index')->name('customer-contact');
@@ -36,9 +40,9 @@ Route::get('/admin-login', function () {
 })->name('admin-login');
 
 Route::get('admin-error',['as'=>'admin.error','uses'=>'admin\ProfileController@getPageError']);
-//,'middleware'=>'adminLogin'
 
-Route::group(['prefix'=>'admin'],function(){
+
+Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'],function(){
 	/* Category */
 	Route::group(['prefix'=>'cate'],function(){
 		Route::get('index',['as'=>'admin.cate.index','uses'=>'admin\CategoryController@index']);

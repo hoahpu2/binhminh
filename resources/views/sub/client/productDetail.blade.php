@@ -54,7 +54,7 @@
 
                             <nav class="woocommerce-breadcrumb breadcrumbs uppercase"><a href="http://ipe.vn">Trang chủ</a> <span class="divider">/</span> <a href="http://ipe.vn/product_category/thiet-bi-khac/">Thiết Bị Khác</a> <span class="divider">/</span> <a href="http://ipe.vn/product_category/thiet-bi-khac/van-cong-nghiep/">Van công nghiệp</a> <span class="divider">/</span> <a href="http://ipe.vn/product_category/thiet-bi-khac/van-cong-nghiep/van-kitz/">Van Kitz</a> <span class="divider">/</span> <a href="http://ipe.vn/product_category/thiet-bi-khac/van-cong-nghiep/van-kitz/van-bi/">Van Bi</a></nav>
                             <h1 class="product-title product_title entry-title">
-                                10K BALL VALVE FULL BORE</h1>
+                            {{$detailproduct->PR_name}}</h1>
 
                             <div class="is-divider small"></div>
                             <ul class="next-prev-thumbs is-small show-for-medium">
@@ -80,7 +80,7 @@
                                 </p>
                             </div>
                             <div class="product-short-description">
-                                <p>Các sản phẩm chất lượng cao này được sản xuất theo tiêu chuẩn quốc tế như ống ISO 9001- 2000, 4064, mặt bích van – hai chiều – một chiều – van Kỹ thuật – van bướm, van cầu, van bằng đồng, van hợp kim, van vườn; Đồng hồ nước, ren mạ kẽm Phụ kiện, phụ kiện SCH hàn chất lượng cao, mặt bích, mõm bơm, ổn định khớp, lọc y tế, van cứu hỏa, phòng cháy chữa cháy Sản phẩm tiêu chuẩn BS, ASTM, JIS, ANSI, API</p>
+                                {!!$detailproduct->PR_sortDesc!!}
                             </div>
 
                             <div class="yith-wcwl-add-to-wishlist add-to-wishlist-3071  wishlist-fragment on-first-load" data-fragment-ref="3071" data-fragment-options="{&quot;base_url&quot;:&quot;&quot;,&quot;in_default_wishlist&quot;:false,&quot;is_single&quot;:true,&quot;show_exists&quot;:false,&quot;product_id&quot;:3071,&quot;parent_product_id&quot;:3071,&quot;product_type&quot;:&quot;simple&quot;,&quot;show_view&quot;:true,&quot;browse_wishlist_text&quot;:&quot;Browse Wishlist&quot;,&quot;already_in_wishslist_text&quot;:&quot;The product is already in the wishlist!&quot;,&quot;product_added_text&quot;:&quot;Product added!&quot;,&quot;heading_icon&quot;:&quot;&quot;,&quot;available_multi_wishlist&quot;:false,&quot;disable_wishlist&quot;:false,&quot;show_count&quot;:false,&quot;ajax_loading&quot;:false,&quot;loop_position&quot;:false,&quot;item&quot;:&quot;add_to_wishlist&quot;}">
@@ -603,7 +603,8 @@
                                 </li>
                             </ul>
                             <div class="tab-panels">
-                                <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content active" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description" style="">
+                                {!!$detailproduct->PR_content!!}
+                                <!-- <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content active" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description" style="">
 
 
                                     <div class="gallery-slideshow">
@@ -615,7 +616,7 @@
                                     <div class="single-content-wrap inner-content">
                                         <div class="single-content clearfix"></div>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
                         </div>

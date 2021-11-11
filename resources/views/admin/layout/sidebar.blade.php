@@ -4,6 +4,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
+          <img src="{{url('resources/upload/useradmin/').'/'.Auth::user()->avatar}}" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
@@ -73,7 +74,7 @@
               <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
             </ul>
           </li> --}}
-          <li class="treeview <?php if($asset[0] == 'Mn') echo'active'; ?>">
+          <!-- <li class="treeview <?php if($asset[0] == 'Mn') echo'active'; ?>">
             <a href="#">
               <i class="fa fa-laptop"></i>
               <span>Quản lý danh mục</span>
@@ -85,7 +86,7 @@
               <li class="<?php if($asset[1] == 'cate.add') echo'active'; ?>"><a href="{{route('admin.catecontent.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới danh mục</a></li>
               <li class="<?php if($asset[1] == 'cate.index') echo'active'; ?>"><a href="{{route('admin.catecontent.index')}}"><i class="fa fa-circle-o"></i> Danh sách danh mục</a></li>
             </ul>
-          </li>
+          </li> -->
           <li class="treeview <?php if($asset[0] == 'DM') echo'active'; ?>">
             <a href="#">
               <i class="fa fa-edit"></i> <span>Quản lý Menu</span>
@@ -161,8 +162,8 @@
             </a>
           </li>
           <li class="<?php if($asset[0] == 'Req') echo'active'; ?>">
-            <a href="{{route('admin.request.index')}}">
-              <i class="fa fa-share"></i> <span>Yêu cầu từ khách hàng</span>
+            <a href="{{route('admin.dangxuat')}}">
+              <i class="fa fa-share"></i> <span>Logout hệ thống</span>
               <span class="pull-right-container">
                 {{-- <small class="label pull-right bg-yellow">12</small> --}}
                 <small class="label pull-right bg-green" id="i_total"></small>

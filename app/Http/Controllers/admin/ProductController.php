@@ -163,7 +163,6 @@ class ProductController extends Controller
             // }
         }
         
-        dd($request->file('subavatar'));
         if(!empty($request->images_delete)){
             $ex =explode(",",$request->images_delete);
             for($i=1;$i<count($ex);$i++){
@@ -178,7 +177,7 @@ class ProductController extends Controller
         $product->PR_CC_id = $request->CC_id;
         $product->PR_alias = str_slug($request->PR_name).'-'.date('dmyhis');
         $product->PR_price = isset($request->PR_price)?$request->PR_price:0;
-        $product->PR_quantity = $request->PR_quantity;
+        $product->PR_quantity = $request->PR_quantity ?:0;
         $product->PR_SKU = isset($request->PR_SKU)?$request->PR_SKU:' ';
         $product->PR_sortDesc = isset($request->PR_descript)?$request->PR_descript:' ';
         $product->PR_sale = isset($request->PR_sale)?$request->PR_sale:0;

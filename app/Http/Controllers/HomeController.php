@@ -43,8 +43,9 @@ class HomeController extends Controller
     public function sanpham()
     {
         $a_GetCategory = $this->getCategory();
-        // dd($a_GetCategory);
-        return view('sub.client.sanpham', compact('a_GetCategory'));
+        $all_Product = Product::where('PR_status', 1)->orderBy('PR_id', 'desc')->limit(12)->get();
+        // dd($all_Product);
+        return view('sub.client.sanpham', compact('a_GetCategory', 'all_Product'));
     }
 
     public function getCategory($parent = 0){
@@ -77,9 +78,11 @@ class HomeController extends Controller
         return view('sub.client.lienhe');
     }
 
-    public function productDetail()
+    public function productDetail($slug)
     {
-        return view('sub.client.productDetail');
+        $detailproduct = Product::where('PR_alias', $slug)->first();
+        
+        return view('sub.client.productDetail', compact('detailproduct'));
     }
 
     public function notFound()
