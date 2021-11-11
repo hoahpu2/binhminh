@@ -23,7 +23,7 @@
 <script src="{{ url('admin/upload') }}/themes/explorer-fas/theme.js" type="text/javascript"></script>
 
 
-@if(isset($asset[2]))
+
 	<script>
 	  $(function () {
 	    // Replace the <textarea id="editor1"> with a CKEditor
@@ -40,7 +40,7 @@
 	    $('.textarea').wysihtml5()
 	  })
 	</script>
-@endif
+
 
 <script>
     $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){

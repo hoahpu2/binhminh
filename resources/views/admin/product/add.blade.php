@@ -69,7 +69,7 @@
               </div>
             </div> -->
             <div class="form-group">
-              <label for="masp" class="col-sm-2 control-label">Mã sản phẩm</label>
+              <label for="masp" class="col-sm-2 control-label">Từ khóa tìm kiếm</label>
               <div class="col-sm-2">
                 <input type="text" name="PR_SKU" class="form-control" id="masp" placeholder="Mã sản phẩm" value="{{old('PR_SKU')}}">
               </div>

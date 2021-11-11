@@ -10,7 +10,8 @@
                     <div data-elementor-type="wp-page" data-elementor-id="1940" class="elementor elementor-1940" data-elementor-settings="[]">
                         <div class="elementor-inner">
                             <div class="elementor-section-wrap">
-                                <section class="elementor-section elementor-top-section elementor-element elementor-element-5d0b6b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d0b6b1" data-element_type="section">
+                                {!! $contact->CT_content !!}
+                                <!-- <section class="elementor-section elementor-top-section elementor-element elementor-element-5d0b6b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d0b6b1" data-element_type="section">
                                     <div class="elementor-container elementor-column-gap-default">
                                         <div class="elementor-row">
                                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e0f99b9" data-id="e0f99b9" data-element_type="column">
@@ -194,7 +195,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </section>
+                                </section> -->
                             </div>
                         </div>
                     </div>

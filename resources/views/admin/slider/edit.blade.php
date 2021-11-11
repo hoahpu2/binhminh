@@ -26,7 +26,7 @@
               <p style="color: red;text-align: center">{!! Session::get('avatar_error') !!}</p><br>
             @endif
             <div class="form-group">
-              <label for="file-4" class="col-sm-2 control-label">Slider</label>
+              <label for="file-4" class="col-sm-2 control-label">Ảnh tiêu đề</label>
 
               <div class="col-sm-5">
                 <input id="file-4" type="file" name="SL_url" class="file" data-upload-url="#" data-theme="fas">
@@ -39,13 +39,24 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="SL_alt" class="col-sm-2 control-label">Alt</label>
+              <label for="SL_alt" class="col-sm-2 control-label">Tiêu đề</label>
 
               <div class="col-sm-5">
                 <input type="text" name="SL_alt" class="form-control" id="SL_alt" placeholder="Tên danh mục" value="{{$slider->SL_alt}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="editor1" class="col-sm-2 control-label">Mô tả chi tiết</label>
+              <div class="col-sm-9">
+                <!-- tools box -->
+                {{-- <div class="box-body pad"> --}}
+                <textarea id="editor1" name="SL_detail" rows="10" cols="80">
+                {{$slider->SL_detail}}
+                </textarea>
+                {{-- </div> --}}
               </div>
             </div>
             <div class="form-group">

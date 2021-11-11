@@ -8,6 +8,7 @@ use App\Catecontent;
 use App\News;
 use App\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class HomeController extends Controller
 {
@@ -37,7 +38,8 @@ class HomeController extends Controller
 
     public function vechungtoi()
     {
-        return view('sub.client.vechungtoi');
+        $contact = Contact::find(1);
+        return view('sub.client.vechungtoi', compact('contact'));
     }
 
     public function sanpham()
@@ -65,7 +67,22 @@ class HomeController extends Controller
 
     public function duan()
     {
-        return view('sub.client.duan');
+        $a_Slider = Slider::where('SL_status', 1)->orderBy('SL_id', 'desc')->get();
+
+        if ($a_Slider) {
+            foreach ($a_Slider as $key=>$value) {
+                // dd($value->SL_id);
+                $a_Slider[$key]->SL_en_id = Crypt::encryptString($value->SL_id);
+            }
+        }
+        return view('sub.client.duan', compact('a_Slider'));
+    }
+
+    public function duanDetail($slug)
+    {
+        $decrypted = Crypt::decryptString($slug);
+        $slider = Slider::find($decrypted);
+        return view('sub.client.duan-detail', compact('slider'));
     }
 
     public function dichvu()

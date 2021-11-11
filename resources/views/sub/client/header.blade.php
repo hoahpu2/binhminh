@@ -103,7 +103,7 @@
                         <li id="menu-item-7150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7150 menu-item-design-default"><a href="<?php echo route('giaiphap'); ?>" class="nav-top-link">Giải Pháp</a></li>
                         <li id="menu-item-7149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7149 menu-item-design-default"><a href="<?php echo route('duan'); ?>" class="nav-top-link">Dự Án</a></li>
                         <li id="menu-item-7151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7151 menu-item-design-default"><a href="<?php echo route('dichvu'); ?>" class="nav-top-link">Dịch Vụ</a></li>
-                        <li id="menu-item-7148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7148 menu-item-design-default"><a href="tai-lieu/index.html" class="nav-top-link">Tài Liệu</a></li>
+                        <li id="menu-item-7148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7148 menu-item-design-default"><a href="tai-lieu/index.html" class="nav-top-link">Tin tức</a></li>
                         <li id="menu-item-1968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968 menu-item-design-default"><a href="<?php echo route('lienhe'); ?>" class="nav-top-link">Liên Hệ</a></li>
                         <li class="has-dropdown header-language-dropdown">
                             <a href="#">

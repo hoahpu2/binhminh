@@ -40,17 +40,16 @@ class SliderController extends Controller
         $a_DataSize = getimagesize($request->file('SL_url'));
         $a_width = (int)$a_DataSize[0];
         $a_height = (int)$a_DataSize[1];
-        if ($a_width / $a_height !== 2) {
-            return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh Slider theo tỷ lệ 2:1'])->withInput();
-        }
+        // if ($a_width / $a_height !== 2) {
+        //     return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh Slider theo tỷ lệ 2:1'])->withInput();
+        // }
         // dd($request->file('SL_url'));
         $profile = new Slider();
         $profile->SL_alt = $request->SL_alt;
         $profile->SL_status = isset($request->SL_status)?1:0;
+        $profile->SL_detail = $request->SL_detail ? $request->SL_detail :'';
 
-        // dd($request->file('avatar'));
         if(!empty($request->file('SL_url'))){
-            // dd($user->avatar);
             $file_name = $request->file('SL_url')->getClientOriginalName();
             $file_names = str_random(4).$file_name;
             $profile->SL_url = $file_names;
@@ -72,20 +71,17 @@ class SliderController extends Controller
             $a_DataSize = getimagesize($request->file('SL_url'));
             $a_width = (int)$a_DataSize[0];
             $a_height = (int)$a_DataSize[1];
-            if ($a_width / $a_height !== 2) {
-                return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh Slider theo tỷ lệ 2:1'])->withInput();
-            }
+            // if ($a_width / $a_height !== 2) {
+            //     return redirect()->back()->with(['avatar_error'=>'Vui lòng chọn ảnh Slider theo tỷ lệ 2:1'])->withInput();
+            // }
         }
         
-        // dd($id);
         $slider = Slider::find($decrypted);
         $slider->SL_alt = $request->SL_alt;
-        // dd($slider);
         $slider->SL_status = isset($request->SL_status)?1:0;
+        $slider->SL_detail = $request->SL_detail ? $request->SL_detail :'';
 
-        // dd($request->file('avatar'));
         if(!empty($request->file('SL_url'))){
-            // dd($user->avatar);
             File::delete('resources/upload/slider/'.$slider->SL_url);
             $file_name = $request->file('SL_url')->getClientOriginalName();
             $file_names = str_random(4).$file_name;
@@ -99,17 +95,15 @@ class SliderController extends Controller
 
     public function getEdit($id)
     {
-        // $aaa = Crypt::encryptString('hoa');
-        // echo decrypt($aaa);dd();
         try {
             $decrypted = Crypt::decryptString($id);
         } catch (DecryptException $e) {
             return redirect()->route('admin.error');
         }
-        // print_r(decrypt($id));die;
+
         $slider = Slider::find($decrypted);
         $slider->SL_en_id = $id;
-        // dd($slider);
+
         $asset = array('SL','add');
         $c_header = array('Quản lý Slider','Sửa Slider');
         return view('admin.slider.edit',compact('asset','slider','c_header'));

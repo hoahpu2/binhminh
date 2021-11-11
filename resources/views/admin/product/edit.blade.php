@@ -65,7 +65,7 @@
           </div>
         </div> -->
         <div class="form-group">
-          <label for="masp" class="col-sm-2 control-label">Từ khóa</label>
+          <label for="masp" class="col-sm-2 control-label">Từ khóa tìm kiếm</label>
           <div class="col-sm-2">
             <input type="text" value="{{$a_Pros['PR_SKU']}}" name="PR_SKU" class="form-control" id="masp" placeholder="Mã sản phẩm">
           </div>
