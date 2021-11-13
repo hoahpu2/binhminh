@@ -38,14 +38,7 @@
                     </div>
                 </article>
 
-
-
-
                 <div id="comments" class="comments-area">
-
-
-
-
 
                 </div>
             </div>

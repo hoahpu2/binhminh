@@ -508,6 +508,7 @@
     <link rel='stylesheet' id='elementor-icons-css' href='{{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/css/elementor-icons.min05c8.css?ver=5.13.0' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-frontend-legacy-css' href='{{asset("wp-content/")}}/plugins/elementor/assets/css/frontend-legacy.mina7da.css?ver=3.4.7' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-frontend-css' href='{{asset("wp-content/")}}/plugins/elementor/assets/css/frontend.mina7da.css?ver=3.4.7' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{asset("css/")}}/f2d3e.css' type='text/css' />
     <style id='elementor-frontend-inline-css' type='text/css'>
         @font-face {
             font-family: eicons;
@@ -2259,11 +2260,12 @@
     <script type='text/javascript' src='{{asset("wp-content/")}}/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min55a0.js?ver=3.2.0' id='pro-preloaded-elements-handlers-js'></script>
     <script type='text/javascript' src='{{asset("wp-content/")}}/plugins/elementor/assets/js/preloaded-modules.mina7da.js?ver=3.4.7' id='preloaded-modules-js'></script>
     
-    <script type='text/javascript' src='{{asset("js/")}}/xfbml.customerchat.js'></script>
+    <!-- <script type='text/javascript' src='{{asset("js/")}}/xfbml.customerchat.js'></script>
     <script type='text/javascript' src='{{asset("js/")}}/za.js'></script>
     <script type='text/javascript' src='{{asset("js/")}}/wp-emoji-release.min.js'></script>
     <script type='text/javascript' src='{{asset("js/")}}/c7035.js'></script>
     <script type='text/javascript' src='{{asset("js/")}}/4ee79.js'></script>
+    <script type='text/javascript' src='{{asset("js/")}}/sdk.js'></script> -->
     <script type="text/javascript">
         var zaloWidgetInterval;
         var tawkToInterval;

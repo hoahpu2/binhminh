@@ -24,14 +24,14 @@ class SliderController extends Controller
         // dd($a_Slider);
         // dd($a_Slider[0]->SL_en_id);
 		$asset = array('SL','index');
-        $c_header = array('Quản lý Slider','Danh sách Slider');
+        $c_header = array('Quản lý Slider','Danh sách Dự án');
 		return view('admin.slider.index',compact('asset','a_Slider','c_header'));
 	}
     
     public function getAdd()
     {
     	$asset = array('SL','add');
-        $c_header = array('Quản lý Slider','Thêm mới Slider');
+        $c_header = array('Quản lý Slider','Thêm mới Dự án');
     	return view('admin.slider.add',compact('asset','c_header'));
     }
 
@@ -105,7 +105,7 @@ class SliderController extends Controller
         $slider->SL_en_id = $id;
 
         $asset = array('SL','add');
-        $c_header = array('Quản lý Slider','Sửa Slider');
+        $c_header = array('Quản lý Slider','Sửa Dự án');
         return view('admin.slider.edit',compact('asset','slider','c_header'));
     }
 

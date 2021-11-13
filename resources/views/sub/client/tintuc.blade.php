@@ -17,7 +17,7 @@
                                                     <div class="elementor-widget-wrap">
                                                         <div class="elementor-element elementor-element-78f5dcf elementor-widget elementor-widget-heading" data-id="78f5dcf" data-element_type="widget" data-widget_type="heading.default">
                                                             <div class="elementor-widget-container">
-                                                                <h1 class="elementor-heading-title elementor-size-default">Dự Án</h1>
+                                                                <h1 class="elementor-heading-title elementor-size-default">Tin tức</h1>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -37,19 +37,19 @@
                                                             <div class="elementor-widget-container">
                                                                 <div class="elementor-cta">
                                                                     <div class="elementor-cta__bg-wrapper">
-                                                                        <div class="elementor-cta__bg elementor-bg" style="background-image: url({{url('resources/upload/slider/').'/'.$all_Products->SL_url}});"></div>
+                                                                        <div class="elementor-cta__bg elementor-bg" style="background-image: url({{url('resources/upload/news/').'/'.$all_Products->N_avatar}});"></div>
                                                                         <div class="elementor-cta__bg-overlay"></div>
                                                                     </div>
                                                                     <div class="elementor-cta__content">
 
                                                                         <h1 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
-                                                                            {{$all_Products->SL_alt}} </h1>
+                                                                            {{$all_Products->N_title}} </h1>
 
-                                                                        <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
-                                                                        {!!$all_Products->SL_detail!!} </div>
+                                                                        <!-- <div class="elementor-cta__description elementor-cta__content-item elementor-content-item">
+                                                                        {!!$all_Products->N_content!!} </div> -->
 
                                                                         <div class="elementor-cta__button-wrapper elementor-cta__content-item elementor-content-item ">
-                                                                            <a class="elementor-cta__button elementor-button elementor-size-sm" href="/du-an/{{$all_Products->SL_en_id}}">
+                                                                            <a class="elementor-cta__button elementor-button elementor-size-sm" href="/tin-tuc/{{$all_Products->N_alias}}">
                                                                                 Xem Thêm </a>
                                                                         </div>
                                                                     </div>

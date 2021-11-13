@@ -23,6 +23,7 @@ Route::get('san-pham/index.html','HomeController@sanpham')->name('sanpham');
 Route::get('lien-ket-nhanh/giai-phap/index.html','HomeController@giaiphap')->name('giaiphap');
 Route::get('du-an/index.html','HomeController@duan')->name('duan');
 Route::get('dich-vu/index.html','HomeController@dichvu')->name('dichvu');
+Route::get('tintuc/index.html','HomeController@tintuc')->name('tintuc');
 Route::get('lien-he/index.html','HomeController@lienhe')->name('lienhe');
 Route::get('product/{Slug}/detail.html','HomeController@productDetail')->name('productdetail');
 Route::get('du-an/{Slug}','HomeController@duanDetail')->name('duan-detail');

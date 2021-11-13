@@ -51,7 +51,7 @@
           <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
               <label>
-                <input name="N_status" type="checkbox" value="1"> Hiển thị trang chủ
+                <input name="N_status" checked type="checkbox" value="1"> Hiển thị trang chủ
               </label>
             </div>
           </div>

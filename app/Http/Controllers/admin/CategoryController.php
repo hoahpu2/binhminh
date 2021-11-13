@@ -32,10 +32,36 @@ class CategoryController extends Controller
 
     public function getAdd()
     {
-    	$a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_number', '!=', 3)->get()->toArray();
+        // $a_Cates = Category::select('CA_name','CA_id','CA_status','CA_parentId')->where('CA_number', '!=', 3)->get()->toArray();
+        
+    	$a_Catess = Category::select('CA_name','CA_id','CA_status','CA_parentId')->where('CA_number', '!=', 3)->get()->toArray();
+        $a_Cates = $this->showCategories($a_Catess);
+        // dd($a_Cates);
     	$asset = array('DM','add');
         $c_header = array('Quản lý danh mục','Thêm mới Menu','Vui lòng không để trống những trường (<span style="color:red">*</span>)');
     	return view('admin.category.add',compact('a_Cates','asset','c_header'));
+    }
+
+    public function showCategories($categories, $parent_id = 0, $char = '')
+    {
+        foreach ($categories as $key => $item)
+        {
+            // Nếu là chuyên mục con thì hiển thị
+            if ($item['CA_parentId'] == $parent_id)
+            {
+                if ($char == '') {
+                    $this->treess[$item['CA_id']] = '<b>'.$char . $item['CA_name'].'</b>';
+                }else{
+                    $this->treess[$item['CA_id']] = $char . $item['CA_name'];
+                }
+
+                // Xóa chuyên mục đã lặp
+                unset($categories[$key]);
+                // Tiếp tục đệ quy để tìm chuyên mục con của chuyên mục đang lặp
+                $this->showCategories($categories, $item['CA_id'], $char.'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+            }
+        }
+        return $this->treess;
     }
 
     public function getEdit($id)
@@ -49,7 +75,8 @@ class CategoryController extends Controller
         $a_CateOne = Category::select()->where('CA_id', $decrypted)->get()->toArray();
         
         $a_CateOne[0]['CA_en_id'] = $id;
-        $a_Cates = Category::select('CA_name','CA_id','CA_status')->where('CA_parentId', 0)->get()->toArray();
+        $a_Catess = Category::select('CA_name','CA_id','CA_status','CA_parentId')->where('CA_number', '!=', 3)->get()->toArray();
+        $a_Cates = $this->showCategories($a_Catess);
         $asset = array('DM','add');
         $c_header = array('Quản lý danh mục','Sửa danh mục','Vui lòng không để trống những trường (<span style="color:red">*</span>)');
         return view('admin.category.edit',compact('a_Cates','asset','a_CateOne','c_header'));
@@ -138,9 +165,10 @@ class CategoryController extends Controller
         $o_Cate->CA_parentId = $request->CA_parent;
         $o_Cate->CA_name = $request->CA_name;
         if ($request->CA_parent == 0) {
-            $o_Cate->CA_number = isset($request->CA_number)?$request->CA_number:null;
-        }else{
-            $o_Cate->CA_number = null;
+            $o_Cate->CA_number = 1;
+        }elseif($request->CA_parent != 0){
+            $checkCate = Category::where('CA_id',$request->CA_parent)->first();
+            $o_Cate->CA_number = $checkCate->CA_number == 1 ? 2 : 3;
         }
         $o_Cate->CA_alias = str_slug($request->CA_name);
         $o_Cate->CA_status = isset($request->CA_status)?1:0;

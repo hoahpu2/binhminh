@@ -30,8 +30,9 @@
               <div class="col-sm-5">
                 <select name="CA_parent" class="form-control select2" id="CA_parent">
                   <option value="0">Danh mục cha</option>
-                  @foreach($a_Cates as $cate)
-                  <option value="{{$cate['CA_id']}}" <?php echo($cate['CA_status']==1)?'':'disabled';?> >{{$cate['CA_name']}}</option>
+                  
+                  @foreach($a_Cates as $key => $cate)
+                  <option value="{{$key}}" >{!!$cate!!}</option>
                   @endforeach
                 </select>
               </div>

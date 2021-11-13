@@ -45,9 +45,14 @@ class HomeController extends Controller
     public function sanpham()
     {
         $a_GetCategory = $this->getCategory();
-        $all_Product = Product::where('PR_status', 1)->orderBy('PR_id', 'desc')->limit(12)->get();
-        // dd($all_Product);
-        return view('sub.client.sanpham', compact('a_GetCategory', 'all_Product'));
+        $all_Product = Product::where('PR_status', 1);
+        if($_GET['cate']){
+            $all_Product = $all_Product->where('PR_CA_id', $_GET['cate']);
+        }
+        
+        $cateActive = $_GET['cate'];
+        $all_Product = $all_Product->orderBy('PR_id', 'desc')->limit(12)->get();
+        return view('sub.client.sanpham', compact('a_GetCategory', 'all_Product', 'cateActive'));
     }
 
     public function getCategory($parent = 0){
@@ -100,6 +105,12 @@ class HomeController extends Controller
         $detailproduct = Product::where('PR_alias', $slug)->first();
         
         return view('sub.client.productDetail', compact('detailproduct'));
+    }
+
+    public function tintuc()
+    {
+        $a_Slider = News::where('N_status', 1)->get();
+        return view('sub.client.tintuc', compact('a_Slider'));
     }
 
     public function notFound()
