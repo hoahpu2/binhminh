@@ -1,79 +1,89 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<title></title>
+    <title>binhminhcar</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+    <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{{asset('css/menu.css')}}" rel="stylesheet" type="text/css" media="all"/>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/script.js')}}" type="text/javascript"></script>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="{{asset('js/jquery.exzoom.js')}}"></script>
+    <link href="{{asset('css/jquery.exzoom.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/style-detail.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/fontawesome.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="{{asset('css/style-all.css')}}" rel="stylesheet" type="text/css" media="all"/>
 
-<link rel="stylesheet" href="{{asset('css/etalage.css')}}" type="text/css" media="all" />
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<!--//fonts-->
-<script src="{{asset('js/jquery.min.js')}}"></script>
 
-<script src="{{asset('js/jquery.etalage.min.js')}}"></script>
+    <style>
+        body{
+            font-family:Arial, "Helvetica Neue", "Helvetica", Tahoma, Verdana, sans-serif;
+        }
+        #exzoom{
+            width: 400px;
+        }
+        @media screen and (max-width: 500px){
+            #exzoom{
+                width: 200px;
+                margin: 20px auto;
+            }
+        }@media screen and (max-width: 375px){
+            .languages{
+                display: none;
+            }
+            .currency{
+                display: none;
+            }
+            .login{
+                display: none;
+            }
+            .social-icons{
+                display: none;
+            }
+        }
 
-<script type="text/javascript" src="{{asset('js/move-top.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/easing.js')}}"></script>
-<link href='//fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
-<link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all"/>
-<link href="{{asset('css/menu.css')}}" rel="stylesheet" type="text/css" media="all"/>
-
+        .hidden { display: none; }
+    </style>
 </head>
-<script>
-            jQuery(document).ready(function($){
+<body>
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+<div style="float: right; position: fixed; bottom:20px;z-index: 1;" > <a href="{{'tel:'.$contactAdmin->CT_number}}"><img src="{{asset('images/phone.gif')}}" class="hotline"  width="65px"  alt=""></a></div>
+<div class="wrap">
+    <!--start header-->
+@include('sub.client.header')
+<!-- end header -->
+    <!-- start main-->
+    @yield('content')
+    <!-- end main -->
+    <!-- start footer-->
+</div>
+@include('sub.client.footer')
+<!-- end footer-->
+<!-- Begin of Chaport Live Chat code -->
+<script type="text/javascript">
+    (function(w,d,v3){
+        w.chaportConfig = { appId : '5c851d2996553c1ae0d27ae7' };
 
-                $('#etalage').etalage({
-                    thumb_image_width: 300,
-                    thumb_image_height: 400,
-                    source_image_width: 900,
-                    source_image_height: 1200,
-                    show_hint: true,
-                    click_callback: function(image_anchor, instance_id){
-                        alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-                    }
-                });
+        if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
+</script>
+<!-- End of Chaport Live Chat code -->
+<div id="fb-root"></div>
 
-            });
-        </script>
-
-<body> 
-    <!-- start header -->
-        @include('sub.client.header-detail')
-    <!-- end header-->
-     <div class="container"> 
-        
-        <div class=" single_top">
-            <div class="single_grid" style="height: 100px">
-                <div class="grid images_3_of_2">
-                        <ul id="etalage">
-                            <li>
-                                <a href="optionallink.html">
-                                    <img class="etalage_thumb_image" src="{{asset('images/s4.jpg')}}"" class="img-responsive" />
-                                    <img class="etalage_source_image" src="{{asset('images/si4.jpg')}}"" class="img-responsive" title="" />
-                                </a>
-                            </li>
-                            <li>
-                                <img class="etalage_thumb_image" src="{{asset('images/s2.jpg')}}"" class="img-responsive" />
-                                <img class="etalage_source_image" src="{{asset('images/si2.jpg')}}"" class="img-responsive" title="" />
-                            </li>
-                            <li>
-                                <img class="etalage_thumb_image" src="{{asset('images/s3.jpg')}}"" class="img-responsive"  />
-                                <img class="etalage_source_image" src="{{asset('images/si3.jpg')}}"" class="img-responsive"  />
-                            </li>
-                            <li>
-                                <img class="etalage_thumb_image" src="{{asset('images/s1.jpg')}}"" class="img-responsive"  />
-                                <img class="etalage_source_image" src="{{asset('images/si1.jpg')}}"" class="img-responsive"  />
-                            </li>
-                        </ul>
-                         <div class="clearfix"> </div>      
-                </div> 
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-    </div>
-            
-        <!-- start footer -->
-            @include('sub.client.footer')
-        <!-- end footer -->
 </body>
 </html>

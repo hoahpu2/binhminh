@@ -1,0 +1,256 @@
+.hotline-phone{
+    float: right;
+    padding-top: 19px;
+    margin-right: 20px;
+    color: red;
+    font-weight: bold;
+}
+.image-logo{
+    width: 250px;
+    margin-left: 30px;
+}
+.heading h3{
+    font-family: 'Monda', sans-serif;
+    font-size: 20px;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.images_1_of_4 h2 a{
+    color :green;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+.images_1_of_4 h2{
+    height:45px;
+}
+
+.short_description{
+    font-weight: bold;
+}
+.product-sale{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+.detail-info{
+    font-size: 17px;
+    padding: 5px;
+    font-style: italic;
+
+}
+.info-product h2{
+    font-family: 'Monda', sans-serif;
+    font-size: 22px;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/*tao menu cap 2*/
+.menu li:hover>.menu-second{
+    margin-top: 17px;
+    width: 180px;
+}
+.menu li:hover> .menu-second li a{
+    width: 180px;
+}
+/*css quang cao*/
+.quangcao-trai{
+    position: fixed;
+    top: 200px;
+    width: 10%;
+    min-height: 300px;
+}.quangcao-phai{
+    position: fixed;
+    top: 200px;
+    width: 10%;
+    min-height: 300px;
+     right: 0;
+}
+ /*css tin tuc*/
+.tin-tuc-img{
+    height: 159px;
+    width: 100%;
+}
+.listview_1_of_2{
+    margin: 0;
+}
+.images_1_of_2{
+    position: relative;
+}
+.new-title{
+    position: absolute;
+    bottom: 17px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    background: black;
+    opacity: 0.6;
+    filter: alpha(opacity=30);
+    width:90%;
+    font-style: italic;
+    text-align:center;
+
+}
+.new-title p {
+    color: white;
+
+}
+.tin-tuc-icon{
+    position: absolute;
+    top: 10px;
+left:10px;
+    padding: 4px;
+    background: red;
+    color: white;
+}
+/*reponse*/
+@media only screen and (max-width: 375px) {
+    .hotline-phone {
+        float: left;
+        padding: 0;
+        margin: 0;
+        padding-top: 20px;
+    }
+}
+/*paginate-links*/
+.container-links{
+    text-align: center;
+}
+.container-links ul li{
+    display: inline-block;
+    padding: 3px;
+    font-size: 20px;
+}
+/*lien he css*/
+.info-company{
+    float:left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.info-customer{
+    float:right;
+    width: 50%;
+}
+.form-contact tr td{
+    text-align: left;
+    font-weight: bold;
+    opacity: 0.7;
+    padding-left: 20px;
+    padding-top:10px;
+}
+.info-customer b{
+    font-weight: bold;
+}
+.main-contact{
+    margin-top: 20px;
+}
+.info-customer .button{
+    background-color: #0061aa;
+    border: medium none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.form-contact{
+    width: 100%;
+}
+@media only screen and (max-width: 900px){
+    .info-company{
+        width: 100%;
+    }
+    .info-customer{
+        width: 100%;
+    }
+    .hotline{
+        margin-top:155px;
+    }
+}
+@media only screen and (max-width: 600px){
+   .news{
+       display: block !important;
+   }
+    .news-content{
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    .news-img{
+        width: 100% !important;
+    }
+    .news-img img{
+        width:100%;
+        height:200px;
+    }
+
+    /*css menu*/
+    .icon-menu{
+        display: inline !important;
+        float:right;
+    }
+    .__active{
+        display: inline !important;
+    }
+
+}
+.icon-menu{
+    display: none;
+}
+
+/*css news*/
+.category-name{
+    font-weight: bold;
+    font-size: 30px;
+}
+.news{
+    width: 100%;
+    display: flex;
+}
+.news-img  {
+    width: 250px;
+}
+.news-img img{
+    width:100%;
+    height:200px;
+}
+.news-content{
+    width: 50%;
+    padding-left: 20px;
+}
+.news-content .news-title{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 7px;
+}
+.read-more{
+    font-style: italic;
+    display: block;
+    padding-top: 10px;
+}
+/*css detail product*/
+@media only screen and (max-width: 600px){
+    .product-detail{
+        width: 100%;
+    }
+    .panel-default{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+    }
+    .product-detail-image-desktop{
+        display: block;
+        padding-right: 0;
+        float: none;
+    }
+}
+.form-contact tr td p{
+    color: red;
+}

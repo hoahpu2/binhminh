@@ -1,0 +1,193 @@
+.wrap-content{
+    font-family: Arial;
+}
+.content{
+    display: table;
+    width:74%;
+    float:left;
+
+}
+.product-detail{
+    float: right;
+    width: 54%;
+}
+.product-detail-image-desktop{
+    display: inline-block;
+    float:left;
+    padding-right:20px;
+}
+.panel-default{
+    border: 1px solid #e8e8e8;
+    float:right;
+}
+.label-success{
+    background-color: #5cb85c;
+}
+.label{
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.hrviet{
+    width: 100%;
+    float: left;
+    padding: 1px 0;
+    margin: 15px 0;
+    clear: both;
+    border-top: 1px solid #EEEEEE;
+}
+.panel-default p{
+    margin: 0 0 10px;
+}
+.hotlie{
+    text-align: center;
+    font-size: 25px;
+}
+.hotlie b{
+    color: red;
+    font-weight: bold;
+}
+.camket{
+    padding-top: 20px;
+}
+.panel-body{
+    padding:10px;
+}
+
+.price{
+    display: inline-block;
+    overflow: hidden;
+    font-size: 24px;
+    color: #e10c00;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+.product-name{
+    font-size: 30px;
+    padding: 15px 0;
+}
+.single_add_vang{
+    margin-top: 30px;
+    background: none repeat scroll 0 0 #f59123;
+    box-shadow: 0 -3px 0 0 #c27806 inset;
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: 0 -3px 0 0 #248c50 inset;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+.single_add_to_cart_button{
+    padding:20px;
+}
+
+.single_add_to_cart_button span{
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 3px;
+    text-transform: none;
+}
+.product-desc{
+    padding: 10px 0;
+}
+.product-sku{
+    padding: 15px 0;
+}
+.tsh a{
+   color:white;
+}
+.tsh i{
+    padding-right:5px;
+}
+.tsh{
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    padding: 5px;
+    padding-right: 20px;
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.recommended{
+    font-weight:bold;
+    font-size:24px;
+    padding: 10px;
+}
+.slick-prev , .slick-next {
+    display: none !important;
+
+}
+.recommend .content_top{
+    margin :20px 0;
+}
+.button-contact{
+    margin-top: 30px;
+    background: none repeat scroll 0 0 #f59123;
+    box-shadow: 0 -3px 0 0 #c27806 inset;
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: 0 -3px 0 0 #248c50 inset;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 40%;
+    padding:15px;
+}
+
+
