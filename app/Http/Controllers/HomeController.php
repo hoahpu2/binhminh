@@ -45,12 +45,14 @@ class HomeController extends Controller
     public function sanpham()
     {
         $a_GetCategory = $this->getCategory();
+        
         $all_Product = Product::where('PR_status', 1);
-        if($_GET['cate']){
+        $cateActive = '';
+        if(isset($_GET['cate'])){
             $all_Product = $all_Product->where('PR_CA_id', $_GET['cate']);
+            $cateActive = $_GET['cate'];
         }
         
-        $cateActive = $_GET['cate'];
         $all_Product = $all_Product->orderBy('PR_id', 'desc')->limit(12)->get();
         return view('sub.client.sanpham', compact('a_GetCategory', 'all_Product', 'cateActive'));
     }
@@ -60,9 +62,28 @@ class HomeController extends Controller
         if(!empty($a_catePa)){
             foreach($a_catePa as $key => $value){
                 $a_catePa[$key]['subMenu'] = $this->getCategory($value['CA_id']);
+                $a_catePa[$key]['list_sub_menu'] = $this->listSubMenu($value['CA_id']);
             }
         }
         return $a_catePa;
+    }
+
+    public function listSubMenu($ca_id){
+        $a_catePa = Category::select('CA_id')->where('CA_parentId', $ca_id)->get()->toArray();
+        if(!empty($a_catePa)){
+            $return = [];
+            foreach($a_catePa as $a_catePas){
+                $return[] = $a_catePas['CA_id'];
+                $returnss = $this->listSubMenu($a_catePas['CA_id']);
+                if(!empty($returnss)){
+                    foreach($returnss as $returnsss){
+                        $return[] = $returnsss;
+                    }
+                }
+            }
+            return $return;
+        }
+        return [];
     }
 
     public function giaiphap()

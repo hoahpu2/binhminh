@@ -512,8 +512,8 @@
     <style id='elementor-frontend-inline-css' type='text/css'>
         @font-face {
             font-family: eicons;
-            src: url(wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons0b93.eot?5.10.0);
-            src: url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
+            src: url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons0b93.eot?5.10.0);
+            src: url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
             font-weight: 400;
             font-style: normal
         }
@@ -527,13 +527,13 @@
         @font-face {
             font-family: "fl-icons";
             font-display: block;
-            src: url(wp-content/themes/flatsome/assets/css/icons/fl-icons9c85.eot?v=3.14.1);
+            src: url({{asset("wp-content/")}}/themes/flatsome/assets/css/icons/fl-icons9c85.eot?v=3.14.1);
             src:
-                url(wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.14.1) format("embedded-opentype"),
-                url(wp-content/themes/flatsome/assets/css/icons/fl-icons9c85.woff2?v=3.14.1) format("woff2"),
-                url(wp-content/themes/flatsome/assets/css/icons/fl-icons9c85.ttf?v=3.14.1) format("truetype"),
-                url(wp-content/themes/flatsome/assets/css/icons/fl-icons9c85.woff?v=3.14.1) format("woff"),
-                url(wp-content/themes/flatsome/assets/css/icons/fl-icons9c85.svg?v=3.14.1#fl-icons) format("svg");
+                url({{asset("wp-content/")}}/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.14.1) format("embedded-opentype"),
+                url({{asset("wp-content/")}}/themes/flatsome/assets/css/icons/fl-icons9c85.woff2?v=3.14.1) format("woff2"),
+                url({{asset("wp-content/")}}/themes/flatsome/assets/css/icons/fl-icons9c85.ttf?v=3.14.1) format("truetype"),
+                url({{asset("wp-content/")}}/themes/flatsome/assets/css/icons/fl-icons9c85.woff?v=3.14.1) format("woff"),
+                url({{asset("wp-content/")}}/themes/flatsome/assets/css/icons/fl-icons9c85.svg?v=3.14.1#fl-icons) format("svg");
         }
     </style>
     <link rel='stylesheet' id='flatsome-shop-css' href='{{asset("wp-content/")}}/themes/flatsome/assets/css/flatsome-shopa1c3.css?ver=3.14.1' type='text/css' media='all' />

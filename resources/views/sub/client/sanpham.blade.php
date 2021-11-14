@@ -58,15 +58,15 @@
                     <div class="is-divider small"></div>
                     <ul class="product-categories">
                         @foreach($a_GetCategory as $cates)
-                        <li class="cat-item cat-item-855 cat-parent has-child <?php echo $cates['CA_id'] == $cateActive ? 'current-cat active' : '' ?>" aria-expanded="false"><a class="find_ter" key_word="{{$cates['CA_alias']}}" href="<?php echo route('sanpham'); ?>?cate={{$cates['CA_id']}}">{{$cates['CA_name']}}</a>@if(!empty($cates['subMenu']))<button class="toggle"><i class="fas fa-angle-down"></i></button>@endif
+                        <li class="cat-item cat-item-855 <?php echo !empty($cates['subMenu']) ? 'cat-parent has-child' : ''; ?> <?php echo $cates['CA_id'] == $cateActive ? 'current-cat ' : '' ?> <?php echo in_array($cateActive, $cates['list_sub_menu']) ? 'active' : '' ?>" aria-expanded="false"><a class="find_ter" key_word="{{$cates['CA_alias']}}" href="<?php echo route('sanpham'); ?>?cate={{$cates['CA_id']}}">{{$cates['CA_name']}}</a>
                             <ul class="children">
                                 @if(!empty($cates['subMenu']))
                                 @foreach($cates['subMenu'] as $cate)
-                                <li class="cat-item cat-item-866 cat-parent has-child <?php echo $cate['CA_id'] == $cateActive ? 'current-cat active' : '' ?>" aria-expanded="false"><a class="find_ter" key_word="{{$cate['CA_alias']}}" href="<?php echo route('sanpham'); ?>?cate={{$cate['CA_id']}}">{{$cate['CA_name']}}</a>@if(!empty($cate['subMenu']))<button class="toggle"><i class="fas fa-angle-down"></i></button>@endif
+                                <li class="cat-item cat-item-866 <?php echo !empty($cate['subMenu']) ? 'cat-parent has-child' : ''; ?> <?php echo $cate['CA_id'] == $cateActive ? 'current-cat' : '' ?> <?php echo in_array($cateActive, $cate['list_sub_menu']) ? 'active' : '' ?>" aria-expanded="false"><a class="find_ter" key_word="{{$cate['CA_alias']}}" href="<?php echo route('sanpham'); ?>?cate={{$cate['CA_id']}}">{{$cate['CA_name']}}</a>
                                     <ul class="children">
                                         @if(!empty($cate['subMenu']))
                                         @foreach($cate['subMenu'] as $catee)
-                                        <li class="cat-item cat-item-867"><a class="find_ter <?php echo $catee['CA_id'] == $cateActive ? 'current-cat active' : '' ?>" key_word="{{$catee['CA_alias']}}" href="<?php echo route('sanpham'); ?>?cate={{$catee['CA_id']}}">{{$catee['CA_name']}}</a></li>
+                                        <li class="cat-item cat-item-867 <?php echo $catee['CA_id'] == $cateActive ? 'current-cat active' : '' ?>"><a class="find_ter" key_word="{{$catee['CA_alias']}}" href="<?php echo route('sanpham'); ?>?cate={{$catee['CA_id']}}">{{$catee['CA_name']}}</a></li>
                                         @endforeach
                                         @endif
                                     </ul>
@@ -76,55 +76,6 @@
                             </ul>
                         </li>
                         @endforeach
-                        <li class="cat-item cat-item-855 cat-parent has-child active" aria-expanded="true"><a href="../index.html">AirTAC</a>
-                            <ul class="children">
-                                <li class="cat-item cat-item-866 current-cat cat-parent active has-child" aria-expanded="false"><a href="index.html">Bộ Lọc AirTAC</a> <button class="toggle"><i class="icon-angle-down"></i></button>
-                                    <ul class="children">
-                                        <li class="cat-item cat-item-867"><a href="dong-ga/index.html">Dòng GA</a></li>
-                                        <li class="cat-item cat-item-868"><a href="dong-gp/index.html">Dòng GP</a></li>
-                                        <li class="cat-item cat-item-869"><a href="dong-khac/index.html">Dòng Khác</a></li>
-                                    </ul>
-                                </li>
-                                <li class="cat-item cat-item-888 cat-parent has-child" aria-expanded="false"><a href="../phu-kien-airtac/index.html">Phụ Kiện AirTAC</a> <button class="toggle"><i class="icon-angle-down"></i></button>
-                                    <ul class="children">
-                                        <li class="cat-item cat-item-898"><a href="../phu-kien-airtac/bo-dieu-khien-toc-do-airtac/index.html">Bộ Điều Khiển Tốc Độ AirTAC</a></li>
-                                        <li class="cat-item cat-item-896"><a href="../phu-kien-airtac/bo-giam-am-airtac/index.html">Bộ Giảm Âm AirTAC</a></li>
-                                        <li class="cat-item cat-item-894"><a href="../phu-kien-airtac/dau-noi-khi-airtac/index.html">Đầu Nối Khí AirTAC</a></li>
-                                        <li class="cat-item cat-item-893"><a href="../phu-kien-airtac/ong-pa-airtac/index.html">Ống PA AirTAC</a></li>
-                                        <li class="cat-item cat-item-890"><a href="../phu-kien-airtac/ong-pu-airtac/index.html">Ống PU AirTAC</a></li>
-                                        <li class="cat-item cat-item-889"><a href="../phu-kien-airtac/phu-kien-giam-xoc-airtac/index.html">Phụ Kiện Giảm Xóc AirTAC</a></li>
-                                        <li class="cat-item cat-item-900"><a href="../phu-kien-airtac/van-ngon-tay-airtac/index.html">Van Ngón Tay AirTAC</a></li>
-                                    </ul>
-                                </li>
-                                <li class="cat-item cat-item-901"><a href="../thanh-truot-airtac/index.html">Thanh Trượt AirTAC</a></li>
-                                <li class="cat-item cat-item-879 cat-parent has-child" aria-expanded="false"><a href="../thiet-bi-truyen-dong-airtac/index.html">Thiết Bị Truyền Động AirTAC</a> <button class="toggle"><i class="icon-angle-down"></i></button>
-                                    <ul class="children">
-                                        <li class="cat-item cat-item-885"><a href="../thiet-bi-truyen-dong-airtac/cam-bien-airtac/index.html">Cảm Biến AirTAC</a></li>
-                                        <li class="cat-item cat-item-881"><a href="../thiet-bi-truyen-dong-airtac/xylanh-ba-airtac/index.html">XyLanh Ba AirTAC</a></li>
-                                        <li class="cat-item cat-item-880"><a href="../thiet-bi-truyen-dong-airtac/xylanh-doi-airtac/index.html">XyLanh Đôi AirTAC</a></li>
-                                        <li class="cat-item cat-item-887"><a href="../thiet-bi-truyen-dong-airtac/xylanh-kep-airtac/index.html">XyLanh Kẹp AirTAC</a></li>
-                                        <li class="cat-item cat-item-884"><a href="../thiet-bi-truyen-dong-airtac/xylanh-quay-airtac/index.html">XyLanh Quay AirTAC</a></li>
-                                        <li class="cat-item cat-item-882"><a href="../thiet-bi-truyen-dong-airtac/xylanh-truot-airtac/index.html">XyLanh Trượt AirTAC</a></li>
-                                        <li class="cat-item cat-item-883"><a href="../thiet-bi-truyen-dong-airtac/xylanh-tu-airtac/index.html">XyLanh Từ AirTAC</a></li>
-                                    </ul>
-                                </li>
-                                <li class="cat-item cat-item-856 cat-parent has-child" aria-expanded="false"><a href="../van-airtac/index.html">Van AirTAC</a> <button class="toggle"><i class="icon-angle-down"></i></button>
-                                    <ul class="children">
-                                        <li class="cat-item cat-item-857"><a href="../van-airtac/van-dien-tu-airtac/index.html">Van Điện Từ AirTAC</a></li>
-                                        <li class="cat-item cat-item-860"><a href="../van-airtac/van-dieu-khien-airtac/index.html">Van Điều Khiển AirTAC</a></li>
-                                        <li class="cat-item cat-item-862"><a href="../van-airtac/van-dieu-khien-khi-nen-airtac/index.html">Van Điều Khiển Khí Nén AirTAC</a></li>
-                                        <li class="cat-item cat-item-864"><a href="../van-airtac/van-tay-airtac/index.html">Van Tay AirTAC</a></li>
-                                    </ul>
-                                </li>
-                                <li class="cat-item cat-item-872 cat-parent has-child" aria-expanded="false"><a href="../xylanh-airtac/index.html">XyLanh AirTAC</a> <button class="toggle"><i class="icon-angle-down"></i></button>
-                                    <ul class="children">
-                                        <li class="cat-item cat-item-875"><a href="../xylanh-airtac/dau-noi-airtac/index.html">Đầu Nối AirTAC</a></li>
-                                        <li class="cat-item cat-item-873"><a href="../xylanh-airtac/giam-xoc-airtac/index.html">Giảm Xóc AirTAC</a></li>
-                                        <li class="cat-item cat-item-874"><a href="../xylanh-airtac/xylanh-airtac-xylanh-airtac/index.html">XyLanh AirTAC</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </aside>
             </div>
@@ -220,14 +171,13 @@
 </main>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type='text/javascript'>
-    $("body").click(function() {
-        // alert('xxx');
-        $(".icon-angle-down").removeClass();
-    });
+    // $("body").hover(function() {
+    //     $(".icon-angle-down").removeClass();
+    // });
 
-    $('.toggle').click(function() {
-        $(".icon-angle-down").removeClass();
-    });
+    // $('.toggle').click(function() {
+    //     $(".icon-angle-down").removeClass();
+    // });
 
     // $('.find_ter').click(function() {
     //     ($(this).attr('key_word'));

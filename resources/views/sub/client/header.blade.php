@@ -69,7 +69,7 @@
                 <div id="logo" class="flex-col logo">
                     <!-- Header logo -->
                     <a href="/" title="IPE - Uy tín tạo niềm tin" rel="home">
-                        <img width="100" height="98" src="{{asset('wp-content/')}}/uploads/2018/12/ipe-logo.png" class="header_logo header-logo" alt="IPE" /><img width="100" height="98" src="wp-content/uploads/2018/12/ipe-logo.png" class="header-logo-dark" alt="IPE" /></a>
+                        <img width="100" height="98" src="{{asset('wp-content/')}}/uploads/2018/12/ipe-logo.png" class="header_logo header-logo" alt="IPE" /><img width="100" height="98" src="{{asset('wp-content/')}}/uploads/2018/12/ipe-logo.png" class="header-logo-dark" alt="IPE" /></a>
                 </div>
 
                 <!-- Mobile Left Elements -->
@@ -85,8 +85,7 @@
                 </div>
 
                 <!-- Left Elements -->
-                <div class="flex-col hide-for-medium flex-left
-    flex-grow">
+                <div class="flex-col hide-for-medium flex-left flex-grow">
                     <ul class="header-nav header-nav-main nav nav-left  nav-size-large nav-spacing-xlarge nav-uppercase">
                     </ul>
                 </div>
