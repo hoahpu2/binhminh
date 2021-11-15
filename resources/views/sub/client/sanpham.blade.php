@@ -147,7 +147,7 @@
 
                     <!-- <div> -->
                 </div><!-- row -->
-                <div class="container">
+                <!-- <div class="container">
                     <nav class="woocommerce-pagination">
                         <ul class="page-numbers nav-pagination links text-center">
                             <li><a class="next page-number" href="page/2/index.html"><i class="fas fa-angle-left"></i></a></li>
@@ -162,7 +162,7 @@
                             <li><a class="next page-number" href="page/2/index.html"><i class="fas fa-angle-right"></i></a></li>
                         </ul>
                     </nav>
-                </div>
+                </div> -->
 
             </div><!-- shop container -->
         </div>
