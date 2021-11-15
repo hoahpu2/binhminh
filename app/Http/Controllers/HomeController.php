@@ -124,8 +124,9 @@ class HomeController extends Controller
     public function productDetail($slug)
     {
         $detailproduct = Product::where('PR_alias', $slug)->first();
+        $catePro = Product::where('PR_CA_id', $detailproduct['PR_CA_id'])->where('PR_id', '!=', $detailproduct['PR_id'])->get()->toArray();
         
-        return view('sub.client.productDetail', compact('detailproduct'));
+        return view('sub.client.productDetail', compact('detailproduct', 'catePro'));
     }
 
     public function tintuc()

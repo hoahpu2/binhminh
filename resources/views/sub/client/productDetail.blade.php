@@ -63,7 +63,7 @@
                                         <i class="icon-angle-left"></i> </a>
                                     <div class="nav-dropdown">
                                         <a title="BRASS BALL VALVE" href="http://ipe.vn/product/brass-ball-valve/">
-                                            <img width="100" height="100" src="http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="" loading="lazy" srcset="http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636-100x100.jpg 100w, http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636-150x150.jpg 150w, http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636-300x300.jpg 300w, http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636.jpg 440w" sizes="(max-width: 100px) 100vw, 100px"></a>
+                                            <img width="100" height="100" src="{{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="" loading="lazy" srcset="{{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636-100x100.jpg 100w, {{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636-150x150.jpg 150w, {{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636-300x300.jpg 300w, {{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636.jpg 440w" sizes="(max-width: 100px) 100vw, 100px"></a>
                                     </div>
                                 </li>
                                 <li class="prod-dropdown has-dropdown">
@@ -71,7 +71,7 @@
                                         <i class="icon-angle-right"></i> </a>
                                     <div class="nav-dropdown">
                                         <a title="Van Bi JIS 10K IRON" href="http://ipe.vn/product/van-bi-jis-10k-iron/">
-                                            <img width="100" height="100" src="http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="" loading="lazy" srcset="http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80-100x100.jpg 100w, http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80-150x150.jpg 150w, http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80-300x300.jpg 300w, http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80.jpg 500w" sizes="(max-width: 100px) 100vw, 100px"></a>
+                                            <img width="100" height="100" src="{{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="" loading="lazy" srcset="{{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80-100x100.jpg 100w, {{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80-150x150.jpg 150w, {{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80-300x300.jpg 300w, {{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80.jpg 500w" sizes="(max-width: 100px) 100vw, 100px"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -104,7 +104,7 @@
                                 <span class="tagged_as">Từ khóa: <a href="http://ipe.vn/tu-khoa-san-pham/10k-ball-valve-full-bore/" rel="tag">10K BALL VALVE FULL BORE</a></span>
 
                             </div>
-                            <div class="social-icons share-icons share-row relative"><a href="whatsapp://send?text=10K%20BALL%20VALVE%20FULL%20BORE - http://ipe.vn/product/10k-ball-valve-full-bore/" data-action="share/whatsapp/share" class="icon button circle is-outline tooltip whatsapp show-for-medium tooltipstered" aria-label="Share on WhatsApp"><i class="icon-whatsapp"></i></a><a href="https://www.facebook.com/sharer.php?u=http://ipe.vn/product/10k-ball-valve-full-bore/" data-label="Facebook" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip facebook tooltipstered" aria-label="Share on Facebook"><i class="icon-facebook"></i></a><a href="https://twitter.com/share?url=http://ipe.vn/product/10k-ball-valve-full-bore/" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip twitter tooltipstered" aria-label="Share on Twitter"><i class="icon-twitter"></i></a><a href="mailto:enteryour@addresshere.com?subject=10K%20BALL%20VALVE%20FULL%20BORE&amp;body=Check%20this%20out:%20http://ipe.vn/product/10k-ball-valve-full-bore/" rel="nofollow" class="icon button circle is-outline tooltip email tooltipstered" aria-label="Email to a Friend"><i class="icon-envelop"></i></a><a href="https://pinterest.com/pin/create/button/?url=http://ipe.vn/product/10k-ball-valve-full-bore/&amp;media=http://ipe.vn/wp-content/uploads/2019/02/266444_11d51ca0-49b3-4fef-8007-2d6a27315d1b.jpg&amp;description=10K%20BALL%20VALVE%20FULL%20BORE" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip pinterest tooltipstered" aria-label="Pin on Pinterest"><i class="icon-pinterest"></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://ipe.vn/product/10k-ball-valve-full-bore/&amp;title=10K%20BALL%20VALVE%20FULL%20BORE" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip linkedin tooltipstered" aria-label="Share on LinkedIn"><i class="icon-linkedin"></i></a></div>
+                            <div class="social-icons share-icons share-row relative"><a href="whatsapp://send?text=10K%20BALL%20VALVE%20FULL%20BORE - http://ipe.vn/product/10k-ball-valve-full-bore/" data-action="share/whatsapp/share" class="icon button circle is-outline tooltip whatsapp show-for-medium tooltipstered" aria-label="Share on WhatsApp"><i class="icon-whatsapp"></i></a><a href="https://www.facebook.com/sharer.php?u=http://ipe.vn/product/10k-ball-valve-full-bore/" data-label="Facebook" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip facebook tooltipstered" aria-label="Share on Facebook"><i class="icon-facebook"></i></a><a href="https://twitter.com/share?url=http://ipe.vn/product/10k-ball-valve-full-bore/" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip twitter tooltipstered" aria-label="Share on Twitter"><i class="icon-twitter"></i></a><a href="mailto:enteryour@addresshere.com?subject=10K%20BALL%20VALVE%20FULL%20BORE&amp;body=Check%20this%20out:%20http://ipe.vn/product/10k-ball-valve-full-bore/" rel="nofollow" class="icon button circle is-outline tooltip email tooltipstered" aria-label="Email to a Friend"><i class="icon-envelop"></i></a><a href="https://pinterest.com/pin/create/button/?url=http://ipe.vn/product/10k-ball-valve-full-bore/&amp;media={{asset('wp-content/')}}/uploads/2019/02/266444_11d51ca0-49b3-4fef-8007-2d6a27315d1b.jpg&amp;description=10K%20BALL%20VALVE%20FULL%20BORE" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip pinterest tooltipstered" aria-label="Pin on Pinterest"><i class="icon-pinterest"></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://ipe.vn/product/10k-ball-valve-full-bore/&amp;title=10K%20BALL%20VALVE%20FULL%20BORE" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px');  return false;" rel="noopener noreferrer nofollow" target="_blank" class="icon button circle is-outline tooltip linkedin tooltipstered" aria-label="Share on LinkedIn"><i class="icon-linkedin"></i></a></div>
                         </div>
 
                         <div id="product-sidebar" class="mfp-hide">
@@ -116,7 +116,7 @@
                                                 <i class="icon-angle-left"></i> </a>
                                             <div class="nav-dropdown">
                                                 <a title="BRASS BALL VALVE" href="http://ipe.vn/product/brass-ball-valve/">
-                                                    <img width="100" height="100" src="http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="" loading="lazy" srcset="http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636-100x100.jpg 100w, http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636-150x150.jpg 150w, http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636-300x300.jpg 300w, http://ipe.vn/wp-content/uploads/2019/02/imgrc0066107636.jpg 440w" sizes="(max-width: 100px) 100vw, 100px"></a>
+                                                    <img width="100" height="100" src="{{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="" loading="lazy" srcset="{{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636-100x100.jpg 100w, {{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636-150x150.jpg 150w, {{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636-300x300.jpg 300w, {{asset('wp-content/')}}/uploads/2019/02/imgrc0066107636.jpg 440w" sizes="(max-width: 100px) 100vw, 100px"></a>
                                             </div>
                                         </li>
                                         <li class="prod-dropdown has-dropdown">
@@ -124,7 +124,7 @@
                                                 <i class="icon-angle-right"></i> </a>
                                             <div class="nav-dropdown">
                                                 <a title="Van Bi JIS 10K IRON" href="http://ipe.vn/product/van-bi-jis-10k-iron/">
-                                                    <img width="100" height="100" src="http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="" loading="lazy" srcset="http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80-100x100.jpg 100w, http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80-150x150.jpg 150w, http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80-300x300.jpg 300w, http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-80.jpg 500w" sizes="(max-width: 100px) 100vw, 100px"></a>
+                                                    <img width="100" height="100" src="{{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail wp-post-image" alt="" loading="lazy" srcset="{{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80-100x100.jpg 100w, {{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80-150x150.jpg 150w, {{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80-300x300.jpg 300w, {{asset('wp-content/')}}/uploads/2019/02/Untitled-1-80.jpg 500w" sizes="(max-width: 100px) 100vw, 100px"></a>
                                             </div>
                                         </li>
                                     </ul>
@@ -638,7 +638,7 @@
                                                     <div class="box-image">
                                                         <div class="image-fade_in_back">
                                                             <a href="http://ipe.vn/product/jis-10k-iron-gate-valve/" aria-label="JIS 10K IRON GATE VALVE">
-                                                                <img width="247" height="296" src="http://ipe.vn/wp-content/uploads/2019/02/Untitled-2-2-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
+                                                                <img width="247" height="296" src="{{asset('wp-content/')}}/uploads/2019/02/Untitled-2-2-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
                                                         </div>
                                                         <div class="image-tools is-small top right show-on-hover">
                                                             <div class="wishlist-icon">
@@ -690,7 +690,7 @@
                                                     <div class="box-image">
                                                         <div class="image-fade_in_back">
                                                             <a href="http://ipe.vn/product/bronze-globe-valve/" aria-label="BRONZE GLOBE VALVE">
-                                                                <img width="247" height="296" src="http://ipe.vn/wp-content/uploads/2019/02/slide_1545713905_50-247x296.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
+                                                                <img width="247" height="296" src="{{asset('wp-content/')}}/uploads/2019/02/slide_1545713905_50-247x296.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
                                                         </div>
                                                         <div class="image-tools is-small top right show-on-hover">
                                                             <div class="wishlist-icon">
@@ -742,7 +742,7 @@
                                                     <div class="box-image">
                                                         <div class="image-fade_in_back">
                                                             <a href="http://ipe.vn/product/bronze-lift-check-valve/" aria-label="BRONZE LIFT CHECK VALVE">
-                                                                <img width="247" height="296" src="http://ipe.vn/wp-content/uploads/2019/02/TB1BamJJpXXXXcWXFXXXXXXXXXX_0-item_pic-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
+                                                                <img width="247" height="296" src="{{asset('wp-content/')}}/uploads/2019/02/TB1BamJJpXXXXcWXFXXXXXXXXXX_0-item_pic-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
                                                         </div>
                                                         <div class="image-tools is-small top right show-on-hover">
                                                             <div class="wishlist-icon">
@@ -794,7 +794,7 @@
                                                     <div class="box-image">
                                                         <div class="image-fade_in_back">
                                                             <a href="http://ipe.vn/product/iron-wafer-type-check-valve/" aria-label="IRON WAFER TYPE CHECK VALVE">
-                                                                <img width="247" height="296" src="http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-81-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
+                                                                <img width="247" height="296" src="{{asset('wp-content/')}}/uploads/2019/02/Untitled-1-81-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
                                                         </div>
                                                         <div class="image-tools is-small top right show-on-hover">
                                                             <div class="wishlist-icon">
@@ -846,7 +846,7 @@
                                                     <div class="box-image">
                                                         <div class="image-fade_in_back">
                                                             <a href="http://ipe.vn/product/10k-gate-valve/" aria-label="10K GATE VALVE">
-                                                                <img width="247" height="296" src="http://ipe.vn/wp-content/uploads/2019/02/jis_10k_rising-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
+                                                                <img width="247" height="296" src="{{asset('wp-content/')}}/uploads/2019/02/jis_10k_rising-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
                                                         </div>
                                                         <div class="image-tools is-small top right show-on-hover">
                                                             <div class="wishlist-icon">
@@ -898,7 +898,7 @@
                                                     <div class="box-image">
                                                         <div class="image-fade_in_back">
                                                             <a href="http://ipe.vn/product/trainer-for-gas-service/" aria-label="TRAINER FOR GAS SERVICE">
-                                                                <img width="247" height="296" src="http://ipe.vn/wp-content/uploads/2019/02/Strainer-Y-Pattern-JIS10K-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
+                                                                <img width="247" height="296" src="{{asset('wp-content/')}}/uploads/2019/02/Strainer-Y-Pattern-JIS10K-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
                                                         </div>
                                                         <div class="image-tools is-small top right show-on-hover">
                                                             <div class="wishlist-icon">
@@ -950,7 +950,7 @@
                                                     <div class="box-image">
                                                         <div class="image-fade_in_back">
                                                             <a href="http://ipe.vn/product/10xjmea/" aria-label="10XJMEA">
-                                                                <img width="247" height="296" src="http://ipe.vn/wp-content/uploads/2019/02/dla1347348501-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
+                                                                <img width="247" height="296" src="{{asset('wp-content/')}}/uploads/2019/02/dla1347348501-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
                                                         </div>
                                                         <div class="image-tools is-small top right show-on-hover">
                                                             <div class="wishlist-icon">
@@ -1002,7 +1002,7 @@
                                                     <div class="box-image">
                                                         <div class="image-fade_in_back">
                                                             <a href="http://ipe.vn/product/iron-swing-check-valve/" aria-label="IRON SWING CHECK VALVE">
-                                                                <img width="247" height="296" src="http://ipe.vn/wp-content/uploads/2019/02/Untitled-1-copy-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
+                                                                <img width="247" height="296" src="{{asset('wp-content/')}}/uploads/2019/02/Untitled-1-copy-247x296.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy"> </a>
                                                         </div>
                                                         <div class="image-tools is-small top right show-on-hover">
                                                             <div class="wishlist-icon">
