@@ -48,13 +48,18 @@ class HomeController extends Controller
         
         $all_Product = Product::where('PR_status', 1);
         $cateActive = '';
+        $limit = 12;
+        $offset = isset($_GET['page']) ? (int)$_GET['page'] - 1 : 0;
         if(isset($_GET['cate'])){
             $all_Product = $all_Product->where('PR_CA_id', $_GET['cate']);
             $cateActive = $_GET['cate'];
         }
         
-        $all_Product = $all_Product->orderBy('PR_id', 'desc')->limit(12)->get();
-        return view('sub.client.sanpham', compact('a_GetCategory', 'all_Product', 'cateActive'));
+        $totalPage = ceil($all_Product->count()/$limit);
+        $all_Product = $all_Product->orderBy('PR_id', 'desc')->offset($offset * $limit)->limit($limit)->get();
+
+        $curentPage = isset($_GET['page']) ? $_GET['page'] : 0;
+        return view('sub.client.sanpham', compact('a_GetCategory', 'all_Product', 'cateActive', 'totalPage', 'curentPage'));
     }
 
     public function getCategory($parent = 0){

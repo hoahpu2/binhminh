@@ -147,22 +147,31 @@
 
                     <!-- <div> -->
                 </div><!-- row -->
-                <!-- <div class="container">
+                <div class="container">
                     <nav class="woocommerce-pagination">
                         <ul class="page-numbers nav-pagination links text-center">
-                            <li><a class="next page-number" href="page/2/index.html"><i class="fas fa-angle-left"></i></a></li>
-                            <li><span aria-current="page" class="page-number current">1</span></li>
-                            <li><a class="page-number" href="page/2/index.html">2</a></li>
+                            <!-- <li><a class="next page-number" href="page/2/index.html"><i class="fas fa-angle-left"></i></a></li> -->
+                            <?php for($i = 1; $i<=$totalPage; $i++){ ?>
+                            @if($i==$curentPage)
+                            <li>
+                                <span aria-current="page" class="page-number current">{{ $i }}</span>
+                            </li>
+                            @else
+                                <li><a class="page-number" href="<?php echo route('sanpham'); ?>?cate={{$cateActive}}&page={{$i}}">{{$i}}</a></li>
+                            @endif
+                            <?php } ?>
+                            <!-- <li><a class="page-number" href="page/3/index.html">3</a></li> -->
+                            <!-- <li><a class="page-number" href="page/2/index.html">2</a></li>
                             <li><a class="page-number" href="page/3/index.html">3</a></li>
                             <li><a class="page-number" href="page/4/index.html">4</a></li>
                             <li><span class="page-number dots">…</span></li>
                             <li><a class="page-number" href="page/110/index.html">110</a></li>
                             <li><a class="page-number" href="page/111/index.html">111</a></li>
                             <li><a class="page-number" href="page/112/index.html">112</a></li>
-                            <li><a class="next page-number" href="page/2/index.html"><i class="fas fa-angle-right"></i></a></li>
+                            <li><a class="next page-number" href="page/2/index.html"><i class="fas fa-angle-right"></i></a></li> -->
                         </ul>
                     </nav>
-                </div> -->
+                </div>
 
             </div><!-- shop container -->
         </div>
