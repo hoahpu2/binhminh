@@ -6,9 +6,6 @@
         <div class="row row-main">
             <div class="large-12 col">
                 <div class="col-inner">
-
-
-
                     <div data-elementor-type="wp-page" data-elementor-id="1961" class="elementor elementor-1961" data-elementor-settings="[]">
                         <div class="elementor-inner">
                             <div class="elementor-section-wrap">
@@ -21,7 +18,7 @@
                                                         <div class="elementor-element elementor-element-d011190 elementor-widget elementor-widget-google_maps" data-id="d011190" data-element_type="widget" data-widget_type="google_maps.default">
                                                             <div class="elementor-widget-container">
                                                                 <div class="elementor-custom-embed">
-                                                                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCRULerf3iiSlwEdzuJBZCjES5DCPdo4lA&amp;q=ipe&amp;zoom=14" title="ipe" aria-label="ipe"></iframe>
+                                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1861.920238361462!2d105.7812813582116!3d21.03906799990119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454cacd93cc57%3A0x465a0246eecc8c72!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOZ2_huqFpIG5n4buvLCDEkOG6oWkgaOG7jWMgUXXhu5FjIGdpYSBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1636982609438!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                                                 </div>
                                                             </div>
                                                         </div>

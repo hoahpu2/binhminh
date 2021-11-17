@@ -8,11 +8,9 @@
                     <div id="col-1096486082" class="col medium-3 small-6 large-3">
                         <div class="col-inner">
 
-
-
                             <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2021311758">
                                 <div class="img-inner dark">
-                                    <img width="101" height="101" src="{{asset('wp-content/')}}/uploads/2019/06/logo-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="http://ipe.vn/wp-content/uploads/2019/06/logo-1.png 101w, http://ipe.vn/wp-content/uploads/2019/06/logo-1-100x100.png 100w" sizes="(max-width: 101px) 100vw, 101px" />
+                                    <img width="101" height="101" src="{{asset('wp-content/')}}/uploads/2019/06/logo-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="{{asset('wp-content/')}}/uploads/2019/06/logo-1.png 101w, {{asset('wp-content/')}}/uploads/2019/06/logo-1.png 100w" sizes="(max-width: 101px) 100vw, 101px" />
                                 </div>
 
                                 <style>
