@@ -77,7 +77,7 @@ class NewsController extends Controller
         if(!empty($request->file('avatar'))){
             $file_name = $request->file('avatar')->getClientOriginalName();
             $update = str_random(4).$file_name;
-            $news->PR_avatar = $update;
+            $news->N_avatar = $update;
             $request->file('avatar')->move('resources/upload/news/',$update);
         }
 

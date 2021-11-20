@@ -42,15 +42,20 @@ class HomeController extends Controller
         return view('sub.client.vechungtoi', compact('contact'));
     }
 
-    public function sanpham()
+    public function sanpham(Request $request)
     {
+        if($request->ajax()){
+            $all_Product = Product::select('PR_name', 'PR_alias', 'PR_avatar')->where('PR_status', 1)->where('PR_name', 'like', '%'. trim($request->key_search) .'%')
+                                    ->get()->toArray();
+            echo json_encode($all_Product);die;
+        }
         $a_GetCategory = $this->getCategory();
         
         $all_Product = Product::where('PR_status', 1);
         $cateActive = '';
-        $limit = 12;
+        $limit = 1;
         $offset = isset($_GET['page']) ? (int)$_GET['page'] - 1 : 0;
-        if(isset($_GET['cate'])){
+        if(isset($_GET['cate']) && $_GET['cate'] != ''){
             $all_Product = $all_Product->where('PR_CA_id', $_GET['cate']);
             $cateActive = $_GET['cate'];
         }
