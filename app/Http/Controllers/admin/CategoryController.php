@@ -100,6 +100,7 @@ class CategoryController extends Controller
 
         $o_Cate->CA_parentId = $request->CA_parent;
         $o_Cate->CA_name = $request->CA_name;
+        $o_Cate->CA_location = $request->CA_location;
         if ($request->CA_parent == 0) {
             $o_Cate->CA_number = 1;
         }elseif($request->CA_parent != 0){
@@ -164,6 +165,7 @@ class CategoryController extends Controller
 
         $o_Cate->CA_parentId = $request->CA_parent;
         $o_Cate->CA_name = $request->CA_name;
+        $o_Cate->CA_location = $request->CA_location;
         if ($request->CA_parent == 0) {
             $o_Cate->CA_number = 1;
         }elseif($request->CA_parent != 0){

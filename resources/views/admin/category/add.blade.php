@@ -11,16 +11,16 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" action="{!! route('admin.cate.postAdd') !!}"  autocomplete="off">
+        <form class="form-horizontal" method="POST" action="{!! route('admin.cate.postAdd') !!}" autocomplete="off">
           @csrf
           <div class="box-body">
             <div class="form-group">
               <label for="CA_name" class="col-sm-2 control-label">Tên Menu <span style="color: red"> *</span></label>
-            
+
               <div class="col-sm-5">
                 <input type="text" name="CA_name" required="required" class="form-control" id="CA_name" placeholder="Tên Menu" value="{{old('CA_name')}}">
                 @if ($errors->has('CA_name'))
-                  <span style="color:red">{{$errors->first('CA_name')}}</span>
+                <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
               </div>
             </div>
@@ -30,23 +30,23 @@
               <div class="col-sm-5">
                 <select name="CA_parent" class="form-control select2" id="CA_parent">
                   <option value="0">Danh mục cha</option>
-                  
+
                   @foreach($a_Cates as $key => $cate)
-                  <option value="{{$key}}" >{!!$cate!!}</option>
+                  <option value="{{$key}}">{!!$cate!!}</option>
                   @endforeach
                 </select>
               </div>
             </div>
-            <!-- <div class="form-group vitri">
-              <label for="CA_number" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
+            <div class="form-group vitri">
+              <label for="CA_location" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
             
               <div class="col-sm-2">
-                <input type="number" name="CA_number" required="required" class="form-control" id="CA_number" placeholder="Vị trí" value="{{old('CA_number')}}" >
-                @if ($errors->has('CA_number'))
-                  <span style="color:red">{{$errors->first('CA_number')}}</span>
+                <input type="number" name="CA_location" required="required" class="form-control" id="CA_location" placeholder="Vị trí" value="{{old('CA_location')}}" >
+                @if ($errors->has('CA_location'))
+                  <span style="color:red">{{$errors->first('CA_location')}}</span>
                 @endif
               </div>
-            </div> -->
+            </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
@@ -64,7 +64,7 @@
               <div class="col-sm-5">
                 <button type="submit" class="btn btn-info pull-center">Sign in</button>
                 <button class="btn btn-default"><a href="{{route('admin.cate.index')}}">Cancel</a></button>
-              </div>              
+              </div>
             </div>
           </div>
           <!-- /.box-footer -->
@@ -74,5 +74,5 @@
       <!--/.col (right) -->
     </div>
     <!-- /.row -->
-  </section>
-  @endsection
+</section>
+@endsection

@@ -28,6 +28,7 @@
               <th>Ngày sửa</th>
               <th>Menu cha</th>
               <th>Menu cấp</th>
+              <th>Vị trí</th>
               <th>Trạng thái</th>
               <th>Hành động</th>
             </tr>
@@ -50,6 +51,9 @@
             </td>
             <td>
               {{$element['CA_number']}}
+            </td>
+            <td>
+              {{$element['CA_location']}}
             </td>
             <td>
              @if($element['CA_status'] == 1)

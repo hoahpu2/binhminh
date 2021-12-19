@@ -32,45 +32,45 @@
             @foreach($a_Slider as $element)
             <tr>
               <td>
-               {{$loop->index+1}}
-             </td>
-             <td>
-              <img src="{{url('resources/upload/slider/')}}/{{$element['SL_url']}}" alt="" class="thumbnail" width="400px" height="200px">
-            </td>
-            <td>
-              {{$element['SL_alt']}}
-            </td>
-            <td>
-              {{$element['created_at']}}
-            </td>
-            <td>
-              {{$element['updated_at']}}
-            </td>
-            <td>
-             @if($element['SL_status'] == 1)
-             <span class="label label-success">Hiện</span>  
-             @else
-             <span class="label label-danger">Ẩn</span>
-             @endif
-           </td>
+                {{$loop->index+1}}
+              </td>
+              <td>
+                <img src="{{url('resources/upload/slider/')}}/{{$element['SL_url']}}" alt="" class="thumbnail" width="400px" height="200px">
+              </td>
+              <td>
+                {{$element['SL_alt']}}
+              </td>
+              <td>
+                {{$element['created_at']}}
+              </td>
+              <td>
+                {{$element['updated_at']}}
+              </td>
+              <td>
+                @if($element['SL_status'] == 1)
+                <span class="label label-success">Hiện</span>
+                @else
+                <span class="label label-danger">Ẩn</span>
+                @endif
+              </td>
 
-           <td>
-            <a href="{{route('admin.slider.getEdit',['id' =>$element['SL_en_id']])}}" class="btn btn-sm btn-primary">
-              <i class="fa fa-pencil"></i>
-            </a>
-            <a href="javascript:;" onclick ="confirmRemove('{{route('admin.slider.getDelete',['id' =>$element['SL_en_id']])}}')" class="btn btn-sm btn-danger">
-              <i class="fa fa-remove"></i>
-            </a>
+              <td>
+                <a href="{{route('admin.slider.getEdit',['id' =>$element['SL_en_id']])}}" class="btn btn-sm btn-primary">
+                  <i class="fa fa-pencil"></i>
+                </a>
+                <a href="javascript:;" onclick="confirmRemove('{{route('admin.slider.getDelete',['id' =>$element['SL_en_id']])}}')" class="btn btn-sm btn-danger">
+                  <i class="fa fa-remove"></i>
+                </a>
 
-          </td>
-        </tr>
-        @endforeach
-      </table>
+              </td>
+            </tr>
+            @endforeach
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
     </div>
-    <!-- /.box-body -->
   </div>
-  <!-- /.box -->
-</div>
-</div>
 </section>
 @endsection

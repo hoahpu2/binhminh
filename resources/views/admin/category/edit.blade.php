@@ -37,16 +37,16 @@
                 </select>
               </div>
             </div>
-            <!-- <div class="form-group vitri">
-              <label for="CA_number" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
+            <div class="form-group">
+              <label for="CA_location" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
             
               <div class="col-sm-2">
-                <input type="number" name="CA_number" required="required" class="form-control" id="CA_number" placeholder="Vị trí" value="{{$a_CateOne[0]['CA_number']}}">
-                @if ($errors->has('CA_number'))
-                  <span style="color:red">{{$errors->first('CA_number')}}</span>
+                <input type="number" name="CA_location" required="required" class="form-control" id="CA_location" placeholder="Vị trí" value="{{$a_CateOne[0]['CA_location']}}">
+                @if ($errors->has('CA_location'))
+                  <span style="color:red">{{$errors->first('CA_location')}}</span>
                 @endif
               </div>
-            </div> -->
+            </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">

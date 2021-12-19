@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use App\ContactCustomer;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
@@ -18,9 +19,24 @@ class ContactController extends Controller
     	return view('admin.contact.index',compact('asset','contact','c_header'));
     }
 
+	public function indexCus()
+	{
+		$c_header = array('Quản lý liên hệ','Liên hệ từ khách hàng');
+		$asset = array('CTTU','','editer');
+		$contact = ContactCustomer::orderBy('id','DESC')->get()->toArray();
+		return view('admin.contact.indexcu',compact('asset','contact','c_header'));
+	}
+
+	public function getDetail($id)
+	{
+		$c_header = array('Quản lý liên hệ','Liên hệ từ khách hàng');
+		$asset = array('CTTU','','editer');
+		$contact = ContactCustomer::where('id', $id)->orderBy('id','DESC')->first();
+		return view('admin.contact.detail',compact('asset','contact','c_header'));
+	}
+
     public function postAdd(Request $request)
     {
-    	// dd('aaaaa');
     	$user = Contact::find($request->id);
     	// $user = new Contact();
     	$user->CT_number = $request->CT_number;

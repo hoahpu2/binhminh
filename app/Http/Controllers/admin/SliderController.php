@@ -24,7 +24,7 @@ class SliderController extends Controller
         // dd($a_Slider);
         // dd($a_Slider[0]->SL_en_id);
 		$asset = array('SL','index');
-        $c_header = array('Quản lý Slider','Danh sách Dự án');
+        $c_header = array('Quản lý Slider','Danh sách slider');
 		return view('admin.slider.index',compact('asset','a_Slider','c_header'));
 	}
     

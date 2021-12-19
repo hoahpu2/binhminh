@@ -18,7 +18,7 @@
                                                         <div class="elementor-element elementor-element-d011190 elementor-widget elementor-widget-google_maps" data-id="d011190" data-element_type="widget" data-widget_type="google_maps.default">
                                                             <div class="elementor-widget-container">
                                                                 <div class="elementor-custom-embed">
-                                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1861.920238361462!2d105.7812813582116!3d21.03906799990119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454cacd93cc57%3A0x465a0246eecc8c72!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOZ2_huqFpIG5n4buvLCDEkOG6oWkgaOG7jWMgUXXhu5FjIGdpYSBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1636982609438!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                                                    {!! $Contact->CT_linkGoogle !!}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -67,11 +67,11 @@
                                                                                 <div class="elementor-element elementor-element-4a3ac2b elementor-widget elementor-widget-text-editor" data-id="4a3ac2b" data-element_type="widget" data-widget_type="text-editor.default">
                                                                                     <div class="elementor-widget-container">
                                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                                            <p><strong>Địa chỉ: </strong>Số 12 Khu C10, KĐT Kiến Hưng Luxury, Hà Đông, Hà Nội</p>
-                                                                                            <p><strong>Điện thoại:</strong> (+84) <a href="tel: 0983382822">983 382 822</a></p>
-                                                                                            <p><strong>Hotline: </strong>(+84) <a href="tel: 0246 658 4455">&nbsp;246.658.4455</a></p>
-                                                                                            <p><strong>Email:</strong>&nbsp;<a href="mailto:info@ipe.com.vn">info@ipe.com.vn</a></p>
-                                                                                            <p><a href="https://goo.gl/maps/SN98BQdKrZYm7FcU8" target="_blank" rel="noopener">Xem bản đồ</a></p>
+                                                                                            <p><strong>Địa chỉ: </strong>{!! $Contact->CT_address !!}</p>
+                                                                                            <p><strong>Điện thoại:</strong> (+84) <a href="tel: {!! $Contact->CT_number !!}">{!! $Contact->CT_number !!}</a></p>
+                                                                                            <!-- <p><strong>Hotline: </strong>(+84) <a href="tel: 0246 658 4455">&nbsp;246.658.4455</a></p> -->
+                                                                                            <p><strong>Email:</strong>&nbsp;<a href="mailto:info@ipe.com.vn">{!! $Contact->CT_Email !!}</a></p>
+                                                                                            <p><a href="https://goo.gl/maps/X1hpcJknYZDwDj8o7" target="_blank" rel="noopener">Xem bản đồ</a></p>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -100,27 +100,22 @@
                                                                                 <div class="elementor-element elementor-element-1313a23 elementor-button-align-start elementor-widget elementor-widget-form" data-id="1313a23" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
                                                                                     <div class="elementor-widget-container">
                                                                                         <form class="elementor-form" method="post" name="New Form">
-                                                                                            <input type="hidden" name="post_id" value="1961">
-                                                                                            <input type="hidden" name="form_id" value="1313a23">
-                                                                                            <input type="hidden" name="referer_title" value="Liên Hệ - IPE">
-
-                                                                                            <input type="hidden" name="queried_id" value="1961">
-
+                                                                                            @csrf
                                                                                             <div class="elementor-form-fields-wrapper elementor-labels-">
                                                                                                 <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50">
                                                                                                     <label for="form-field-name" class="elementor-field-label elementor-screen-only">Họ và tên</label><input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Họ và tên">
                                                                                                 </div>
                                                                                                 <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_ee9c570 elementor-col-50">
-                                                                                                    <label for="form-field-field_ee9c570" class="elementor-field-label elementor-screen-only">Công Ty</label><input size="1" type="text" name="form_fields[field_ee9c570]" id="form-field-field_ee9c570" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Công Ty">
+                                                                                                    <label for="form-field-field_ee9c570" class="elementor-field-label elementor-screen-only">Công Ty</label><input size="1" type="text" name="form_fields[company]" id="form-field-field_ee9c570" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Công Ty">
                                                                                                 </div>
                                                                                                 <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_0459bb3 elementor-col-100">
-                                                                                                    <label for="form-field-field_0459bb3" class="elementor-field-label elementor-screen-only">Địa Chỉ</label><input size="1" type="text" name="form_fields[field_0459bb3]" id="form-field-field_0459bb3" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Địa Chỉ">
+                                                                                                    <label for="form-field-field_0459bb3" class="elementor-field-label elementor-screen-only">Địa Chỉ</label><input size="1" type="text" name="form_fields[address]" id="form-field-field_0459bb3" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Địa Chỉ">
                                                                                                 </div>
                                                                                                 <div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required">
                                                                                                     <label for="form-field-email" class="elementor-field-label elementor-screen-only">Email</label><input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Email" required="required" aria-required="true">
                                                                                                 </div>
                                                                                                 <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_b42cc7c elementor-col-50">
-                                                                                                    <label for="form-field-field_b42cc7c" class="elementor-field-label elementor-screen-only">Số điện thoại</label><input size="1" type="text" name="form_fields[field_b42cc7c]" id="form-field-field_b42cc7c" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Số điện thoại">
+                                                                                                    <label for="form-field-field_b42cc7c" class="elementor-field-label elementor-screen-only">Số điện thoại</label><input size="1" type="number" name="form_fields[number]" id="form-field-field_b42cc7c" class="elementor-field elementor-size-md  elementor-field-textual" required="required" placeholder="Số điện thoại">
                                                                                                 </div>
                                                                                                 <div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100 elementor-field-required">
                                                                                                     <label for="form-field-message" class="elementor-field-label elementor-screen-only">Tin nhắn</label><textarea class="elementor-field-textual elementor-field  elementor-size-md" name="form_fields[message]" id="form-field-message" rows="10" placeholder="Tin nhắn" required="required" aria-required="true"></textarea>

@@ -1,6 +1,12 @@
+<style>
+    .hotline, .menu-item-design-default > a {
+        font-family: 'eicons' !important;
+        color: #0b0742 !important;
+    }
+</style>
 <header id="header" class="header has-sticky sticky-jump">
     <div class="header-wrapper">
-        <div id="top-bar" class="header-top hide-for-sticky">
+        <!-- <div id="top-bar" class="header-top hide-for-sticky">
             <div class="flex-row container">
                 <div class="flex-col hide-for-medium flex-left">
                     <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
@@ -61,7 +67,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
         <div id="masthead" class="header-main ">
             <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
 
@@ -69,7 +75,7 @@
                 <div id="logo" class="flex-col logo">
                     <!-- Header logo -->
                     <a href="/" title="IPE - Uy tín tạo niềm tin" rel="home">
-                        <img width="100" height="98" src="{{asset('wp-content/')}}/uploads/2018/12/ipe-logo.png" class="header_logo header-logo" alt="IPE" /><img width="100" height="98" src="{{asset('wp-content/')}}/uploads/2018/12/ipe-logo.png" class="header-logo-dark" alt="IPE" /></a>
+                        <img width="150" height="98" src="{{asset('wp-content/')}}/uploads/logo-1.png" class="header_logo header-logo" alt="IPE" /><img width="100" height="98" src="{{asset('wp-content/')}}/uploads/2018/12/ipe-logo.png" class="header-logo-dark" alt="IPE" /></a>
                 </div>
 
                 <!-- Mobile Left Elements -->
@@ -96,38 +102,39 @@
                         <li id="menu-item-1948" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1948 menu-item-design-default"><a href="<?php echo route('vechungtoi'); ?>" class="nav-top-link">Về Chúng Tôi</a></li>
                         <li id="menu-item-1916" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-741 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega menu-item menu-item-type-post_type menu-item-object-page menu-item-1916 menu-item-design-default">
                             <a href="<?php echo route('sanpham'); ?>" class="nav-top-link ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only">Sản Phẩm</a>
-                            <!-- <ul class="ubermenu-submenu ubermenu-submenu-id-741 ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-center" style="left: 158.297px;">
-                                <li class=" ubermenu-autocolumn menu-item-741-col-0 ubermenu-item-level-1 ubermenu-column ubermenu-column-1-2 ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-741-col-0">
-                                    <ul class="ubermenu-submenu ubermenu-submenu-id-741-col-0 ubermenu-submenu-type-stack">
-                                        <li id="menu-item-855" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-product_cat ubermenu-item-855 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-default ubermenu-item-layout-image_left ubermenu-item-notext" href="http://vntechco.com.vn/product_category/smc/"><img class="ubermenu-image ubermenu-image-size-shop_thumbnail" src="http://vntechco.com.vn/wp-content/uploads/2020/09/logo-1-1.png" width="100" height="50" alt="logo (1)"></a></li>
-                                        <li id="menu-item-745" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-product_cat ubermenu-item-745 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-default ubermenu-item-layout-image_left ubermenu-item-notext" href="http://vntechco.com.vn/product_category/cognex/"><img class="ubermenu-image ubermenu-image-size-shop_thumbnail" src="http://vntechco.com.vn/wp-content/uploads/2020/09/logo-3-1.png" width="100" height="50" alt="logo (3)"></a></li>
-                                        <li id="menu-item-747" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-product_cat ubermenu-item-747 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-default ubermenu-item-layout-image_left ubermenu-item-notext" href="http://vntechco.com.vn/product_category/ls/"><img class="ubermenu-image ubermenu-image-size-shop_thumbnail" src="http://vntechco.com.vn/wp-content/uploads/2020/09/logo-8-1.png" width="100" height="50" alt="logo (8)"></a></li>
-                                        <li id="menu-item-746" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-product_cat ubermenu-item-746 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-default ubermenu-item-layout-image_left ubermenu-item-notext" href="http://vntechco.com.vn/product_category/delixi/"><img class="ubermenu-image ubermenu-image-size-shop_thumbnail" src="http://vntechco.com.vn/wp-content/uploads/2020/09/logo-5-1.png" width="100" height="50" alt="logo (5)"></a></li>
-                                    </ul>
-                                </li>
-                                <li class=" ubermenu-autocolumn menu-item-741-col-1 ubermenu-item-level-1 ubermenu-column ubermenu-column-1-2 ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-741-col-1">
-                                    <ul class="ubermenu-submenu ubermenu-submenu-id-741-col-1 ubermenu-submenu-type-stack">
-                                        <li id="menu-item-749" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-product_cat ubermenu-item-749 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-default ubermenu-item-layout-image_left ubermenu-item-notext" href="http://vntechco.com.vn/product_category/wanshsin/"><img class="ubermenu-image ubermenu-image-size-shop_thumbnail" src="http://vntechco.com.vn/wp-content/uploads/2020/09/logo-6-1.png" width="100" height="50" alt="logo (6)"></a></li>
-                                        <li id="menu-item-750" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-product_cat ubermenu-item-750 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-default ubermenu-item-layout-image_left ubermenu-item-notext" href="http://vntechco.com.vn/product_category/zebra/"><img class="ubermenu-image ubermenu-image-size-shop_thumbnail" src="http://vntechco.com.vn/wp-content/uploads/2020/09/logo-4-1.png" width="100" height="50" alt="logo (4)"></a></li>
-                                        <li id="menu-item-2618" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-product_cat ubermenu-item-2618 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-default ubermenu-item-layout-image_left ubermenu-item-notext" href="http://vntechco.com.vn/product_category/opt/"><img class="ubermenu-image ubermenu-image-size-full" src="http://vntechco.com.vn/wp-content/uploads/2020/10/logo-11.png" width="100" height="50" alt="logo-(11)"></a></li>
-                                        <li id="menu-item-2619" class="ubermenu-item ubermenu-item-type-taxonomy ubermenu-item-object-product_cat ubermenu-item-2619 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-target-with-image ubermenu-item-layout-default ubermenu-item-layout-image_left ubermenu-item-notext" href="http://vntechco.com.vn/product_category/tm-robot/"><img class="ubermenu-image ubermenu-image-size-full" src="http://vntechco.com.vn/wp-content/uploads/2020/10/logo-10.png" width="100" height="50" alt="logo-(10)"></a></li>
-                                    </ul>
-                                </li>
-                            </ul> -->
                         </li>
                         <li id="menu-item-7150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7150 menu-item-design-default"><a href="<?php echo route('giaiphap'); ?>" class="nav-top-link">Giải Pháp</a></li>
-                        <li id="menu-item-7149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7149 menu-item-design-default"><a href="<?php echo route('duan'); ?>" class="nav-top-link">Dự Án</a></li>
-                        <li id="menu-item-7151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7151 menu-item-design-default"><a href="<?php echo route('dichvu'); ?>" class="nav-top-link">Dịch Vụ</a></li>
+                        <!-- <li id="menu-item-7149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7149 menu-item-design-default"><a href="<?php echo route('duan'); ?>" class="nav-top-link">Dự Án</a></li>
+                        <li id="menu-item-7151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7151 menu-item-design-default"><a href="<?php echo route('dichvu'); ?>" class="nav-top-link">Dịch Vụ</a></li> -->
                         <li id="menu-item-7148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7148 menu-item-design-default"><a href="<?php echo route('tintuc'); ?>" class="nav-top-link">Tin tức</a></li>
                         <li id="menu-item-1968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968 menu-item-design-default"><a href="<?php echo route('lienhe'); ?>" class="nav-top-link">Liên Hệ</a></li>
-                        <li class="has-dropdown header-language-dropdown">
+                        <li class="has-dropdown header-language-dropdown menu-item-design-default">
                             <a href="#">
                                 Languages <i class="icon-angle-down"></i> </a>
                             <ul class="nav-dropdown nav-dropdown-default">
                                 <li><a>You need Polylang or WPML plugin for this to work. You can remove it from Theme Options.</a></li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul>    
+                    <aside id="search-3" class="widget widget_search" style="width: 650px;margin-top: 17px;">
+                        <form method="get" class="searchform" action="" role="search" style="display: inline-block;width: 390px;">
+                            <div class="flex-row relative">
+                                <div class="flex-col flex-grow">
+                                    <input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Tìm kiếm…" autocomplete="off">
+                                </div>
+                                <div class="flex-col">
+                                    <button type="button" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Submit">
+                                        <i class="fas fa-search"></i> </button>
+                                </div>
+                            </div>
+                            <div class="live-search-results text-left z-top">
+                                <div class="autocomplete-suggestions" id="autocomplete-suggestions" style="max-height: 300px; z-index: 9999;">
+                                </div>
+                            </div>
+                        </form>
+                        <span class="hotline" style="margin-left: 30px;"> <b> HOTLINE: 0981668830</b></span>
+                    </aside>
+                    
                 </div>
 
                 <!-- Mobile Right Elements -->
@@ -198,3 +205,12 @@
         </div>
     </div>
 </header>
+<script>
+    window.addEventListener("scroll",function(){
+        if (document.documentElement.scrollTop == 0) {
+            $('#search-3').show()
+        }else{
+            $('#search-3').hide()
+        }
+    });
+</script>

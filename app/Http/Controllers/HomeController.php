@@ -7,6 +7,7 @@ use App\Product;
 use App\Catecontent;
 use App\News;
 use App\Contact;
+use App\ContactCustomer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
@@ -30,10 +31,10 @@ class HomeController extends Controller
 //             $value->count = count( Product::where('PR_status',1)->where('PR_CC_id',$value->CC_id)->take(4)->get()->toArray());
 //         }
 //         $news = News::where('N_status',1)->take(4)->get();
-//         $slider = Slider::all()->where('SL_status',1);
+        $slider = Slider::all()->where('SL_status',1);
 //         $contactAdmin = Contact::get()->first();
 
-    	return view('sub.client.main');
+    	return view('sub.client.main', compact('slider'));
     }
 
     public function vechungtoi()
@@ -53,7 +54,7 @@ class HomeController extends Controller
         
         $all_Product = Product::where('PR_status', 1);
         $cateActive = '';
-        $limit = 1;
+        $limit = 8;
         $offset = isset($_GET['page']) ? (int)$_GET['page'] - 1 : 0;
         if(isset($_GET['cate']) && $_GET['cate'] != ''){
             $all_Product = $all_Product->where('PR_CA_id', $_GET['cate']);
@@ -68,7 +69,7 @@ class HomeController extends Controller
     }
 
     public function getCategory($parent = 0){
-        $a_catePa = Category::where('CA_parentId', $parent)->get()->toArray();
+        $a_catePa = Category::where('CA_parentId', $parent)->orderBy('CA_location')->get()->toArray();
         if(!empty($a_catePa)){
             foreach($a_catePa as $key => $value){
                 $a_catePa[$key]['subMenu'] = $this->getCategory($value['CA_id']);
@@ -128,7 +129,22 @@ class HomeController extends Controller
 
     public function lienhe()
     {
-        return view('sub.client.lienhe');
+        $Contact = Contact::where('CT_id', 1)->first();
+        return view('sub.client.lienhe', compact('Contact'));
+    }
+
+    public function adminAjax(Request $request){
+        $o_Cate = new ContactCustomer();
+
+        $o_Cate->name = $request->form_fields['name'];
+        $o_Cate->company = $request->form_fields['company'];
+        $o_Cate->address = $request->form_fields['address'];
+        $o_Cate->email = $request->form_fields['email'];
+        $o_Cate->number = $request->form_fields['number'];
+        $o_Cate->message = $request->form_fields['message'];
+        
+    	$o_Cate->save();
+        echo json_encode(['message' => 'Gửi yêu cầu thành công.']);die;
     }
 
     public function productDetail($slug)

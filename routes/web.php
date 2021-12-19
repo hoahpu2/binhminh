@@ -27,6 +27,7 @@ Route::get('tintuc/index.html','HomeController@tintuc')->name('tintuc');
 Route::get('lien-he/index.html','HomeController@lienhe')->name('lienhe');
 Route::get('product/{Slug}/detail.html','HomeController@productDetail')->name('productdetail');
 Route::get('du-an/{Slug}','HomeController@duanDetail')->name('duan-detail');
+Route::post('lien-he/wp-admin/admin-ajax.php','HomeController@adminAjax')->name('wp-admin');
 
 Route::post('tim-kiem','DetailProductController@search')->name('search');
 Route::get('lien-he','ContactController@index')->name('customer-contact');
@@ -103,6 +104,12 @@ Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'],function(){
 		Route::get('delete/{id}',['as'=>'admin.contact.getDelete','uses'=>'UserController@getDelete']);
 		Route::get('edit/{id}',['as'=>'admin.contact.getEdit','uses'=>'UserController@getEdit']);
 		Route::post('edit/{id}',['as'=>'admin.contact.postEdit','uses'=>'UserController@postEdit']);
+	});
+
+	/* Contact */
+	Route::group(['prefix'=>'contactCu'],function(){
+		Route::get('index',['as'=>'admin.contactCu.index','uses'=>'admin\ContactController@indexCus']);
+		Route::get('detail/{id}',['as'=>'admin.contactCu.getDetail','uses'=>'admin\ContactController@getDetail']);
 	});
 
 	/* Request Customer */

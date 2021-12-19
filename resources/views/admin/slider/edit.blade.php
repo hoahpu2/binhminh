@@ -49,17 +49,6 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="editor1" class="col-sm-2 control-label">Mô tả chi tiết</label>
-              <div class="col-sm-9">
-                <!-- tools box -->
-                {{-- <div class="box-body pad"> --}}
-                <textarea id="editor1" name="SL_detail" rows="10" cols="80">
-                {{$slider->SL_detail}}
-                </textarea>
-                {{-- </div> --}}
-              </div>
-            </div>
-            <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>

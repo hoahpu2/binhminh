@@ -1,3 +1,7 @@
+<?php
+use App\Contact;
+$contact = Contact::select()->first();
+?>
 <footer id="footer" class="footer-wrapper">
     <div class="footer-widgets footer footer-2 dark">
         <div class="row dark large-columns-1 mb-0">
@@ -10,7 +14,7 @@
 
                             <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2021311758">
                                 <div class="img-inner dark">
-                                    <img width="101" height="101" src="{{asset('wp-content/')}}/uploads/2019/06/logo-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="{{asset('wp-content/')}}/uploads/2019/06/logo-1.png 101w, {{asset('wp-content/')}}/uploads/2019/06/logo-1.png 100w" sizes="(max-width: 101px) 100vw, 101px" />
+                                    <img width="101" height="101" src="{{asset('wp-content/')}}/uploads/logo-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="{{asset('wp-content/')}}/uploads/logo-1.png, {{asset('wp-content/')}}/uploads/logo-1.png" sizes="(max-width: 101px) 100vw, 101px" />
                                 </div>
 
                                 <style>
@@ -21,7 +25,7 @@
                             </div>
 
 
-                            <div class="social-icons follow-icons h1 full-width text-left"><span>Kết Nối Với IPE </br></span><a href="https://www.facebook.com/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon button circle is-outline facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="mailto:info@ipe.com.vn" data-label="E-mail" rel="nofollow" class="icon button circle is-outline  email tooltip" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer nofollow" data-label="LinkedIn" class="icon button circle is-outline  linkedin tooltip" title="Follow on LinkedIn" aria-label="Follow on LinkedIn"><i class="icon-linkedin"></i></a><a href="https://www.youtube.com/channel/UCsEOutaazI1nVWpga8-7L7Q" target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube" class="icon button circle is-outline  youtube tooltip" title="Follow on YouTube" aria-label="Follow on YouTube"><i class="icon-youtube"></i></a></div>
+                            <div class="social-icons follow-icons h1 full-width text-left"><span>Kết Nối Với SIS </br></span><a href="https://www.facebook.com/" target="_blank" data-label="Facebook" rel="noopener noreferrer nofollow" class="icon button circle is-outline facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook"><i class="icon-facebook"></i></a><a href="mailto:info@ipe.com.vn" data-label="E-mail" rel="nofollow" class="icon button circle is-outline  email tooltip" title="Send us an email" aria-label="Send us an email"><i class="icon-envelop"></i></a><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer nofollow" data-label="LinkedIn" class="icon button circle is-outline  linkedin tooltip" title="Follow on LinkedIn" aria-label="Follow on LinkedIn"><i class="icon-linkedin"></i></a><a href="https://www.youtube.com/channel/UCsEOutaazI1nVWpga8-7L7Q" target="_blank" rel="noopener noreferrer nofollow" data-label="YouTube" class="icon button circle is-outline  youtube tooltip" title="Follow on YouTube" aria-label="Follow on YouTube"><i class="icon-youtube"></i></a></div>
 
 
                         </div>
@@ -40,13 +44,10 @@
 
                             <div id="text-2780771389" class="text">
 
-
-                                <p style="text-align: left;"><i class="fa fa-map-marker" aria-hidden="true"></i><a href="https://goo.gl/maps/95K6ga5Pjq4PXU3U8"> Địa Chỉ: Lô CTT10, KĐT Kiến
-                                        Hưng Luxury, P. Kiến Hưng,
-                                        Hà Đông, HN</a></p>
-                                <p><i class="fa fa-phone" aria-hidden="true"></i><a href="tel: 0246 658 4455"> Tel: 0246.658.4455</a></p>
-                                <p style="text-align: left;"><i class="fa fa-phone-square" aria-hidden="true"></i><a href="tel: 0983382822"> Hotline: 0983.382.822</a></p>
-                                <p style="text-align: left;"><i class="fa fa-envelope" aria-hidden="true"></i> Email: info@ipe.com.vn</p>
+                                <p style="font-size: 17px;"><b> CÔNG TY TNHH SIS VIỆT NAM </b></p>
+                                <p style="text-align: left;"><i class="fa fa-map-marker" aria-hidden="true"></i><a href="https://goo.gl/maps/95K6ga5Pjq4PXU3U8"> Trụ Sở Chính :  {{$contact['CT_address']}}<br>VP Hà Nam : KCN Đồng Văn I, Duy Tiên– Hà Nam.</a></p>
+                                <p style="text-align: left;"><i class="fa fa-phone-square" aria-hidden="true"></i><a href="tel: 0983382822"> Điện thoại : {{$contact['CT_number']}}</a></p>
+                                <p style="text-align: left;"><i class="fa fa-envelope" aria-hidden="true"></i> Email: {{$contact['CT_Email']}}</p>
 
                                 <style>
                                     #text-2780771389 {
@@ -99,7 +100,7 @@
                             <div id="text-3365750117" class="text">
 
 
-                                <p>Đăng ký để nhận tin tức về sản phẩm và giải pháp mới nhất từ IPE</p>
+                                <p>Đăng ký để nhận tin tức về sản phẩm và giải pháp mới nhất từ SIS</p>
 
                                 <style>
                                     #text-3365750117 {
@@ -175,7 +176,7 @@
 
             <div class="footer-primary pull-left">
                 <div class="copyright-footer">
-                    Copyright 2021 © <strong> Bản quyền thuộc Công ty TNHH IPE Việt Nam.</strong> </div>
+                    Copyright 2021 © <strong> Bản quyền thuộc Công ty TNHH SIS Việt Nam.</strong> </div>
             </div>
         </div>
     </div>

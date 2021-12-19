@@ -25,16 +25,16 @@
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!-- This site is optimized with the Yoast SEO plugin v17.4 - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>IPE - IPE</title>
+    <title>SIS</title>
     <link rel="canonical" href="index.html" />
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="IPE - IPE" />
-    <meta property="og:description" content="http://ipe.vn/wp-content/uploads/2021/08/Video-banner-IPE.mp4 Giới Thiệu Công Ty TNHH IPE Việt Nam chuyên cung cấp các giải pháp tự động hoá thông minh và thiết bị phụ trợ sản xuất trong ngành công nghiệp điện tử, oto,&#8230; Với hơn 5 năm kinh nghiệm nhập khẩu, phân phối và nghiên cứu các giải pháp về thiết bị tự động..." />
-    <meta property="og:url" content="http://ipe.vn/" />
+    <meta property="og:description" content="url({{asset('wp-content/')}}/uploads/2021/08/Video-banner-IPE.mp4 Giới Thiệu Công Ty TNHH IPE Việt Nam chuyên cung cấp các giải pháp tự động hoá thông minh và thiết bị phụ trợ sản xuất trong ngành công nghiệp điện tử, oto,&#8230; Với hơn 5 năm kinh nghiệm nhập khẩu, phân phối và nghiên cứu các giải pháp về thiết bị tự động..." />
+    <!-- <meta property="og:url" content="http://ipe.vn/" /> -->
     <meta property="og:site_name" content="IPE" />
     <meta property="article:modified_time" content="2021-09-14T01:57:21+00:00" />
-    <meta property="og:image" content="http://ipe.vn/wp-content/uploads/2019/08/cognex.png" />
+    <meta property="og:image" content="url({{asset('wp-content/')}}/uploads/2019/08/cognex.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:label1" content="Ước tính thời gian đọc" />
     <meta name="twitter:data1" content="4 phút" />
@@ -51,8 +51,6 @@
                     "@type": "ImageObject",
                     "@id": "http://ipe.vn/#logo",
                     "inLanguage": "vi",
-                    "url": "http://ipe.vn/wp-content/uploads/2019/06/logo-1.png",
-                    "contentUrl": "http://ipe.vn/wp-content/uploads/2019/06/logo-1.png",
                     "width": 101,
                     "height": 101,
                     "caption": "C\u00f4ng Ty TNHH IPE Vi\u1ec7t Nam"
@@ -82,8 +80,6 @@
                 "@type": "ImageObject",
                 "@id": "http://ipe.vn/#primaryimage",
                 "inLanguage": "vi",
-                "url": "http://ipe.vn/wp-content/uploads/2021/07/PXL_20210623_045912485.PORTRAIT-1024x576.jpg",
-                "contentUrl": "http://ipe.vn/wp-content/uploads/2021/07/PXL_20210623_045912485.PORTRAIT-1024x576.jpg"
             }, {
                 "@type": "WebPage",
                 "@id": "http://ipe.vn/#webpage",
@@ -128,6 +124,7 @@
     <link rel='dns-prefetch' href='http://s.w.org/' />
     <link rel="alternate" type="application/rss+xml" title="Dòng thông tin IPE &raquo;" href="feed/index.html" />
     <link rel="alternate" type="application/rss+xml" title="Dòng phản hồi IPE &raquo;" href="comments/feed/index.html" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="text/javascript">
         window._wpemojiSettings = {
             "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/",
@@ -188,6 +185,106 @@
             background: none !important;
             padding: 0 !important;
         }
+    </style>
+    <style>
+    .arcontactus-widget.right.arcontactus-message{right:20px}
+    .arcontactus-widget.right.arcontactus-message{bottom:20px}
+    .arcontactus-widget .arcontactus-message-button{
+        background-color: red;
+    }
+    .pulsation{-webkit-animation-duration:2s;animation-duration:2s}
+    .arcontactus-widget.md .arcontactus-message-button,.arcontactus-widget.md.arcontactus-message{width:60px;height:60px}
+    .arcontactus-widget{opacity:0;transition:.2s opacity}
+    .arcontactus-widget *{box-sizing:border-box}
+    .arcontactus-widget.left.arcontactus-message{left:20px;right:auto}
+    .arcontactus-widget.left .arcontactus-message-button{right:auto;left:0}
+    .arcontactus-widget.left .arcontactus-prompt{left:80px;right:auto;transform-origin:0 50%}
+    .arcontactus-widget.left .arcontactus-prompt:before{border-right:8px solid #FFF;border-top:8px solid transparent;border-left:8px solid transparent;border-bottom:8px solid transparent;right:auto;left:-15px}
+    .arcontactus-widget.left .messangers-block{right:auto;left:0;-webkit-transform-origin:10% 105%;-ms-transform-origin:10% 105%;transform-origin:10% 105%}
+    .arcontactus-widget.left .callback-countdown-block{left:0;right:auto}
+    .arcontactus-widget.left .callback-countdown-block::before,.arcontactus-widget.left .messangers-block::before{left:25px;right:auto}
+    .arcontactus-widget.md .callback-countdown-block,.arcontactus-widget.md .messangers-block{bottom:70px}
+    .arcontactus-widget.md .arcontactus-prompt{bottom:5px}
+    .arcontactus-widget.md.left .callback-countdown-block:before,.arcontactus-widget.md.left .messangers-block:before{left:21px}
+    .arcontactus-widget.md.left .arcontactus-prompt{left:70px}
+    .arcontactus-widget.md.right .callback-countdown-block:before,.arcontactus-widget.md.right .messangers-block:before{right:21px}
+    .arcontactus-widget.md.right .arcontactus-prompt{right:70px}
+    .arcontactus-widget.md .arcontactus-message-button .pulsation{width:74px;height:74px}
+    .arcontactus-widget.md .arcontactus-message-button .callback-state,.arcontactus-widget.md .arcontactus-message-button .icons{width:40px;height:40px;margin-top:-20px;margin-left:-20px}
+    .arcontactus-widget.sm .arcontactus-message-button,.arcontactus-widget.sm.arcontactus-message{width:50px;height:50px}
+    .arcontactus-widget.sm .callback-countdown-block,.arcontactus-widget.sm .messangers-block{bottom:60px}
+    .arcontactus-widget.sm .arcontactus-prompt{bottom:0}
+    .arcontactus-widget.sm.left .callback-countdown-block:before,.arcontactus-widget.sm.left .messangers-block:before{left:16px}
+    .arcontactus-widget.sm.left .arcontactus-prompt{left:60px}
+    .arcontactus-widget.sm.right .callback-countdown-block:before,.arcontactus-widget.sm.right .messangers-block:before{right:16px}
+    .arcontactus-widget.sm.right .arcontactus-prompt{right:60px}
+    .arcontactus-widget.sm .arcontactus-message-button .pulsation{width:64px;height:64px}
+    .arcontactus-widget.sm .arcontactus-message-button .icons{width:40px;height:40px;margin-top:-20px;margin-left:-20px}
+    .arcontactus-widget.sm .arcontactus-message-button .static{margin-top:-16px}
+    .arcontactus-widget.sm .arcontactus-message-button .callback-state{width:40px;height:40px;margin-top:-20px;margin-left:-20px}
+    .arcontactus-widget.active{opacity:1}
+    .arcontactus-widget .icons.hide,.arcontactus-widget .static.hide{opacity:0;transform:scale(0)}
+    .arcontactus-widget.arcontactus-message{z-index:10000;right:20px;bottom:20px;position:fixed!important;height:70px;width:70px}
+    .arcontactus-widget .arcontactus-message-button{width:70px;position:absolute;height:70px;right:0;background-color:red;border-radius:50px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;cursor:pointer}
+    .arcontactus-widget .arcontactus-message-button p{font-family:Ubuntu,Arial,sans-serif;color:#fff;font-weight:700;font-size:10px;line-height:11px;margin:0}
+    .arcontactus-widget .arcontactus-message-button .pulsation{width:84px;height:84px;background-color:red;border-radius:50px;position:absolute;left:-7px;top:-7px;z-index:-1;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);-webkit-animation:arcontactus-pulse 2s infinite;animation:arcontactus-pulse 2s infinite}
+    .arcontactus-widget .arcontactus-message-button .icons{background-color:#fff;width:44px;height:44px;border-radius:50px;position:absolute;overflow:hidden;top:50%;left:50%;margin-top:-22px;margin-left:-22px}
+    .arcontactus-widget .arcontactus-message-button .static{position:absolute;top:50%;left:50%;margin-top:-19px;margin-left:-26px;width:52px;height:52px;text-align:center}
+    .arcontactus-widget .arcontactus-message-button .static img{display:inline}
+    .arcontactus-widget .arcontactus-message-button .static svg{width:24px;height:24px;color:#FFF}
+    .arcontactus-widget .arcontactus-message-button.no-text .static{margin-top:-12px}
+    .arcontactus-widget .pulsation:nth-of-type(2n){-webkit-animation-delay:.5s;animation-delay:.5s}
+    .arcontactus-widget .pulsation.stop{-webkit-animation:none;animation:none}
+    .arcontactus-widget .icons-line{top:10px;left:12px;display:-webkit-box;display:-ms-flexbox;display:flex;position:absolute;-webkit-transition:cubic-bezier(.13,1.49,.14,-.4);-o-transition:cubic-bezier(.13,1.49,.14,-.4);-webkit-animation-delay:0s;animation-delay:0s;-webkit-transform:translateX(30px);-ms-transform:translateX(30px);transform:translateX(30px);height:24px;transition:.2s all}
+    .arcontactus-widget .icons,.arcontactus-widget .static{transition:.2s all}
+    .arcontactus-widget .icons-line.stop{-webkit-animation-play-state:paused;animation-play-state:paused}
+    .arcontactus-widget .icons-line span{display:inline-block;width:24px;height:24px;color:red}
+    .arcontactus-widget .icons-line span i,.arcontactus-widget .icons-line span svg{width:24px;height:24px}
+    .arcontactus-widget .icons-line span i{display:block;font-size:24px;line-height:24px}
+    .arcontactus-widget .icons-line img,.arcontactus-widget .icons-line span{margin-right:40px}
+    .arcontactus-widget .icons.hide .icons-line{transform:scale(0)}
+    .arcontactus-widget .icons .icon:first-of-type{margin-left:0}
+    .arcontactus-widget .arcontactus-close{color:#FFF}
+    .arcontactus-widget .arcontactus-close svg{-webkit-transform:rotate(180deg) scale(0);-ms-transform:rotate(180deg) scale(0);transform:rotate(180deg) scale(0);-webkit-transition:ease-in .12s all;-o-transition:ease-in .12s all;transition:ease-in .12s all;display:block}
+    .arcontactus-widget .arcontactus-close.show-messageners-block svg{-webkit-transform:rotate(0) scale(1);-ms-transform:rotate(0) scale(1);transform:rotate(0) scale(1)}
+    .arcontactus-widget .arcontactus-prompt,.arcontactus-widget .messangers-block{background:center no-repeat #FFF;box-shadow:0 0 10px rgba(0,0,0,.6);width:235px;position:absolute;bottom:80px;right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;padding:14px 0;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:7px;-webkit-transform-origin:80% 105%;-ms-transform-origin:80% 105%;transform-origin:80% 105%;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);-webkit-transition:ease-out .12s all;-o-transition:ease-out .12s all;transition:ease-out .12s all;z-index:10000}
+    .arcontactus-widget .arcontactus-prompt:before,.arcontactus-widget .messangers-block:before{position:absolute;bottom:-7px;right:25px;left:auto;display:inline-block!important;border-right:8px solid transparent;border-top:8px solid #FFF;border-left:8px solid transparent;content:''}
+    .arcontactus-widget .arcontactus-prompt.show-messageners-block,.arcontactus-widget .messangers-block.show-messageners-block{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+    .arcontactus-widget .arcontactus-prompt{color:#787878;font-family:Arial,sans-serif;font-size:16px;line-height:18px;width:auto;bottom:10px;right:80px;white-space:nowrap;padding:18px 20px 14px}
+    .arcontactus-widget .arcontactus-prompt:before{border-right:8px solid transparent;border-top:8px solid transparent;border-left:8px solid #FFF;border-bottom:8px solid transparent;bottom:16px;right:-15px}
+    .arcontactus-widget .arcontactus-prompt.active{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+    .arcontactus-widget .arcontactus-prompt .arcontactus-prompt-close{position:absolute;right:6px;top:6px;cursor:pointer;z-index:100;height:14px;width:14px;padding:2px}
+    .arcontactus-widget .arcontactus-prompt .arcontactus-prompt-close svg{height:10px;width:10px;display:block}
+    .arcontactus-widget .arcontactus-prompt .arcontactus-prompt-typing{border-radius:10px;display:inline-block;left:3px;padding:0;position:relative;top:4px;width:50px}
+    .arcontactus-widget .arcontactus-prompt .arcontactus-prompt-typing>div{position:relative;float:left;border-radius:50%;width:10px;height:10px;background:#ccc;margin:0 2px;-webkit-animation:arcontactus-updown 2s infinite;animation:arcontactus-updown 2s infinite}
+    .arcontactus-widget .arcontactus-prompt .arcontactus-prompt-typing>div:nth-child(2){animation-delay:.1s}
+    .arcontactus-widget .arcontactus-prompt .arcontactus-prompt-typing>div:nth-child(3){animation-delay:.2s}
+    .arcontactus-widget .messangers-block.sm .messanger{padding-left:50px;min-height:44px}
+    .arcontactus-widget .messangers-block.sm .messanger span{height:32px;width:32px;margin-top:-16px}
+    .arcontactus-widget .messangers-block.sm .messanger span svg{height:20px;width:20px;margin-top:-10px;margin-left:-10px}
+    .arcontactus-widget .messanger{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0;cursor:pointer;width:100%;padding:8px 20px 8px 60px;position:relative;min-height:54px;text-decoration:none}
+    .arcontactus-widget .messanger:hover{background-color:#EEE}
+    .arcontactus-widget .messanger:before{background-repeat:no-repeat;background-position:center}
+    .arcontactus-widget .messanger.facebook span{background:#0084ff}
+    .arcontactus-widget .messanger.viber span{background:#7c529d}
+    .arcontactus-widget .messanger.telegram span{background:#2ca5e0}
+    .arcontactus-widget .messanger.skype span{background:#31c4ed}
+    .arcontactus-widget .messanger.email span{background:#ff8400}
+    .arcontactus-widget .messanger.contact span{background:#7eb105}
+    .arcontactus-widget .messanger.call-back span{background:#54cd81}
+    .arcontactus-widget .messanger span{position:absolute;left:10px;top:50%;margin-top:-20px;display:block;width:40px;height:40px;border-radius:50%;background-color:#0084ff;margin-right:10px;color:#FFF;text-align:center;vertical-align:middle}
+    .arcontactus-widget .messanger span i,.arcontactus-widget .messanger span svg{width:24px;height:24px;vertical-align:middle;text-align:center;display:block;position:absolute;top:50%;left:50%;margin-top:-12px;margin-left:-12px}
+    .arcontactus-widget .messanger span i{font-size:24px;line-height:24px}
+    .arcontactus-widget .messanger p{margin:0;font-family:Arial,sans-serif;font-size:14px;color:rgba(0,0,0,.87)}
+    @-webkit-keyframes arcontactus-pulse{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}50%{opacity:.5}100%{-webkit-transform:scale(1);transform:scale(1);opacity:0}}
+    @media (max-width:468px){.arcontactus-widget.opened.arcontactus-message,.arcontactus-widget.opened.left.arcontactus-message{width:auto;right:20px;left:20px}}
+    @keyframes arcontactus-updown{0%,100%,43%{transform:translate(0,0)}25%,35%{transform:translate(0,-10px)}}
+    @-webkit-keyframes arcontactus-updown{0%,100%,43%{transform:translate(0 0)}25%,35%{transform:translate(-10px 0)}}
+    @keyframes arcontactus-pulse{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}50%{opacity:.5}100%{-webkit-transform:scale(1);transform:scale(1);opacity:0}}
+    @-webkit-keyframes arcontactus-show-stat{0%,100%,20%,85%{-webkit-transform:scale(1);transform:scale(1)}21%,84%{-webkit-transform:scale(0);transform:scale(0)}}
+    @keyframes arcontactus-show-stat{0%,100%,20%,85%{-webkit-transform:scale(1);transform:scale(1)}21%,84%{-webkit-transform:scale(0);transform:scale(0)}}
+    @-webkit-keyframes arcontactus-show-icons{0%,100%,20%,85%{-webkit-transform:scale(0);transform:scale(0)}21%,84%{-webkit-transform:scale(1);transform:scale(1)}}
+    @keyframes arcontactus-show-icons{0%,100%,20%,85%{-webkit-transform:scale(0);transform:scale(0)}21%,84%{-webkit-transform:scale(1);transform:scale(1)}}
     </style>
     <style id='wp-block-library-inline-css' type='text/css'>
         :root {
@@ -509,11 +606,18 @@
     <link rel='stylesheet' id='elementor-frontend-legacy-css' href='{{asset("wp-content/")}}/plugins/elementor/assets/css/frontend-legacy.mina7da.css?ver=3.4.7' type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-frontend-css' href='{{asset("wp-content/")}}/plugins/elementor/assets/css/frontend.mina7da.css?ver=3.4.7' type='text/css' media='all' />
     <link rel='stylesheet' href='{{asset("css/")}}/f2d3e.css' type='text/css' />
+    <!-- <link rel="stylesheet" href="{{asset('css/')}}/f2d3e1.css" type='text/css' /> -->
+
+    <script type='text/javascript' id='jquery.contactus-js-extra'>
+        /* <![CDATA[ */
+        var arCUVars = { "url": "http:\/\/vntechco.com.vn\/wp-admin\/admin-ajax.php", "version": "1.9.9", "_wpnonce": "<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"0082091640\" \/><input type=\"hidden\" name=\"_wp_http_referer\" value=\"\/\" \/>" };
+/* ]]> */
+    </script>
     <style id='elementor-frontend-inline-css' type='text/css'>
         @font-face {
             font-family: eicons;
             src: url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons0b93.eot?5.10.0);
-            src: url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(http://ipe.vn/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
+            src: url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(url({{asset("wp-content/")}}/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
             font-weight: 400;
             font-style: normal
         }
@@ -555,7 +659,11 @@
     <link rel='shortlink' href='index.html' />
     <link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embedd36e.json?url=http%3A%2F%2Fipe.vn%2F" />
     <link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed61a1?url=http%3A%2F%2Fipe.vn%2F&amp;format=xml" />
+
+    
+
     <style>
+        .elementor-441 .elementor-element.elementor-element-8271348 .elementor-repeater-item-3b5742c .swiper-slide-bg{background-color:#833ca3;background-image:url({{asset("wp-content/")}}/uploads/banner-vnt-1-scaled.jpg);background-size:cover}.elementor-441 .elementor-element.elementor-element-8271348 .elementor-repeater-item-3b5742c .elementor-background-overlay{background-color:rgba(0,0,0,0.5)}.elementor-441 .elementor-element.elementor-element-8271348 .elementor-repeater-item-e33fb7a .swiper-slide-bg{background-color:#833ca3;background-image:url(http://vntechco.com.vn/wp-content/uploads/2020/09/banner-vnt-2.jpg);background-size:cover}.elementor-441 .elementor-element.elementor-element-8271348 .elementor-repeater-item-e33fb7a .elementor-background-overlay{background-color:rgba(0,0,0,0.5)}.elementor-441 .elementor-element.elementor-element-8271348 .elementor-repeater-item-de41f62 .swiper-slide-bg{background-color:#833ca3;background-image:url(http://vntechco.com.vn/wp-content/uploads/2020/09/banner-vnt-3.jpg);background-size:cover}.elementor-441 .elementor-element.elementor-element-8271348 .elementor-repeater-item-de41f62 .elementor-background-overlay{background-color:rgba(0,0,0,0.5)}.elementor-441 .elementor-element.elementor-element-8271348 .swiper-slide{height:640px;transition-duration:calc(5000ms*1.2)}.elementor-441 .elementor-element.elementor-element-8271348 .swiper-slide-contents{max-width:80%;text-shadow:0px 0px 10px rgba(0,0,0,0.3)}.elementor-441 .elementor-element.elementor-element-8271348 .swiper-slide-inner{text-align:center}
         .bg {
             opacity: 0;
             transition: opacity 1s;
@@ -573,25 +681,25 @@
             }
         </style>
     </noscript>
-    <link rel="icon" href='{{asset("wp-content/")}}/uploads/2019/02/Untitled-3-100x100.png' sizes="32x32" />
-    <link rel="icon" href="{{asset('wp-content/')}}uploads/2019/02/Untitled-3-e1550541212924.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="{{asset('wp-content/')}}uploads/2019/02/Untitled-3-e1550541212924.png" />
-    <meta name="msapplication-TileImage" content="http://ipe.vn/wp-content/uploads/2019/02/Untitled-3-e1550541212924.png" />
+    <link rel="icon" href='{{asset("wp-content/")}}/uploads/LOGO-removebg-preview_re.png' sizes="32x32" />
+    <link rel="icon" href="{{asset('wp-content/')}}uploads/LOGO-removebg-preview_re.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="{{asset('wp-content/')}}uploads/LOGO-removebg-preview_re.png" />
+    <meta name="msapplication-TileImage" content="url({{asset('wp-content/')}}/uploads/LOGO-removebg-preview_re.png" />
     <style id="custom-css" type="text/css">
         :root {
             --primary-color: #446084;
         }
 
         .header-main {
-            height: 98px
+            height: 120px
         }
 
         #logo img {
-            max-height: 98px
+            /* max-height: 98px */
         }
 
         #logo {
-            width: 100px;
+            width: 150px;
         }
 
         #logo img {
@@ -738,7 +846,7 @@
         }
 
         .footer-2 {
-            background-color: #777777
+            background-color: #12152c
         }
 
         .absolute-footer,
@@ -781,8 +889,8 @@
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1948"><a href="lien-ket-nhanh/ve-chung-toi/index.html">Về Chúng Tôi</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1916"><a href="san-pham/index.html">Sản Phẩm</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7150"><a href="lien-ket-nhanh/giai-phap/index.html">Giải Pháp</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7149"><a href="du-an/index.html">Dự Án</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7151"><a href="dich-vu/index.html">Dịch Vụ</a></li>
+                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7149"><a href="du-an/index.html">Dự Án</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7151"><a href="dich-vu/index.html">Dịch Vụ</a></li> -->
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7148"><a href="tai-lieu/index.html">Tài Liệu</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968"><a href="lien-ket-nhanh/1961-2/index.html">Liên Hệ</a></li>
                 <li class="header-divider"></li>
@@ -847,183 +955,97 @@
         </div>
 
     </div>
-    <div id="arcontactus"
-        class="arcontactus-widget arcontactus-message arcu-fadeindown left lg ui-draggable ui-draggable-handle arcuAnimated active open"
-        style="width: 70px; inset: 1719px auto auto 21px; height: 70px;">
-        <!--noindex-->
-        <div class="callback-countdown-block" style="color: #105A9C">
-            <div class="callback-countdown-block-close" style="background-color:#105A9C; color: #FFFFFF"><svg width="12"
-                    height="13" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g transform="translate(-4087 108)">
-                        <g>
-                            <path transform="translate(4087 -108)" fill="currentColor"
-                                d="M 14 1.41L 12.59 0L 7 5.59L 1.41 0L 0 1.41L 5.59 7L 0 12.59L 1.41 14L 7 8.41L 12.59 14L 14 12.59L 8.41 7L 14 1.41Z">
-                            </path>
-                        </g>
-                    </g>
-                </svg></div>
-            <div class="callback-countdown-block-phone display-flex">
-                <p>Please enter your phone number<br>and we call you back soon</p>
-                <form id="arcu-callback-form" action="http://vntechco.com.vn/wp-admin/admin-ajax.php" method="POST">
-                    <div class="callback-countdown-block-form-group"><input name="action" type="hidden"
-                            value="arcontactus_request_callback"><input name="gtoken" class="ar-g-token" type="hidden"
-                            value="">
-                        <div
-                            class="arcu-form-group arcu-form-group-type-tel arcu-form-group-phone arcu-form-group-required">
-                            <input name="phone" class="arcu-form-field arcu-field-phone" required="required" type="tel"
-                                value="" placeholder="+XXX-XX-XXX-XX-XX"></div>
-                        <div class="arcu-form-group arcu-form-button"><button
-                                id="arcontactus-message-callback-phone-submit" type="submit"
-                                style="background-color: #105A9C">Waiting for call</button></div>
-                    </div><input type="hidden" id="_wpnonce" name="_wpnonce" value="cea7f17155"><input type="hidden"
-                        name="_wp_http_referer" value="/">
-                </form>
-            </div>
-            <div class="callback-countdown-block-timer">
-                <p>We are calling you to phone</p>
-                <div class="callback-countdown-block-timer_timer"></div>
-            </div>
-            <div class="callback-countdown-block-sorry">
-                <p>Thank you.<br>We are call you back soon.</p>
-            </div>
-        </div>
-        <div class="messangers-block arcuAnimated lg has-header show-messageners-block">
-            <div class="arcu-menu-header" style="background-color:#105A9C">Liên Hệ Ngay Để Nhận Được Giá Tốt Nhất</div>
-            <div class="messangers-list-container">
-                <ul class="messangers-list arcu-downtoup rounded-items">
-                    <li><a class="messanger msg-item-facebook-messenger" id="msg-item-1" rel="nofollow noopener"
-                            target="_blank"><span style="background-color:#567AFF"><svg
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor"
-                                        d="M224 32C15.9 32-77.5 278 84.6 400.6V480l75.7-42c142.2 39.8 285.4-59.9 285.4-198.7C445.8 124.8 346.5 32 224 32zm23.4 278.1L190 250.5 79.6 311.6l121.1-128.5 57.4 59.6 110.4-61.1-121.1 128.5z">
-                                    </path>
-                                </svg></span>
-                            <div class="arcu-item-label">
-                                <div class="arcu-item-title">Messenger</div>
-                            </div>
-                        </a></li>
-                    <li><a class="messanger msg-item-skype" id="msg-item-5" rel="nofollow noopener"
-                            href="skype:Anhtuanhx" target="_blank"><span style="background-color:#1C9CC5"><svg
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor"
-                                        d="M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z">
-                                    </path>
-                                </svg></span>
-                            <div class="arcu-item-label">
-                                <div class="arcu-item-title">Skype</div>
-                            </div>
-                        </a></li>
-                    <li><a class="messanger msg-item-envelope" id="msg-item-6" rel="nofollow noopener"
-                            href="mailto:info@vntechco.vn" target="_blank"><span style="background-color:#FF643A"><svg
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path fill="currentColor"
-                                        d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM48 96h416c8.8 0 16 7.2 16 16v41.4c-21.9 18.5-53.2 44-150.6 121.3-16.9 13.4-50.2 45.7-73.4 45.3-23.2.4-56.6-31.9-73.4-45.3C85.2 197.4 53.9 171.9 32 153.4V112c0-8.8 7.2-16 16-16zm416 320H48c-8.8 0-16-7.2-16-16V195c22.8 18.7 58.8 47.6 130.7 104.7 20.5 16.4 56.7 52.5 93.3 52.3 36.4.3 72.3-35.5 93.3-52.3 71.9-57.1 107.9-86 130.7-104.7v205c0 8.8-7.2 16-16 16z">
-                                    </path>
-                                </svg></span>
-                            <div class="arcu-item-label">
-                                <div class="arcu-item-title">Email</div>
-                            </div>
-                        </a></li>
-                    <li>
-                        <div class="messanger call-back msg-item-phone"><span style="background-color:#4EB625"><svg
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path fill="currentColor"
-                                        d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
-                                    </path>
-                                </svg></span>
-                            <div class="arcu-item-label">
-                                <div class="arcu-item-title">Callback request</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a class="messanger msg-item-zalo" id="msg-item-10" rel="nofollow noopener"
-                            target="_blank"><span style="background-color:#2890FF"><svg
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460.1 436.6">
-                                    <path fill="currentColor" class="st0"
-                                        d="M82.6 380.9c-1.8-.8-3.1-1.7-1-3.5 1.3-1 2.7-1.9 4.1-2.8 13.1-8.5 25.4-17.8 33.5-31.5 6.8-11.4 5.7-18.1-2.8-26.5C69 269.2 48.2 212.5 58.6 145.5 64.5 107.7 81.8 75 107 46.6c15.2-17.2 33.3-31.1 53.1-42.7 1.2-.7 2.9-.9 3.1-2.7-.4-1-1.1-.7-1.7-.7-33.7 0-67.4-.7-101 .2C28.3 1.7.5 26.6.6 62.3c.2 104.3 0 208.6 0 313 0 32.4 24.7 59.5 57 60.7 27.3 1.1 54.6.2 82 .1 2 .1 4 .2 6 .2H290c36 0 72 .2 108 0 33.4 0 60.5-27 60.5-60.3v-.6-58.5c0-1.4.5-2.9-.4-4.4-1.8.1-2.5 1.6-3.5 2.6-19.4 19.5-42.3 35.2-67.4 46.3-61.5 27.1-124.1 29-187.6 7.2-5.5-2-11.5-2.2-17.2-.8-8.4 2.1-16.7 4.6-25 7.1-24.4 7.6-49.3 11-74.8 6zm72.5-168.5c1.7-2.2 2.6-3.5 3.6-4.8 13.1-16.6 26.2-33.2 39.3-49.9 3.8-4.8 7.6-9.7 10-15.5 2.8-6.6-.2-12.8-7-15.2-3-.9-6.2-1.3-9.4-1.1-17.8-.1-35.7-.1-53.5 0-2.5 0-5 .3-7.4.9-5.6 1.4-9 7.1-7.6 12.8 1 3.8 4 6.8 7.8 7.7 2.4.6 4.9.9 7.4.8 10.8.1 21.7 0 32.5.1 1.2 0 2.7-.8 3.6 1-.9 1.2-1.8 2.4-2.7 3.5-15.5 19.6-30.9 39.3-46.4 58.9-3.8 4.9-5.8 10.3-3 16.3s8.5 7.1 14.3 7.5c4.6.3 9.3.1 14 .1 16.2 0 32.3.1 48.5-.1 8.6-.1 13.2-5.3 12.3-13.3-.7-6.3-5-9.6-13-9.7-14.1-.1-28.2 0-43.3 0zm116-52.6c-12.5-10.9-26.3-11.6-39.8-3.6-16.4 9.6-22.4 25.3-20.4 43.5 1.9 17 9.3 30.9 27.1 36.6 11.1 3.6 21.4 2.3 30.5-5.1 2.4-1.9 3.1-1.5 4.8.6 3.3 4.2 9 5.8 14 3.9 5-1.5 8.3-6.1 8.3-11.3.1-20 .2-40 0-60-.1-8-7.6-13.1-15.4-11.5-4.3.9-6.7 3.8-9.1 6.9zm69.3 37.1c-.4 25 20.3 43.9 46.3 41.3 23.9-2.4 39.4-20.3 38.6-45.6-.8-25-19.4-42.1-44.9-41.3-23.9.7-40.8 19.9-40 45.6zm-8.8-19.9c0-15.7.1-31.3 0-47 0-8-5.1-13-12.7-12.9-7.4.1-12.3 5.1-12.4 12.8-.1 4.7 0 9.3 0 14v79.5c0 6.2 3.8 11.6 8.8 12.9 6.9 1.9 14-2.2 15.8-9.1.3-1.2.5-2.4.4-3.7.2-15.5.1-31 .1-46.5z">
-                                    </path>
-                                </svg></span>
-                            <div class="arcu-item-label">
-                                <div class="arcu-item-title">Zalo</div>
-                            </div>
-                        </a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="arcontactus-message-button" style="background-color: #105A9C">
-            <div class="static hide">
-                <div class="img-24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path fill="currentColor"
-                            d="M416 224V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64v160c0 35.3 28.7 64 64 64v54.2c0 8 9.1 12.6 15.5 7.8l82.8-62.1H352c35.3.1 64-28.6 64-63.9zm96-64h-64v64c0 52.9-43.1 96-96 96H192v64c0 35.3 28.7 64 64 64h125.7l82.8 62.1c6.4 4.8 15.5.2 15.5-7.8V448h32c35.3 0 64-28.7 64-64V224c0-35.3-28.7-64-64-64z">
-                        </path>
-                    </svg>
-                    <p>Liên Hệ Ngay</p>
-                </div>
-            </div>
-            <div class="callback-state" style="color: #105A9C"><svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                        d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
-                    </path>
-                </svg></div>
-            <div class="icons hide">
-                <div class="icons-line" style="transform: translate(-2px, 0px);"><span style="color: #105A9C"><svg
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                                d="M224 32C15.9 32-77.5 278 84.6 400.6V480l75.7-42c142.2 39.8 285.4-59.9 285.4-198.7C445.8 124.8 346.5 32 224 32zm23.4 278.1L190 250.5 79.6 311.6l121.1-128.5 57.4 59.6 110.4-61.1-121.1 128.5z">
-                            </path>
-                        </svg></span><span style="color: #105A9C"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512">
-                            <path fill="currentColor"
-                                d="M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z">
-                            </path>
-                        </svg></span><span style="color: #105A9C"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512">
-                            <path fill="currentColor"
-                                d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM48 96h416c8.8 0 16 7.2 16 16v41.4c-21.9 18.5-53.2 44-150.6 121.3-16.9 13.4-50.2 45.7-73.4 45.3-23.2.4-56.6-31.9-73.4-45.3C85.2 197.4 53.9 171.9 32 153.4V112c0-8.8 7.2-16 16-16zm416 320H48c-8.8 0-16-7.2-16-16V195c22.8 18.7 58.8 47.6 130.7 104.7 20.5 16.4 56.7 52.5 93.3 52.3 36.4.3 72.3-35.5 93.3-52.3 71.9-57.1 107.9-86 130.7-104.7v205c0 8.8-7.2 16-16 16z">
-                            </path>
-                        </svg></span><span style="color: #105A9C"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512">
-                            <path fill="currentColor"
-                                d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
-                            </path>
-                        </svg></span><span style="color: #105A9C"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 460.1 436.6">
-                            <path fill="currentColor" class="st0"
-                                d="M82.6 380.9c-1.8-.8-3.1-1.7-1-3.5 1.3-1 2.7-1.9 4.1-2.8 13.1-8.5 25.4-17.8 33.5-31.5 6.8-11.4 5.7-18.1-2.8-26.5C69 269.2 48.2 212.5 58.6 145.5 64.5 107.7 81.8 75 107 46.6c15.2-17.2 33.3-31.1 53.1-42.7 1.2-.7 2.9-.9 3.1-2.7-.4-1-1.1-.7-1.7-.7-33.7 0-67.4-.7-101 .2C28.3 1.7.5 26.6.6 62.3c.2 104.3 0 208.6 0 313 0 32.4 24.7 59.5 57 60.7 27.3 1.1 54.6.2 82 .1 2 .1 4 .2 6 .2H290c36 0 72 .2 108 0 33.4 0 60.5-27 60.5-60.3v-.6-58.5c0-1.4.5-2.9-.4-4.4-1.8.1-2.5 1.6-3.5 2.6-19.4 19.5-42.3 35.2-67.4 46.3-61.5 27.1-124.1 29-187.6 7.2-5.5-2-11.5-2.2-17.2-.8-8.4 2.1-16.7 4.6-25 7.1-24.4 7.6-49.3 11-74.8 6zm72.5-168.5c1.7-2.2 2.6-3.5 3.6-4.8 13.1-16.6 26.2-33.2 39.3-49.9 3.8-4.8 7.6-9.7 10-15.5 2.8-6.6-.2-12.8-7-15.2-3-.9-6.2-1.3-9.4-1.1-17.8-.1-35.7-.1-53.5 0-2.5 0-5 .3-7.4.9-5.6 1.4-9 7.1-7.6 12.8 1 3.8 4 6.8 7.8 7.7 2.4.6 4.9.9 7.4.8 10.8.1 21.7 0 32.5.1 1.2 0 2.7-.8 3.6 1-.9 1.2-1.8 2.4-2.7 3.5-15.5 19.6-30.9 39.3-46.4 58.9-3.8 4.9-5.8 10.3-3 16.3s8.5 7.1 14.3 7.5c4.6.3 9.3.1 14 .1 16.2 0 32.3.1 48.5-.1 8.6-.1 13.2-5.3 12.3-13.3-.7-6.3-5-9.6-13-9.7-14.1-.1-28.2 0-43.3 0zm116-52.6c-12.5-10.9-26.3-11.6-39.8-3.6-16.4 9.6-22.4 25.3-20.4 43.5 1.9 17 9.3 30.9 27.1 36.6 11.1 3.6 21.4 2.3 30.5-5.1 2.4-1.9 3.1-1.5 4.8.6 3.3 4.2 9 5.8 14 3.9 5-1.5 8.3-6.1 8.3-11.3.1-20 .2-40 0-60-.1-8-7.6-13.1-15.4-11.5-4.3.9-6.7 3.8-9.1 6.9zm69.3 37.1c-.4 25 20.3 43.9 46.3 41.3 23.9-2.4 39.4-20.3 38.6-45.6-.8-25-19.4-42.1-44.9-41.3-23.9.7-40.8 19.9-40 45.6zm-8.8-19.9c0-15.7.1-31.3 0-47 0-8-5.1-13-12.7-12.9-7.4.1-12.3 5.1-12.4 12.8-.1 4.7 0 9.3 0 14v79.5c0 6.2 3.8 11.6 8.8 12.9 6.9 1.9 14-2.2 15.8-9.1.3-1.2.5-2.4.4-3.7.2-15.5.1-31 .1-46.5z">
-                            </path>
-                        </svg></span></div>
-            </div>
-            <div class="arcontactus-close show-messageners-block"><svg width="12" height="13" viewBox="0 0 14 14"
-                    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g transform="translate(-4087 108)">
-                        <g>
-                            <path transform="translate(4087 -108)" fill="currentColor"
-                                d="M 14 1.41L 12.59 0L 7 5.59L 1.41 0L 0 1.41L 5.59 7L 0 12.59L 1.41 14L 7 8.41L 12.59 14L 14 12.59L 8.41 7L 14 1.41Z">
-                            </path>
-                        </g>
-                    </g>
-                </svg></div>
-            <div class="pulsation stop" style="background-color: #105A9C"></div>
-            <div class="pulsation stop" style="background-color: #105A9C"></div>
-        </div>
-        <div class="arcontactus-prompt arcu-prompt-top">
-            <div class="arcontactus-prompt-close" style="background-color: #105A9C; color: #FFFFFF"><svg width="12"
-                    height="13" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g transform="translate(-4087 108)">
-                        <g>
-                            <path transform="translate(4087 -108)" fill="currentColor"
-                                d="M 14 1.41L 12.59 0L 7 5.59L 1.41 0L 0 1.41L 5.59 7L 0 12.59L 1.41 14L 7 8.41L 12.59 14L 14 12.59L 8.41 7L 14 1.41Z">
-                            </path>
-                        </g>
-                    </g>
-                </svg></div>
-            <div class="arcontactus-prompt-inner"></div>
-        </div>
-        <!--/noindex-->
-    </div>
+
+    <div id='arcontactus'></div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+    <script>//<![CDATA[
+
+    function arCuGetCookie(t){return document.cookie.length>0&&(c_start=document.cookie.indexOf(t+"="),-1!=c_start)?(c_start=c_start+t.length+1,c_end=document.cookie.indexOf(";",c_start),-1==c_end&&(c_end=document.cookie.length),unescape(document.cookie.substring(c_start,c_end))):0}function arCuCreateCookie(t,e,s){var n;if(s){var i=new Date;i.setTime(i.getTime()+24*s*60*60*1e3),n="; expires="+i.toGMTString()}else n="";document.cookie=t+"="+e+n+"; path=/"}function arCuShowMessage(t){if(arCuPromptClosed)return!1;void 0!==arCuMessages[t]?(jQuery("#arcontactus").contactUs("showPromptTyping"),_arCuTimeOut=setTimeout(function(){if(arCuPromptClosed)return!1;jQuery("#arcontactus").contactUs("showPrompt",{content:arCuMessages[t]}),t++,_arCuTimeOut=setTimeout(function(){if(arCuPromptClosed)return!1;arCuShowMessage(t)},arCuMessageTime)},arCuTypingTime)):(arCuCloseLastMessage&&jQuery("#arcontactus").contactUs("hidePrompt"),arCuLoop&&arCuShowMessage(0))}function arCuShowMessages(){setTimeout(function(){clearTimeout(_arCuTimeOut),arCuShowMessage(0)},arCuDelayFirst)}!function(t){function e(s,n){this._initialized=!1,this.settings=null,this.options=t.extend({},e.Defaults,n),this.$element=t(s),this.init(),this.x=0,this.y=0,this._interval,this._menuOpened=!1,this._callbackOpened=!1,this.countdown=null}e.Defaults={align:"right",countdown:0,drag:!1,buttonText:"Liên hệ",buttonSize:"large",menuSize:"normal",items:[],iconsAnimationSpeed:1200,theme:"#105A9C",buttonIcon:'<svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(-825 -308)"><g id="Vector"><use xlink:href="#path0_fill0123" transform="translate(825 308)" fill="#FFFFFF"/></g></g><defs><path id="path0_fill0123" d="M 19 4L 17 4L 17 13L 4 13L 4 15C 4 15.55 4.45 16 5 16L 16 16L 20 20L 20 5C 20 4.45 19.55 4 19 4ZM 15 10L 15 1C 15 0.45 14.55 0 14 0L 1 0C 0.45 0 0 0.45 0 1L 0 15L 4 11L 14 11C 14.55 11 15 10.55 15 10Z"/></defs></svg>',closeIcon:'<svg width="12" height="13" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Canvas" transform="translate(-4087 108)"><g id="Vector"><use xlink:href="#path0_fill" transform="translate(4087 -108)" fill="currentColor"></use></g></g><defs><path id="path0_fill" d="M 14 1.41L 12.59 0L 7 5.59L 1.41 0L 0 1.41L 5.59 7L 0 12.59L 1.41 14L 7 8.41L 12.59 14L 14 12.59L 8.41 7L 14 1.41Z"></path></defs></svg>'},e.prototype.init=function(){this.destroy(),this.settings=t.extend({},this.options),this.$element.addClass("arcontactus-widget").addClass("arcontactus-message"),"left"===this.settings.align?this.$element.addClass("left"):this.$element.addClass("left"),this.settings.items.length?(this._initCallbackBlock(),this._initMessengersBlock(),this._initMessageButton(),this._initPrompt(),this._initEvents(),this.startAnimation(),this.$element.addClass("active")):console.info("jquery.contactus:no items"),this._initialized=!0,this.$element.trigger("arcontactus.init")},e.prototype.destroy=function(){if(!this._initialized)return!1;this.$element.html(""),this._initialized=!1,this.$element.trigger("arcontactus.destroy")},e.prototype._initCallbackBlock=function(){},e.prototype._initMessengersBlock=function(){var e=t("<div>",{class:"messangers-block"});"normal"!==this.settings.menuSize&&"large"!==this.settings.menuSize||e.addClass("lg"),"small"===this.settings.menuSize&&e.addClass("sm"),this._appendMessengerIcons(e),this.$element.append(e)},e.prototype._appendMessengerIcons=function(e){t.each(this.settings.items,function(s){if("callback"==this.href)var n=t("<div>",{class:"messanger call-back "+(this.class?this.class:"")});else if(n=t("<a>",{class:"messanger "+(this.class?this.class:""),id:this.id?this.id:null,href:this.href,target:this.target?this.target:"_blank"}),this.onClick){var i=this;n.on("click",function(t){i.onClick(t)})}var a=t("<span>",{style:this.color?"background-color:"+this.color:null});a.append(this.icon),n.append(a),n.append("<p>"+this.title+"</p>"),e.append(n)})},e.prototype._initMessageButton=function(){var e=this,s=t("<div>",{class:"arcontactus-message-button",style:this._backgroundStyle()});"large"===this.settings.buttonSize&&this.$element.addClass("lg"),"medium"===this.settings.buttonSize&&this.$element.addClass("md"),"small"===this.settings.buttonSize&&this.$element.addClass("sm");var n=t("<div>",{class:"static"});n.append(this.settings.buttonIcon),!1!==this.settings.buttonText?n.append("<p>"+this.settings.buttonText+"</p>"):s.addClass("no-text");var i=t("<div>",{class:"callback-state",style:e._colorStyle()});i.append(this.settings.callbackStateIcon);var a=t("<div>",{class:"icons hide"}),o=t("<div>",{class:"icons-line"});t.each(this.settings.items,function(s){var n=t("<span>",{style:e._colorStyle()});n.append(this.icon),o.append(n)}),a.append(o);var r=t("<div>",{class:"arcontactus-close"});r.append(this.settings.closeIcon);var c=t("<div>",{class:"pulsation",style:e._backgroundStyle()}),l=t("<div>",{class:"pulsation",style:e._backgroundStyle()});s.append(n).append(i).append(a).append(r).append(c).append(l),this.$element.append(s)},e.prototype._initPrompt=function(){var e=t("<div>",{class:"arcontactus-prompt"}),s=t("<div>",{class:"arcontactus-prompt-close",style:this._colorStyle()});s.append(this.settings.closeIcon);var n=t("<div>",{class:"arcontactus-prompt-inner"});e.append(s).append(n),this.$element.append(e)},e.prototype._initEvents=function(){var e=this.$element,s=this;e.find(".arcontactus-message-button").on("mousedown",function(t){s.x=t.pageX,s.y=t.pageY}).on("mouseup",function(t){t.pageX===s.x&&t.pageY===s.y&&(s.toggleMenu(),t.preventDefault())}),this.settings.drag&&(e.draggable(),e.get(0).addEventListener("touchmove",function(t){var s=t.targetTouches[0];e.get(0).style.left=s.pageX-25+"px",e.get(0).style.top=s.pageY-25+"px",t.preventDefault()},!1)),t(document).on("click",function(t){s.closeMenu()}),e.on("click",function(t){t.stopPropagation()}),e.find(".call-back").on("click",function(){s.openCallbackPopup()}),e.find(".callback-countdown-block-close").on("click",function(){null!=s.countdown&&(clearInterval(s.countdown),s.countdown=null),s.closeCallbackPopup()}),e.find(".arcontactus-prompt-close").on("click",function(){s.hidePrompt()})},e.prototype.show=function(){this.$element.addClass("active"),this.$element.trigger("arcontactus.show")},e.prototype.hide=function(){this.$element.removeClass("active"),this.$element.trigger("arcontactus.hide")},e.prototype.openMenu=function(){var t=this.$element;t.find(".messangers-block").hasClass("show-messageners-block")||(this.stopAnimation(),t.find(".messangers-block, .arcontactus-close").addClass("show-messageners-block"),t.find(".icons, .static").addClass("hide"),t.find(".pulsation").addClass("stop"),this._menuOpened=!0,this.$element.trigger("arcontactus.openMenu"))},e.prototype.closeMenu=function(){var t=this.$element;t.find(".messangers-block").hasClass("show-messageners-block")&&(t.find(".messangers-block, .arcontactus-close").removeClass("show-messageners-block"),t.find(".icons, .static").removeClass("hide"),t.find(".pulsation").removeClass("stop"),this.startAnimation(),this._menuOpened=!1,this.$element.trigger("arcontactus.closeMenu"))},e.prototype.toggleMenu=function(){var t=this.$element;if(this.hidePrompt(),t.find(".callback-countdown-block").hasClass("display-flex"))return!1;t.find(".messangers-block").hasClass("show-messageners-block")?this.closeMenu():this.openMenu(),this.$element.trigger("arcontactus.toggleMenu")},e.prototype.openCallbackPopup=function(){var t=this.$element;t.addClass("opened"),this.closeMenu(),this.stopAnimation(),t.find(".icons, .static").addClass("hide"),t.find(".pulsation").addClass("stop"),t.find(".callback-countdown-block").addClass("display-flex"),this._callbackOpened=!0,this.$element.trigger("arcontactus.openCallbackPopup")},e.prototype.closeCallbackPopup=function(){var t=this.$element;t.removeClass("opened"),t.find(".messangers-block").removeClass("show-messageners-block"),t.find(".arcontactus-close").removeClass("show-messageners-block"),t.find(".icons, .static").removeClass("hide"),this.startAnimation(),this._callbackOpened=!1,this.$element.trigger("arcontactus.closeCallbackPopup")},e.prototype.startAnimation=function(){var t=this.$element,e=t.find(".icons-line"),s=t.find(".static"),n=t.find(".icons-line>span:first-child").width()+40;if("large"===this.settings.buttonSize)var i=2,a=0;"medium"===this.settings.buttonSize&&(i=4,a=-2),"small"===this.settings.buttonSize&&(i=4,a=-2);var o=t.find(".icons-line>span").length,r=0;if(this.stopAnimation(),0===this.settings.iconsAnimationSpeed)return!1;this._interval=setInterval(function(){0===r&&(e.parent().removeClass("hide"),s.addClass("hide"));var t="translate("+-(n*r+i)+"px, "+a+"px)";e.css({"-webkit-transform":t,"-ms-transform":t,transform:t}),++r>o&&(r>o+1&&(r=0),e.parent().addClass("hide"),s.removeClass("hide"),t="translate("+-i+"px, "+a+"px)",e.css({"-webkit-transform":t,"-ms-transform":t,transform:t}))},this.settings.iconsAnimationSpeed)},e.prototype.stopAnimation=function(){clearInterval(this._interval);var t=this.$element,e=t.find(".icons-line"),s=t.find(".static");e.parent().addClass("hide"),s.removeClass("hide");var n="translate(-2px, 0px)";e.css({"-webkit-transform":n,"-ms-transform":n,transform:n})},e.prototype.showPrompt=function(t){var e=this.$element.find(".arcontactus-prompt");t&&t.content&&e.find(".arcontactus-prompt-inner").html(t.content),e.addClass("active"),this.$element.trigger("arcontactus.showPrompt")},e.prototype.hidePrompt=function(){this.$element.find(".arcontactus-prompt").removeClass("active"),this.$element.trigger("arcontactus.hidePrompt")},e.prototype.showPromptTyping=function(){this.$element.find(".arcontactus-prompt").find(".arcontactus-prompt-inner").html(""),this._insertPromptTyping(),this.showPrompt({}),this.$element.trigger("arcontactus.showPromptTyping")},e.prototype._insertPromptTyping=function(){var e=this.$element.find(".arcontactus-prompt-inner"),s=t("<div>",{class:"arcontactus-prompt-typing"}),n=t("<div>");s.append(n),s.append(n.clone()),s.append(n.clone()),e.append(s)},e.prototype.hidePromptTyping=function(){this.$element.find(".arcontactus-prompt").removeClass("active"),this.$element.trigger("arcontactus.hidePromptTyping")},e.prototype._backgroundStyle=function(){return"background-color: "+this.settings.theme},e.prototype._colorStyle=function(){return"color: "+this.settings.theme},t.fn.contactUs=function(s){var n=Array.prototype.slice.call(arguments,1);return this.each(function(){var i=t(this),a=i.data("ar.contactus");a||(a=new e(this,"object"==typeof s&&s),i.data("ar.contactus",a)),"string"==typeof s&&"_"!==s.charAt(0)&&a[s].apply(a,n)})},t.fn.contactUs.Constructor=e}(jQuery);
+    //]]></script>
+
+
+    <script>//<![CDATA[
+    var arCuMessages = ["Xin chào"];
+    var arCuLoop = false;
+    var arCuCloseLastMessage = false;
+    var arCuPromptClosed = false;
+    var _arCuTimeOut = null;
+    var arCuDelayFirst = 2000;
+    var arCuTypingTime = 2000;
+    var arCuMessageTime = 4000;
+    var arCuClosedCookie = 0;
+    var arcItems = [];
+    window.addEventListener('load', function() {
+    arCuClosedCookie = arCuGetCookie('arcu-closed');
+    jQuery('#arcontactus').on('arcontactus.init', function() {
+    if (arCuClosedCookie) {
+    return false;
+    }
+    arCuShowMessages();
+    });
+    jQuery('#arcontactus').on('arcontactus.openMenu', function() {
+    clearTimeout(_arCuTimeOut);
+    arCuPromptClosed = true;
+    jQuery('#contact').contactUs('hidePrompt');
+    arCuCreateCookie('arcu-closed', 1, 30);
+    });
+    jQuery('#arcontactus').on('arcontactus.hidePrompt', function() {
+    clearTimeout(_arCuTimeOut);
+    arCuPromptClosed = true;
+    arCuCreateCookie('arcu-closed', 1, 30);
+    });
+
+    var arcItem = {};
+    arcItem.id = 'msg-item-1';
+    arcItem.class = 'msg-item-facebook-messenger';
+    arcItem.title = 'Messenger';
+    arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 32C15.9 32-77.5 278 84.6 400.6V480l75.7-42c142.2 39.8 285.4-59.9 285.4-198.7C445.8 124.8 346.5 32 224 32zm23.4 278.1L190 250.5 79.6 311.6l121.1-128.5 57.4 59.6 110.4-61.1-121.1 128.5z"></path></svg>';
+    arcItem.href = 'https://m.me/camranhmedia';
+    arcItem.color = '#567AFF';
+    arcItems.push(arcItem);
+
+    var arcItem = {};
+    arcItem.id = 'msg-item-2';
+    arcItem.class = 'msg-item-zalo';
+    arcItem.title = 'Zalo Shop';
+    arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460.1 436.6"><path fill="currentColor" class="st0" d="M82.6 380.9c-1.8-.8-3.1-1.7-1-3.5 1.3-1 2.7-1.9 4.1-2.8 13.1-8.5 25.4-17.8 33.5-31.5 6.8-11.4 5.7-18.1-2.8-26.5C69 269.2 48.2 212.5 58.6 145.5 64.5 107.7 81.8 75 107 46.6c15.2-17.2 33.3-31.1 53.1-42.7 1.2-.7 2.9-.9 3.1-2.7-.4-1-1.1-.7-1.7-.7-33.7 0-67.4-.7-101 .2C28.3 1.7.5 26.6.6 62.3c.2 104.3 0 208.6 0 313 0 32.4 24.7 59.5 57 60.7 27.3 1.1 54.6.2 82 .1 2 .1 4 .2 6 .2H290c36 0 72 .2 108 0 33.4 0 60.5-27 60.5-60.3v-.6-58.5c0-1.4.5-2.9-.4-4.4-1.8.1-2.5 1.6-3.5 2.6-19.4 19.5-42.3 35.2-67.4 46.3-61.5 27.1-124.1 29-187.6 7.2-5.5-2-11.5-2.2-17.2-.8-8.4 2.1-16.7 4.6-25 7.1-24.4 7.6-49.3 11-74.8 6zm72.5-168.5c1.7-2.2 2.6-3.5 3.6-4.8 13.1-16.6 26.2-33.2 39.3-49.9 3.8-4.8 7.6-9.7 10-15.5 2.8-6.6-.2-12.8-7-15.2-3-.9-6.2-1.3-9.4-1.1-17.8-.1-35.7-.1-53.5 0-2.5 0-5 .3-7.4.9-5.6 1.4-9 7.1-7.6 12.8 1 3.8 4 6.8 7.8 7.7 2.4.6 4.9.9 7.4.8 10.8.1 21.7 0 32.5.1 1.2 0 2.7-.8 3.6 1-.9 1.2-1.8 2.4-2.7 3.5-15.5 19.6-30.9 39.3-46.4 58.9-3.8 4.9-5.8 10.3-3 16.3s8.5 7.1 14.3 7.5c4.6.3 9.3.1 14 .1 16.2 0 32.3.1 48.5-.1 8.6-.1 13.2-5.3 12.3-13.3-.7-6.3-5-9.6-13-9.7-14.1-.1-28.2 0-43.3 0zm116-52.6c-12.5-10.9-26.3-11.6-39.8-3.6-16.4 9.6-22.4 25.3-20.4 43.5 1.9 17 9.3 30.9 27.1 36.6 11.1 3.6 21.4 2.3 30.5-5.1 2.4-1.9 3.1-1.5 4.8.6 3.3 4.2 9 5.8 14 3.9 5-1.5 8.3-6.1 8.3-11.3.1-20 .2-40 0-60-.1-8-7.6-13.1-15.4-11.5-4.3.9-6.7 3.8-9.1 6.9zm69.3 37.1c-.4 25 20.3 43.9 46.3 41.3 23.9-2.4 39.4-20.3 38.6-45.6-.8-25-19.4-42.1-44.9-41.3-23.9.7-40.8 19.9-40 45.6zm-8.8-19.9c0-15.7.1-31.3 0-47 0-8-5.1-13-12.7-12.9-7.4.1-12.3 5.1-12.4 12.8-.1 4.7 0 9.3 0 14v79.5c0 6.2 3.8 11.6 8.8 12.9 6.9 1.9 14-2.2 15.8-9.1.3-1.2.5-2.4.4-3.7.2-15.5.1-31 .1-46.5z"></path></svg>';
+    arcItem.href = 'https://zalo.me/774786573093693552';
+    arcItem.color = '#2EA8FF';
+    arcItems.push(arcItem);
+
+    var arcItem = {};
+    arcItem.id = 'msg-item-6';
+    arcItem.class = 'msg-item-sms';
+    arcItem.title = 'SMS';
+    arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M128 216c-13.3 0-24 10.7-24 24s10.7 24 24 24 24-10.7 24-24-10.7-24-24-24zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24 24-10.7 24-24-10.7-24-24-24zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24 24-10.7 24-24-10.7-24-24-24zM256 32C114.6 32 0 125.1 0 240c0 47.6 19.9 91.2 52.9 126.3C38 405.7 7 439.1 6.5 439.5c-6.6 7-8.4 17.2-4.6 26S14.4 480 24 480c61.5 0 110-25.7 139.1-46.3C192 442.8 223.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 384c-28.3 0-56.3-4.3-83.2-12.8l-15.2-4.8-13 9.2c-23 16.3-58.5 35.3-102.6 39.6 12-15.1 29.8-40.4 40.8-69.6l7.1-18.7-13.7-14.6C47.3 313.7 32 277.6 32 240c0-97 100.5-176 224-176s224 79 224 176-100.5 176-224 176z"></path></svg>';
+    arcItem.href = 'sms:0935961044';
+    arcItem.color = '#1C9CC5';
+    arcItems.push(arcItem);
+
+    var arcItem = {};
+    arcItem.id = 'msg-item-7';
+    arcItem.class = 'msg-item-envelope';
+    arcItem.title = 'Gửi Email';
+    arcItem.icon = '<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM48 96h416c8.8 0 16 7.2 16 16v41.4c-21.9 18.5-53.2 44-150.6 121.3-16.9 13.4-50.2 45.7-73.4 45.3-23.2.4-56.6-31.9-73.4-45.3C85.2 197.4 53.9 171.9 32 153.4V112c0-8.8 7.2-16 16-16zm416 320H48c-8.8 0-16-7.2-16-16V195c22.8 18.7 58.8 47.6 130.7 104.7 20.5 16.4 56.7 52.5 93.3 52.3 36.4.3 72.3-35.5 93.3-52.3 71.9-57.1 107.9-86 130.7-104.7v205c0 8.8-7.2 16-16 16z"></path></svg>';
+    arcItem.href = 'mailto:mannguyenroii@gmail.com';
+    arcItem.color = '#FF643A';
+    arcItems.push(arcItem);
+
+    var arcItem = {};
+    arcItem.id = 'msg-item-8';
+    arcItem.class = 'msg-item-phone';
+    arcItem.title = 'Gọi Ngay';
+    arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>';
+    arcItem.href = 'tel:0935961044';
+    arcItem.color = '#4EB625';
+    arcItems.push(arcItem);
+
+    jQuery('#arcontactus').contactUs({
+    items: arcItems
+    });
+    });
+    //]]></script>
     <script type="text/javascript">
         (function() {
             var c = document.body.className;
@@ -1826,7 +1848,7 @@
         /* <![CDATA[ */
         var woolentorData = {
             "url": "http:\/\/ipe.vn\/wp-content\/plugins\/woolentor-addons\/woolentor-blocks",
-            "ajax": "http:\/\/ipe.vn\/wp-admin\/admin-ajax.php",
+            "ajax": "http:\/\/ipe.vn\/wp-admin\/admin-ajax.php1",
             "security": "06c332d9d4"
         };
         /* ]]> */
@@ -1849,7 +1871,7 @@
     <script type='text/javascript' id='woocommerce-js-extra'>
         /* <![CDATA[ */
         var woocommerce_params = {
-            "ajax_url": "\/wp-admin\/admin-ajax.php",
+            "ajax_url": "\/wp-admin\/admin-ajax.php2",
             "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"
         };
         /* ]]> */
@@ -1858,7 +1880,7 @@
     <script type='text/javascript' id='wc-cart-fragments-js-extra'>
         /* <![CDATA[ */
         var wc_cart_fragments_params = {
-            "ajax_url": "\/wp-admin\/admin-ajax.php",
+            "ajax_url": "\/wp-admin\/admin-ajax.php3",
             "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
             "cart_hash_key": "wc_cart_hash_7998554114fa31ed541cad1f07708537",
             "fragment_name": "wc_fragments_7998554114fa31ed541cad1f07708537",
@@ -1871,7 +1893,7 @@
     <script type='text/javascript' id='flatsome-js-js-extra'>
         /* <![CDATA[ */
         var flatsomeVars = {
-            "ajaxurl": "http:\/\/ipe.vn\/wp-admin\/admin-ajax.php",
+            "ajaxurl": "http:\/\/ipe.vn\/wp-admin\/admin-ajax.php4",
             "rtl": "",
             "sticky_height": "70",
             "assets_url": "http:\/\/ipe.vn\/wp-content\/themes\/flatsome\/assets\/js\/",
@@ -2017,7 +2039,7 @@
         /* <![CDATA[ */
         var _wpUtilSettings = {
             "ajax": {
-                "url": "\/wp-admin\/admin-ajax.php"
+                "url": "\/wp-admin\/admin-ajax.php5"
             }
         };
         /* ]]> */
@@ -2037,7 +2059,7 @@
     <script type='text/javascript' id='woolentor-widgets-scripts-js-extra'>
         /* <![CDATA[ */
         var woolentor_addons = {
-            "woolentorajaxurl": "http:\/\/ipe.vn\/wp-admin\/admin-ajax.php",
+            "woolentorajaxurl": "http:\/\/ipe.vn\/wp-admin\/admin-ajax.php6",
             "ajax_nonce": "ba3436c842"
         };
         /* ]]> */
@@ -2050,7 +2072,7 @@
     <script type='text/javascript' src='{{asset("wp-content/")}}/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min55a0.js?ver=3.2.0' id='elementor-sticky-js'></script>
     <script type='text/javascript' id='elementor-pro-frontend-js-before'>
         var ElementorProFrontendConfig = {
-            "ajaxurl": "http:\/\/ipe.vn\/wp-admin\/admin-ajax.php",
+            "ajaxurl": "wp-admin\/admin-ajax.php",
             "nonce": "e673779960",
             "urls": {
                 "assets": "http:\/\/ipe.vn\/wp-content\/plugins\/elementor-pro\/assets\/"
@@ -2140,6 +2162,11 @@
             }
         };
     </script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <script type='text/javascript' src='{{asset("wp-content/")}}/plugins/elementor-pro/assets/js/frontend.min55a0.js?ver=3.2.0' id='elementor-pro-frontend-js'></script>
     <script type='text/javascript' src='{{asset("wp-content/")}}/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2' id='elementor-waypoints-js'></script>
     <script type='text/javascript' src='{{asset("wp-includes/")}}/js/jquery/ui/core.min35d0.js?ver=1.12.1' id='jquery-ui-core-js'></script>
@@ -2259,219 +2286,6 @@
     <script type='text/javascript' src='{{asset("wp-content/")}}/plugins/elementor/assets/js/frontend.mina7da.js?ver=3.4.7' id='elementor-frontend-js'></script>
     <script type='text/javascript' src='{{asset("wp-content/")}}/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min55a0.js?ver=3.2.0' id='pro-preloaded-elements-handlers-js'></script>
     <script type='text/javascript' src='{{asset("wp-content/")}}/plugins/elementor/assets/js/preloaded-modules.mina7da.js?ver=3.4.7' id='preloaded-modules-js'></script>
-    
-    <!-- <script type='text/javascript' src='{{asset("js/")}}/xfbml.customerchat.js'></script>
-    <script type='text/javascript' src='{{asset("js/")}}/za.js'></script>
-    <script type='text/javascript' src='{{asset("js/")}}/wp-emoji-release.min.js'></script>
-    <script type='text/javascript' src='{{asset("js/")}}/c7035.js'></script>
-    <script type='text/javascript' src='{{asset("js/")}}/4ee79.js'></script>
-    <script type='text/javascript' src='{{asset("js/")}}/sdk.js'></script> -->
-    <script type="text/javascript">
-        var zaloWidgetInterval;
-        var tawkToInterval;
-        var tawkToHideInterval;
-        var skypeWidgetInterval;
-        var lcpWidgetInterval;
-        var closePopupTimeout;
-        var lzWidgetInterval;
-        var paldeskInterval;
-        var arcuOptions;
-        var hideCustomerChatInterval;
-        var arCuMessages = ["Ch\u00e0o B\u1ea1n!", "B\u1ea1n c\u1ea7n h\u1ed7 tr\u1ee3 th\u00eam?", "Li\u00ean h\u1ec7 ngay v\u1edbi ch\u00fang t\u00f4i"];
-        var arCuLoop = false;;
-        var arCuCloseLastMessage = false;
-        var arCuPromptClosed = false;
-        var _arCuTimeOut = null;
-        var arCuDelayFirst = 2000;
-        var arCuTypingTime = 2000;
-        var arCuMessageTime = 4000;
-        var arCuClosedCookie = 0;
-        var arcItems = [];
-        window.addEventListener('load', function () {
-            jQuery('#arcontactus').remove();
-            var $arcuWidget = jQuery('<div>', {
-                id: 'arcontactus'
-            });
-            jQuery('body').append($arcuWidget);
-            arCuClosedCookie = arCuGetCookie('arcu-closed');
-            jQuery('#arcontactus').on('arcontactus.init', function () {
-                jQuery('#arcontactus').addClass('arcuAnimated').addClass('flipInY');
-                jQuery('#arcu-callback-form').append(arCUVars._wpnonce);
-                setTimeout(function () {
-                    jQuery('#arcontactus').removeClass('flipInY');
-                }, 1000);
-                if (arCuClosedCookie) {
-                    return false;
-                }
-                arCuShowMessages();
-                setTimeout(function () {
-                    if (arCuGetCookie('arcumenu-closed') == 0) {
-                        jQuery('#arcontactus').contactUs('openMenu');
-                    }
-                }, 1);
-            });
-            jQuery('#arcontactus').on('arcontactus.closeMenu', function () {
-                arCuCreateCookie('arcumenu-closed', 1, 1);
-            });
-            jQuery('#arcontactus').on('arcontactus.openMenu', function () {
-                clearTimeout(_arCuTimeOut);
-                if (!arCuPromptClosed) {
-                    arCuPromptClosed = true;
-                    jQuery('#arcontactus').contactUs('hidePrompt');
-                }
-            });
-            jQuery('#arcontactus').on('arcontactus.openCallbackPopup', function () {
-                clearTimeout(_arCuTimeOut);
-                if (!arCuPromptClosed) {
-                    arCuPromptClosed = true;
-                    jQuery('#arcontactus').contactUs('hidePrompt');
-                }
-            });
-
-            jQuery('#arcontactus').on('arcontactus.hidePrompt', function () {
-                clearTimeout(_arCuTimeOut);
-                if (arCuClosedCookie != "1") {
-                    arCuClosedCookie = "1";
-                    arCuPromptClosed = true;
-                    arCuCreateCookie('arcu-closed', 1, 0);
-                }
-            });
-            var arcItem = {};
-            arcItem.id = 'msg-item-1';
-            arcItem.onClick = function (e) {
-                e.preventDefault();
-                jQuery('#arcontactus').contactUs('closeMenu');
-                if (typeof FB == 'undefined' || typeof FB.CustomerChat == 'undefined') {
-                    console.error('Facebook customer chat integration is disabled in module configuration');
-                    return false;
-                }
-                jQuery('#arcontactus').contactUs('hide');
-                jQuery('#ar-fb-chat').addClass('active');
-                clearInterval(hideCustomerChatInterval);
-                FB.CustomerChat.show(true);
-                FB.CustomerChat.showDialog();
-
-
-            }
-            arcItem.class = 'msg-item-facebook-messenger';
-            arcItem.title = "Messenger";
-            arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 32C15.9 32-77.5 278 84.6 400.6V480l75.7-42c142.2 39.8 285.4-59.9 285.4-198.7C445.8 124.8 346.5 32 224 32zm23.4 278.1L190 250.5 79.6 311.6l121.1-128.5 57.4 59.6 110.4-61.1-121.1 128.5z"></path></svg>';
-            arcItem.color = '#567AFF';
-            arcItems.push(arcItem);
-            var arcItem = {};
-            arcItem.id = 'msg-item-5';
-            arcItem.class = 'msg-item-skype';
-            arcItem.title = "Skype";
-            arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z"></path></svg>';
-            arcItem.href = 'skype:Anhtuanhx';
-            arcItem.color = '#1C9CC5';
-            arcItems.push(arcItem);
-            var arcItem = {};
-            arcItem.id = 'msg-item-6';
-            arcItem.class = 'msg-item-envelope';
-            arcItem.title = "Email";
-            arcItem.icon = '<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM48 96h416c8.8 0 16 7.2 16 16v41.4c-21.9 18.5-53.2 44-150.6 121.3-16.9 13.4-50.2 45.7-73.4 45.3-23.2.4-56.6-31.9-73.4-45.3C85.2 197.4 53.9 171.9 32 153.4V112c0-8.8 7.2-16 16-16zm416 320H48c-8.8 0-16-7.2-16-16V195c22.8 18.7 58.8 47.6 130.7 104.7 20.5 16.4 56.7 52.5 93.3 52.3 36.4.3 72.3-35.5 93.3-52.3 71.9-57.1 107.9-86 130.7-104.7v205c0 8.8-7.2 16-16 16z"></path></svg>';
-            arcItem.href = 'mailto:info@vntechco.vn';
-            arcItem.color = '#FF643A';
-            arcItems.push(arcItem);
-            var arcItem = {};
-            arcItem.id = 'msg-item-9';
-            arcItem.class = 'msg-item-phone';
-            arcItem.title = "Callback request";
-            arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>';
-            arcItem.href = 'callback';
-            arcItem.color = '#4EB625';
-            arcItems.push(arcItem);
-            var arcItem = {};
-            arcItem.id = 'msg-item-10';
-            arcItem.onClick = function (e) {
-                e.preventDefault();
-                jQuery('#arcontactus').contactUs('closeMenu');
-                if (typeof ZaloSocialSDK == 'undefined') {
-                    console.error('Zalo integration is disabled in module configuration');
-                    return false;
-                }
-                jQuery('#ar-zalo-chat-widget').addClass('active');
-                ZaloSocialSDK.openChatWidget();
-                zaloWidgetInterval = setInterval(function () {
-                    checkZaloIsOpened();
-                }, 100);
-                jQuery('#arcontactus').contactUs('hide');
-
-
-            }
-            arcItem.class = 'msg-item-zalo';
-            arcItem.title = "Zalo";
-            arcItem.icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460.1 436.6"><path fill="currentColor" class="st0" d="M82.6 380.9c-1.8-.8-3.1-1.7-1-3.5 1.3-1 2.7-1.9 4.1-2.8 13.1-8.5 25.4-17.8 33.5-31.5 6.8-11.4 5.7-18.1-2.8-26.5C69 269.2 48.2 212.5 58.6 145.5 64.5 107.7 81.8 75 107 46.6c15.2-17.2 33.3-31.1 53.1-42.7 1.2-.7 2.9-.9 3.1-2.7-.4-1-1.1-.7-1.7-.7-33.7 0-67.4-.7-101 .2C28.3 1.7.5 26.6.6 62.3c.2 104.3 0 208.6 0 313 0 32.4 24.7 59.5 57 60.7 27.3 1.1 54.6.2 82 .1 2 .1 4 .2 6 .2H290c36 0 72 .2 108 0 33.4 0 60.5-27 60.5-60.3v-.6-58.5c0-1.4.5-2.9-.4-4.4-1.8.1-2.5 1.6-3.5 2.6-19.4 19.5-42.3 35.2-67.4 46.3-61.5 27.1-124.1 29-187.6 7.2-5.5-2-11.5-2.2-17.2-.8-8.4 2.1-16.7 4.6-25 7.1-24.4 7.6-49.3 11-74.8 6zm72.5-168.5c1.7-2.2 2.6-3.5 3.6-4.8 13.1-16.6 26.2-33.2 39.3-49.9 3.8-4.8 7.6-9.7 10-15.5 2.8-6.6-.2-12.8-7-15.2-3-.9-6.2-1.3-9.4-1.1-17.8-.1-35.7-.1-53.5 0-2.5 0-5 .3-7.4.9-5.6 1.4-9 7.1-7.6 12.8 1 3.8 4 6.8 7.8 7.7 2.4.6 4.9.9 7.4.8 10.8.1 21.7 0 32.5.1 1.2 0 2.7-.8 3.6 1-.9 1.2-1.8 2.4-2.7 3.5-15.5 19.6-30.9 39.3-46.4 58.9-3.8 4.9-5.8 10.3-3 16.3s8.5 7.1 14.3 7.5c4.6.3 9.3.1 14 .1 16.2 0 32.3.1 48.5-.1 8.6-.1 13.2-5.3 12.3-13.3-.7-6.3-5-9.6-13-9.7-14.1-.1-28.2 0-43.3 0zm116-52.6c-12.5-10.9-26.3-11.6-39.8-3.6-16.4 9.6-22.4 25.3-20.4 43.5 1.9 17 9.3 30.9 27.1 36.6 11.1 3.6 21.4 2.3 30.5-5.1 2.4-1.9 3.1-1.5 4.8.6 3.3 4.2 9 5.8 14 3.9 5-1.5 8.3-6.1 8.3-11.3.1-20 .2-40 0-60-.1-8-7.6-13.1-15.4-11.5-4.3.9-6.7 3.8-9.1 6.9zm69.3 37.1c-.4 25 20.3 43.9 46.3 41.3 23.9-2.4 39.4-20.3 38.6-45.6-.8-25-19.4-42.1-44.9-41.3-23.9.7-40.8 19.9-40 45.6zm-8.8-19.9c0-15.7.1-31.3 0-47 0-8-5.1-13-12.7-12.9-7.4.1-12.3 5.1-12.4 12.8-.1 4.7 0 9.3 0 14v79.5c0 6.2 3.8 11.6 8.8 12.9 6.9 1.9 14-2.2 15.8-9.1.3-1.2.5-2.4.4-3.7.2-15.5.1-31 .1-46.5z"/></svg>';
-            arcItem.color = '#2890FF';
-            arcItems.push(arcItem);
-            arcuOptions = {
-                wordpressPluginVersion: '1.9.9',
-                buttonIcon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M416 224V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64v160c0 35.3 28.7 64 64 64v54.2c0 8 9.1 12.6 15.5 7.8l82.8-62.1H352c35.3.1 64-28.6 64-63.9zm96-64h-64v64c0 52.9-43.1 96-96 96H192v64c0 35.3 28.7 64 64 64h125.7l82.8 62.1c6.4 4.8 15.5.2 15.5-7.8V448h32c35.3 0 64-28.7 64-64V224c0-35.3-28.7-64-64-64z"></path></svg>',
-                drag: true,
-                mode: 'regular',
-                buttonIconUrl: 'http://vntechco.com.vn/wp-content/plugins/ar-contactus/res/img/msg.svg',
-                showMenuHeader: true,
-                menuHeaderText: "Liên Hệ Ngay Để Nhận Được Giá Tốt Nhất",
-                showHeaderCloseBtn: false,
-                headerCloseBtnBgColor: '#FFFFFF',
-                headerCloseBtnColor: '#3B3B3B',
-                itemsIconType: 'rounded',
-                align: 'left',
-                reCaptcha: false,
-                reCaptchaKey: '',
-                countdown: 0,
-                theme: '#105A9C',
-                buttonText: "Liên Hệ Ngay",
-                buttonSize: 'large',
-                buttonIconSize: 24,
-                menuSize: 'large',
-                phonePlaceholder: 'Array',
-                callbackSubmitText: 'Waiting for call',
-                errorMessage: 'Connection error. Please refresh the page and try again.',
-                callProcessText: 'We are calling you to phone',
-                callSuccessText: 'Thank you.<br/>We are call you back soon.',
-                callbackFormText: 'Please enter your phone number<br/>and we call you back soon',
-                iconsAnimationSpeed: 600,
-                iconsAnimationPause: 2000,
-                items: arcItems,
-                ajaxUrl: 'http://vntechco.com.vn/wp-admin/admin-ajax.php',
-                promptPosition: 'top',
-                popupAnimation: 'fadeindown',
-                style: '',
-                itemsAnimation: 'downtoup',
-                callbackFormFields: {
-                    phone: {
-                        name: 'phone',
-                        enabled: true,
-                        required: true,
-                        type: 'tel',
-                        label: '',
-                        placeholder: "+XXX-XX-XXX-XX-XX"
-                    },
-                },
-                action: 'arcontactus_request_callback'
-            };
-            jQuery('#arcontactus').contactUs(arcuOptions);
-            FB.Event.subscribe('customerchat.dialogHide', function () {
-                jQuery('#ar-fb-chat').removeClass('active');
-                jQuery('#arcontactus').contactUs('show');
-                FB.CustomerChat.hide();
-            });
-            FB.Event.subscribe('customerchat.dialogShow', function () {
-                jQuery('#ar-fb-chat').addClass('active');
-                jQuery('#arcontactus').contactUs('hide');
-            });
-            FB.Event.subscribe('customerchat.load', function () {
-                /*hideCustomerChatInterval = setInterval(function(){
-                    if (jQuery('.fb_dialog').is(':visible')) {
-                        FB.CustomerChat.hide();
-                        clearInterval(hideCustomerChatInterval);
-                    }
-                }, 100);*/
-            });
-        });
-    </script>
 </body>
 
 <!-- Mirrored from ipe.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Nov 2021 14:35:52 GMT -->
