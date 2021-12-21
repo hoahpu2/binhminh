@@ -100,6 +100,19 @@
               
             </ul>
           </li>
+          <li class="treeview <?php if($asset[0] == 'LG') echo'active'; ?>">
+            <a href="#">
+              <i class="fa fa-edit"></i> <span>Quản lý Logo hãng</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li class="<?php if($asset[1] == 'add') echo'active'; ?>"><a href="{{route('admin.logo.getAdd')}}"><i class="fa fa-circle-o"></i> Thêm mới logo</a></li>
+              <li class="<?php if($asset[1] == 'index') echo'active'; ?>"><a href="{{route('admin.logo.index')}}"><i class="fa fa-circle-o"></i> Danh sách logo</a></li>
+              
+            </ul>
+          </li>
           <li class="treeview <?php if($asset[0] == 'PR') echo'active'; ?>">
             <a href="#">
               <i class="fa fa-table"></i> <span>Quản lý sản phẩm</span>
@@ -164,6 +177,11 @@
           <li class="<?php if($asset[0] == 'CTTU') echo'active'; ?>">
             <a href="{{route('admin.contactCu.index')}}">
               <i class="fa fa-envelope"></i> <span>Liên hệ từ khách hàng</span>
+            </a>
+          </li>
+          <li class="<?php if($asset[0] == 'SP_H') echo'active'; ?>">
+            <a href="{{route('admin.sanphamHome.index')}}">
+              <i class="fa fa-envelope"></i> <span>Sản phẩm nổi bật</span>
             </a>
           </li>
           <li class="<?php if($asset[0] == 'Req') echo'active'; ?>">

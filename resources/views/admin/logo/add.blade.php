@@ -11,7 +11,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" action="{!! route('admin.slider.postAdd') !!}" enctype="multipart/form-data"  autocomplete="off">
+        <form class="form-horizontal" method="POST" action="{!! route('admin.logo.postAdd') !!}" enctype="multipart/form-data"  autocomplete="off">
           @csrf
           <div class="box-body">
 
@@ -62,7 +62,7 @@
               <div class="col-sm-5"></div>
               <div class="col-sm-5">
                 <button type="submit" class="btn btn-info pull-center">Sign in</button>
-                <button type="button" class="btn btn-default"><a href="{{route('admin.slider.index')}}">Cancel</a></button>
+                <button type="button" class="btn btn-default"><a href="{{route('admin.logo.index')}}">Cancel</a></button>
               </div>              
             </div>
           </div>

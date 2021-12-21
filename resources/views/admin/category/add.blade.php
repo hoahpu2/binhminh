@@ -37,7 +37,7 @@
                 </select>
               </div>
             </div>
-            <div class="form-group vitri">
+            <div class="form-group">
               <label for="CA_location" class="col-sm-2 control-label">Vị trí <span style="color: red"> *</span></label>
             
               <div class="col-sm-2">

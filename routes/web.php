@@ -76,6 +76,16 @@ Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'],function(){
 		Route::post('edit/{id}',['as'=>'admin.slider.postEdit','uses'=>'admin\SliderController@postEdit']);
 	});
 
+	/* Logo */
+	Route::group(['prefix'=>'logo'],function(){
+		Route::get('index',['as'=>'admin.logo.index','uses'=>'admin\SliderController@index_logo']);
+		Route::get('add',['as'=>'admin.logo.getAdd','uses'=>'admin\SliderController@getAdd_logo']);
+		Route::post('add',['as'=>'admin.logo.postAdd','uses'=>'admin\SliderController@postAdd_logo']);
+		Route::get('delete/{id}',['as'=>'admin.logo.getDelete','uses'=>'admin\SliderController@getDelete_logo']);
+		Route::get('edit/{id}',['as'=>'admin.logo.getEdit','uses'=>'admin\SliderController@getEdit_logo']);
+		Route::post('edit/{id}',['as'=>'admin.logo.postEdit','uses'=>'admin\SliderController@postEdit_logo']);
+	});
+
 	/* News */
 	Route::group(['prefix'=>'news'],function(){
 		Route::get('index',['as'=>'admin.news.index','uses'=>'admin\NewsController@index']);
@@ -110,6 +120,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'],function(){
 	Route::group(['prefix'=>'contactCu'],function(){
 		Route::get('index',['as'=>'admin.contactCu.index','uses'=>'admin\ContactController@indexCus']);
 		Route::get('detail/{id}',['as'=>'admin.contactCu.getDetail','uses'=>'admin\ContactController@getDetail']);
+	});
+
+	Route::group(['prefix'=>'sanphamHome'],function(){
+		Route::get('index',['as'=>'admin.sanphamHome.index','uses'=>'admin\ContactController@sanphamHome']);
+		Route::post('add',['as'=>'admin.sanphamHome.postAdd','uses'=>'admin\ContactController@sanphamHome']);
 	});
 
 	/* Request Customer */

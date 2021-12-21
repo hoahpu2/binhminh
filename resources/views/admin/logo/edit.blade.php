@@ -11,7 +11,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form class="form-horizontal" method="POST" action="{!! route('admin.slider.postAdd') !!}" enctype="multipart/form-data"  autocomplete="off">
+        <form class="form-horizontal" method="POST" action="{!! route('admin.logo.postEdit',$slider->SL_en_id) !!}" enctype="multipart/form-data"  autocomplete="off">
           @csrf
           <div class="box-body">
 
@@ -34,23 +34,25 @@
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
               </div>
+              <div class="col-sm-5">
+                <img src="{{url('resources/upload/logo/')}}/{{$slider->SL_url}}" alt="" class="thumbnail" width="400" height="200">
+              </div>
             </div>
             <div class="form-group">
               <label for="SL_alt" class="col-sm-2 control-label">Tiêu đề</label>
 
               <div class="col-sm-5">
-                <input type="text" name="SL_alt" class="form-control" id="SL_alt" placeholder="Tên tiêu đề">
+                <input type="text" name="SL_alt" class="form-control" id="SL_alt" placeholder="Tên danh mục" value="{{$slider->SL_alt}}">
                 @if ($errors->has('CA_name'))
                   <span style="color:red">{{$errors->first('CA_name')}}</span>
                 @endif
               </div>
             </div>
-            
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" checked name="SL_status" value="1"> Hiển thị trang chủ
+                    <input type="checkbox" name="SL_status" value="1" <?php echo($slider->SL_status==1)?'checked':'' ?>> Hiển thị trang chủ
                   </label>
                 </div>
               </div>
@@ -62,7 +64,7 @@
               <div class="col-sm-5"></div>
               <div class="col-sm-5">
                 <button type="submit" class="btn btn-info pull-center">Sign in</button>
-                <button type="button" class="btn btn-default"><a href="{{route('admin.slider.index')}}">Cancel</a></button>
+                <button type="button" class="btn btn-default"><a href="{{route('admin.logo.index')}}">Cancel</a></button>
               </div>              
             </div>
           </div>

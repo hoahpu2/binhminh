@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Category;
 use App\Slider;
+use App\Logo;
 use App\Product;
 use App\Catecontent;
 use App\News;
@@ -32,9 +33,10 @@ class HomeController extends Controller
 //         }
 //         $news = News::where('N_status',1)->take(4)->get();
         $slider = Slider::all()->where('SL_status',1);
+        $logo = Logo::all()->where('SL_status',1);
 //         $contactAdmin = Contact::get()->first();
 
-    	return view('sub.client.main', compact('slider'));
+    	return view('sub.client.main', compact('slider', 'logo'));
     }
 
     public function vechungtoi()
