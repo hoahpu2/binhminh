@@ -1391,27 +1391,11 @@
                                                             <div class="elementor-widget-container">
                                                                 <div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
                                                                     <div class="elementor-image-carousel swiper-wrapper">
+                                                                        @foreach($logo as $logos)
                                                                         <div class="swiper-slide">
-                                                                            <figure class="swiper-slide-inner"><img style="height: 50px;" class="swiper-slide-image" src="{{asset('wp-content/')}}/uploads/Logo/AUtonic.png" alt="logo-(11)" /></figure>
+                                                                            <figure class="swiper-slide-inner"><img style="height: 50px;" class="swiper-slide-image" src="{{url('resources/upload/logo/')}}/{{$logos->SL_url}}" alt="logo" /></figure>
                                                                         </div>
-                                                                        <div class="swiper-slide">
-                                                                            <figure class="swiper-slide-inner"><img style="height: 50px;" class="swiper-slide-image" src="{{asset('wp-content/')}}/uploads/Logo/cognex_logo_1200.jpg" alt="logo-(10)" /></figure>
-                                                                        </div>
-                                                                        <div class="swiper-slide">
-                                                                            <figure class="swiper-slide-inner"><img style="height: 50px;" class="swiper-slide-image" src="{{asset('wp-content/')}}/uploads/Logo/HIKVISION LOGO.jfif" alt="logo-(9)" /></figure>
-                                                                        </div>
-                                                                        <div class="swiper-slide">
-                                                                            <figure class="swiper-slide-inner"><img style="height: 50px;" class="swiper-slide-image" src="{{asset('wp-content/')}}/uploads/Logo/logo-ls-cu.jpg" alt="logo (8)" /></figure>
-                                                                        </div>
-                                                                        <div class="swiper-slide">
-                                                                            <figure class="swiper-slide-inner"><img style="height: 50px;" class="swiper-slide-image" src="{{asset('wp-content/')}}/uploads/Logo/Mitsubishi_Electric_logo.svg.png" alt="logo (7)" /></figure>
-                                                                        </div>
-                                                                        <div class="swiper-slide">
-                                                                            <figure class="swiper-slide-inner"><img style="height: 50px;" class="swiper-slide-image" src="{{asset('wp-content/')}}/uploads/Logo/SMC.jpg" alt="logo (6)" /></figure>
-                                                                        </div>
-                                                                        <div class="swiper-slide">
-                                                                            <figure class="swiper-slide-inner"><img style="height: 50px;" class="swiper-slide-image" src="{{asset('wp-content/')}}/uploads/Logo/Unitech.png" alt="logo (5)" /></figure>
-                                                                        </div>
+                                                                        @endforeach
                                                                     </div>
                                                                     <div class="swiper-pagination"></div>
                                                                     <div class="elementor-swiper-button elementor-swiper-button-prev">
